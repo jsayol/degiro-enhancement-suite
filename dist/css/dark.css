@@ -1,14 +1,68 @@
+/* TODO: Consider switching to SASS (mainly to do selector nesting) */
+
 :root {
-    --degiro-blue                    : #009fdf;
-    --degiro-ext-dark-bg             : #22272e;
-    --degiro-ext-dark-bg-midlite     : #2f3640;
-    --degiro-ext-dark-bg-lite        : #2d333b;
+    --degiro-blue    : #009fdf;
+    --degiro-darkblue: #181a21;
+
+    --degiro-ext-dark-bg        : #22272e;
+    --degiro-ext-dark-bg-midlite: #2f3640;
+    --degiro-ext-dark-bg-lite   : #2d333b;
+
     --degiro-ext-dark-color          : #cdd9e5;
     --degiro-ext-dark-color-secondary: #768390;
     --degiro-ext-dark-border-color   : #444c56;
+
     --degiro-ext-dark-scroll-bg      : #24292e;
     --degiro-ext-dark-scroll-thumb-bg: #586069;
     --degiro-ext-dark-scroll-track-bg: #586069;
+}
+
+body {
+    background-color: var(--degiro-ext-dark-bg) !important;
+}
+
+body>div[data-name="portal"] div[role="dialog"] {
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-ext-dark-bg) !important;
+}
+
+body>div[data-name="portal"] div[data-test-key="popover-container"],
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div {
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-darkblue) !important;
+}
+
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div>a:hover,
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div>button:hover {
+    background-color: var(--degiro-ext-dark-bg-midlite) !important;
+}
+
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div>div {
+    background-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div:first-child>div:first-child,
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div:first-child>div:first-child>*,
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div:first-child>div:first-child button[role="option"] {
+    background-color: var(--degiro-darkblue) !important;
+}
+
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div:first-child>div:first-child button[role="option"]:hover {
+    background-color: var(--degiro-ext-dark-bg-midlite) !important;
+}
+
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div:first-child>div:first-child>div:last-child {
+    border-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div:first-child>div:first-child>div:last-child>button:not([accent]) {
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+}
+
+body>div[data-name="portal"] div[data-test-key="popover-container"]>div:first-child>div:first-child>div:last-child>button:not([accent]):hover {
+    background-color: var(--degiro-ext-dark-bg-midlite) !important;
 }
 
 *::-webkit-scrollbar {
@@ -34,6 +88,7 @@ div[data-name="commonOrderButtonLayout"]>button:nth-child(2) {
     border-left-width: 0px !important;
 }
 
+button[aria-label="Hint"] i[role="img"][data-name="icon"],
 label[aria-haspopup="listbox"] i[role="img"][data-name="icon"] {
     color: var(--degiro-ext-dark-color) !important;
 }
@@ -55,11 +110,23 @@ div[data-name="fullHeader"] button[data-name="cashOrderButton"] {
     border-color    : var(--degiro-ext-dark-border-color) !important;
 }
 
-/* div[data-name="fullHeader"] button[data-name="cashOrderButton"]  */
+div[data-name="fullHeader"] button[data-name="cashOrderButton"]:hover {
+    background-color: var(--degiro-ext-dark-bg-midlite) !important;
+}
+
+button[data-name="exportButton"] {
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+}
+
+button[data-name="exportButton"]:hover {
+    background-color: var(--degiro-ext-dark-bg-midlite) !important;
+}
 
 div[data-name="quickSearch"] span[data-name="productBriefInfo"],
 div[data-name="quickSearch"] span[data-name="productType"] {
-    color: var(--degiro-ext-dark-color-secondary);
+    color: var(--degiro-ext-dark-color-secondary) !important;
 }
 
 div[data-name="quickSearch"] div:nth-child(2) i[role="img"][data-name="icon"] {
@@ -67,7 +134,7 @@ div[data-name="quickSearch"] div:nth-child(2) i[role="img"][data-name="icon"] {
 }
 
 div[data-name="quickSearch"]>div:nth-child(2)>div:nth-child(2) span:not([data-name="productName"]) {
-    color: var(--degiro-ext-dark-color-secondary);
+    color: var(--degiro-ext-dark-color-secondary) !important;
 }
 
 div[data-name="quickSearch"]>div:nth-child(2)>div:nth-child(1)>div:not(:first-child):hover,
@@ -93,14 +160,19 @@ div[data-name="inputLayout"] {
 }
 
 label[aria-haspopup="listbox"],
-input[type="text"] {
+input[type="text"],
+input[type="number"],
+input[inputmode="numeric"],
+div[role="listbox"] {
     color           : var(--degiro-ext-dark-color) !important;
     background-color: var(--degiro-ext-dark-bg-lite) !important;
     border-color    : var(--degiro-ext-dark-border-color) !important;
 }
 
-input[type="text"]::placeholder {
-    color: var(--degiro-ext-dark-color) !important;
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[inputmode="numeric"]::placeholder {
+    color: var(--degiro-ext-dark-color-secondary) !important;
 }
 
 div[role="tabpanel"] a:not([aria-current="page"]) {
@@ -114,7 +186,7 @@ div[role="tabpanel"] a:not([aria-current="page"]) {
     border-color    : var(--degiro-ext-dark-border-color) !important;
 }
 
-#mainContent>section+div>div:nth-child(2)>div>div>div div {
+#mainContent>section+div>div:nth-child(2)>div>div>div div:not([data-name="inputLayout"]) {
     border-color    : var(--degiro-ext-dark-border-color) !important;
     background-color: var(--degiro-ext-dark-bg) !important;
 }
@@ -202,4 +274,143 @@ div[data-name="newsArticlePage"]>div:nth-child(2)>div:after {
 
 div[data-name="newsArticlePage"] div[data-name="articleContent"]>h2+div>span {
     color: var(--degiro-ext-dark-color-secondary) !important;
+}
+
+button>span[data-name="productCategory"] {
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-color) !important;
+}
+
+section[data-name="sideInformationPanel"] {
+    color: var(--degiro-ext-dark-color) !important;
+}
+
+section[data-name="sideInformationPanel"] span[data-name="productBriefInfo"] {
+    color: var(--degiro-ext-dark-color-secondary) !important;
+}
+
+/* TODO: don't use class name*/
+div[data-name="productOrdersBook"] th._3TdTMQeT {
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
+}
+
+div[data-name="productOrdersBook"] tr,
+div[data-name="productOrdersBook"] th,
+div[data-name="productOrdersBook"] td {
+    border-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+div[data-name="productOrdersBook"] tr td:first-child div:first-child span:first-child {
+    color: var(--degiro-ext-dark-color-secondary) !important;
+}
+
+div[data-name="productOrdersBook"] tr td:last-child div:first-child span:nth-child(2) {
+    color: var(--degiro-ext-dark-color-secondary) !important;
+}
+
+button[data-name="ordersBookHintButton"] i[role="img"][data-name="icon"] {
+    color: var(--degiro-ext-dark-color) !important;
+}
+
+section[data-name="sideInformationPanel"] fieldset button:not([disabled]) {
+    border-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+span[data-field="feedQuality"] {
+    color: var(--degiro-ext-dark-color) !important;
+}
+
+section[data-name="sideInformationPanel"] div[data-name="orderConfirmation"]>div:nth-child(7),
+section[data-name="sideInformationPanel"] div[data-name="orderConfirmation"]>section>div {
+    border-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+div[data-name="orderConfirmationFees"] span[data-name="feeSchedule"] {
+    color: var(--degiro-ext-dark-color-secondary) !important;
+}
+
+section[data-name="sideInformationPanel"] div[data-name="orderConfirmation"]>div:last-child>button:not([accent]) {
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+}
+
+section[data-name="sideInformationPanel"] div[data-name="orderConfirmation"]>div:last-child>button:not([accent]):hover {
+    background-color: var(--degiro-ext-dark-bg-midlite) !important;
+}
+
+section[data-name="sideInformationPanel"] span[data-name="productType"] {
+    color: var(--degiro-ext-dark-color-secondary) !important;
+}
+
+section[data-name="sideInformationPanel"]>div[data-name="orderForm"]>header+div>div:first-child>div:nth-child(2)>div {
+    border-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+section[data-name="sideInformationPanel"]>div[data-name="orderForm"]>header+div>div:first-child>div:nth-child(2)>div:hover {
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
+}
+
+section[data-name="sideInformationPanel"]>div[data-name="orderForm"] div[data-name="toggleButton"] {
+    border-top-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+section[data-name="sideInformationPanel"] a[data-name="productPositionInfo"] {
+    border-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+#mainContent div[data-name="favourites"] div[aria-live="polite"]>div,
+#mainContent div[data-name="favourites"] div[aria-live="polite"]>div th,
+#mainContent div[data-name="favourites"] div[aria-live="polite"]>div td,
+#mainContent div[data-name="portfolio"] div[data-name="positions"]>div:first-child,
+#mainContent div[data-name="portfolio"] div[data-name="positions"]>div:first-child th,
+#mainContent div[data-name="portfolio"] div[data-name="positions"]>div:first-child tr:nth-child(even) td,
+#mainContent div[data-name="portfolio"] div[data-name="cashFundCompensations"]>div,
+#mainContent div[data-name="portfolio"] div[data-name="cashFundCompensations"]>div th {
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+}
+
+#mainContent div[data-name="favourites"] div[aria-live="polite"]>div th,
+#mainContent div[data-name="portfolio"] div[data-name="positions"]>div:first-child th,
+#mainContent div[data-name="portfolio"] div[data-name="cashFundCompensations"]>div th {
+    color: var(--degiro-ext-dark-color-secondary) !important;
+}
+
+#mainContent div[data-name="favourites"] div[aria-live="polite"]>div th[data-field="name"]::before,
+#mainContent div[data-name="favourites"] div[aria-live="polite"]>div th[data-field="name"]::after,
+#mainContent div[data-name="favourites"] div[aria-live="polite"]>div td:first-child::before,
+#mainContent div[data-name="favourites"] div[aria-live="polite"]>div td:first-child::after,
+#mainContent div[data-name="portfolio"] div[data-name="positions"]>div:first-child th[data-field="productInfo.name"]::before,
+#mainContent div[data-name="portfolio"] div[data-name="positions"]>div:first-child th[data-field="productInfo.name"]::after,
+#mainContent div[data-name="portfolio"] div[data-name="positions"]>div:first-child td:first-child::before,
+#mainContent div[data-name="portfolio"] div[data-name="positions"]>div:first-child td:first-child::after {
+    background-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+#mainContent div[data-name="portfolio"]>div:first-child {
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
+}
+
+#mainContent div[data-name="portfolio"] div[data-name="positions"]>div:first-child tr:nth-child(even):hover td,
+#mainContent div[data-name="portfolio"] div[data-name="cashFundCompensations"]>div td {
+    background-color: var(--degiro-ext-dark-bg-midlite) !important;
+}
+
+#mainContent div[data-name="portfolio"] div[data-name="positions"]>div:first-child tr:nth-child(odd) td {
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+}
+
+#mainContent div[data-name="portfolio"] div[data-name="positions"] i[role="img"][data-name="icon"] {
+    color: var(--degiro-ext-dark-color) !important;
+}
+
+#mainContent div[data-name="portfolio"] div[data-name="cashFundCompensations"] tr[data-name="compensationItem"] td {
+    border-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+#mainContent div[data-name="portfolio"]>div:first-child>div:first-child>div:first-child {
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
 }
