@@ -97,12 +97,17 @@ chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
     if (info.status == 'complete') applyCustomStyles(tab);
 });
 
-function applyCustomStyles(tab: chrome.tabs.Tab) {
-    console.log('applyCustomStyles()');
+let customStylesApplied = false;
+
+function applyCustomStyles(tab: chrome.tabs.Tab, force = false) {
     var tabUrl = tab.url;
     if (tabUrl && tabUrl.match("^https?://trader.degiro.nl")) {
-        chrome.tabs.insertCSS(tab.id as number, {
-            file: "css/dark.css"
-        });
+        if (!customStylesApplied || force) {
+            console.log('applyCustomStyles()');
+            chrome.tabs.insertCSS(tab.id as number, {
+                file: "css/dark.css"
+            });
+            customStylesApplied = true;
+        }
     }
 }

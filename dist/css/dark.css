@@ -1,104 +1,205 @@
 :root {
-    --degiro-extender-dark-background     : #22272e;
-    --degiro-extender-dark-background-lite: #2d333b;
-    --degiro-extender-dark-color          : #cdd9e5;
-    --degiro-extender-dark-color-secondary: #768390;
-    --degiro-extender-dark-border-color   : #444c56;
+    --degiro-blue                    : #009fdf;
+    --degiro-ext-dark-bg             : #22272e;
+    --degiro-ext-dark-bg-midlite     : #2f3640;
+    --degiro-ext-dark-bg-lite        : #2d333b;
+    --degiro-ext-dark-color          : #cdd9e5;
+    --degiro-ext-dark-color-secondary: #768390;
+    --degiro-ext-dark-border-color   : #444c56;
+    --degiro-ext-dark-scroll-bg      : #24292e;
+    --degiro-ext-dark-scroll-thumb-bg: #586069;
+    --degiro-ext-dark-scroll-track-bg: #586069;
+}
+
+*::-webkit-scrollbar {
+    width: 12px
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--degiro-ext-dark-scroll-bg);
+    border          : 2px solid var(--degiro-ext-dark-scroll-thumb-bg);
+    border-radius   : 5px
+}
+
+*::-webkit-scrollbar-track-piece {
+    background-color: var(--degiro-ext-dark-scroll-track-bg);
+}
+
+div[data-name="commonOrderButtonLayout"]>button {
+    border-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+div[data-name="commonOrderButtonLayout"]>button:nth-child(2) {
+    border           : 1px solid var(--degiro-ext-dark-border-color) !important;
+    border-left-width: 0px !important;
+}
+
+label[aria-haspopup="listbox"] i[role="img"][data-name="icon"] {
+    color: var(--degiro-ext-dark-color) !important;
 }
 
 div[data-name="fullHeader"],
-div[data-name="fullHeader"]>div>div {
-    color           : var(--degiro-extender-dark-color) !important;
-    background-color: var(--degiro-extender-dark-background) !important;
-    border-color    : var(--degiro-extender-dark-border-color) !important;
+div[data-name="fullHeader"]>div:first-child>div:first-child {
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
 }
 
-div[data-name="fullHeader"]>div>div * {
-    border-color: var(--degiro-extender-dark-border-color) !important;
+div[data-name="fullHeader"]>div:first-child>div:first-child * {
+    border-color: var(--degiro-ext-dark-border-color) !important;
 }
 
 div[data-name="fullHeader"] button[data-name="cashOrderButton"] {
-    color           : var(--degiro-extender-dark-color) !important;
-    background-color: var(--degiro-extender-dark-background) !important;
-    border-color    : var(--degiro-extender-dark-border-color) !important;
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
 }
 
 /* div[data-name="fullHeader"] button[data-name="cashOrderButton"]  */
 
 div[data-name="quickSearch"] span[data-name="productBriefInfo"],
 div[data-name="quickSearch"] span[data-name="productType"] {
-    color: var(--degiro-extender-dark-color-secondary);
+    color: var(--degiro-ext-dark-color-secondary);
 }
 
 div[data-name="quickSearch"] div:nth-child(2) i[role="img"][data-name="icon"] {
-    color: var(--degiro-extender-dark-color) !important;
+    color: var(--degiro-ext-dark-color) !important;
 }
 
 div[data-name="quickSearch"]>div:nth-child(2)>div:nth-child(2) span:not([data-name="productName"]) {
-    color: var(--degiro-extender-dark-color-secondary);
+    color: var(--degiro-ext-dark-color-secondary);
 }
 
 div[data-name="quickSearch"]>div:nth-child(2)>div:nth-child(1)>div:not(:first-child):hover,
 div[data-name="quickSearch"]>div:nth-child(2)>div:nth-child(2)>div:not(:first-child):hover {
-    background-color: var(--degiro-extender-dark-background-lite) !important;
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
 }
 
 
 section {
-    background-color: var(--degiro-extender-dark-background) !important;
-    border-color    : var(--degiro-extender-dark-border-color) !important;
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
 }
 
 section[data-name="accountSummary"] div,
 section[data-name="accountSummary"] span:not([data-id="totalPortfolio"]) {
-    color       : var(--degiro-extender-dark-color) !important;
-    border-color: var(--degiro-extender-dark-border-color) !important;
+    color       : var(--degiro-ext-dark-color) !important;
+    border-color: var(--degiro-ext-dark-border-color) !important;
 }
 
 div[data-name="inputLayout"] {
-    border-color    : var(--degiro-extender-dark-border-color) !important;
-    background-color: var(--degiro-extender-dark-background-lite) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
 }
 
 label[aria-haspopup="listbox"],
 input[type="text"] {
-    color           : var(--degiro-extender-dark-color) !important;
-    background-color: var(--degiro-extender-dark-background-lite) !important;
-    border-color    : var(--degiro-extender-dark-border-color) !important;
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
 }
 
 input[type="text"]::placeholder {
-    color: var(--degiro-extender-dark-color) !important;
+    color: var(--degiro-ext-dark-color) !important;
 }
 
 div[role="tabpanel"] a:not([aria-current="page"]) {
-    color: var(--degiro-extender-dark-color) !important;
+    color: var(--degiro-ext-dark-color) !important;
 }
 
 #mainContent>section+div,
 #mainContent>section+div>div:nth-child(2),
 #mainContent>section+div>div:nth-child(2)>div>div {
-    background-color: var(--degiro-extender-dark-background-lite) !important;
-    border-color    : var(--degiro-extender-dark-border-color) !important;
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+}
+
+#mainContent>section+div>div:nth-child(2)>div>div>div div {
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+    background-color: var(--degiro-ext-dark-bg) !important;
+}
+
+#mainContent>section+div>div:nth-child(2)>div>div>div div li {
+    border-color: var(--degiro-ext-dark-border-color) !important;
 }
 
 #mainContent>section+div>div::after {
-    background-color: var(--degiro-extender-dark-border-color) !important;
+    background-color: var(--degiro-ext-dark-border-color) !important;
 }
 
 #mainContent>section+div>div,
 #mainContent>section+div>div>div>div {
-    color           : var(--degiro-extender-dark-color) !important;
-    background-color: var(--degiro-extender-dark-background) !important;
-    border-color    : var(--degiro-extender-dark-border-color) !important;
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
 }
 
 #mainContent>section+div>div>div>div::after {
-    background-color: var(--degiro-extender-dark-border-color) !important;
+    background-color: var(--degiro-ext-dark-border-color) !important;
+}
+
+#mainContent>section+div button:not([disabled]) {
+    color: var(--degiro-ext-dark-color) !important;
 }
 
 div[data-name="data-vendors"] {
-    color           : var(--degiro-extender-dark-color) !important;
-    background-color: var(--degiro-extender-dark-background-lite) !important;
+    color           : var(--degiro-ext-dark-color) !important;
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
 
+}
+
+div.highcharts-container .highcharts-background {
+    fill: var(--degiro-ext-dark-bg);
+}
+
+div.highcharts-container .highcharts-grid>path {
+    stroke: var(--degiro-ext-dark-border-color);
+}
+
+div.highcharts-container .highcharts-axis-labels text {
+    fill : var(--degiro-ext-dark-color) !important;
+    color: var(--degiro-ext-dark-color) !important;
+}
+
+div[data-name="marketIndices"] button[data-name="productItem"] {
+    background-color: var(--degiro-ext-dark-bg-lite) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+}
+
+div[data-name="marketIndices"] div[data-name="chartPeriod"] button {
+    background-color: var(--degiro-ext-dark-bg) !important;
+}
+
+div[data-name="marketIndices"] button[data-name="prevProductButton"],
+div[data-name="marketIndices"] button[data-name="nextProductButton"] {
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+}
+
+/* TODO: Find a better way to identify the selected market tab without using the class name */
+div[data-name="marketIndices"] div:not([data-name="chartPeriod"]) button._1ivg9Ttu {
+    background-color: var(--degiro-ext-dark-bg) !important;
+}
+
+div[data-name="newsList"] a {
+    background-color: var(--degiro-ext-dark-bg) !important;
+    border-color    : var(--degiro-ext-dark-border-color) !important;
+}
+
+div[data-name="newsList"] time[data-field="date"] {
+    color: var(--degiro-ext-dark-color-secondary) !important;
+}
+
+/* TODO: Find a better way to identify the selected news item without using the class name */
+div[data-name="newsList"]>a._3sik6KCI {
+    background-color: var(--degiro-ext-dark-bg-midlite) !important;
+}
+
+div[data-name="newsArticlePage"]>div:nth-child(2)>div:before,
+div[data-name="newsArticlePage"]>div:nth-child(2)>div:after {
+    background: linear-gradient(180deg, var(--degiro-ext-dark-bg) 30%, hsla(0, 0%, 100%, 0)) !important;
+}
+
+div[data-name="newsArticlePage"] div[data-name="articleContent"]>h2+div>span {
+    color: var(--degiro-ext-dark-color-secondary) !important;
 }
