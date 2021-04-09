@@ -90,3 +90,44 @@ select {
     padding         : 4px;
     margin-top      : 0.2em
 }
+
+#settings {
+    display: none;
+}
+
+body.showSettings #settings {
+    display: block;
+}
+
+body.showSettings #quickOrder {
+    display: none;
+}
+
+#quickOrder-open,
+#quickOrder-close {
+    cursor: pointer;
+}
+
+#quickOrder-iframe {
+    border    : 0;
+    margin-top: 5px;
+}
+
+#quickOrder-close {
+    cursor: pointer;
+}
+
+#quickOrder-close>button {
+    position        : absolute;
+    transform       : translateY(-20%);
+    background-color: transparent !important;
+    padding         : 0;
+    top             : 2px;
+    left            : 0;
+}
+
+#quickOrder-close>button>i {
+    width      : 20px;
+    height     : 20px;
+    user-select: none;
+}

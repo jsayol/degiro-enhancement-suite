@@ -10,91 +10,99 @@
     <link rel='stylesheet' type='text/css' href="css/donations.css">
   </head>
 
-<body>
-  <div class="content">
+<body class="showSettings">
+  <div id="settings">
+    <div class="content">
 
-    <div class="title">
-      Extended Settings
+      <div class="title">
+        Extended Settings
+      </div>
+
+      <div class="form">
+        <label class="description" for="locale">Language</label>
+        <select id="locale">
+          <option value="default">Default</option>
+          <option disabled value="-"></option>
+
+          <option value="en_IE">English (Ireland)</option>
+          <option value="en_CH">English (Switzerland)</option>
+          <option value="en_GB">English (United Kingdom)</option>
+          <option disabled value="-"></option>
+
+          <option value="fr_FR">Français (France)</option>
+          <option value="fr_BE">Français (Belgique)</option>
+          <option value="fr_CH">Français (Suisse)</option>
+          <option disabled value="-"></option>
+
+          <option value="it_IT">Italiano (Italia)</option>
+          <option value="it_CH">Italiano (Svizzera)</option>
+          <option disabled value="-"></option>
+
+          <option value="de_DE">Deutsch (Deutschland)</option>
+          <option value="de_AT">Deutsch (Österreich)</option>
+          <option value="de_CH">Deutsch (Schweiz)</option>
+          <option disabled value="-"></option>
+
+          <option value="nl_NL">Nederlands (Nederland)</option>
+          <option value="nl_BE">Nederlands (België)</option>
+          <option disabled value="-"></option>
+
+          <option value="es_ES">Español</option>
+          <option value="da_DK">Dansk</option>
+          <option value="pt_PT">Português</option>
+          <option value="pl_PL">Polski</option>
+          <option value="sv_SE">Svenska</option>
+          <option value="cs_CZ">Ceština</option>
+          <option value="el_GR">Eλληνική</option>
+          <option value="hu_HU">Magyar</option>
+        </select>
+      </div>
+
+      <div class="form-buttons">
+        <button id="save">Apply changes</button>
+      </div>
+
+      <div id="quickOrder-open">
+        <span>Quick order</span>
+      </div>
+
     </div>
 
-    <div class="form">
-      <label class="description" for="locale">Language</label>
-      <select id="locale">
-        <option value="default">Default</option>
-        <option disabled value="-"></option>
+    <div class="bottom">
 
-        <option value="en_IE">English (Ireland)</option>
-        <option value="en_CH">English (Switzerland)</option>
-        <option value="en_GB">English (United Kingdom)</option>
-        <option disabled value="-"></option>
+      <div class="btn-container kofi">
+        <a title="Donate on ko-fi.com" class="donation-button" href="https://ko-fi.com/Q5Q447X4V" target="_blank">
+          <span class="donationtext">
+            <img src="img/cup-border.png" alt="Ko-fi donations" class="donationimg" />
+          </span>
+        </a>
+      </div>
 
-        <option value="fr_FR">Français (France)</option>
-        <option value="fr_BE">Français (Belgique)</option>
-        <option value="fr_CH">Français (Suisse)</option>
-        <option disabled value="-"></option>
+      <div class="btn-container crypto">
+        <a title="Donate with Crypto" class="donation-button"
+          href="https://commerce.coinbase.com/checkout/7867ad05-6d57-4971-8085-c339fcd58ef8" target="_blank">
+          <span class="donationtext">
+            <img src="img/bitcoin.svg" alt="Crypto donations" class="donationimg" />
+          </span>
+        </a>
+      </div>
 
-        <option value="it_IT">Italiano (Italia)</option>
-        <option value="it_CH">Italiano (Svizzera)</option>
-        <option disabled value="-"></option>
-
-        <option value="de_DE">Deutsch (Deutschland)</option>
-        <option value="de_AT">Deutsch (Österreich)</option>
-        <option value="de_CH">Deutsch (Schweiz)</option>
-        <option disabled value="-"></option>
-
-        <option value="nl_NL">Nederlands (Nederland)</option>
-        <option value="nl_BE">Nederlands (België)</option>
-        <option disabled value="-"></option>
-
-        <option value="es_ES">Español</option>
-        <option value="da_DK">Dansk</option>
-        <option value="pt_PT">Português</option>
-        <option value="pl_PL">Polski</option>
-        <option value="sv_SE">Svenska</option>
-        <option value="cs_CZ">Ceština</option>
-        <option value="el_GR">Eλληνική</option>
-        <option value="hu_HU">Magyar</option>
-      </select>
     </div>
-
-    <div class="form-buttons">
-      <button id="save">Apply changes</button>
-    </div>
-
   </div>
 
-  <div class="bottom">
-
-    <div class="btn-container kofi">
-      <a title="Donate on ko-fi.com" class="donation-button" href="https://ko-fi.com/Q5Q447X4V" target="_blank">
-        <span class="donationtext">
-          <img src="img/cup-border.png" alt="Ko-fi donations" class="donationimg" />
-        </span>
-      </a>
+  <div id="quickOrder">
+    <div id="quickOrder-close">
+      <button type="button" aria-label="Close">
+        <i role="img" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M18.93 6.485L13.414 12l5.516 5.515-1.415 1.415L12 13.414 6.485 18.93 5.07 17.515 10.586 12 5.07 6.485 6.485 5.07 12 10.586l5.515-5.516z">
+            </path>
+          </svg>
+        </i>
+      </button>
     </div>
-
-    <div class="btn-container crypto">
-      <a title="Donate with Crypto" class="donation-button"
-        href="https://commerce.coinbase.com/checkout/7867ad05-6d57-4971-8085-c339fcd58ef8" target="_blank">
-        <span class="donationtext">
-          <img src="img/bitcoin.svg" alt="Crypto donations" class="donationimg" />
-        </span>
-      </a>
-    </div>
-
-  </div>
-
-  <!-- <br />
-
-    <div class=btn-container>
-      <a title="Support me on ko-fi.com" class="donation-button" style="background-color:#29abe0;"
-        href="https://ko-fi.com/Q5Q447X4V" target="_blank">
-        <span class="donationtext">
-          <img src="img/cup-border.png" alt="Ko-fi donations" class="donationimg" />
-        </span>
-      </a> -->
-
-
+    <iframe id="quickOrder-iframe" width="330" height="300"></iframe>
   </div>
 
   <script src="js/popup.js"></script>

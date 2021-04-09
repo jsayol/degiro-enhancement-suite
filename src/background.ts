@@ -7,7 +7,7 @@ let options: Options = {};
 //
 // Define and install chrome.webRequest listeners.
 //
-function onBeforeRequestListener(details: chrome.webRequest.WebRequestDetails) {
+function onBeforeRequestListener(details: chrome.webRequest.WebRequestDetails): chrome.webRequest.BlockingResponse | void {
     if (options.locale && (options.locale !== 'default')) {
         const match = details.url.match(new RegExp('^(https?://trader.degiro.nl/i18n/messages_)(.+)'));
 
@@ -16,7 +16,7 @@ function onBeforeRequestListener(details: chrome.webRequest.WebRequestDetails) {
             console.log(details, { requestedLocale, locale: options.locale });
 
             if (requestedLocale !== options.locale) {
-                let redirect: chrome.webRequest.BlockingResponse = {
+                const redirect: chrome.webRequest.BlockingResponse = {
                     redirectUrl: urlPrefix + options.locale
                 };
                 return redirect;
@@ -26,14 +26,30 @@ function onBeforeRequestListener(details: chrome.webRequest.WebRequestDetails) {
     }
 };
 
+function onHeadersReceivedListener(details: chrome.webRequest.WebResponseHeadersDetails): chrome.webRequest.BlockingResponse | void {
+    if (/*details.url.includes('orderMode') &&*/ details.responseHeaders) {
+        const responseHeaders = details.responseHeaders.filter(h => h.name !== "x-frame-options");
+
+        if (details.responseHeaders.some(h => h.name === "x-frame-options")) {
+            console.log({ details, responseHeaders });
+        }
+
+        return { responseHeaders };
+    }
+}
+
 function onErrorOccurredListener(details: chrome.webRequest.WebResponseErrorDetails) {
-    console.log('onErrorOccurredListener', { details });
+    console.log('onErrorOccurredListener', details);
 };
 
 chrome.webRequest.onErrorOccurred.addListener(onErrorOccurredListener, { urls: ["<all_urls>"] });
 chrome.webRequest.onBeforeRequest.addListener(onBeforeRequestListener, { urls: ["<all_urls>"] }, [
-    // options: blocking, requestBody
+    // options: "blocking", "requestBody"
     "blocking",
+]);
+chrome.webRequest.onHeadersReceived.addListener(onHeadersReceivedListener, { urls: ["<all_urls>"] }, [
+    // options: "blocking", "responseHeaders", or "extraHeaders"
+    "blocking", "responseHeaders",
 ]);
 
 let onStartupOrOnInstalledListener = function () {
@@ -75,3 +91,18 @@ chrome.runtime.onStartup.addListener(function () {
 chrome.runtime.onInstalled.addListener(function () {
     onStartupOrOnInstalledListener();
 });
+
+// chrome.tabs.onCreated.addListener(applyCustomStyles);
+chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
+    if (info.status == 'complete') applyCustomStyles(tab);
+});
+
+function applyCustomStyles(tab: chrome.tabs.Tab) {
+    console.log('applyCustomStyles()');
+    var tabUrl = tab.url;
+    if (tabUrl && tabUrl.match("^https?://trader.degiro.nl")) {
+        chrome.tabs.insertCSS(tab.id as number, {
+            file: "css/dark.css"
+        });
+    }
+}

@@ -20,7 +20,7 @@
         "storage",
         "webRequest",
         "webRequestBlocking",
-        "*://trader.degiro.nl/trader/*"
+        "*://trader.degiro.nl/*"
     ],
     "manifest_version": 2
 }

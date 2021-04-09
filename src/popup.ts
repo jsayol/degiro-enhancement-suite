@@ -25,8 +25,53 @@ function getFormOptions() {
     });
 }
 
+function quickOrderOpen() {
+    // const settings = document.getElementById('settings');
+    // const quickOrder = document.getElementById('quickOrder');
+    const quickOrderIframe = document.getElementById('quickOrder-iframe') as HTMLIFrameElement;
+
+    document.body.classList.remove('showSettings');
+
+    // if (settings !== null) {
+    //     settings.style.display = 'none'
+    // }
+
+    // if (quickOrder !== null) {
+    //     quickOrder.style.display = 'block'
+    // }
+
+    if (quickOrderIframe !== null) {
+        quickOrderIframe.src = 'https://trader.degiro.nl/trader/?orderMode#/markets?newOrder';
+    }
+}
+
+function quickOrderClose() {
+    // const settings = document.getElementById('settings');
+    // const quickOrder = document.getElementById('quickOrder');
+    const quickOrderIframe = document.getElementById('quickOrder-iframe') as HTMLIFrameElement;
+
+    document.body.classList.add('showSettings');
+
+    // if (settings !== null) {
+    //     settings.style.display = 'none'
+    // }
+
+    // if (quickOrder !== null) {
+    //     quickOrder.style.display = 'block'
+    // }
+
+    if (quickOrderIframe !== null) {
+        quickOrderIframe.src = '';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', getFormOptions);
 
-const saveButton = document.getElementById('save') as HTMLButtonElement;
-saveButton.addEventListener('click', saveOptions);
+const saveButton = document.getElementById('save');
+saveButton && saveButton.addEventListener('click', saveOptions);
 
+const quickOrderOpenElem = document.getElementById('quickOrder-open');
+quickOrderOpenElem && quickOrderOpenElem.addEventListener('click', quickOrderOpen);
+
+const quickOrderCloseElem = document.getElementById('quickOrder-close');
+quickOrderCloseElem && quickOrderCloseElem.addEventListener('click', quickOrderClose);
