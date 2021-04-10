@@ -4,7 +4,7 @@
   filter: contrast(var(--degiro-ext-theme-global-contrast))
     saturate(var(--degiro-ext-theme-global-saturate)) !important;
   color: var(--degiro-ext-theme-color) !important;
-  background-color: var(--degiro-ext-theme-modal-bg) !important;
+  background-color: var(--degiro-ext-theme-app-bg) !important;
 }
 
 #appContainer aside img[alt="DEGIRO-TRADER-CLIENT"],
