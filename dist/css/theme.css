@@ -28,7 +28,8 @@
 }
 
 #appContainer header img[src^="images/app-icons/degiro/degiro."] {
-  filter: drop-shadow(0px 0px 3px #768390);
+  /* filter: drop-shadow(0px 0px 3px #768390); */
+  filter: var(--degiro-ext-theme-login-logo-filter);
 }
 
 #loginForm > div:nth-child(3) a {
@@ -701,7 +702,8 @@ section[data-name="sideInformationPanel"] a[data-name="productPositionInfo"] {
   > div:first-child
   > div:first-child
   * {
-  background-color: var(--degiro-ext-theme-bg-lite) !important;
+  /* TODO: reapply this without breaking the styles for "Market" */
+  /* background-color: var(--degiro-ext-theme-bg-lite) !important; */
 }
 
 #mainContent
@@ -773,7 +775,8 @@ div[data-name="topNews"] > div > section > a {
   > div:first-child
   > div:nth-child(2)
   * {
-  background-color: #000 !important;
+  /* TODO: reapply this without breaking the styles for "Market" */
+  /* background-color: #000 !important; */
 }
 
 #mainContent
