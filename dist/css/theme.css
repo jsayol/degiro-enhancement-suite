@@ -1,0 +1,682 @@
+/* Login */
+
+#appContainer {
+  filter: contrast(var(--degiro-ext-theme-global-contrast))
+    saturate(var(--degiro-ext-theme-global-saturate)) !important;
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-modal-bg) !important;
+}
+
+#appContainer aside img[alt="DEGIRO-TRADER-CLIENT"],
+#appContainer aside span[data-name="profileAvatar"],
+#appContainer aside div[data-active="true"] svg,
+#appContainer div[data-name="commonOrderButtonLayout"],
+#appContainer button[accent="true"]:not([data-name="quickOrderButton"]),
+#appContainer img[data-name="countryFlag"],
+#appContainer div[role="tabpanel"] *[aria-current="page"],
+#appContainer button[data-id][disabled],
+#appContainer label[aria-label="Toggle"] span {
+  filter: brightness(var(--degiro-ext-theme-brightness));
+}
+
+#appContainer aside {
+  background-color: var(--degiro-ext-theme-modal-bg) !important;
+}
+
+#appContainer header {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#appContainer header img[src^="images/app-icons/degiro/degiro."] {
+  filter: drop-shadow(0px 0px 3px #768390);
+}
+
+#loginForm > div:nth-child(3) a {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+main div[data-name="notification"] {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+/* Webtrader */
+
+body {
+  background-color: var(--degiro-ext-theme-bg) !important;
+}
+
+body > div[data-name="portal"] div[role="dialog"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+}
+
+body > div[data-name="portal"] div[data-test-key="popover-container"],
+body > div[data-name="portal"] div[data-test-key="popover-container"] > div {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-modal-bg) !important;
+}
+
+body
+  > div[data-name="portal"]
+  div[data-test-key="popover-container"]
+  > div
+  > a:hover,
+body
+  > div[data-name="portal"]
+  div[data-test-key="popover-container"]
+  > div
+  > button:hover {
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
+}
+
+body
+  > div[data-name="portal"]
+  div[data-test-key="popover-container"]
+  > div
+  > div {
+  background-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+body
+  > div[data-name="portal"]
+  div[data-test-key="popover-container"]
+  > div:first-child
+  > div:first-child,
+body
+  > div[data-name="portal"]
+  div[data-test-key="popover-container"]
+  > div:first-child
+  > div:first-child
+  > *,
+body
+  > div[data-name="portal"]
+  div[data-test-key="popover-container"]
+  > div:first-child
+  > div:first-child
+  button[role="option"] {
+  background-color: var(--degiro-ext-theme-modal-bg) !important;
+}
+
+body
+  > div[data-name="portal"]
+  div[data-test-key="popover-container"]
+  > div:first-child
+  > div:first-child
+  button[role="option"]:hover {
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
+}
+
+body
+  > div[data-name="portal"]
+  div[data-test-key="popover-container"]
+  > div:first-child
+  > div:first-child
+  > div:last-child {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+body
+  > div[data-name="portal"]
+  div[data-test-key="popover-container"]
+  > div:first-child
+  > div:first-child
+  > div:last-child
+  > button:not([accent]) {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+body
+  > div[data-name="portal"]
+  div[data-test-key="popover-container"]
+  > div:first-child
+  > div:first-child
+  > div:last-child
+  > button:not([accent]):hover {
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--degiro-ext-theme-scroll-bg);
+  border: 2px solid var(--degiro-ext-theme-scroll-thumb-bg);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-track-piece {
+  background-color: var(--degiro-ext-theme-scroll-track-bg);
+}
+
+div[data-name="commonOrderButtonLayout"] > button {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+div[data-name="commonOrderButtonLayout"] > button:nth-child(2) {
+  border: 1px solid var(--degiro-ext-theme-border-color) !important;
+  border-left-width: 0px !important;
+}
+
+button[aria-label="Hint"] i[role="img"][data-name="icon"],
+label[aria-haspopup="listbox"] i[role="img"][data-name="icon"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+div[data-name="fullHeader"],
+div[data-name="fullHeader"] > div:first-child > div:first-child {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+div[data-name="fullHeader"] > div:first-child > div:first-child * {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+div[data-name="fullHeader"] button[data-name="cashOrderButton"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+div[data-name="fullHeader"] button[data-name="cashOrderButton"]:hover {
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
+}
+
+button[data-name="exportButton"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+button[data-name="exportButton"]:hover {
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
+}
+
+div[data-name="quickSearch"] span[data-name="productBriefInfo"],
+div[data-name="quickSearch"] span[data-name="productType"] {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+div[data-name="quickSearch"] div:nth-child(2) i[role="img"][data-name="icon"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+div[data-name="quickSearch"]
+  > div:nth-child(2)
+  > div:nth-child(2)
+  span:not([data-name="productName"]) {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+div[data-name="quickSearch"]
+  > div:nth-child(2)
+  > div:nth-child(1)
+  > div:not(:first-child):hover,
+div[data-name="quickSearch"]
+  > div:nth-child(2)
+  > div:nth-child(2)
+  > div:not(:first-child):hover {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+section {
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+section[data-name="accountSummary"] div,
+section[data-name="accountSummary"] span:not([data-id="totalPortfolio"]) {
+  color: var(--degiro-ext-theme-color) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+div[data-name="inputLayout"] {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+label[aria-haspopup="listbox"],
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[inputmode="numeric"],
+div[role="listbox"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="password"]::placeholder,
+input[inputmode="numeric"]::placeholder {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+div[role="tabpanel"] a:not([aria-current="page"]) {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+#mainContent > section + div,
+#mainContent > section + div > div:nth-child(2),
+#mainContent > section + div > div:nth-child(2) > div > div {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent
+  > section
+  + div
+  > div:nth-child(2)
+  > div
+  > div
+  > div
+  div:not([data-name="inputLayout"]) {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+}
+
+#mainContent > section + div > div:nth-child(2) > div > div > div div li {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent > section + div > div::after {
+  background-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent > section + div > div,
+#mainContent > section + div > div > div > div {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent > section + div > div > div > div::after {
+  background-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent > section + div button:not([disabled]) {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+div[data-name="data-vendors"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+div.highcharts-container .highcharts-background {
+  fill: var(--degiro-ext-theme-bg);
+}
+
+div.highcharts-container .highcharts-grid > path {
+  stroke: var(--degiro-ext-theme-border-color);
+}
+
+div.highcharts-container .highcharts-axis-labels text {
+  fill: var(--degiro-ext-theme-color) !important;
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+div.highcharts-container svg *[fill="#007336"] {
+  fill: var(--degiro-ext-theme-green-color) !important;
+}
+
+div.highcharts-container svg *[fill="#FF0000"] {
+  fill: var(--degiro-ext-theme-red-color) !important;
+}
+
+div.highcharts-container svg *[stroke="#66B366"] {
+  stroke: var(--degiro-ext-theme-green-color) !important;
+}
+
+div.highcharts-container svg *[stroke="#FF0000"] {
+  stroke: var(--degiro-ext-theme-red-color) !important;
+}
+
+div.highcharts-container svg *[stroke="#FFFFFF"] {
+  stroke: var(--degiro-ext-theme-bg) !important;
+}
+
+div.highcharts-container
+  svg
+  g.highcharts-series
+  path[fill="rgba(0, 159, 227, 0.25)"] {
+  fill: var(--degiro-ext-theme-chart-line-bg) !important;
+}
+
+div.highcharts-container svg g.highcharts-series path[stroke="#009FE3"] {
+  stroke: var(--degiro-ext-theme-chart-line-color) !important;
+}
+
+div[data-name="marketIndices"] button[data-name="productItem"] {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+div[data-name="marketIndices"] div[data-name="chartPeriod"] button {
+  background-color: var(--degiro-ext-theme-bg) !important;
+}
+
+div[data-name="marketIndices"] button[data-name="prevProductButton"],
+div[data-name="marketIndices"] button[data-name="nextProductButton"] {
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+/* TODO: Find a better way to identify the selected market tab without using the class name */
+div[data-name="marketIndices"]
+  div:not([data-name="chartPeriod"])
+  button._1ivg9Ttu {
+  background-color: var(--degiro-ext-theme-bg) !important;
+}
+
+div[data-name="newsList"] a {
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+div[data-name="newsList"] time[data-field="date"] {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+/* TODO: Find a better way to identify the selected news item without using the class name */
+div[data-name="newsList"] > a._3sik6KCI {
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
+}
+
+div[data-name="newsArticlePage"] > div:nth-child(2) > div:before,
+div[data-name="newsArticlePage"] > div:nth-child(2) > div:after {
+  background: linear-gradient(
+    180deg,
+    var(--degiro-ext-theme-bg) 30%,
+    hsla(0, 0%, 100%, 0)
+  ) !important;
+}
+
+div[data-name="newsArticlePage"]
+  div[data-name="articleContent"]
+  > h2
+  + div
+  > span {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+button > span[data-name="productCategory"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-color) !important;
+}
+
+section[data-name="sideInformationPanel"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+section[data-name="sideInformationPanel"] span[data-name="productBriefInfo"] {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+/* TODO: don't use class name*/
+div[data-name="productOrdersBook"] th._3TdTMQeT {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+div[data-name="productOrdersBook"] tr,
+div[data-name="productOrdersBook"] th,
+div[data-name="productOrdersBook"] td {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+div[data-name="productOrdersBook"]
+  tr
+  td:first-child
+  div:first-child
+  span:first-child {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+div[data-name="productOrdersBook"]
+  tr
+  td:last-child
+  div:first-child
+  span:nth-child(2) {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+button[data-name="ordersBookHintButton"] i[role="img"][data-name="icon"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+section[data-name="sideInformationPanel"] fieldset button:not([disabled]) {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+span[data-field="feedQuality"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+section[data-name="sideInformationPanel"]
+  div[data-name="orderConfirmation"]
+  > div:nth-child(7),
+section[data-name="sideInformationPanel"]
+  div[data-name="orderConfirmation"]
+  > section
+  > div {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+div[data-name="orderConfirmationFees"] span[data-name="feeSchedule"] {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+section[data-name="sideInformationPanel"]
+  div[data-name="orderConfirmation"]
+  > div:last-child
+  > button:not([accent]) {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+section[data-name="sideInformationPanel"]
+  div[data-name="orderConfirmation"]
+  > div:last-child
+  > button:not([accent]):hover {
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
+}
+
+section[data-name="sideInformationPanel"] span[data-name="productType"] {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+section[data-name="sideInformationPanel"]
+  > div[data-name="orderForm"]
+  > header
+  + div
+  > div:first-child
+  > div:nth-child(2)
+  > div {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+section[data-name="sideInformationPanel"]
+  > div[data-name="orderForm"]
+  > header
+  + div
+  > div:first-child
+  > div:nth-child(2)
+  > div:hover {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+section[data-name="sideInformationPanel"]
+  > div[data-name="orderForm"]
+  div[data-name="toggleButton"] {
+  border-top-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+section[data-name="sideInformationPanel"] a[data-name="productPositionInfo"] {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent div[data-name="favourites"] div[aria-live="polite"] > div,
+#mainContent div[data-name="favourites"] div[aria-live="polite"] > div th,
+#mainContent div[data-name="favourites"] div[aria-live="polite"] > div td,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  > div:first-child,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  > div:first-child
+  th,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  > div:first-child
+  tr:nth-child(even)
+  td,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="cashFundCompensations"]
+  > div,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="cashFundCompensations"]
+  > div
+  th {
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent div[data-name="favourites"] div[aria-live="polite"] > div th,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  > div:first-child
+  th,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="cashFundCompensations"]
+  > div
+  th {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+#mainContent
+  div[data-name="favourites"]
+  div[aria-live="polite"]
+  > div
+  th[data-field="name"]::before,
+#mainContent
+  div[data-name="favourites"]
+  div[aria-live="polite"]
+  > div
+  th[data-field="name"]::after,
+#mainContent
+  div[data-name="favourites"]
+  div[aria-live="polite"]
+  > div
+  td:first-child::before,
+#mainContent
+  div[data-name="favourites"]
+  div[aria-live="polite"]
+  > div
+  td:first-child::after,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  > div:first-child
+  th[data-field="productInfo.name"]::before,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  > div:first-child
+  th[data-field="productInfo.name"]::after,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  > div:first-child
+  td:first-child::before,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  > div:first-child
+  td:first-child::after {
+  background-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent div[data-name="portfolio"] > div:first-child {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  > div:first-child
+  tr:nth-child(even):hover
+  td,
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="cashFundCompensations"]
+  > div
+  td {
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
+}
+
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  > div:first-child
+  tr:nth-child(odd)
+  td {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="positions"]
+  i[role="img"][data-name="icon"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+#mainContent
+  div[data-name="portfolio"]
+  div[data-name="cashFundCompensations"]
+  tr[data-name="compensationItem"]
+  td {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent
+  div[data-name="portfolio"]
+  > div:first-child
+  > div:first-child
+  > div:first-child {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+#appContainer #appWorkspace button[data-action="buy"] {
+  color: var(--degiro-ext-theme-textongreen-color) !important;
+  background-color: var(--degiro-ext-theme-green-color) !important;
+}
+
+#appContainer #appWorkspace button[data-action="sell"] {
+  color: var(--degiro-ext-theme-textonred-color) !important;
+  background-color: var(--degiro-ext-theme-red-color) !important;
+}
+
+#appContainer span[data-positive="true"],
+#appContainer span[data-negative="false"] {
+  color: var(--degiro-ext-theme-green-color) !important;
+}
+
+#appContainer span[data-positive="false"],
+#appContainer span[data-negative="true"] {
+  color: var(--degiro-ext-theme-red-color) !important;
+}

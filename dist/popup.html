@@ -15,47 +15,78 @@
     <div class="content">
 
       <div class="title">
-        Extended Settings
+        Enhancements
       </div>
 
       <div class="form">
-        <label class="description" for="locale">Language</label>
-        <select id="locale">
-          <option value="default">Default</option>
-          <option disabled value="-"></option>
+        <fieldset>
+          <label class="description" for="locale">Language:</label>
+          <select id="locale">
+            <option value="default">Default</option>
+            <option disabled value="-"></option>
 
-          <option value="en_IE">English (Ireland)</option>
-          <option value="en_CH">English (Switzerland)</option>
-          <option value="en_GB">English (United Kingdom)</option>
-          <option disabled value="-"></option>
+            <option value="en_IE">English (Ireland)</option>
+            <option value="en_CH">English (Switzerland)</option>
+            <option value="en_GB">English (United Kingdom)</option>
+            <option disabled value="-"></option>
 
-          <option value="fr_FR">Français (France)</option>
-          <option value="fr_BE">Français (Belgique)</option>
-          <option value="fr_CH">Français (Suisse)</option>
-          <option disabled value="-"></option>
+            <option value="fr_FR">Français (France)</option>
+            <option value="fr_BE">Français (Belgique)</option>
+            <option value="fr_CH">Français (Suisse)</option>
+            <option disabled value="-"></option>
 
-          <option value="it_IT">Italiano (Italia)</option>
-          <option value="it_CH">Italiano (Svizzera)</option>
-          <option disabled value="-"></option>
+            <option value="it_IT">Italiano (Italia)</option>
+            <option value="it_CH">Italiano (Svizzera)</option>
+            <option disabled value="-"></option>
 
-          <option value="de_DE">Deutsch (Deutschland)</option>
-          <option value="de_AT">Deutsch (Österreich)</option>
-          <option value="de_CH">Deutsch (Schweiz)</option>
-          <option disabled value="-"></option>
+            <option value="de_DE">Deutsch (Deutschland)</option>
+            <option value="de_AT">Deutsch (Österreich)</option>
+            <option value="de_CH">Deutsch (Schweiz)</option>
+            <option disabled value="-"></option>
 
-          <option value="nl_NL">Nederlands (Nederland)</option>
-          <option value="nl_BE">Nederlands (België)</option>
-          <option disabled value="-"></option>
+            <option value="nl_NL">Nederlands (Nederland)</option>
+            <option value="nl_BE">Nederlands (België)</option>
+            <option disabled value="-"></option>
 
-          <option value="es_ES">Español</option>
-          <option value="da_DK">Dansk</option>
-          <option value="pt_PT">Português</option>
-          <option value="pl_PL">Polski</option>
-          <option value="sv_SE">Svenska</option>
-          <option value="cs_CZ">Ceština</option>
-          <option value="el_GR">Eλληνική</option>
-          <option value="hu_HU">Magyar</option>
-        </select>
+            <option value="es_ES">Español</option>
+            <option value="da_DK">Dansk</option>
+            <option value="pt_PT">Português</option>
+            <option value="pl_PL">Polski</option>
+            <option value="sv_SE">Svenska</option>
+            <option value="cs_CZ">Ceština</option>
+            <option value="el_GR">Eλληνική</option>
+            <option value="hu_HU">Magyar</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <div class="description">Theme:</div>
+          <div class="radio-element">
+            <input type="radio" name="theme" id="theme-default" value="default" checked>
+            <label for="theme-default">Default</label>
+          </div>
+          <div class="radio-element">
+            <input type="radio" name="theme" id="theme-bluish" value="bluish">
+            <label for="theme-bluish">Bluish</label>
+          </div>
+          <div class="radio-element">
+            <input type="radio" name="theme" id="theme-dark" value="dark">
+            <label for="theme-dark">Dark</label>
+          </div>
+          <div class="radio-element">
+            <input type="radio" name="theme" id="theme-black-hole" value="black-hole">
+            <label for="theme-black-hole">Black hole</label>
+          </div>
+          <div class="radio-element">
+            <input type="radio" name="theme" id="theme-high-contrast-white" value="high-contrast-white">
+            <label for="theme-high-contrast-white">High contrast (white)</label>
+          </div>
+          <div class="radio-element">
+            <input type="radio" name="theme" id="theme-high-contrast-black" value="high-contrast-black">
+            <label for="theme-high-contrast-black">High contrast (black)</label>
+          </div>
+        </fieldset>
+
       </div>
 
       <div class="form-buttons">

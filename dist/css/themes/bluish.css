@@ -1,0 +1,22 @@
+:root {
+  --degiro-blue: #009fdf;
+  --degiro-ext-theme-modal-bg: #181a21;
+  --degiro-ext-theme-bg: #22272e;
+  --degiro-ext-theme-bg-midlite: #2f3640;
+  --degiro-ext-theme-bg-lite: #2d333b;
+  --degiro-ext-theme-color: #cdd9e5;
+  --degiro-ext-theme-color-secondary: #768390;
+  --degiro-ext-theme-border-color: #444c56;
+  --degiro-ext-theme-scroll-bg: #24292e;
+  --degiro-ext-theme-scroll-thumb-bg: #586069;
+  --degiro-ext-theme-scroll-track-bg: #586069;
+  --degiro-ext-theme-red-color: #c55a56;
+  --degiro-ext-theme-green-color: #00773f;
+  --degiro-ext-theme-textonred-color: #cecece;
+  --degiro-ext-theme-textongreen-color: #cecece;
+  --degiro-ext-theme-brightness: 95%;
+  --degiro-ext-theme-global-contrast: 100%;
+  --degiro-ext-theme-global-saturate: 100%;
+  --degiro-ext-theme-chart-line-color: rgb(0 159 223 / 29%);
+  --degiro-ext-theme-chart-line-bg: #181a21;
+}

@@ -1,26 +1,36 @@
 {
-    "name": "Extended Settings for DEGIRO",
-    "version": "0.0.1",
-    "description": "Extended settings for DEGIRO webtrader.",
-    "background": {
-        "persistent": true,
-        "scripts": [
-            "js/background.js"
-        ]
-    },
-    "browser_action": {
-        "default_title": "Extended Settings for DEGIRO",
-        "default_icon": "icon.png",
-        "default_popup": "popup.html"
-    },
-    "permissions": [
-        "contextMenus",
-        "cookies",
-        "history",
-        "storage",
-        "webRequest",
-        "webRequestBlocking",
-        "*://trader.degiro.nl/*"
-    ],
-    "manifest_version": 2
+  "name": "Enhancement Suite for DEGIRO",
+  "version": "0.0.1",
+  "description": "A suite of enhancements for the DEGIRO webtrader.",
+  "background": {
+    "persistent": true,
+    "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_title": "Enhancement Suite for DEGIRO",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://trader.degiro.nl/*"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "css/theme.css",
+    "css/themes/bluish.css",
+    "css/themes/dark.css",
+    "css/themes/black-hole.css",
+    "css/themes/high-contrast-white.css",
+    "css/themes/high-contrast-black.css"
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://trader.degiro.nl/*"
+  ],
+  "manifest_version": 2
 }
