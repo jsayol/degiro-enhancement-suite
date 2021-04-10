@@ -405,7 +405,10 @@ div[data-name="newsArticlePage"]
   color: var(--degiro-ext-theme-color-secondary) !important;
 }
 
-button > span[data-name="productCategory"] {
+#appContainer
+  #mainContent
+  button[type="button"][aria-label="Hint"][data-name="tooltipButton"]
+  > span[data-name="productCategory"] {
   color: var(--degiro-ext-theme-color) !important;
   background-color: var(--degiro-ext-theme-bg) !important;
   border-color: var(--degiro-ext-theme-color) !important;
@@ -526,6 +529,20 @@ section[data-name="sideInformationPanel"] a[data-name="productPositionInfo"] {
 #mainContent div[data-name="favourites"] div[aria-live="polite"] > div th,
 #mainContent div[data-name="favourites"] div[aria-live="polite"] > div td,
 #mainContent
+  div[aria-live="polite"]
+  *:is(table[data-name="holidaysCalendar"], table[data-name="agendaSplits"], div[data-name="horizontalScrollPanel"]
+    table),
+#mainContent
+  div[aria-live="polite"]
+  *:is(table[data-name="holidaysCalendar"], table[data-name="agendaSplits"], div[data-name="horizontalScrollPanel"]
+    table)
+  th,
+#mainContent
+  div[aria-live="polite"]
+  *:is(table[data-name="holidaysCalendar"], table[data-name="agendaSplits"], div[data-name="horizontalScrollPanel"]
+    table)
+  td,
+#mainContent
   div[data-name="portfolio"]
   div[data-name="positions"]
   > div:first-child,
@@ -554,6 +571,11 @@ section[data-name="sideInformationPanel"] a[data-name="productPositionInfo"] {
 }
 
 #mainContent div[data-name="favourites"] div[aria-live="polite"] > div th,
+#mainContent
+  div[aria-live="polite"]
+  *:is(table[data-name="holidaysCalendar"], table[data-name="agendaSplits"], div[data-name="horizontalScrollPanel"]
+    table)
+  th,
 #mainContent
   div[data-name="portfolio"]
   div[data-name="positions"]
@@ -633,6 +655,12 @@ section[data-name="sideInformationPanel"] a[data-name="productPositionInfo"] {
   div[data-name="positions"]
   > div:first-child
   tr:nth-child(odd)
+  td,
+#mainContent
+  div[aria-live="polite"]
+  *:is(table[data-name="holidaysCalendar"], table[data-name="agendaSplits"], div[data-name="horizontalScrollPanel"]
+    table)
+  tr:nth-child(odd)
   td {
   background-color: var(--degiro-ext-theme-bg-lite) !important;
   border-color: var(--degiro-ext-theme-border-color) !important;
@@ -657,8 +685,34 @@ section[data-name="sideInformationPanel"] a[data-name="productPositionInfo"] {
   div[data-name="portfolio"]
   > div:first-child
   > div:first-child
-  > div:first-child {
+  > div:first-child,
+#mainContent
+  div:not([data-name])
+  > div:nth-child(2)
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child,
+#mainContent
+  div:not([data-name])
+  > div:nth-child(2)
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  * {
   background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+#mainContent
+  div:not([data-name])
+  > div:nth-child(2)
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:nth-child(3) {
+  color: var(--degiro-ext-theme-color-secondary) !important;
 }
 
 #appContainer #appWorkspace button[data-action="buy"] {
@@ -679,4 +733,149 @@ section[data-name="sideInformationPanel"] a[data-name="productPositionInfo"] {
 #appContainer span[data-positive="false"],
 #appContainer span[data-negative="true"] {
   color: var(--degiro-ext-theme-red-color) !important;
+}
+
+div[data-name="topNews"] > div > a > div > div > time,
+div[data-name="topNews"] > div > section > a > div > time {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+div[data-name="topNews"] > div > a > div > div:nth-child(3),
+div[data-name="topNews"] > div > section > a > div > div {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+/* TODO: don't use classnames */
+label[aria-haspopup="listbox"]._2rXS8vA8._28I6HDQH:not(._3XeeYfzY),
+div[data-name="frontPageSubCategorySelect"] button[data-id="frontPage"] {
+  border-color: transparent !important;
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+}
+
+/* TODO: don't use classnames */
+label[aria-haspopup="listbox"]._2rXS8vA8._28I6HDQH._3XeeYfzY,
+div[data-name="frontPageSubCategorySelect"]
+  button[data-id="frontPage"][disabled] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+div[data-name="topNews"] > div > section > a {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent
+  div:not([data-name])
+  > div:nth-child(2)
+  > div:first-child
+  > div:first-child
+  > div:first-child
+  > div:nth-child(2)
+  * {
+  background-color: #000 !important;
+}
+
+#mainContent
+  div:not([data-name])
+  table[data-name="holidaysCalendar"]
+  td[data-field="exchanges"]
+  > div,
+#mainContent
+  div:not([data-name])
+  table[data-name="agendaSplits"]
+  tr
+  > td:nth-child(2)
+  *,
+#mainContent
+  div:not([data-name])
+  div[data-name="horizontalScrollPanelWrapper"]
+  div[data-name="horizontalScrollPanel"]
+  table
+  tr
+  :is(td > div, td > div *) {
+  background-color: transparent !important;
+}
+
+#mainContent div[data-name="horizontalScrollPanel"] table {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent
+  div[data-name="horizontalScrollPanel"]
+  table
+  > tbody
+  > tr
+  > td:before,
+#mainContent
+  div[data-name="horizontalScrollPanel"]
+  table
+  > tbody
+  > tr
+  > td:after,
+#mainContent
+  div[data-name="horizontalScrollPanel"]
+  table
+  > thead
+  > tr
+  > th:before,
+#mainContent
+  div[data-name="horizontalScrollPanel"]
+  table
+  > thead
+  > tr
+  > th:after {
+  background-color: transparent !important;
+}
+
+div[data-name="pagination"],
+div[data-name="pagination"] button i {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+div[data-name="pagination"] + div > span {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+/* TODO: don't use classname */
+/* We repeat the classname to increase the specificity of this selector (quite a hack, but...) */
+#mainContent div[aria-live="polite"] + div._3SHcS-Ra._3SHcS-Ra._3SHcS-Ra {
+  background-color: transparent !important;
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+#mainContent
+  table[data-name="holidaysCalendar"]
+  i[role="img"][data-name="icon"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+#appContainer
+  #appWorkspace
+  #mainContent
+  div[data-name="ordersHistory"]
+  div[data-name="ordersHistoryFilters"]
+  * {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+body > div[data-name="portal"] > div > div {
+  background-color: var(--degiro-ext-theme-bg) !important;
+}
+
+body > div[data-name="portal"] > div > div button:not([disabled]) {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+body > div[data-name="portal"] > div > div button[disabled] {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+  filter: opacity(0.7);
+}
+
+body > div[data-name="portal"] > div > div button[data-selected="true"] {
+  color: var(--degiro-ext-theme-bg) !important;
+}
+
+body > div[data-name="portal"] > div > div > table > thead > tr {
+  color: var(--degiro-ext-theme-color) !important;
 }
