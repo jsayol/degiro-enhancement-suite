@@ -28,7 +28,6 @@
 }
 
 #appContainer header img[src^="images/app-icons/degiro/degiro."] {
-  /* filter: drop-shadow(0px 0px 3px #768390); */
   filter: var(--degiro-ext-theme-login-logo-filter);
 }
 
@@ -727,12 +726,12 @@ section[data-name="sideInformationPanel"] a[data-name="productPositionInfo"] {
   background-color: var(--degiro-ext-theme-red-color) !important;
 }
 
-#appContainer span[data-positive="true"],
+#appContainer span[data-positive="true"]:not([data-id="totalPortfolio"]),
 #appContainer span[data-negative="false"] {
   color: var(--degiro-ext-theme-green-color) !important;
 }
 
-#appContainer span[data-positive="false"],
+#appContainer span[data-positive="false"]:not([data-id="totalPortfolio"]),
 #appContainer span[data-negative="true"] {
   color: var(--degiro-ext-theme-red-color) !important;
 }
