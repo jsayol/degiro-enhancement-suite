@@ -1010,3 +1010,44 @@ body > div[data-name="portal"] > div > div > table > thead > tr {
   span:is([data-positive="true"], [data-positive="false"], [data-negative="true"], [data-negative="false"]):is(:not([data-field="AbsoluteDifference"], [data-field="RelativeDifference"])) {
   color: var(--degiro-ext-theme-color) !important;
 }
+
+/* TODO: don't use class names */
+#appContainer
+  div[data-name="products"]
+  div[data-name="productTypeSearch"]
+  table._2KnDJmXg
+  tr
+  td._3txtVfoE {
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
+}
+#appContainer
+  div[data-name="products"]
+  div[data-name="productTypeSearch"]
+  div:is(.lEEKEUMB, ._3_myEOPT) {
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
+}
+#appContainer
+  div[data-name="products"]
+  div[data-name="productTypeSearch"]
+  div:is(.lEEKEUMB, ._2AWxLI4H) {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+#appContainer
+  div[data-name="products"]
+  div[data-name="productTypeSearch"]
+  div.lEEKEUMB {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+#appContainer
+  div[data-name="products"]
+  div[data-name="productTypeSearch"]
+  div._1EJdlh6R {
+  color: var(--degiro-ext-theme-color) !important;
+}
+#appContainer
+  div[data-name="products"]
+  div[data-name="productTypeSearch"]
+  div.U1-JE85L
+  div._3-1aJ2Xy {
+  background-color: var(--degiro-ext-theme-bg) !important;
+}
