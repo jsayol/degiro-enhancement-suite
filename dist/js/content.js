@@ -1,34 +1,52 @@
 const CSS_ID_PREFIX = "degiro-enhancement-suite--css-";
 const THEME_CLASS_PREFIX = "degiro-enhancement-suite--theme-";
 
+let connectionPort;
+
+/**
+ * Monitor the connection to the extension's background page.
+ * This allows us to detect if it get uninstalled or upgraded
+ * so that we can do some cleanup.
+ */
+chrome.runtime.onConnect.addListener((port) => {
+  connectionPort = port;
+  connectionPort.onDisconnect.addListener(() => {
+    cleanup();
+  });
+});
+
 let currentTheme = "default";
 
 function initialize() {
-  console.log("initialize()");
-
   if (currentTheme !== "default") {
     loadStyleSheet("css/theme.css", "common");
   }
 
   chrome.runtime.sendMessage({ op: "getSettings" }, (settings) => {
-    console.log("getSettings response", settings);
     applyCustomTheme(settings.theme);
   });
 
-  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    console.log({ message, sender, sendResponse });
+  chrome.runtime.onMessage.addListener(onMessageHandler);
+}
 
-    if (!sender.tab) {
-      // Message comes from the extension itself (if theres `tab` then it comes from a content script)
+function cleanup() {
+  applyCustomTheme("default");
+  chrome.runtime.onMessage.removeListener(onMessageHandler);
+  connectionPort.onDisconnect.removeListener(cleanup);
+}
 
-      if (message.op === "settingsUpdate") {
-        applyCustomTheme(message.settings.theme);
-      }
-      if (message.op === "reload") {
-        location.reload();
-      }
+function onMessageHandler(message, sender, sendResponse) {
+  console.log({ message, sender, sendResponse });
+
+  // Only handle messages that come from the extension itself (if theres `tab` then it comes from a content script)
+  if (!sender.tab) {
+    if (message.op === "settingsUpdate") {
+      applyCustomTheme(message.settings.theme);
     }
-  });
+    if (message.op === "reload") {
+      location.reload();
+    }
+  }
 }
 
 function loadStyleSheet(filePath, id) {
@@ -53,8 +71,6 @@ function applyCustomTheme(theme) {
   if (!theme) {
     theme = "default";
   }
-
-  console.log(`applyCustomTheme(${theme}) - currentTheme=${currentTheme}`);
 
   if (theme === currentTheme) {
     return;

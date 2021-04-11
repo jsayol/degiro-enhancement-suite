@@ -41,7 +41,6 @@ document
   .querySelectorAll('input[type="radio"][name="theme"]:not([disabled])')
   .forEach((radio) => {
     radio.addEventListener("change", (event) => {
-      console.log(event);
       const theme = (event.target as HTMLInputElement).value;
       saveSetting("theme", theme);
     });

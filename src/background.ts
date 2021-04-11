@@ -11,6 +11,7 @@ const DEFAULT_SETTINGS: Settings = {
 };
 
 let settings = DEFAULT_SETTINGS;
+let knownTabs: Set<number /*tabId*/> = new Set();
 
 function getSettings(): Promise<Settings> {
   return new Promise((resolve) => {
@@ -90,6 +91,44 @@ chrome.webRequest.onHeadersReceived.addListener(
 );
 
 async function onStartupOrOnInstalledListener() {
+  chrome.tabs.onCreated.addListener((tab) => {
+    if (tab.id) {
+      knownTabs.add(tab.id);
+    }
+  });
+
+  chrome.tabs.onRemoved.addListener((tabId, info) => {
+    knownTabs.delete(tabId);
+  });
+
+  /**
+   * This loops through any open DEGIRO tab to inject the
+   * content script when the extension is installed or updated.
+   * New tabs created after the extension has been installed will
+   * get the script automatically, no need to inject it here.
+   */
+  chrome.tabs.query({ url: "*://trader.degiro.nl/*" }, (tabs) => {
+    tabs.forEach((tab) => {
+      if (tab && tab.id && !knownTabs.has(tab.id)) {
+        knownTabs.add(tab.id);
+        chrome.tabs.executeScript(
+          tab.id,
+          {
+            file: "js/content.js",
+          },
+          () => {
+            /**
+             * When the script has executed we open a connection to the
+             * tab's content script so that it can detect if the extension
+             * gets removed or upgraded.
+             */
+            chrome.tabs.connect(tab.id!);
+          }
+        );
+      }
+    });
+  });
+
   settings = await getSettings();
   propagateSettingsUpdate(settings);
 
@@ -119,11 +158,6 @@ chrome.runtime.onStartup.addListener(onStartupOrOnInstalledListener);
 
 // Fired when the extension is first installed, when the extension is updated to a new version, and when Chrome is updated to a new version.
 chrome.runtime.onInstalled.addListener(onStartupOrOnInstalledListener);
-
-// Fired when a tab is updated
-chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
-  //   if (info.status == "complete") enableCustomThemesForTab(tab);
-});
 
 function propagateSettingsUpdate(settings: Settings) {
   chrome.runtime.sendMessage({ op: "settingsUpdate", settings });
