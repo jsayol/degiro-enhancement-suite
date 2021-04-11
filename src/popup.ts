@@ -8,7 +8,6 @@ function reloadOpenTabs() {
     tabs.forEach((tab) => {
       if (tab && tab.id) {
         chrome.tabs.reload(tab.id);
-        // chrome.tabs.sendMessage(tab.id, { op: "reload" });
       }
     });
   });
@@ -70,6 +69,16 @@ document
         iframe.setAttribute(
           "src",
           "https://trader.degiro.nl/trader/?orderMode#/markets?newOrder"
+        );
+
+        // When it loads, notify the frame that it's supposed to show
+        // the order mode page (in case the user has to log in)
+        iframe.addEventListener(
+          "load",
+          () => {
+            iframe.contentWindow?.postMessage("orderModeFrame", "*");
+          },
+          false
         );
       }
     }

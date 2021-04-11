@@ -103,4 +103,22 @@ function applyCustomTheme(theme) {
   currentTheme = theme;
 }
 
+if (window.parent !== window) {
+  window.addEventListener("message", (event) => {
+    if (event.data === "orderModeFrame") {
+      const isTraderPage = !!window.location.href.match(/\/trader\/\#/);
+      const isOrderModePage = !!window.location.href.match(/\?orderMode/);
+      if (isTraderPage && !isOrderModePage) {
+        /**
+         * We're inside an iframe that requested the "global order mode" but
+         * the user had to log in and the app routed to the main page instead.
+         * Let's take the user back to the order mode page again.
+         */
+        window.location.href =
+          "https://trader.degiro.nl/trader/?orderMode#/markets?newOrder";
+      }
+    }
+  });
+}
+
 initialize();

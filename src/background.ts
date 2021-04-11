@@ -120,7 +120,7 @@ async function onStartupOrOnInstalledListener() {
             /**
              * When the script has executed we open a connection to the
              * tab's content script so that it can detect if the extension
-             * gets removed or upgraded.
+             * gets uninstalled or upgraded.
              */
             chrome.tabs.connect(tab.id!);
           }
