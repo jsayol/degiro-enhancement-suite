@@ -29,8 +29,9 @@
   ],
   "web_accessible_resources": [
     "css/theme.css",
-    "css/themes/soft.css",
     "css/themes/dark.css",
+    "css/themes/soft-blue.css",
+    "css/themes/soft-green.css",
     "css/themes/black-hole.css",
     "css/themes/high-contrast-white.css",
     "css/themes/high-contrast-black.css"

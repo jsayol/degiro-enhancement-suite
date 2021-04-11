@@ -92,13 +92,11 @@ function applyCustomTheme(theme: string) {
   // Unload any previous theme css files.
   // Note: It's important to do this after loading the new one to avoid
   // any jitter when switching themes. Not critical but looks ugly otherwise.
-  setTimeout(() => {
-    document
-      .querySelectorAll(
-        `link[id^='${CSS_ID_PREFIX}theme-']:not([id='${CSS_ID_PREFIX}theme-${theme}'])`
-      )
-      .forEach((sheet) => unloadStyleSheet(sheet.id, true));
-  }, 1000);
+  document
+    .querySelectorAll(
+      `link[id^='${CSS_ID_PREFIX}theme-']:not([id='${CSS_ID_PREFIX}theme-${theme}'])`
+    )
+    .forEach((sheet) => unloadStyleSheet(sheet.id, true));
 
   currentTheme = theme;
 }
@@ -121,4 +119,7 @@ if (window.parent !== window) {
   });
 }
 
-initialize();
+// TODO: this is temporary to avoid applying themes to the quick order iframe
+if (window.parent === window) {
+  initialize();
+}
