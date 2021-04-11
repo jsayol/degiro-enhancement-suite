@@ -1,5 +1,4 @@
 node_modules/
 dist/js/*
-!dist/js/content.js
 priv/
 release/

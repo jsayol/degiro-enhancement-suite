@@ -1,7 +1,7 @@
 const CSS_ID_PREFIX = "degiro-enhancement-suite--css-";
 const THEME_CLASS_PREFIX = "degiro-enhancement-suite--theme-";
 
-let connectionPort;
+let connectionPort: chrome.runtime.Port;
 
 /**
  * Monitor the connection to the extension's background page.
@@ -10,9 +10,7 @@ let connectionPort;
  */
 chrome.runtime.onConnect.addListener((port) => {
   connectionPort = port;
-  connectionPort.onDisconnect.addListener(() => {
-    cleanup();
-  });
+  connectionPort.onDisconnect.addListener(cleanup);
 });
 
 let currentTheme = "default";
@@ -35,9 +33,11 @@ function cleanup() {
   connectionPort.onDisconnect.removeListener(cleanup);
 }
 
-function onMessageHandler(message, sender, sendResponse) {
-  console.log({ message, sender, sendResponse });
-
+function onMessageHandler(
+  message: any,
+  sender: chrome.runtime.MessageSender,
+  sendResponse: (response?: any) => void
+): void {
   // Only handle messages that come from the extension itself (if theres `tab` then it comes from a content script)
   if (!sender.tab) {
     if (message.op === "settingsUpdate") {
@@ -49,25 +49,25 @@ function onMessageHandler(message, sender, sendResponse) {
   }
 }
 
-function loadStyleSheet(filePath, id) {
+function loadStyleSheet(filePath: string, id: string) {
   var link = document.createElement("link");
   link.setAttribute("href", chrome.extension.getURL(filePath));
   link.setAttribute("id", `${CSS_ID_PREFIX}${id}`);
   link.setAttribute("type", "text/css");
   link.setAttribute("rel", "stylesheet");
-  document.querySelector("html").appendChild(link);
+  document.querySelector("html")?.appendChild(link);
 }
 
-function unloadStyleSheet(id, isFullId = false) {
+function unloadStyleSheet(id: string, isFullId = false) {
   var cssNode = document.querySelector(
     `#${isFullId ? "" : CSS_ID_PREFIX}${id}`
   );
-  if (cssNode) {
+  if (cssNode && cssNode.parentNode) {
     cssNode.parentNode.removeChild(cssNode);
   }
 }
 
-function applyCustomTheme(theme) {
+function applyCustomTheme(theme: string) {
   if (!theme) {
     theme = "default";
   }
