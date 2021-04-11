@@ -124,8 +124,8 @@ span.quickOrderIcon {
   text-shadow: 0 0 1px #007bc2;
 }
 
-.reloadButton {
-  /* display: none; */
+#reloadButton {
+  display: none;
   top: 34px;
   right: 3px;
   position: absolute;
@@ -138,11 +138,11 @@ span.quickOrderIcon {
   background-color: transparent;
 }
 
-.reloadButton:focus {
+#reloadButton:focus {
   outline: 0;
 }
 
-.reloadButton:active {
+#reloadButton:active {
   top: 35px;
   right: 2px;
 }

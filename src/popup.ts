@@ -7,7 +7,8 @@ function reloadOpenTabs() {
   chrome.tabs.query({ url: "*://trader.degiro.nl/*" }, (tabs) => {
     tabs.forEach((tab) => {
       if (tab && tab.id) {
-        chrome.tabs.sendMessage(tab.id, { op: "reload" });
+        chrome.tabs.reload(tab.id);
+        // chrome.tabs.sendMessage(tab.id, { op: "reload" });
       }
     });
   });
@@ -36,9 +37,6 @@ function loadSettings() {
 
 document.addEventListener("DOMContentLoaded", loadSettings);
 
-const saveButton = document.getElementById("save");
-saveButton && saveButton.addEventListener("click", reloadOpenTabs);
-
 document
   .querySelectorAll('input[type="radio"][name="theme"]:not([disabled])')
   .forEach((radio) => {
@@ -49,23 +47,40 @@ document
     });
   });
 
-document.querySelector("#locale")?.addEventListener("change", (event) => {
-  saveSetting("locale", (event.target as HTMLSelectElement).value);
-});
+(document.querySelector("#locale") as HTMLSelectElement).addEventListener(
+  "change",
+  (event) => {
+    saveSetting("locale", (event.target as HTMLSelectElement).value);
+    (document.querySelector(
+      "#reloadButton"
+    ) as HTMLButtonElement).style.display = "block";
+  }
+);
 
-document.querySelector("#tab2")?.addEventListener("change", (event) => {
-  const selected = (event.target as HTMLInputElement).value === "on";
+(document.querySelector("#tab2") as HTMLInputElement).addEventListener(
+  "change",
+  (event) => {
+    const selected = (event.target as HTMLInputElement).value === "on";
 
-  if (selected) {
-    const iframe = document.querySelector(
-      "iframe#quickOrder"
-    ) as HTMLIFrameElement;
+    if (selected) {
+      const iframe = document.querySelector(
+        "iframe#quickOrder"
+      ) as HTMLIFrameElement;
 
-    if (!iframe.hasAttribute("src")) {
-      iframe.setAttribute(
-        "src",
-        "https://trader.degiro.nl/trader/?orderMode#/markets?newOrder"
-      );
+      if (!iframe.hasAttribute("src")) {
+        iframe.setAttribute(
+          "src",
+          "https://trader.degiro.nl/trader/?orderMode#/markets?newOrder"
+        );
+      }
     }
   }
-});
+);
+
+(document.querySelector("#reloadButton") as HTMLButtonElement).addEventListener(
+  "click",
+  (event) => {
+    reloadOpenTabs();
+    (event.target as HTMLButtonElement).style.display = "none";
+  }
+);

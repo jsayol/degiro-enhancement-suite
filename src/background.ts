@@ -12,39 +12,26 @@ const DEFAULT_SETTINGS: Settings = {
 
 let settings = DEFAULT_SETTINGS;
 
-function getSettings(callback: (o: Settings) => any) {
-  chrome.storage.sync.get(DEFAULT_SETTINGS, (settings) => {
-    if (callback) {
-      callback(settings as Settings);
-    }
+function getSettings(): Promise<Settings> {
+  return new Promise((resolve) => {
+    chrome.storage.sync.get(DEFAULT_SETTINGS, (items) => {
+      resolve(items as Settings);
+    });
   });
 }
 
-function syncSetting(name: string, value: any, callback?: Function) {
-  console.log(name in settings, settings[name as keyof Settings] !== value);
-  if (name in settings && settings[name as keyof Settings] !== value) {
-    console.log("Syncing", name, value);
-    const setting = {
-      [name]: value,
-    };
-
-    settings[name as keyof Settings] = value;
-
-    chrome.storage.sync.set(setting, () => {
-      if (callback) {
-        callback();
-      }
-      // chrome.runtime.sendMessage('reload', () => {
-      //     window.close();
-      // });
-
-      propagateSettingsUpdate(settings);
-    });
-
-    // if (name === "theme") {
-    //   applyCustomTheme(value);
-    // }
-  }
+function saveSettingItem(name: string, value: any): Promise<void> {
+  return new Promise<void>((resolve) => {
+    if (name in settings && settings[name as keyof Settings] !== value) {
+      settings[name as keyof Settings] = value;
+      chrome.storage.sync.set({ [name]: value }, () => {
+        propagateSettingsUpdate(settings);
+        resolve();
+      });
+    } else {
+      resolve();
+    }
+  });
 }
 
 // Intercept the request for the I18N file and replace it with the user's preferred language
@@ -69,19 +56,14 @@ function onBeforeRequestListener(
   }
 }
 
-// Remove the "x-frame-options" response header so we can show the quick order page in an iframe
+// Remove the "x-frame-options" response header so we can show the quick order page inside an iframe
 function onHeadersReceivedListener(
   details: chrome.webRequest.WebResponseHeadersDetails
 ): chrome.webRequest.BlockingResponse | void {
   if (details.responseHeaders) {
     const responseHeaders = details.responseHeaders.filter(
-      (h) => h.name !== "x-frame-options"
+      (header) => header.name.toLowerCase() !== "x-frame-options"
     );
-
-    // if (details.responseHeaders.some(h => h.name === "x-frame-options")) {
-    //     console.log({ details, responseHeaders });
-    // }
-
     return { responseHeaders };
   }
 }
@@ -95,93 +77,56 @@ function onErrorOccurredListener(
 chrome.webRequest.onErrorOccurred.addListener(onErrorOccurredListener, {
   urls: ["<all_urls>"],
 });
+
 chrome.webRequest.onBeforeRequest.addListener(
   onBeforeRequestListener,
   { urls: ["<all_urls>"] },
-  [
-    // options: "blocking", "requestBody"
-    "blocking",
-  ]
+  ["blocking"]
 );
 chrome.webRequest.onHeadersReceived.addListener(
   onHeadersReceivedListener,
   { urls: ["<all_urls>"] },
-  [
-    // options: "blocking", "responseHeaders", or "extraHeaders"
-    "blocking",
-    "responseHeaders",
-  ]
+  ["blocking", "responseHeaders"]
 );
 
-let onStartupOrOnInstalledListener = function () {
-  console.log("onStartupOrOnInstalledListener");
-  getSettings((items) => {
-    console.log(settings);
-    settings = items;
-    propagateSettingsUpdate(settings);
-  });
+async function onStartupOrOnInstalledListener() {
+  settings = await getSettings();
+  propagateSettingsUpdate(settings);
 
-  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    console.log({ message, sender });
-
-    if (message === "reload") {
-      chrome.tabs.executeScript({ code: "window.location.reload();" });
-      sendResponse();
-    } else if ("op" in message) {
-      console.log("op in message");
-      //   if (message.op === "getSettings") {
-      //     getSettings((list) => sendResponse(list));
-      //   } else
-      if (message.op === "saveSetting") {
-        console.log("saveSetting");
-        const { name, value } = message;
-        syncSetting(name, value, () => sendResponse());
-      } else if (message.op === "getSettings") {
-        sendResponse(settings);
-        // propagateSettingsUpdate(settings);
+  chrome.runtime.onMessage.addListener(
+    async (message, sender, sendResponse) => {
+      if ("op" in message) {
+        switch (message.op) {
+          case "saveSetting":
+            const { name, value } = message;
+            await saveSettingItem(name, value);
+            break;
+          case "getSettings":
+            sendResponse(settings);
+            break;
+        }
       }
-    } else {
-      sendResponse();
     }
-  });
-};
+  );
+}
 
-// happens on browser start
-chrome.runtime.onStartup.addListener(function () {
-  onStartupOrOnInstalledListener();
-});
+/**
+ * Fired when a profile that has this extension installed first starts up.
+ * This event is not fired when an incognito profile is started, even if
+ * this extension is operating in 'split' incognito mode.
+ **/
+chrome.runtime.onStartup.addListener(onStartupOrOnInstalledListener);
 
-// happens on Reload of extension
-chrome.runtime.onInstalled.addListener(function () {
-  onStartupOrOnInstalledListener();
-});
+// Fired when the extension is first installed, when the extension is updated to a new version, and when Chrome is updated to a new version.
+chrome.runtime.onInstalled.addListener(onStartupOrOnInstalledListener);
 
+// Fired when a tab is updated
 chrome.tabs.onUpdated.addListener((tabId, info, tab) => {
   //   if (info.status == "complete") enableCustomThemesForTab(tab);
 });
 
-// function enableCustomThemesForTab(tab: chrome.tabs.Tab) {
-//   var tabUrl = tab.url;
-//   if (tabUrl && tabUrl.match("^https?://trader.degiro.nl")) {
-//     console.log(`enableCustomThemesForTab(${tab.id})`);
-//     chrome.tabs.insertCSS(tab.id as number, { file: "css/theme.css" });
-//   }
-// }
-
-// function applyCustomTheme(theme: string) {
-//   console.log(`applyCustomTheme(${theme})`);
-//   chrome.runtime.sendMessage({ op: "applyCustomTheme", theme });
-//   //   chrome.tabs.query({ url: "*://trader.degiro.nl/*" }, (tabs) => {
-//   //     console.log(tabs);
-//   //     // tabs.forEach((tab) => enableCustomThemesForTab(tab));
-//   //   });
-// }
-
 function propagateSettingsUpdate(settings: Settings) {
-  console.log("propagateSettingsUpdate", settings);
-
   chrome.runtime.sendMessage({ op: "settingsUpdate", settings });
-
   chrome.tabs.query({ url: "*://trader.degiro.nl/*" }, (tabs) => {
     tabs.forEach((tab) => {
       if (tab && tab.id) {
