@@ -1,6 +1,9 @@
 const CSS_ID_PREFIX = "degiro-enhancement-suite--css-";
 const THEME_CLASS_PREFIX = "degiro-enhancement-suite--theme-";
+const onColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
+let currentTheme = "default";
+let isAutoTheme = false;
 let connectionPort: chrome.runtime.Port;
 
 /**
@@ -13,17 +16,11 @@ chrome.runtime.onConnect.addListener((port) => {
   connectionPort.onDisconnect.addListener(cleanup);
 });
 
-let currentTheme = "default";
-
 function initialize() {
   if (currentTheme !== "default") {
     loadStyleSheet("css/theme.css", "common");
   }
-
-  chrome.runtime.sendMessage({ op: "getSettings" }, (settings) => {
-    applyCustomTheme(settings.theme);
-  });
-
+  chrome.runtime.sendMessage({ op: "getSettings" }, handleSettingsUpdate);
   chrome.runtime.onMessage.addListener(onMessageHandler);
 }
 
@@ -31,6 +28,10 @@ function cleanup() {
   applyCustomTheme("default");
   chrome.runtime.onMessage.removeListener(onMessageHandler);
   connectionPort.onDisconnect.removeListener(cleanup);
+}
+
+function handleSettingsUpdate(settings: Settings) {
+  applyCustomTheme(settings.theme);
 }
 
 function onMessageHandler(
@@ -41,7 +42,7 @@ function onMessageHandler(
   // Only handle messages that come from the extension itself (if theres `tab` then it comes from a content script)
   if (!sender.tab) {
     if (message.op === "settingsUpdate") {
-      applyCustomTheme(message.settings.theme);
+      handleSettingsUpdate(message.settings);
     }
     if (message.op === "reload") {
       location.reload();
@@ -72,6 +73,23 @@ function applyCustomTheme(theme: string) {
     theme = "default";
   }
 
+  const wasAutoTheme = isAutoTheme;
+  isAutoTheme = theme === "auto";
+
+  if (isAutoTheme) {
+    // Determine which theme we should use
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      theme = "dark";
+    } else {
+      theme = "default";
+    }
+    if (!wasAutoTheme) {
+      startDarkModeDetection();
+    }
+  } else if (wasAutoTheme) {
+    stopDarkModeDetection();
+  }
+
   if (theme === currentTheme) {
     return;
   }
@@ -99,6 +117,22 @@ function applyCustomTheme(theme: string) {
     .forEach((sheet) => unloadStyleSheet(sheet.id, true));
 
   currentTheme = theme;
+}
+
+function startDarkModeDetection() {
+  if (window.matchMedia("(prefers-color-scheme)").media === "not all") {
+    // Color scheme detection is not supported
+    return;
+  }
+  onColorScheme.addEventListener("change", colorSchemeChangeHandler);
+}
+
+function stopDarkModeDetection() {
+  onColorScheme.removeEventListener("change", colorSchemeChangeHandler);
+}
+
+function colorSchemeChangeHandler(event: MediaQueryListEvent) {
+  applyCustomTheme("auto");
 }
 
 if (window.parent !== window) {

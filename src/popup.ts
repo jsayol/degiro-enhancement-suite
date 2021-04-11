@@ -31,7 +31,17 @@ function loadSettings() {
     if (themeElement) {
       themeElement.checked = true;
     }
+
+    applyPopupTheme(settings.theme);
   });
+}
+
+function applyPopupTheme(theme: string) {
+  if (!theme || theme === "default") {
+    delete document.body.dataset.enhancementSuitTheme;
+  } else {
+    document.body.dataset.enhancementSuitTheme = theme;
+  }
 }
 
 document.addEventListener("DOMContentLoaded", loadSettings);
@@ -42,6 +52,7 @@ document
     radio.addEventListener("change", (event) => {
       const theme = (event.target as HTMLInputElement).value;
       saveSetting("theme", theme);
+      applyPopupTheme(theme);
     });
   });
 
