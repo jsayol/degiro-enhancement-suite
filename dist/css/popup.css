@@ -119,7 +119,15 @@ div.radio-element label {
   vertical-align: bottom;
 }
 
-span.quickOrderIcon {
+.tabIcon {
+  margin-right: 4px;
+}
+
+.tabIcon.settingsIcon {
+  font-size: 1.3rem;
+}
+
+.tabIcon.quickOrderIcon {
   color: transparent;
   text-shadow: 0 0 1px #007bc2;
 }
@@ -163,7 +171,8 @@ span.quickOrderIcon {
 }
 
 .tabs > .tab > label {
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: -1px;
   padding: 6px 6px;
   border: 1px solid #ccc;
@@ -175,6 +184,7 @@ span.quickOrderIcon {
   letter-spacing: 1px;
   cursor: pointer;
   /* transition: all 0.3s; */
+  line-height: 1rem;
 }
 
 .tabs > .tab:hover label {
