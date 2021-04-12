@@ -4,7 +4,7 @@
   filter: contrast(var(--degiro-ext-theme-global-contrast))
     saturate(var(--degiro-ext-theme-global-saturate)) !important;
   color: var(--degiro-ext-theme-color) !important;
-  background-color: var(--degiro-ext-theme-app-bg) !important;
+  background-color: var(--degiro-ext-theme-bg-app) !important;
 }
 
 #appContainer aside img[alt="DEGIRO-TRADER-CLIENT"],
@@ -20,7 +20,7 @@
 }
 
 #appContainer aside {
-  background-color: var(--degiro-ext-theme-prominent-bg) !important;
+  background-color: var(--degiro-ext-theme-bg-prominent) !important;
 }
 
 #appContainer header {
@@ -39,8 +39,13 @@ main div[data-name="notification"] {
   background-color: var(--degiro-ext-theme-bg-lite) !important;
 }
 
+/* TODO: don't use class names */
+#appContainer > div > main + div._1KJUWku- {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
 #appContainer > div > div > div[data-name="modal"] {
-  background-color: var(--degiro-ext-theme-bg-lite) !important;
+  background-color: var(--degiro-ext-theme-bg-midlite) !important;
 }
 
 #appContainer
@@ -85,7 +90,7 @@ body > div[data-name="portal"] div[role="dialog"] {
 body > div[data-name="portal"] div[data-test-key="popover-container"],
 body > div[data-name="portal"] div[data-test-key="popover-container"] > div {
   color: var(--degiro-ext-theme-color) !important;
-  background-color: var(--degiro-ext-theme-prominent-bg) !important;
+  background-color: var(--degiro-ext-theme-bg-prominent) !important;
 }
 
 body
@@ -126,7 +131,7 @@ body
   > div:first-child
   > div:first-child
   button[role="option"] {
-  background-color: var(--degiro-ext-theme-prominent-bg) !important;
+  background-color: var(--degiro-ext-theme-bg-prominent) !important;
 }
 
 body

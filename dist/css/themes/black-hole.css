@@ -1,8 +1,8 @@
 :root {
   --degiro-blue: #009fdf;
   --degiro-ext-theme-login-logo-filter: drop-shadow(0px 0px 5px #989898);
-  --degiro-ext-theme-app-bg: #000000;
-  --degiro-ext-theme-prominent-bg: #000000;
+  --degiro-ext-theme-bg-app: #000000;
+  --degiro-ext-theme-bg-prominent: #000000;
   --degiro-ext-theme-bg: #040404;
   --degiro-ext-theme-bg-midlite: #080808;
   --degiro-ext-theme-bg-lite: #0b0b0b;
