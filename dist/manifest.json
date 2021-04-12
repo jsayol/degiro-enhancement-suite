@@ -37,7 +37,6 @@
     "css/themes/high-contrast-black.css"
   ],
   "permissions": [
-    "tabs",
     "storage",
     "webRequest",
     "webRequestBlocking",
