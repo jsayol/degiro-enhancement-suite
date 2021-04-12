@@ -114,7 +114,7 @@ async function onStartupOrOnInstalledListener() {
         chrome.tabs.executeScript(
           tab.id,
           {
-            file: "js/content.js",
+            file: "content/content.js",
           },
           () => {
             /**
@@ -134,6 +134,18 @@ async function onStartupOrOnInstalledListener() {
 
   chrome.runtime.onMessage.addListener(
     async (message, sender, sendResponse) => {
+      if ('__parcel_hmr_reload__' in message) {
+        /**
+         * From: https://v2.parceljs.org/recipes/web-extension/#unexpected-messages
+         * `In development mode, your background scripts will receive a message event
+         * with the content { __parcel_hmr_reload__: true } whenever the page is reloaded.
+         * Parcel will use this automatically to refresh the extension when necessary,
+         * so you'll want to ensure any messages your background scripts receive do not
+         * have the __parcel_hmr_reload__ property before handling them.`
+         */
+        return;
+      }
+
       if ("op" in message) {
         switch (message.op) {
           case "saveSetting":

@@ -1,14 +1,42 @@
 {
-  "name": "degiro-extension",
-  "version": "1.0.1",
-  "description": "Example of using chrome.webRequest API.",
-  "main": "background.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "degiro-enhancement-suite",
+  "version": "1.1.0",
+  "description": "A Web Extension to enhance the DEGIRO webtrader.",
+  "repository": "https://github.com/jsayol/degiro-enhancement-suite",
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "private": true,
+  "targets": {
+    "dev": {
+      "sourceMap": {
+        "inline": true,
+        "inlineSources": true
+      }
+    },
+    "prod": {}
+  },
+  "scripts": {
+    "start": "parcel watch src/manifest.json --host localhost --port 1234 --target dev",
+    "build": "parcel build src/manifest.json --target prod",
+    "clean": "npm run clean:dev && npm run clean:prod",
+    "clean:dev": "rimraf dist/dev",
+    "clean:prod": "rimraf dist/prod",
+    "cleanstart": "npm run clean:dev && npm run start",
+    "cleanbuild": "npm run clean:prod && npm run build",
+    "ff:dev": "web-ext run --source-dir ./dist/dev",
+    "ff:prod": "web-ext run --source-dir ./dist/prod"
+  },
+  "browserslist": ">0.25% and supports async-functions",
   "dependencies": {
-    "@types/chrome": "^0.0.134"
+    "webextension-polyfill": "^0.7.0"
+  },
+  "devDependencies": {
+    "@parcel/config-webextension": "^2.0.0-nightly.2261",
+    "@parcel/transformer-sass": "^2.0.0-nightly.639",
+    "@types/chrome": "^0.0.134",
+    "parcel": "^2.0.0-nightly.637",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4",
+    "web-ext": "^6.0.0"
   }
 }

@@ -9,32 +9,32 @@ img.donationimg {
   margin-right: 4px !important;
   margin-left: 0 !important;
   margin-bottom: 3px !important;
-}
 
-.donationimg:after {
-  vertical-align: middle;
-  height: 25px;
-  padding-top: 0;
-  padding-bottom: 0;
-  border: none;
-  margin-top: 0;
-  margin-right: 6px;
-  margin-left: 0;
-  margin-bottom: 4px !important;
-  content: url("../img/whitelogo.svg");
+  &::after {
+    vertical-align: middle;
+    height: 25px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+    margin-top: 0;
+    margin-right: 6px;
+    margin-left: 0;
+    margin-bottom: 4px !important;
+    // content: url("../../assets/img/whitelogo.svg");
+  }
 }
 
 .btn-container {
   display: inline-block !important;
   white-space: nowrap;
-}
 
-.btn-container.kofi img.donationimg {
-  content: url("../img/cup-border.png");
-}
+  &.kofi img.donationimg {
+    content: url("../../assets/img/cup-border.png");
+  }
 
-.btn-container.crypto img.donationimg {
-  content: url("../img/bitcoin.svg");
+  &.crypto img.donationimg {
+    content: url("../../assets/img/bitcoin.svg");
+  }
 }
 
 span.donationtext {
@@ -65,26 +65,30 @@ a.donation-button {
   font-size: 14px !important;
 }
 
-.btn-container.kofi a.donation-button {
-  background-color: #29abe0;
+.btn-container {
+  &.kofi a.donation-button {
+    background-color: #29abe0;
+  }
+
+  &.crypto a.donation-button {
+    background-color: #f2a900;
+  }
 }
 
-.btn-container.crypto a.donation-button {
-  background-color: #f2a900;
-}
+a.donation-button {
+  &:visited {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
 
-a.donation-button:visited {
-  color: #fff !important;
-  text-decoration: none !important;
-}
+  &:hover {
+    box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 25%);
+  }
 
-a.donation-button:hover {
-  box-shadow: 0px 0px 5px 3px rgb(0 0 0 / 25%);
-}
-
-a.donation-button:active {
-  color: #f5f5f5 !important;
-  text-decoration: none !important;
+  &:active {
+    color: #f5f5f5 !important;
+    text-decoration: none !important;
+  }
 }
 
 .donationtext img.donationimg {

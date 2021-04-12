@@ -18,7 +18,7 @@ chrome.runtime.onConnect.addListener((port) => {
 
 function initialize() {
   if (currentTheme !== "default") {
-    loadStyleSheet("css/theme.css", "common");
+    loadStyleSheet("styles/theme.css", "common");
   }
   chrome.runtime.sendMessage({ op: "getSettings" }, handleSettingsUpdate);
   chrome.runtime.onMessage.addListener(onMessageHandler);
@@ -52,7 +52,7 @@ function onMessageHandler(
 
 function loadStyleSheet(filePath: string, id: string) {
   var link = document.createElement("link");
-  link.setAttribute("href", chrome.extension.getURL(filePath));
+  link.setAttribute("href", chrome.runtime.getURL(filePath));
   link.setAttribute("id", `${CSS_ID_PREFIX}${id}`);
   link.setAttribute("type", "text/css");
   link.setAttribute("rel", "stylesheet");
@@ -96,12 +96,12 @@ function applyCustomTheme(theme: string) {
 
   if (currentTheme === "default") {
     // Load the common CSS styles for a non-default theme
-    loadStyleSheet("css/theme.css", "common");
+    loadStyleSheet("content/styles/theme.css", "common");
   }
 
   if (theme !== "default") {
     // Load StyleSheet for the new theme
-    loadStyleSheet(`css/themes/${theme}.css`, `theme-${theme}`);
+    loadStyleSheet(`content/styles/themes/${theme}.css`, `theme-${theme}`);
   } else {
     // Unload the common CSS styles for a non-default theme
     unloadStyleSheet("common");

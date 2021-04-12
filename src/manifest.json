@@ -1,0 +1,47 @@
+{
+  "name": "Enhancement Suite for DEGIRO",
+  "version": "1.1.0",
+  "description": "A suite of enhancements for the DEGIRO webtrader.",
+  "icons": {
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "72": "assets/icons/icon72.png",
+    "96": "assets/icons/icon96.png",
+    "128": "assets/icons/icon128.png",
+    "144": "assets/icons/icon144.png",
+    "192": "assets/icons/icon192.png"
+  },
+  "background": {
+    "persistent": true,
+    "scripts": ["background/background.ts"]
+  },
+  "browser_action": {
+    "default_title": "Enhancement Suite for DEGIRO",
+    "default_icon": "assets/icons/icon48-round.png",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://trader.degiro.nl/*"],
+      "all_frames": true,
+      "js": ["content/content.ts"]
+    }
+  ],
+  "web_accessible_resources": [
+    "content/styles/theme.scss",
+    "content/styles/themes/dark.scss",
+    "content/styles/themes/soft-blue.scss",
+    "content/styles/themes/soft-green.scss",
+    "content/styles/themes/black-hole.scss",
+    "content/styles/themes/high-contrast-white.scss",
+    "content/styles/themes/high-contrast-black.scss"
+  ],
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://trader.degiro.nl/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "manifest_version": 2
+}

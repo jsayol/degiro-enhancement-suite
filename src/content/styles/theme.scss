@@ -1,0 +1,1285 @@
+@function native-contrast($amount) {
+  @return #{"contrast(#{$amount})"};
+}
+
+@function native-saturate($amount) {
+  @return #{"saturate(#{$amount})"};
+}
+
+@function native-brightness($amount) {
+  @return #{"brightness(#{$amount})"};
+}
+
+@function native-opacity($amount) {
+  @return #{"opacity(#{$amount})"};
+}
+
+#appContainer {
+  filter: native-contrast(var(--degiro-ext-theme-global-contrast))
+    native-saturate(var(--degiro-ext-theme-global-saturate)) !important;
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg-app) !important;
+
+  aside {
+    img[alt="DEGIRO-TRADER-CLIENT"],
+    span[data-name="profileAvatar"],
+    div[data-active="true"] svg {
+      filter: native-brightness(var(--degiro-ext-theme-brightness));
+    }
+  }
+
+  div[data-name="commonOrderButtonLayout"],
+  button[accent="true"]:not([data-name="quickOrderButton"]),
+  img[data-name="countryFlag"],
+  div[role="tabpanel"] *[aria-current="page"],
+  button[data-id][disabled],
+  label[aria-label="Toggle"] span {
+    filter: native-brightness(var(--degiro-ext-theme-brightness));
+  }
+
+  aside {
+    background-color: var(--degiro-ext-theme-bg-prominent) !important;
+  }
+
+  header {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+    background-color: var(--degiro-ext-theme-bg) !important;
+
+    img[src^="images/app-icons/degiro/degiro."] {
+      filter: var(--degiro-ext-theme-login-logo-filter);
+    }
+  }
+}
+
+#loginForm > div:nth-child(3) a {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+main div[data-name="notification"] {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+#appContainer > div > {
+  main + div._1KJUWku- {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+
+  div > div[data-name="modal"] {
+    background-color: var(--degiro-ext-theme-bg-midlite) !important;
+
+    div[data-name="modalContent"] {
+      color: var(--degiro-ext-theme-color) !important;
+    }
+
+    button[data-name="modalActionsItem"] {
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+  }
+}
+
+body {
+  background-color: var(--degiro-ext-theme-bg) !important;
+
+  > div[data-name="portal"] div {
+    &[role="listbox"] {
+      > div {
+        border-color: var(--degiro-ext-theme-border-color) !important;
+        background-color: var(--degiro-ext-theme-bg) !important;
+      }
+
+      button[data-name="selectOption"]:hover {
+        background-color: var(--degiro-ext-theme-bg-lite) !important;
+      }
+    }
+
+    &[role="dialog"] {
+      color: var(--degiro-ext-theme-color) !important;
+      background-color: var(--degiro-ext-theme-bg) !important;
+    }
+
+    &[data-test-key="popover-container"] {
+      color: var(--degiro-ext-theme-color) !important;
+      background-color: var(--degiro-ext-theme-bg-prominent) !important;
+
+      > div {
+        color: var(--degiro-ext-theme-color) !important;
+        background-color: var(--degiro-ext-theme-bg-prominent) !important;
+
+        > {
+          a:hover,
+          button:hover {
+            background-color: var(--degiro-ext-theme-bg-midlite) !important;
+          }
+
+          div {
+            background-color: var(--degiro-ext-theme-border-color) !important;
+          }
+        }
+
+        &:first-child > div:first-child {
+          background-color: var(--degiro-ext-theme-bg-prominent) !important;
+
+          > * {
+            background-color: var(--degiro-ext-theme-bg-prominent) !important;
+          }
+
+          button[role="option"] {
+            background-color: var(--degiro-ext-theme-bg-prominent) !important;
+
+            &:hover {
+              background-color: var(--degiro-ext-theme-bg-midlite) !important;
+            }
+          }
+
+          > div:last-child {
+            border-color: var(--degiro-ext-theme-border-color) !important;
+
+            > button:not([accent]) {
+              color: var(--degiro-ext-theme-color) !important;
+              background-color: var(--degiro-ext-theme-bg) !important;
+              border-color: var(--degiro-ext-theme-border-color) !important;
+
+              &:hover {
+                background-color: var(--degiro-ext-theme-bg-midlite) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+* {
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--degiro-ext-theme-scroll-bg);
+    border: 2px solid var(--degiro-ext-theme-scroll-thumb-bg);
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: var(--degiro-ext-theme-scroll-track-bg);
+  }
+}
+
+div[data-name="commonOrderButtonLayout"] > button {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+
+  &:nth-child(2) {
+    border: 1px solid var(--degiro-ext-theme-border-color) !important;
+    border-left-width: 0px !important;
+  }
+}
+
+button[aria-label="Hint"] i[role="img"][data-name="icon"],
+label[aria-haspopup="listbox"] i[role="img"][data-name="icon"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+div[data-name="fullHeader"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+
+  > div:first-child > div:first-child {
+    color: var(--degiro-ext-theme-color) !important;
+    background-color: var(--degiro-ext-theme-bg) !important;
+    border-color: var(--degiro-ext-theme-border-color) !important;
+
+    * {
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+  }
+
+  button[data-name="cashOrderButton"] {
+    color: var(--degiro-ext-theme-color) !important;
+    background-color: var(--degiro-ext-theme-bg) !important;
+    border-color: var(--degiro-ext-theme-border-color) !important;
+
+    &:hover {
+      background-color: var(--degiro-ext-theme-bg-midlite) !important;
+    }
+  }
+}
+
+button[data-name="exportButton"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+
+  &:hover {
+    background-color: var(--degiro-ext-theme-bg-midlite) !important;
+  }
+}
+
+div[data-name="quickSearch"] {
+  span {
+    &[data-name="productBriefInfo"],
+    &[data-name="productType"] {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+  }
+
+  div:nth-child(2) i[role="img"][data-name="icon"] {
+    color: var(--degiro-ext-theme-color) !important;
+  }
+
+  > div:nth-child(2) > div {
+    &:nth-child(2) span:not([data-name="productName"]) {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+
+    &:nth-child(1) > div:not(:first-child):hover,
+    &:nth-child(2) > div:not(:first-child):hover {
+      background-color: var(--degiro-ext-theme-bg-lite) !important;
+    }
+  }
+}
+
+section {
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+
+  &[data-name="accountSummary"] {
+    div,
+    span:not([data-id="totalPortfolio"]) {
+      color: var(--degiro-ext-theme-color) !important;
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+  }
+}
+
+div[data-name="inputLayout"] {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+label[aria-haspopup="listbox"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+input {
+  &[type="text"],
+  &[type="number"],
+  &[type="password"],
+  &[inputmode="numeric"] {
+    color: var(--degiro-ext-theme-color) !important;
+    background-color: var(--degiro-ext-theme-bg-lite) !important;
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+}
+
+div[role="listbox"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+input {
+  &[type="text"]::placeholder,
+  &[type="number"]::placeholder,
+  &[type="password"]::placeholder,
+  &[inputmode="numeric"]::placeholder {
+    color: var(--degiro-ext-theme-color-secondary) !important;
+  }
+}
+
+div[role="tabpanel"] a:not([aria-current="page"]) {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+#mainContent {
+  > section + div {
+    background-color: var(--degiro-ext-theme-bg-lite) !important;
+    border-color: var(--degiro-ext-theme-border-color) !important;
+
+    > div:nth-child(2) {
+      background-color: var(--degiro-ext-theme-bg-lite) !important;
+      border-color: var(--degiro-ext-theme-border-color) !important;
+
+      > div > div {
+        background-color: var(--degiro-ext-theme-bg-lite) !important;
+        border-color: var(--degiro-ext-theme-border-color) !important;
+      }
+    }
+  }
+
+  ._2yIQtRn4 ._3n28doiM._2uPWOaAd {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+
+  ._1zoYYmyE,
+  table:is([data-name="holidaysCalendar"], [data-name="agendaIpo"]) + div {
+    background-color: var(--degiro-ext-theme-bg) !important;
+  }
+
+  > section + div {
+    div[data-name="horizontalScrollPanelWrapper"] + div {
+      background-color: var(--degiro-ext-theme-bg) !important;
+    }
+
+    > div {
+      &:nth-child(2) > div > div > div div li {
+        border-color: var(--degiro-ext-theme-border-color) !important;
+      }
+
+      &::after,
+      > div > div::after {
+        background-color: var(--degiro-ext-theme-border-color) !important;
+      }
+
+      color: var(--degiro-ext-theme-color) !important;
+      background-color: var(--degiro-ext-theme-bg) !important;
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+
+    button:not([disabled]):not(:is(:hover, :focus)) {
+      color: var(--degiro-ext-theme-color) !important;
+    }
+  }
+}
+
+div {
+  &[data-name="data-vendors"] {
+    color: var(--degiro-ext-theme-color) !important;
+    background-color: var(--degiro-ext-theme-bg-lite) !important;
+  }
+
+  &.highcharts-container {
+    .highcharts-background {
+      fill: var(--degiro-ext-theme-bg);
+    }
+
+    .highcharts-grid > path {
+      stroke: var(--degiro-ext-theme-border-color);
+    }
+
+    .highcharts-axis-labels text {
+      fill: var(--degiro-ext-theme-color) !important;
+      color: var(--degiro-ext-theme-color) !important;
+    }
+
+    svg {
+      * {
+        &[fill="#007336"] {
+          fill: var(--degiro-ext-theme-green-color) !important;
+        }
+
+        &[fill="#FF0000"] {
+          fill: var(--degiro-ext-theme-red-color) !important;
+        }
+
+        &[stroke="#66B366"] {
+          stroke: var(--degiro-ext-theme-green-color) !important;
+        }
+
+        &[stroke="#FF0000"] {
+          stroke: var(--degiro-ext-theme-red-color) !important;
+        }
+
+        &[stroke="#FFFFFF"] {
+          stroke: var(--degiro-ext-theme-bg) !important;
+        }
+      }
+
+      g.highcharts-series path {
+        &[fill="rgba(0, 159, 227, 0.25)"] {
+          fill: var(--degiro-ext-theme-chart-line-bg) !important;
+        }
+
+        &[stroke="#009FE3"] {
+          stroke: var(--degiro-ext-theme-chart-line-color) !important;
+        }
+      }
+
+      text[x="708"] {
+        &:nth-last-child(2) {
+          fill: var(--degiro-ext-theme-textongreen-color) !important;
+          color: var(--degiro-ext-theme-textongreen-color) !important;
+        }
+
+        &:nth-last-child(1) {
+          fill: var(--degiro-ext-theme-textonred-color) !important;
+          color: var(--degiro-ext-theme-textonred-color) !important;
+        }
+      }
+    }
+  }
+
+  &[data-name="marketIndices"] {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+
+    ~ div {
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+
+    button[data-name="productItem"] {
+      background-color: var(--degiro-ext-theme-bg-lite) !important;
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+
+    div[data-name="chartPeriod"] button {
+      background-color: var(--degiro-ext-theme-bg) !important;
+    }
+
+    button {
+      &[data-name="prevProductButton"],
+      &[data-name="nextProductButton"] {
+        background-color: var(--degiro-ext-theme-bg) !important;
+        border-color: var(--degiro-ext-theme-border-color) !important;
+      }
+    }
+
+    div:not([data-name="chartPeriod"]) button._1ivg9Ttu {
+      background-color: var(--degiro-ext-theme-bg) !important;
+    }
+  }
+
+  &[data-name="marketMovers"] div {
+    &[data-name="marketWinner"] {
+      background-color: var(--degiro-ext-theme-bg) !important;
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+
+    &[data-name="marketLoser"] {
+      border-color: var(--degiro-ext-theme-border-color) !important;
+      background-color: var(--degiro-ext-theme-bg-lite) !important;
+    }
+  }
+
+  &[data-name="marketIndices"] > div:nth-child(3) > div:nth-child(2) {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+
+  &[data-name="newsList"] {
+    a {
+      background-color: var(--degiro-ext-theme-bg) !important;
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+
+    time[data-field="date"] {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+
+    > a._3sik6KCI {
+      background-color: var(--degiro-ext-theme-bg-midlite) !important;
+    }
+  }
+
+  &[data-name="newsArticlePage"] {
+    > div:nth-child(3) > div {
+      &:before,
+      &:after {
+        background: linear-gradient(
+          180deg,
+          var(--degiro-ext-theme-bg) 30%,
+          hsla(0, 0%, 100%, 0)
+        ) !important;
+      }
+    }
+
+    div[data-name="articleContent"] > h2 + div > span {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+  }
+}
+
+#appContainer
+  button[type="button"][aria-label="Hint"][data-name="tooltipButton"]
+  > span[data-name="productCategory"] {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+  border-color: var(--degiro-ext-theme-color) !important;
+}
+
+section[data-name="sideInformationPanel"] {
+  color: var(--degiro-ext-theme-color) !important;
+
+  span[data-name="productBriefInfo"] {
+    color: var(--degiro-ext-theme-color-secondary) !important;
+  }
+}
+
+div[data-name="productOrdersBook"] {
+  th._3TdTMQeT {
+    background-color: var(--degiro-ext-theme-bg-lite) !important;
+  }
+
+  tr,
+  th,
+  td {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+
+  tr td {
+    &:first-child div:first-child span:first-child,
+    &:last-child div:first-child span:nth-child(2) {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+  }
+}
+
+button[data-name="ordersBookHintButton"] i[role="img"][data-name="icon"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+section[data-name="sideInformationPanel"] fieldset button:not([disabled]) {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+span[data-field="feedQuality"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+section[data-name="sideInformationPanel"] div[data-name="orderConfirmation"] > {
+  div:nth-child(7),
+  section > div {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+}
+
+div[data-name="orderConfirmationFees"] span[data-name="feeSchedule"] {
+  color: var(--degiro-ext-theme-color-secondary) !important;
+}
+
+section[data-name="sideInformationPanel"] {
+  div[data-name="orderConfirmation"] > div:last-child > button:not([accent]) {
+    color: var(--degiro-ext-theme-color) !important;
+    background-color: var(--degiro-ext-theme-bg) !important;
+    border-color: var(--degiro-ext-theme-border-color) !important;
+
+    &:hover {
+      background-color: var(--degiro-ext-theme-bg-midlite) !important;
+    }
+  }
+
+  span[data-name="productType"] {
+    color: var(--degiro-ext-theme-color-secondary) !important;
+  }
+
+  > div[data-name="orderForm"] {
+    > header + div > div:first-child > div:nth-child(2) > div {
+      border-color: var(--degiro-ext-theme-border-color) !important;
+
+      &:hover {
+        background-color: var(--degiro-ext-theme-bg-lite) !important;
+      }
+    }
+
+    div[data-name="toggleButton"] {
+      border-top-color: var(--degiro-ext-theme-border-color) !important;
+    }
+  }
+
+  a[data-name="productPositionInfo"] {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+}
+
+#mainContent {
+  div {
+    &[data-name="favourites"] {
+      > div:first-child > div:first-child > div:first-child {
+        background-color: var(--degiro-ext-theme-bg) !important;
+      }
+
+      div[aria-live="polite"] > div {
+        background-color: var(--degiro-ext-theme-bg) !important;
+        border-color: var(--degiro-ext-theme-border-color) !important;
+
+        th,
+        td {
+          background-color: var(--degiro-ext-theme-bg) !important;
+          border-color: var(--degiro-ext-theme-border-color) !important;
+        }
+      }
+    }
+
+    &[aria-live="polite"]
+      *:is(table[data-name="holidaysCalendar"], table[data-name="agendaSplits"], div[data-name="horizontalScrollPanel"]
+        table) {
+      background-color: var(--degiro-ext-theme-bg) !important;
+      border-color: var(--degiro-ext-theme-border-color) !important;
+
+      th,
+      td {
+        background-color: var(--degiro-ext-theme-bg) !important;
+        border-color: var(--degiro-ext-theme-border-color) !important;
+      }
+    }
+  }
+
+  :is(div[data-name="portfolio"]
+      div[data-name="positions"]
+      > div:first-child, div[data-name="ordersHistory"], div[data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"]) {
+    background-color: var(--degiro-ext-theme-bg) !important;
+    border-color: var(--degiro-ext-theme-border-color) !important;
+
+    th,
+    tr:nth-child(even) td {
+      background-color: var(--degiro-ext-theme-bg) !important;
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+  }
+
+  div {
+    &[data-name="portfolio"] div {
+      &[data-name="cashFundCompensations"] {
+        background-color: var(--degiro-ext-theme-bg) !important;
+        border-color: var(--degiro-ext-theme-border-color) !important;
+
+        > div {
+          background-color: var(--degiro-ext-theme-bg) !important;
+          border-color: var(--degiro-ext-theme-border-color) !important;
+
+          th {
+            background-color: var(--degiro-ext-theme-bg) !important;
+            border-color: var(--degiro-ext-theme-border-color) !important;
+          }
+        }
+      }
+
+      &[data-name="positions"][data-empty="false"] {
+        background-color: var(--degiro-ext-theme-bg-lite) !important;
+      }
+    }
+
+    &[data-name="favourites"] div[aria-live="polite"] > div th,
+    &[aria-live="polite"]
+      *:is(table[data-name="holidaysCalendar"], table[data-name="agendaSplits"], div[data-name="horizontalScrollPanel"]
+        table)
+      th {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+  }
+
+  :is(div[data-name="portfolio"]
+      div[data-name="positions"]
+      > div:first-child, div[data-name="ordersHistory"], div[data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"])
+    th {
+    color: var(--degiro-ext-theme-color-secondary) !important;
+  }
+
+  div {
+    &[data-name="portfolio"] div[data-name="cashFundCompensations"] > div th {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+
+    &[data-name="favourites"] div[aria-live="polite"] > div {
+      th[data-field="name"] {
+        &::before,
+        &::after {
+          background-color: var(--degiro-ext-theme-border-color) !important;
+        }
+      }
+
+      td:first-child {
+        &::before,
+        &::after {
+          background-color: var(--degiro-ext-theme-border-color) !important;
+        }
+      }
+    }
+
+    &[data-name="portfolio"]
+      div[data-name="positions"]
+      > div:first-child
+      th[data-field="productInfo.name"] {
+      &::before,
+      &::after {
+        background-color: var(--degiro-ext-theme-border-color) !important;
+      }
+    }
+  }
+
+  :is(div[data-name="portfolio"]
+      div[data-name="positions"]
+      > div:first-child, div[data-name="ordersHistory"], div[data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"])
+    td:first-child {
+    &::before,
+    &::after {
+      background-color: var(--degiro-ext-theme-border-color) !important;
+    }
+  }
+
+  div[data-name="portfolio"] > div:first-child {
+    background-color: var(--degiro-ext-theme-bg-lite) !important;
+  }
+
+  :is(div[data-name="portfolio"]
+      div[data-name="positions"]
+      > div:first-child, div[data-name="ordersHistory"], div[data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"])
+    tr:nth-child(even):hover
+    td,
+  div[data-name="portfolio"] div[data-name="cashFundCompensations"] > div td {
+    background-color: var(--degiro-ext-theme-bg-midlite) !important;
+  }
+
+  :is(div[data-name="portfolio"]
+      div[data-name="positions"]
+      > div:first-child, div[data-name="ordersHistory"], div[data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"])
+    tr:nth-child(odd)
+    td,
+  div[aria-live="polite"]
+    *:is(table[data-name="holidaysCalendar"], table[data-name="agendaSplits"], div[data-name="horizontalScrollPanel"]
+      table)
+    tr:nth-child(odd)
+    td {
+    background-color: var(--degiro-ext-theme-bg-lite) !important;
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+
+  :is(div[data-name="portfolio"]
+      div[data-name="positions"], div[data-name="ordersHistory"], div[data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"])
+    i[role="img"][data-name="icon"] {
+    color: var(--degiro-ext-theme-color) !important;
+  }
+
+  div {
+    &[data-name="portfolio"] {
+      div[data-name="cashFundCompensations"]
+        tr[data-name="compensationItem"]
+        td {
+        border-color: var(--degiro-ext-theme-border-color) !important;
+      }
+
+      > div:first-child > div:first-child > div:first-child * {
+        background-color: var(--degiro-ext-theme-bg-lite) !important;
+      }
+    }
+
+    &:not([data-name])
+      > div:nth-child(2)
+      > div:first-child
+      > div:first-child
+      > div:first-child
+      > div:first-child
+      > div:nth-child(3) {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+  }
+}
+
+#appContainer {
+  #appWorkspace button {
+    &[data-action="buy"]:not([disabled]) {
+      color: var(--degiro-ext-theme-textongreen-color) !important;
+      background-color: var(--degiro-ext-theme-green-color) !important;
+    }
+
+    &[data-action="sell"]:not([disabled]) {
+      color: var(--degiro-ext-theme-textonred-color) !important;
+      background-color: var(--degiro-ext-theme-red-color) !important;
+    }
+  }
+
+  span {
+    &[data-positive="true"]:is([data-field="totalPl"], :not(:is([data-id="totalPortfolio"], [data-field="depreciationValue"], [data-field="depreciationPercent"], [data-field="initialPrice"], [data-field="firePrice"]))),
+    &[data-negative="false"] {
+      color: var(--degiro-ext-theme-green-color) !important;
+    }
+
+    &[data-positive="false"]:is([data-field="totalPl"], :not(:is([data-id="totalPortfolio"], [data-field="depreciationValue"], [data-field="depreciationPercent"], [data-field="initialPrice"], [data-field="firePrice"]))),
+    &[data-negative="true"] {
+      color: var(--degiro-ext-theme-red-color) !important;
+    }
+  }
+}
+
+div {
+  &[data-name="topNews"] {
+    *:not(a) {
+      color: var(--degiro-ext-theme-color);
+    }
+
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+
+  &[data-name="latestNews"],
+  &[data-name="newsArticlePage"] > div {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+
+  &[data-name="topNews"] > div > {
+    a > div > div > time,
+    section > a > div > time {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+
+    a > div > div:nth-child(3),
+    section > a > div > div {
+      color: var(--degiro-ext-theme-color) !important;
+    }
+  }
+}
+
+label[aria-haspopup="listbox"]._2rXS8vA8._28I6HDQH:not(._3XeeYfzY),
+div[data-name="frontPageSubCategorySelect"] button[data-id="frontPage"] {
+  border-color: transparent !important;
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg) !important;
+}
+
+label[aria-haspopup="listbox"]._2rXS8vA8._28I6HDQH._3XeeYfzY {
+  color: var(--degiro-ext-theme-color) !important;
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+div {
+  &[data-name="frontPageSubCategorySelect"]
+    button[data-id="frontPage"][disabled] {
+    color: var(--degiro-ext-theme-color) !important;
+    background-color: var(--degiro-ext-theme-bg-lite) !important;
+  }
+
+  &[data-name="topNews"] > div > section > a {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+}
+
+#mainContent div[data-name="marketAgenda"] > div:nth-child(2) > div {
+  border-color: var(--degiro-ext-theme-border-color) !important;
+}
+
+#mainContent div {
+  &:not([data-name]) {
+    table {
+      &[data-name="holidaysCalendar"] td[data-field="exchanges"] > div,
+      &[data-name="agendaSplits"] tr > td:nth-child(2) * {
+        background-color: transparent !important;
+      }
+    }
+
+    div[data-name="horizontalScrollPanelWrapper"]
+      div[data-name="horizontalScrollPanel"]
+      table
+      tr
+      :is(td > div, td > div *) {
+      background-color: transparent !important;
+    }
+  }
+
+  &[data-name="horizontalScrollPanel"] table {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+
+    > :is(thead > tr > th:before, thead > tr > th:after, tbody
+        > tr
+        > td:before, tbody > tr > td:after) {
+      background-color: transparent !important;
+    }
+  }
+}
+
+div[data-name="pagination"] {
+  color: var(--degiro-ext-theme-color) !important;
+
+  button i {
+    color: var(--degiro-ext-theme-color) !important;
+  }
+
+  + div > span {
+    color: var(--degiro-ext-theme-color-secondary) !important;
+  }
+}
+
+/* We repeat the classname to increase the specificity of this selector (quite a hack, but...) */
+#mainContent {
+  div[aria-live="polite"] + div._3SHcS-Ra._3SHcS-Ra._3SHcS-Ra {
+    background-color: transparent !important;
+    color: var(--degiro-ext-theme-color-secondary) !important;
+  }
+
+  table[data-name="holidaysCalendar"] i[role="img"][data-name="icon"] {
+    color: var(--degiro-ext-theme-color) !important;
+  }
+}
+
+#appContainer {
+  #appWorkspace
+    #mainContent
+    div:is([data-name="ordersHistory"], [data-name="accountOverview"], [data-name="transactions"], [data-name="portfolioDepreciation"], div[data-name="portfolioDepreciation"], div[data-name="products"])
+    div[data-name$="Filters"]
+    * {
+    background-color: var(--degiro-ext-theme-bg-lite) !important;
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+
+  div {
+    &:is([data-name="ordersHistory"], [data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"])
+      div[aria-live="polite"]
+      > div {
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+
+    &:is([data-name="ordersHistory"], [data-name="transactions"])
+      a:not(:hover) {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+
+    &:is([data-name="ordersHistory"], [data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"]) {
+      time,
+      span[data-name="exchangeAbbr"] {
+        color: var(--degiro-ext-theme-color-secondary) !important;
+      }
+    }
+  }
+
+  [data-name="transactions"] {
+    td:is(:nth-child(4), :nth-child(6)),
+    span[data-field="feeInBaseCurrency"]:not(:is([data-positive="true"], [data-negative="true"])) {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+  }
+
+  div {
+    &:is([data-name="ordersHistory"], [data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"])
+      table
+      > tbody
+      > tr
+      > td {
+      &:nth-child(5),
+      &:nth-child(7) {
+        color: var(--degiro-ext-theme-color-secondary) !important;
+      }
+    }
+
+    &:is([data-name="ordersHistory"], [data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"])
+      span[data-field="action"] {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+  }
+}
+
+#mainContent
+  div:is([data-name="ordersHistory"], [data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"])
+  th:first-child {
+  &::before,
+  &:after {
+    background-color: var(--degiro-ext-theme-bg) !important;
+  }
+}
+
+body > div[data-name="portal"] > div > div {
+  background-color: var(--degiro-ext-theme-bg) !important;
+}
+
+#appContainer div[data-name="portfolioDepreciation"] {
+  td {
+    &[data-field="isin"],
+    &[data-field="exchange"] {
+      color: var(--degiro-ext-theme-color) !important;
+    }
+  }
+
+  span[data-field="depreciationValue"] {
+    color: var(--degiro-ext-theme-color) !important;
+  }
+}
+
+body > div[data-name="portal"] > div > div {
+  button {
+    &:not([disabled]) {
+      color: var(--degiro-ext-theme-color) !important;
+    }
+
+    &[disabled] {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+      filter: native-opacity(0.7);
+    }
+
+    &[data-selected="true"] {
+      color: var(--degiro-ext-theme-bg) !important;
+    }
+  }
+
+  > table > thead > tr {
+    color: var(--degiro-ext-theme-color) !important;
+  }
+}
+
+#mainContent div {
+  &[data-name="reports"] {
+    time[data-field="date"] {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+
+    > div:nth-child(2)
+      > div:first-child
+      > div:first-child
+      > div:first-child
+      > div {
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+  }
+
+  &[data-name="products"]
+    > div:nth-child(2)
+    > div:first-child
+    > div:first-child
+    > div:nth-child(2) {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+  }
+}
+
+#appContainer div[data-name="products"] div[data-name="productTypeSearch"] {
+  span:is([data-positive="true"], [data-positive="false"], [data-negative="true"], [data-negative="false"]):is(:not([data-field="AbsoluteDifference"], [data-field="RelativeDifference"])) {
+    color: var(--degiro-ext-theme-color) !important;
+  }
+
+  table._2KnDJmXg tr td._3txtVfoE {
+    background-color: var(--degiro-ext-theme-bg-midlite) !important;
+  }
+
+  div {
+    &:is(.lEEKEUMB, ._3_myEOPT) {
+      background-color: var(--degiro-ext-theme-bg-midlite) !important;
+    }
+
+    &:is(.lEEKEUMB, ._2AWxLI4H) {
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+
+    &.lEEKEUMB {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+
+    &._1EJdlh6R {
+      color: var(--degiro-ext-theme-color) !important;
+    }
+
+    &.U1-JE85L div._3-1aJ2Xy {
+      background-color: var(--degiro-ext-theme-bg) !important;
+    }
+  }
+}
+
+div[data-name="productDetails"] {
+  header {
+    div {
+      background-color: var(--degiro-ext-theme-bg) !important;
+      border-color: var(--degiro-ext-theme-border-color) !important;
+
+      &::after {
+        background-color: var(--degiro-ext-theme-border-color) !important;
+      }
+    }
+
+    > div > div {
+      color: var(--degiro-ext-theme-color) !important;
+      background-color: var(--degiro-ext-theme-bg) !important;
+      color: var(--degiro-ext-theme-color) !important;
+      background-color: var(--degiro-ext-theme-bg) !important;
+    }
+  }
+
+  span {
+    &[data-name="productType"] {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+
+      + i[data-name="icon"] {
+        color: var(--degiro-ext-theme-color-secondary) !important;
+      }
+    }
+
+    &[data-name="productBriefInfo"] {
+      color: var(--degiro-ext-theme-color) !important;
+    }
+  }
+}
+
+#appContainer
+  div[data-name="productDetails"]
+  span[data-field="CurrentPrice"][data-positive="true"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+div[data-name="productDetails"] header + div {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+
+  > div > div > div {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+
+    div {
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+  }
+}
+
+#appContainer #mainContent div[data-name="productDetails"] {
+  :is(dl[data-name="refinitivProductPricesInfo"], dl[data-name="refinitivProductPricesInfo"]
+      + dl, dl[data-name="positionDetails"])
+    span:is([data-positive="true"], [data-negative="true"]):not(:is([data-field="AbsoluteDifference"], [data-field="RelativeDifference"], [data-field="PRYTDPCT"], [data-field="todayPl"], [data-field="unrealizedPl"], [data-field="totalPl"])) {
+    color: var(--degiro-ext-theme-color) !important;
+  }
+
+  div
+    div
+    div
+    div
+    span
+    span[data-positive="true"]:is([data-field="NLOW"], [data-field="NHIG"]) {
+    color: var(--degiro-blue) !important;
+  }
+
+  time:is([data-field="NLOWDATE"], [data-field="NHIGDATE"]) {
+    color: var(--degiro-ext-theme-color-secondary) !important;
+  }
+
+  div[data-name="marketNews"] button[data-name="newsItem"] {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+
+    &._1Zrwwp4K {
+      background-color: var(--degiro-ext-theme-bg-lite) !important;
+    }
+
+    time {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+  }
+}
+
+div[data-name="newsArticle"] {
+  div[data-name="horizontalScrollPanel"] table {
+    border-color: var(--degiro-ext-theme-border-color) !important;
+
+    td {
+      background-color: var(--degiro-ext-theme-bg-lite) !important;
+      border-color: var(--degiro-ext-theme-border-color) !important;
+    }
+  }
+
+  time {
+    color: var(--degiro-ext-theme-color-secondary) !important;
+  }
+}
+
+#appContainer #mainContent div[data-name="productDetails"] {
+  div {
+    &:is([data-name="productKeyFigures"], [data-name="companyInformation"], [data-name="companyRatios"])
+      span:is([data-positive="true"], [data-negative="true"]) {
+      color: var(--degiro-ext-theme-color) !important;
+    }
+
+    &[data-name="companyInformation"] {
+      button::after {
+        background: linear-gradient(
+          0deg,
+          var(--degiro-ext-theme-bg) 0%,
+          hsla(0, 0%, 100%, 0)
+        ) !important;
+      }
+
+      time:is([data-field="businessSummaryLastModified"], [data-field="financialSummaryLastModified"]) {
+        color: var(--degiro-ext-theme-color-secondary) !important;
+      }
+    }
+
+    &:is([data-name="companyFinancials"], [data-name="companyFinancials"] + div)
+      svg {
+      text {
+        fill: var(--degiro-ext-theme-color-secondary) !important;
+      }
+
+      g[data-name="horizontalGrid"] line {
+        stroke: var(--degiro-ext-theme-border-color) !important;
+      }
+    }
+
+    &[data-name="companyFinancials"] {
+      + div > div:nth-child(2) > div:nth-child(2) > div,
+      > div:nth-child(2) > div:nth-child(3) > div {
+        color: var(--degiro-ext-theme-color-secondary) !important;
+      }
+    }
+  }
+
+  /* Note: Consider moving these into each theme file if they need to change */
+  --degiro-ext-theme-financial-green: #00cf4f;
+  --degiro-ext-theme-financial-lowgreen: #7fdaaf;
+  --degiro-ext-theme-financial-grey: #bbbbbb;
+  --degiro-ext-theme-financial-lowred: #ff8888;
+  --degiro-ext-theme-financial-red: #db312b;
+
+  svg rect {
+    &[fill="#00A658"] {
+      fill: var(--degiro-ext-theme-financial-green) !important;
+    }
+
+    &[fill="#CBEDDD"] {
+      fill: var(--degiro-ext-theme-financial-lowgreen) !important;
+    }
+
+    &[fill="#D4D4D4"] {
+      fill: var(--degiro-ext-theme-financial-grey) !important;
+    }
+
+    &[fill="#FADEDE"] {
+      fill: var(--degiro-ext-theme-financial-lowred) !important;
+    }
+
+    &[fill="#E6605C"] {
+      fill: var(--degiro-ext-theme-financial-red) !important;
+    }
+  }
+
+  div {
+    &[style*="rgb(0, 166, 88)"] {
+      background-color: var(--degiro-ext-theme-financial-green) !important;
+    }
+
+    &[style*="rgb(203, 237, 221)"] {
+      background-color: var(--degiro-ext-theme-financial-lowgreen) !important;
+    }
+
+    &[style*="rgb(212, 212, 212)"] {
+      background-color: var(--degiro-ext-theme-financial-grey) !important;
+    }
+
+    &[style*="rgb(250, 222, 222)"] {
+      background-color: var(--degiro-ext-theme-financial-lowred) !important;
+    }
+
+    &[style*="rgb(230, 96, 92)"] {
+      background-color: var(--degiro-ext-theme-financial-red) !important;
+    }
+
+    &._3oLn_MN8 {
+      background-color: var(--degiro-ext-theme-bg-lite) !important;
+
+      dd {
+        color: var(--degiro-ext-theme-color-secondary) !important;
+      }
+
+      > div > div {
+        color: var(--degiro-ext-theme-color) !important;
+        background-color: var(--degiro-ext-theme-bg-prominent) !important;
+
+        &::after {
+          background-color: var(--degiro-ext-theme-bg-prominent) !important;
+        }
+      }
+    }
+
+    &[data-name="companyInformation"] h3 + div {
+      color: var(--degiro-ext-theme-color-secondary) !important;
+    }
+
+    &[data-name="profileCompanyProfile"]
+      span:is([data-positive="true"], [data-negative="true"]) {
+      color: var(--degiro-ext-theme-color) !important;
+    }
+  }
+}
+
+/*
+#appContainer
+  #mainContent
+  div[data-name="productDetails"]
+div:is([data-name="keyExecutivesCard"], [data-name="financialsTableCard"], [data-name="marginsCard"], [data-name="priceAndVolumeCard"], [data-name="valuationCard"], [data-name="valuationCard"], [data-name="incomeStatementCard"], [data-name="incomeStatementCard"], [data-name="growthRateCard"], [data-name="managementCard"])
+*/
