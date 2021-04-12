@@ -1,6 +1,6 @@
 {
   "name": "Enhancement Suite for DEGIRO",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A suite of enhancements for the DEGIRO webtrader.",
   "icons": {
     "32": "icons/icon32.png",
