@@ -20,7 +20,7 @@
 }
 
 #appContainer aside {
-  background-color: var(--degiro-ext-theme-modal-bg) !important;
+  background-color: var(--degiro-ext-theme-prominent-bg) !important;
 }
 
 #appContainer header {
@@ -37,6 +37,26 @@
 
 main div[data-name="notification"] {
   background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+#appContainer > div > div > div[data-name="modal"] {
+  background-color: var(--degiro-ext-theme-bg-lite) !important;
+}
+
+#appContainer
+  > div
+  > div
+  > div[data-name="modal"]
+  div[data-name="modalContent"] {
+  color: var(--degiro-ext-theme-color) !important;
+}
+
+#appContainer
+  > div
+  > div
+  > div[data-name="modal"]
+  button[data-name="modalActionsItem"] {
+  border-color: var(--degiro-ext-theme-border-color) !important;
 }
 
 /* Webtrader */
@@ -65,7 +85,7 @@ body > div[data-name="portal"] div[role="dialog"] {
 body > div[data-name="portal"] div[data-test-key="popover-container"],
 body > div[data-name="portal"] div[data-test-key="popover-container"] > div {
   color: var(--degiro-ext-theme-color) !important;
-  background-color: var(--degiro-ext-theme-modal-bg) !important;
+  background-color: var(--degiro-ext-theme-prominent-bg) !important;
 }
 
 body
@@ -106,7 +126,7 @@ body
   > div:first-child
   > div:first-child
   button[role="option"] {
-  background-color: var(--degiro-ext-theme-modal-bg) !important;
+  background-color: var(--degiro-ext-theme-prominent-bg) !important;
 }
 
 body
