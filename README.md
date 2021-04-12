@@ -22,27 +22,71 @@ Choose any of the languages offered by DEGIRO and change it whenever you want.
 - Eλληνική _(Greek)_
 - Magyar _(Hungarian)_
 
-| [<img src="https://i.imgur.com/BCHnZUk.png" width="400px">](https://i.imgur.com/BCHnZUk.png) | [<img src="https://i.imgur.com/yAv3Vyk.png" width="400px">](https://i.imgur.com/yAv3Vyk.png) |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+<table>
+  <tr>
+    <td><a href="https://i.imgur.com/BCHnZUk.png"><img src="https://i.imgur.com/BCHnZUk.png" width="400px"></a></td>
+    <td><a href="https://i.imgur.com/yAv3Vyk.png"><img src="https://i.imgur.com/yAv3Vyk.png" width="400px"></a></td>
+  </tr>
+</table>
 
 ### Themes
 
 The extension offers several themes (_more to come!_) to make the webtrader look how you like it.
 
-|            Theme             | Preview                                                                                      |
-| :--------------------------: | -------------------------------------------------------------------------------------------- |
-|       **_Automatic_**        | Automatically sets either _Default_ or _Dark_ depending on your system settings.             |
-|         **Default**          | [<img src="https://i.imgur.com/8lEl2lh.png" width="250px">](https://i.imgur.com/8lEl2lh.png) |
-|           **Dark**           | [<img src="https://i.imgur.com/uA9KKut.png" width="250px">](https://i.imgur.com/uA9KKut.png) |
-|        **Soft blue**         | [<img src="https://i.imgur.com/FKfpuk5.png" width="250px">](https://i.imgur.com/FKfpuk5.png) |
-|        **Soft green**        | [<img src="https://i.imgur.com/d9pFvtu.png" width="250px">](https://i.imgur.com/d9pFvtu.png) |
-|        **Black hole**        | [<img src="https://i.imgur.com/qmRDQNA.png" width="250px">](https://i.imgur.com/qmRDQNA.png) |
-| **High contrast<br>(black)** | [<img src="https://i.imgur.com/FKVSvkS.png" width="250px">](https://i.imgur.com/FKVSvkS.png) |
-| **High contrast<br>(white)** | [<img src="https://i.imgur.com/Q3gFfox.png" width="250px">](https://i.imgur.com/Q3gFfox.png) |
+<table>
+  <thead>
+    <tr>
+      <th align="center">Theme</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center"><strong><em>Automatic</em></strong></td>
+      <td>
+        Automatically sets either <em>Default</em> or <em>Dark</em> depending on your system settings.
+        <br><br>
+        <a href="https://i.imgur.com/ly55S1m.mp4"><img src="https://i.imgur.com/mvfX2Xd.gif" width="400px"></a></td>
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Default</strong></td>
+      <td><a href="https://i.imgur.com/8lEl2lh.png"><img src="https://i.imgur.com/8lEl2lh.png" width="400px"></a></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Dark</strong></td>
+      <td><a href="https://i.imgur.com/uA9KKut.png"><img src="https://i.imgur.com/uA9KKut.png" width="400px"></a></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Soft blue</strong></td>
+      <td><a href="https://i.imgur.com/FKfpuk5.png"><img src="https://i.imgur.com/FKfpuk5.png" width="400px"></a></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Soft green</strong></td>
+      <td><a href="https://i.imgur.com/d9pFvtu.png"><img src="https://i.imgur.com/d9pFvtu.png" width="400px"></a></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Black hole</strong></td>
+      <td><a href="https://i.imgur.com/qmRDQNA.png"><img src="https://i.imgur.com/qmRDQNA.png" width="400px"></a></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>High contrast<br>(black)</strong></td>
+      <td><a href="https://i.imgur.com/FKVSvkS.png"><img src="https://i.imgur.com/FKVSvkS.png" width="400px"></a></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>High contrast<br>(white)</strong></td>
+      <td><a href="https://i.imgur.com/Q3gFfox.png"><img src="https://i.imgur.com/Q3gFfox.png" width="400px"></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Quick order
 
 Quickly place an order right from the extension's popup without having to open the whole DEGIRO.
 
-| [<img src="https://i.imgur.com/vyhifp6.png" width="400px">](https://i.imgur.com/vyhifp6.png) | [<img src="https://i.imgur.com/QAGgM4w.png" width="400px">](https://i.imgur.com/QAGgM4w.png) |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+<table>
+  <tr>
+    <td><a href="https://i.imgur.com/vyhifp6.png"><img src="https://i.imgur.com/vyhifp6.png" width="400px"></a></td>
+    <td><a href="https://i.imgur.com/QAGgM4w.png"><img src="https://i.imgur.com/QAGgM4w.png" width="400px"></a></td>
+  </tr>
+</table>
