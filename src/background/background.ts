@@ -1,9 +1,4 @@
-// TODO: webpack or similar
-
-interface Settings {
-  locale: string;
-  theme: string;
-}
+import { Settings } from "../common";
 
 const DEFAULT_SETTINGS: Settings = {
   locale: "default",
@@ -134,7 +129,7 @@ async function onStartupOrOnInstalledListener() {
 
   chrome.runtime.onMessage.addListener(
     async (message, sender, sendResponse) => {
-      if ('__parcel_hmr_reload__' in message) {
+      if ("__parcel_hmr_reload__" in message) {
         /**
          * From: https://v2.parceljs.org/recipes/web-extension/#unexpected-messages
          * `In development mode, your background scripts will receive a message event

@@ -24,17 +24,17 @@
     {
       "matches": ["*://trader.degiro.nl/*"],
       "all_frames": true,
-      "js": ["content/content.ts"]
+      "js": ["content/content.ts"],
+      "css": [
+        "content/styles/theme.scss",
+        "content/styles/themes/dark.scss",
+        "content/styles/themes/soft-blue.scss",
+        "content/styles/themes/soft-green.scss",
+        "content/styles/themes/black-hole.scss",
+        "content/styles/themes/high-contrast-black.scss",
+        "content/styles/themes/high-contrast-white.scss"
+      ]
     }
-  ],
-  "web_accessible_resources": [
-    "content/styles/theme.scss",
-    "content/styles/themes/dark.scss",
-    "content/styles/themes/soft-blue.scss",
-    "content/styles/themes/soft-green.scss",
-    "content/styles/themes/black-hole.scss",
-    "content/styles/themes/high-contrast-white.scss",
-    "content/styles/themes/high-contrast-black.scss"
   ],
   "permissions": [
     "storage",

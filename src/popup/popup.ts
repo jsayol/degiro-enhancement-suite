@@ -1,7 +1,4 @@
-interface Settings {
-  locale: string;
-  theme: string;
-}
+import { Settings } from "../common";
 
 function reloadOpenTabs() {
   chrome.tabs.query({ url: "*://trader.degiro.nl/*" }, (tabs) => {

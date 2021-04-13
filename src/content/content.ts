@@ -1,10 +1,7 @@
-const CSS_ID_PREFIX = "degiro-enhancement-suite--css-";
-const THEME_CLASS_PREFIX = "degiro-enhancement-suite--theme-";
-const onColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
+import { Settings } from "../common";
 
-let currentTheme = "default";
-let isAutoTheme = false;
 let connectionPort: chrome.runtime.Port;
+let currentTheme = "default";
 
 /**
  * Monitor the connection to the extension's background page.
@@ -17,11 +14,17 @@ chrome.runtime.onConnect.addListener((port) => {
 });
 
 function initialize() {
-  if (currentTheme !== "default") {
-    loadStyleSheet("styles/theme.css", "common");
-  }
   chrome.runtime.sendMessage({ op: "getSettings" }, handleSettingsUpdate);
   chrome.runtime.onMessage.addListener(onMessageHandler);
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", colorSchemeChangeHandler);
+
+  // If we're inside an iframe (quick order in popup) we mark
+  // the page so that we can avoid applying themes for now.
+  if (window.self !== window.top) {
+    document.querySelector("html").dataset.enhancementSuiteIframe = "true";
+  }
 }
 
 function cleanup() {
@@ -50,110 +53,33 @@ function onMessageHandler(
   }
 }
 
-function loadStyleSheet(filePath: string, id: string) {
-  var link = document.createElement("link");
-  link.setAttribute("href", chrome.runtime.getURL(filePath));
-  link.setAttribute("id", `${CSS_ID_PREFIX}${id}`);
-  link.setAttribute("type", "text/css");
-  link.setAttribute("rel", "stylesheet");
-  document.querySelector("html")?.appendChild(link);
-}
-
-function unloadStyleSheet(id: string, isFullId = false) {
-  var cssNode = document.querySelector(
-    `#${isFullId ? "" : CSS_ID_PREFIX}${id}`
-  );
-  if (cssNode && cssNode.parentNode) {
-    cssNode.parentNode.removeChild(cssNode);
-  }
-}
-
 function applyCustomTheme(theme: string) {
   if (!theme) {
     theme = "default";
   }
 
-  const wasAutoTheme = isAutoTheme;
-  isAutoTheme = theme === "auto";
-
-  if (isAutoTheme) {
-    // Determine which theme we should use
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      theme = "dark";
-    } else {
-      theme = "default";
+  if (theme === "auto") {
+    if (currentTheme !== "auto") {
+      // Determine which theme we should use
+      const useDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.querySelector("html").dataset.enhancementSuiteTheme = useDark
+        ? "dark"
+        : "default";
     }
-    if (!wasAutoTheme) {
-      startDarkModeDetection();
-    }
-  } else if (wasAutoTheme) {
-    stopDarkModeDetection();
-  }
-
-  if (theme === currentTheme) {
-    return;
-  }
-
-  if (currentTheme === "default") {
-    // Load the common CSS styles for a non-default theme
-    loadStyleSheet("content/styles/theme.css", "common");
-  }
-
-  if (theme !== "default") {
-    // Load StyleSheet for the new theme
-    loadStyleSheet(`content/styles/themes/${theme}.css`, `theme-${theme}`);
   } else {
-    // Unload the common CSS styles for a non-default theme
-    unloadStyleSheet("common");
+    document.querySelector("html").dataset.enhancementSuiteTheme = theme;
+    delete document.querySelector("html").dataset.enhancementSuiteThemeAuto;
   }
-
-  // Unload any previous theme css files.
-  // Note: It's important to do this after loading the new one to avoid
-  // any jitter when switching themes. Not critical but looks ugly otherwise.
-  document
-    .querySelectorAll(
-      `link[id^='${CSS_ID_PREFIX}theme-']:not([id='${CSS_ID_PREFIX}theme-${theme}'])`
-    )
-    .forEach((sheet) => unloadStyleSheet(sheet.id, true));
 
   currentTheme = theme;
 }
 
-function startDarkModeDetection() {
-  if (window.matchMedia("(prefers-color-scheme)").media === "not all") {
-    // Color scheme detection is not supported
-    return;
-  }
-  onColorScheme.addEventListener("change", colorSchemeChangeHandler);
-}
-
-function stopDarkModeDetection() {
-  onColorScheme.removeEventListener("change", colorSchemeChangeHandler);
-}
-
 function colorSchemeChangeHandler(event: MediaQueryListEvent) {
-  applyCustomTheme("auto");
+  if (currentTheme === "auto") {
+    document.querySelector("html").dataset.enhancementSuiteTheme = event.matches
+      ? "dark"
+      : "default";
+  }
 }
 
-if (window.parent !== window) {
-  window.addEventListener("message", (event) => {
-    if (event.data === "orderModeFrame") {
-      const isTraderPage = !!window.location.href.match(/\/trader\/\#/);
-      const isOrderModePage = !!window.location.href.match(/\?orderMode/);
-      if (isTraderPage && !isOrderModePage) {
-        /**
-         * We're inside an iframe that requested the "global order mode" but
-         * the user had to log in and the app routed to the main page instead.
-         * Let's take the user back to the order mode page again.
-         */
-        window.location.href =
-          "https://trader.degiro.nl/trader/?orderMode#/markets?newOrder";
-      }
-    }
-  });
-}
-
-// TODO: this is temporary to avoid applying themes to the quick order iframe
-if (window.parent === window) {
-  initialize();
-}
+initialize();
