@@ -1,24 +1,24 @@
-html[data-enhancement-suite-theme="dark"] {
-  --degiro-blue: #009fdf;
-  --degiro-ext-theme-login-logo-filter: drop-shadow(0px 0px 3px #768390);
-  --degiro-ext-theme-bg-app: ##101010;
-  --degiro-ext-theme-bg-prominent: #101010;
-  --degiro-ext-theme-bg: #161617;
-  --degiro-ext-theme-bg-midlite: #1e1e1f;
-  --degiro-ext-theme-bg-lite: #1f2021;
-  --degiro-ext-theme-color: #afafaf;
-  --degiro-ext-theme-color-secondary: #696969;
-  --degiro-ext-theme-border-color: #2f2f2f;
-  --degiro-ext-theme-scroll-bg: #0c0c0c;
-  --degiro-ext-theme-scroll-thumb-bg: #3a3a3a;
-  --degiro-ext-theme-scroll-track-bg: #2f2f2f;
-  --degiro-ext-theme-red-color: #e8312b;
-  --degiro-ext-theme-green-color: #008043;
-  --degiro-ext-theme-textonred-color: #cecece;
-  --degiro-ext-theme-textongreen-color: #cecece;
-  --degiro-ext-theme-brightness: 100%;
-  --degiro-ext-theme-global-contrast: 100%;
-  --degiro-ext-theme-global-saturate: 80%;
-  --degiro-ext-theme-chart-line-color: #353535;
-  --degiro-ext-theme-chart-line-bg: rgb(80 80 80 / 25%);
+html[data-suite-theme="dark"] {
+  --suite-degiroblue: #009fdf;
+  --suite-theme-login-logo-filter: drop-shadow(0px 0px 3px #768390);
+  --suite-theme-bg-app: #101010;
+  --suite-theme-bg-prominent: #101010;
+  --suite-theme-bg: #161617;
+  --suite-theme-bg-midlite: #1e1e1f;
+  --suite-theme-bg-lite: #1f2021;
+  --suite-theme-color: #afafaf;
+  --suite-theme-color-secondary: #696969;
+  --suite-theme-border-color: #2f2f2f;
+  --suite-theme-scroll-bg: #0c0c0c;
+  --suite-theme-scroll-thumb-bg: #3a3a3a;
+  --suite-theme-scroll-track-bg: #2f2f2f;
+  --suite-theme-red-color: #e8312b;
+  --suite-theme-green-color: #008043;
+  --suite-theme-textonred-color: #cecece;
+  --suite-theme-textongreen-color: #cecece;
+  --suite-theme-brightness: 100%;
+  --suite-theme-global-contrast: 100%;
+  --suite-theme-global-saturate: 80%;
+  --suite-theme-chart-line-color: #353535;
+  --suite-theme-chart-line-bg: rgb(80 80 80 / 25%);
 }

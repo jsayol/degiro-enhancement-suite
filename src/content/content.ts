@@ -23,7 +23,7 @@ function initialize() {
   // If we're inside an iframe (quick order in popup) we mark
   // the page so that we can avoid applying themes for now.
   if (window.self !== window.top) {
-    document.querySelector("html").dataset.enhancementSuiteIframe = "true";
+    document.querySelector("html").dataset.suiteIframe = "true";
   }
 }
 
@@ -62,13 +62,12 @@ function applyCustomTheme(theme: string) {
     if (currentTheme !== "auto") {
       // Determine which theme we should use
       const useDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.querySelector("html").dataset.enhancementSuiteTheme = useDark
+      document.querySelector("html").dataset.suiteTheme = useDark
         ? "dark"
         : "default";
     }
   } else {
-    document.querySelector("html").dataset.enhancementSuiteTheme = theme;
-    delete document.querySelector("html").dataset.enhancementSuiteThemeAuto;
+    document.querySelector("html").dataset.suiteTheme = theme;
   }
 
   currentTheme = theme;
@@ -76,7 +75,7 @@ function applyCustomTheme(theme: string) {
 
 function colorSchemeChangeHandler(event: MediaQueryListEvent) {
   if (currentTheme === "auto") {
-    document.querySelector("html").dataset.enhancementSuiteTheme = event.matches
+    document.querySelector("html").dataset.suiteTheme = event.matches
       ? "dark"
       : "default";
   }

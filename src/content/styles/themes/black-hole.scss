@@ -1,24 +1,24 @@
-html[data-enhancement-suite-theme="black-hole"] {
-  --degiro-blue: #009fdf;
-  --degiro-ext-theme-login-logo-filter: drop-shadow(0px 0px 5px #989898);
-  --degiro-ext-theme-bg-app: #000000;
-  --degiro-ext-theme-bg-prominent: #000000;
-  --degiro-ext-theme-bg: #040404;
-  --degiro-ext-theme-bg-midlite: #080808;
-  --degiro-ext-theme-bg-lite: #0b0b0b;
-  --degiro-ext-theme-color: #b7b7b7;
-  --degiro-ext-theme-color-secondary: #9a9a9a;
-  --degiro-ext-theme-border-color: #151515;
-  --degiro-ext-theme-scroll-bg: #000000;
-  --degiro-ext-theme-scroll-thumb-bg: #232323;
-  --degiro-ext-theme-scroll-track-bg: #232323;
-  --degiro-ext-theme-red-color: #963836;
-  --degiro-ext-theme-green-color: #007941;
-  --degiro-ext-theme-textonred-color: #b3b3b3;
-  --degiro-ext-theme-textongreen-color: #b3b3b3;
-  --degiro-ext-theme-brightness: 75%;
-  --degiro-ext-theme-global-contrast: 105%;
-  --degiro-ext-theme-global-saturate: 150%;
-  --degiro-ext-theme-chart-line-color: #1f1f1f;
-  --degiro-ext-theme-chart-line-bg: rgb(30 30 30 / 25%);
+html[data-suite-theme="black-hole"] {
+  --suite-degiroblue: #009fdf;
+  --suite-theme-login-logo-filter: drop-shadow(0px 0px 5px #989898);
+  --suite-theme-bg-app: #000000;
+  --suite-theme-bg-prominent: #000000;
+  --suite-theme-bg: #040404;
+  --suite-theme-bg-midlite: #080808;
+  --suite-theme-bg-lite: #0b0b0b;
+  --suite-theme-color: #b7b7b7;
+  --suite-theme-color-secondary: #9a9a9a;
+  --suite-theme-border-color: #151515;
+  --suite-theme-scroll-bg: #000000;
+  --suite-theme-scroll-thumb-bg: #232323;
+  --suite-theme-scroll-track-bg: #232323;
+  --suite-theme-red-color: #963836;
+  --suite-theme-green-color: #007941;
+  --suite-theme-textonred-color: #b3b3b3;
+  --suite-theme-textongreen-color: #b3b3b3;
+  --suite-theme-brightness: 75%;
+  --suite-theme-global-contrast: 105%;
+  --suite-theme-global-saturate: 150%;
+  --suite-theme-chart-line-color: #1f1f1f;
+  --suite-theme-chart-line-bg: rgb(30 30 30 / 25%);
 }
