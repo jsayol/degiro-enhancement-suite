@@ -51,7 +51,11 @@ The extension offers several themes (_more to come!_) to make the webtrader look
     </tr>
     <tr>
       <td align="center"><strong>Default</strong></td>
-      <td><a href="https://i.imgur.com/8lEl2lh.png"><img src="https://i.imgur.com/8lEl2lh.png" width="400px"></a></td>
+      <td>
+        The standard theme offered by DEGIRO, no changes whatsoever.
+        <br><br>
+        <a href="https://i.imgur.com/8lEl2lh.png"><img src="https://i.imgur.com/8lEl2lh.png" width="400px"></a>
+      </td>
     </tr>
     <tr>
       <td align="center"><strong>Dark</strong></td>
@@ -77,6 +81,7 @@ The extension offers several themes (_more to come!_) to make the webtrader look
       <td align="center"><strong>High contrast<br>(white)</strong></td>
       <td><a href="https://i.imgur.com/Q3gFfox.png"><img src="https://i.imgur.com/Q3gFfox.png" width="400px"></a></td>
     </tr>
+
   </tbody>
 </table>
 
