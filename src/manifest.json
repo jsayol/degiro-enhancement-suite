@@ -26,7 +26,6 @@
       "all_frames": true,
       "js": ["content/content.ts"],
       "css": [
-        "content/styles/theme.scss",
         "content/styles/themes/dark.scss",
         "content/styles/themes/soft-blue.scss",
         "content/styles/themes/soft-green.scss",
@@ -36,6 +35,7 @@
       ]
     }
   ],
+  "web_accessible_resources": ["content/styles/theme.scss"],
   "permissions": [
     "storage",
     "webRequest",

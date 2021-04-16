@@ -16,12 +16,14 @@
     "prod": {}
   },
   "scripts": {
-    "start": "parcel watch src/manifest.json --host localhost --port 1234 --target dev",
+    "start": "parcel watch src/manifest.json --no-hmr --target dev",
+    "start:hmr": "parcel watch src/manifest.json --host localhost --port 1234 --target dev",
     "build": "parcel build src/manifest.json --target prod",
     "clean": "npm run clean:dev && npm run clean:prod",
     "clean:dev": "rimraf dist/dev",
     "clean:prod": "rimraf dist/prod",
     "cleanstart": "npm run clean:dev && npm run start",
+    "cleanstart:hmr": "npm run clean:dev && npm run start:hmr",
     "cleanbuild": "npm run clean:prod && npm run build",
     "ff:dev": "web-ext run --source-dir ./dist/dev",
     "ff:prod": "web-ext run --source-dir ./dist/prod"
