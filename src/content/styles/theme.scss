@@ -16,6 +16,11 @@
 
 // html[data-suite-theme]:not([data-suite-theme="default"]):not([data-suite-iframe])
 #appContainer {
+  *:last-child {
+    transition: background-color 0.5s ease, color 0.1s ease,
+      border-color 0.1s ease;
+  }
+
   filter: native-contrast(var(--suite-theme-global-contrast))
     native-saturate(var(--suite-theme-global-saturate)) !important;
   color: var(--suite-theme-color) !important;
@@ -378,6 +383,10 @@ div {
   }
 
   &.highcharts-container {
+    div.highcharts-loading {
+      background-color: var(--suite-theme-bg-lite) !important;
+    }
+
     .highcharts-background {
       fill: var(--suite-theme-bg);
     }
@@ -452,6 +461,10 @@ div {
 
     div[data-name="chartPeriod"] button {
       background-color: var(--suite-theme-bg) !important;
+
+      &[disabled] {
+        background-color: transparent !important;
+      }
     }
 
     button {
