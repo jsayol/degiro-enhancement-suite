@@ -1,5 +1,11 @@
-html[data-suite-theme="dark"] {
-  --suite-degiroblue: #009fdf;
+/*
+ NOTE: if using this theme as a base to make another one, remove
+ the `html[data-suite-theme="auto"]` slector.
+ 
+ "auto" here is only used for the popup, the content script handles
+ applying the auto theme to the webtrader.
+ */
+html[data-suite-theme="dark"], html[data-suite-theme="auto"] {
   --suite-theme-login-logo-filter: drop-shadow(0px 0px 3px #768390);
   --suite-theme-bg-app: #101010;
   --suite-theme-bg-prominent: #101010;

@@ -29,15 +29,16 @@ function loadSettings() {
       themeElement.checked = true;
     }
 
-    applyPopupTheme(settings.theme);
+    applyThemeToPopup(settings.theme);
   });
 }
 
-function applyPopupTheme(theme: string) {
+function applyThemeToPopup(theme: string) {
+  const data = document.querySelector("html").dataset;
   if (!theme || theme === "default") {
-    delete document.body.dataset.enhancementSuitTheme;
+    delete data.suiteTheme;
   } else {
-    document.body.dataset.enhancementSuitTheme = theme;
+    data.suiteTheme = theme;
   }
 }
 
@@ -49,7 +50,7 @@ document
     radio.addEventListener("change", (event) => {
       const theme = (event.target as HTMLInputElement).value;
       saveSetting("theme", theme);
-      applyPopupTheme(theme);
+      applyThemeToPopup(theme);
     });
   });
 

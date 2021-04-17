@@ -30,13 +30,13 @@ function initialize() {
 }
 
 function cleanup() {
-  applyCustomTheme("default");
+  applyTheme("default");
   chrome.runtime.onMessage.removeListener(onMessageHandler);
   connectionPort.onDisconnect.removeListener(cleanup);
 }
 
 function handleSettingsUpdate(settings: Settings) {
-  applyCustomTheme(settings.theme);
+  applyTheme(settings.theme);
 }
 
 function onMessageHandler(
@@ -83,7 +83,7 @@ function unloadBaseTheme() {
   }
 }
 
-function applyCustomTheme(theme: string) {
+function applyTheme(theme: string) {
   if (!theme) {
     theme = "default";
   }
@@ -125,7 +125,6 @@ function applyAutoTheme(useDark = false) {
 
 function applyRandomTheme() {
   const style = document.querySelector("html").style;
-  style.setProperty("--suite-degiroblue", getRandomColor());
   style.setProperty("--suite-theme-bg-app", getRandomColor());
   style.setProperty("--suite-theme-bg-prominent", getRandomColor());
   style.setProperty("--suite-theme-bg", getRandomColor());
@@ -149,7 +148,6 @@ function applyRandomTheme() {
 
 function removeRandomTheme() {
   const style = document.querySelector("html").style;
-  style.removeProperty("--suite-degiroblue");
   style.removeProperty("--suite-theme-bg-app");
   style.removeProperty("--suite-theme-bg-prominent");
   style.removeProperty("--suite-theme-bg");

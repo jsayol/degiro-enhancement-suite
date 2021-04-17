@@ -16,23 +16,23 @@ body {
   font-family: Roboto, Helvetica, HelveticaNeue, sans-serif;
   margin: 0;
   min-width: 0.95em;
+  filter: native-contrast(var(--suite-theme-global-contrast))
+    native-saturate(var(--suite-theme-global-saturate));
+
+  *:last-child {
+    transition: background-color 300ms ease, color 50ms ease,
+      border-color 50ms ease;
+  }
 }
 
 * {
   user-select: none;
+  color: var(--suite-theme-color);
 }
 
 .content {
-  color: #181a21;
-  background-color: #fff;
-  border: 2px solid #edeff1;
-}
-
-.title {
-  padding: 0.25em 2em !important;
-  border-bottom: 1px solid #edeff1;
-  color: #181a21;
-  font-size: 1.195rem;
+  background-color: var(--suite-theme-bg);
+  border: 2px solid rgb(184, 184, 184);
 }
 
 .form {
@@ -53,7 +53,7 @@ fieldset {
 }
 
 .bottom {
-  background-color: #edeff1;
+  background-color: var(--suite-theme-bg-lite);
   text-align: center;
 
   .btn-container {
@@ -63,36 +63,10 @@ fieldset {
       margin-left: 1em;
     }
   }
-
-  button {
-    background: transparent;
-    background-color: #009fdf;
-    font-family: Roboto, Helvetica, HelveticaNeue, sans-serif;
-    font-size: 100%;
-    color: #fff;
-    margin: 0;
-    font-weight: 500;
-    height: 30px;
-    align-items: center;
-    border: 1px solid transparent;
-    display: inline-flex;
-    justify-content: center;
-    padding: 0 8px;
-    vertical-align: top;
-    white-space: nowrap;
-    user-select: none;
-    -webkit-appearance: button;
-    text-transform: none;
-    opacity: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-indent: 0px;
-    text-shadow: none;
-  }
 }
 
 select {
-  background-color: #f3f4f5;
+  background-color: var(--suite-theme-bg-lite);
   border: 1px solid transparent;
   font-weight: 400;
   padding: 4px;
@@ -132,7 +106,7 @@ div.radio-element {
 
   &.quickOrderIcon {
     color: transparent;
-    text-shadow: 0 0 1px #007bc2;
+    text-shadow: 0 0 1px var(--suite-theme-color);
   }
 }
 

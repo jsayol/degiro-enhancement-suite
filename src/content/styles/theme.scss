@@ -14,11 +14,11 @@
   @return #{"opacity(#{$amount})"};
 }
 
-// html[data-suite-theme]:not([data-suite-theme="default"]):not([data-suite-iframe])
+// html[data-suite-theme]:not([data-suite-theme="default"])
 #appContainer {
   *:last-child {
-    transition: background-color 0.5s ease, color 0.1s ease,
-      border-color 0.1s ease;
+    transition: background-color 300ms ease, color 50ms ease,
+      border-color 50ms ease;
   }
 
   filter: native-contrast(var(--suite-theme-global-contrast))
@@ -1216,15 +1216,6 @@ div[data-name="productDetails"] header + div {
   //     + dl, dl[data-name="positionDetails"])
   //   span:is([data-positive="true"], [data-negative="true"]):not(:is([data-field="AbsoluteDifference"], [data-field="RelativeDifference"], [data-field="PRYTDPCT"], [data-field="todayPl"], [data-field="unrealizedPl"], [data-field="totalPl"])) {
   //   color: var(--suite-theme-color) !important;
-  // }
-
-  // div
-  //   div
-  //   div
-  //   div
-  //   span
-  //   span[data-positive="true"]:is([data-field="NLOW"], [data-field="NHIG"]) {
-  //   color: var(--suite-degiroblue) !important;
   // }
 
   time:is([data-field="NLOWDATE"], [data-field="NHIGDATE"]) {
