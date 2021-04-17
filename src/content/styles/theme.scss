@@ -780,7 +780,7 @@ section[data-name="sideInformationPanel"] {
       }
 
       > div:first-child > div:first-child > div:first-child * {
-        background-color: var(--suite-theme-bg-lite) !important;
+        background-color: transparent !important;
       }
     }
 
@@ -1001,7 +1001,7 @@ div[data-name="pagination"] {
         color: var(--suite-theme-color-secondary) !important;
       }
     }
-  
+
     &:is([data-name="ordersHistory"], [data-name="transactions"], div[data-name="accountOverview"], div[data-name="portfolioDepreciation"], div[data-name="products"])
       span[data-field="action"] {
       color: var(--suite-theme-color-secondary) !important;
@@ -1396,9 +1396,25 @@ div[data-name="refinitivVideos"] {
   }
 }
 
-table[data-name="orders"] tr[data-name="openOrder"] {
-  button i[role="img"] {
-    color: var(--suite-theme-color) !important;
+table[data-name="orders"] {
+  &,
+  tbody,
+  tr,
+  td {
+    border-color: var(--suite-theme-border-color) !important;
+  }
+
+  tr[data-name="openOrder"] {
+    td:nth-child(5) {
+      &,
+      span[data-field="price"] {
+        color: var(--suite-theme-color-secondary) !important;
+      }
+    }
+
+    button i[role="img"] {
+      color: var(--suite-theme-color) !important;
+    }
   }
 }
 
