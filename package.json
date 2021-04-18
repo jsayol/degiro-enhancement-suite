@@ -1,6 +1,6 @@
 {
   "name": "degiro-enhancement-suite",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Web Extension to enhance the DEGIRO webtrader.",
   "repository": "https://github.com/jsayol/degiro-enhancement-suite",
   "author": "",
