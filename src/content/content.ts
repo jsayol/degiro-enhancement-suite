@@ -1,10 +1,19 @@
-import { getRandomColor, Settings } from "../common";
+import {
+  DegiroClient,
+  DegiroConfig,
+  getRandomColor,
+  Settings,
+} from "../common";
 
 const BASE_THEME_ID = "--suite-theme-css";
+const CONFIG_URL = "https://trader.degiro.nl/login/secure/config";
 
 let connectionPort: chrome.runtime.Port;
 let currentTheme = "default";
-
+let degiroData: {
+  config: DegiroConfig;
+  client: DegiroClient;
+};
 /**
  * Monitor the connection to the extension's background page.
  * This allows us to detect if it get uninstalled or upgraded
@@ -27,6 +36,23 @@ function initialize() {
   if (window.self !== window.top) {
     document.querySelector("html").dataset.suiteIframe = "true";
   }
+
+  fetchDegiroData();
+}
+
+async function fetchDegiroData() {
+  // TODO: handle possible errors while fetching
+
+  const configResponse = await fetch(CONFIG_URL);
+  const configJSON = await configResponse.json();
+  const config: DegiroConfig = configJSON["data"];
+
+  const clientUrl = `${config.paUrl}client?sessionId=${config.sessionId}`;
+  const clientResponse = await fetch(clientUrl);
+  const clientJSON = await clientResponse.json();
+  const client: DegiroClient = clientJSON["data"];
+
+  degiroData = { config, client };
 }
 
 function cleanup() {
