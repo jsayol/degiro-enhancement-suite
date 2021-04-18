@@ -95,3 +95,16 @@ Quickly place an order right from the extension's popup without having to open t
     <td><a href="https://i.imgur.com/QAGgM4w.png"><img src="https://i.imgur.com/QAGgM4w.png" width="400px"></a></td>
   </tr>
 </table>
+
+## Development
+
+If you want to build the extension from source:
+
+* With `npm`:
+  `npm install`
+  `npm run cleanbuild`
+* With `yarn`:
+  `yarn`
+  `yarn run cleanbuild`
+
+The generated extension will be in `dist/prod`.
