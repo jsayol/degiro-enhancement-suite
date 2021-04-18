@@ -1,3 +1,4 @@
+import { browser, WebRequest } from "webextension-polyfill-ts";
 import { Settings } from "../common";
 
 const DEFAULT_SETTINGS: Settings = {
@@ -9,31 +10,25 @@ let settings = DEFAULT_SETTINGS;
 let knownTabs: Set<number /*tabId*/> = new Set();
 
 function getSettings(): Promise<Settings> {
-  return new Promise((resolve) => {
-    chrome.storage.sync.get(DEFAULT_SETTINGS, (items) => {
-      resolve(items as Settings);
-    });
-  });
+  return browser.storage.sync.get(DEFAULT_SETTINGS) as Promise<Settings>;
 }
 
-function saveSettingItem(name: string, value: any): Promise<void> {
-  return new Promise<void>((resolve) => {
+async function saveSettingItem(name: string, value: any): Promise<void> {
+  try {
     if (name in settings && settings[name as keyof Settings] !== value) {
       settings[name as keyof Settings] = value;
-      chrome.storage.sync.set({ [name]: value }, () => {
-        propagateSettingsUpdate(settings);
-        resolve();
-      });
-    } else {
-      resolve();
+      await browser.storage.sync.set({ [name]: value });
+      propagateSettingsUpdate(settings);
     }
-  });
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 // Intercept the request for the I18N file and replace it with the user's preferred language
 function onBeforeRequestListener(
-  details: chrome.webRequest.WebRequestDetails
-): chrome.webRequest.BlockingResponse | void {
+  details: WebRequest.OnBeforeRequestDetailsType
+): WebRequest.BlockingResponse | void {
   if (settings.locale && settings.locale !== "default") {
     const match = details.url.match(
       new RegExp("^(https?://trader.degiro.nl/i18n/messages_)(.+)")
@@ -43,7 +38,7 @@ function onBeforeRequestListener(
       const [, urlPrefix, requestedLocale] = match;
 
       if (requestedLocale !== settings.locale) {
-        const redirect: chrome.webRequest.BlockingResponse = {
+        const redirect: WebRequest.BlockingResponse = {
           redirectUrl: urlPrefix + settings.locale,
         };
         return redirect;
@@ -54,8 +49,8 @@ function onBeforeRequestListener(
 
 // Remove the "x-frame-options" response header so we can show the quick order page inside an iframe
 function onHeadersReceivedListener(
-  details: chrome.webRequest.WebResponseHeadersDetails
-): chrome.webRequest.BlockingResponse | void {
+  details: WebRequest.OnHeadersReceivedDetailsType
+): WebRequest.BlockingResponse | void {
   if (details.responseHeaders) {
     const responseHeaders = details.responseHeaders.filter(
       (header) => header.name.toLowerCase() !== "x-frame-options"
@@ -65,95 +60,103 @@ function onHeadersReceivedListener(
 }
 
 function onErrorOccurredListener(
-  details: chrome.webRequest.WebResponseErrorDetails
+  details: WebRequest.OnErrorOccurredDetailsType
 ) {
   console.log("onErrorOccurredListener", details);
 }
 
-chrome.webRequest.onErrorOccurred.addListener(onErrorOccurredListener, {
+browser.webRequest.onErrorOccurred.addListener(onErrorOccurredListener, {
   urls: ["<all_urls>"],
 });
 
-chrome.webRequest.onBeforeRequest.addListener(
+browser.webRequest.onBeforeRequest.addListener(
   onBeforeRequestListener,
   { urls: ["<all_urls>"] },
   ["blocking"]
 );
-chrome.webRequest.onHeadersReceived.addListener(
+browser.webRequest.onHeadersReceived.addListener(
   onHeadersReceivedListener,
   { urls: ["<all_urls>"] },
   ["blocking", "responseHeaders"]
 );
 
 async function onStartupOrOnInstalledListener() {
-  chrome.tabs.onCreated.addListener((tab) => {
-    if (tab.id) {
-      knownTabs.add(tab.id);
-    }
-  });
-
-  chrome.tabs.onRemoved.addListener((tabId, info) => {
-    knownTabs.delete(tabId);
-  });
-
-  /**
-   * This loops through any open DEGIRO tab to inject the
-   * content script when the extension is installed or updated.
-   * New tabs created after the extension has been installed will
-   * get the script automatically, no need to inject it here.
-   */
-  chrome.tabs.query({ url: "*://trader.degiro.nl/*" }, (tabs) => {
-    tabs.forEach((tab) => {
-      if (tab && tab.id && !knownTabs.has(tab.id)) {
+  try {
+    browser.tabs.onCreated.addListener((tab) => {
+      if (tab.id) {
         knownTabs.add(tab.id);
-        chrome.tabs.executeScript(
-          tab.id,
-          {
-            file: "content/content.js",
-          },
-          () => {
-            /**
-             * When the script has executed we open a connection to the
-             * tab's content script so that it can detect if the extension
-             * gets uninstalled or upgraded.
-             */
-            chrome.tabs.connect(tab.id!);
-          }
-        );
       }
     });
-  });
 
-  settings = await getSettings();
-  propagateSettingsUpdate(settings);
+    browser.tabs.onRemoved.addListener((tabId, info) => {
+      knownTabs.delete(tabId);
+    });
 
-  chrome.runtime.onMessage.addListener(
-    async (message, sender, sendResponse) => {
-      if ("__parcel_hmr_reload__" in message) {
-        /**
-         * From: https://v2.parceljs.org/recipes/web-extension/#unexpected-messages
-         * `In development mode, your background scripts will receive a message event
-         * with the content { __parcel_hmr_reload__: true } whenever the page is reloaded.
-         * Parcel will use this automatically to refresh the extension when necessary,
-         * so you'll want to ensure any messages your background scripts receive do not
-         * have the __parcel_hmr_reload__ property before handling them.`
-         */
-        return;
-      }
-
-      if ("op" in message) {
-        switch (message.op) {
-          case "saveSetting":
-            const { name, value } = message;
-            await saveSettingItem(name, value);
-            break;
-          case "getSettings":
-            sendResponse(settings);
-            break;
+    /**
+     * This loops through any open DEGIRO tab to inject the
+     * content script when the extension is installed or updated.
+     * New tabs created after the extension has been installed will
+     * get the script automatically, no need to inject it here.
+     */
+    const tabs = await browser.tabs.query({ url: "*://trader.degiro.nl/*" });
+    tabs.forEach(async (tab) => {
+      try {
+        if (tab && tab.id && !knownTabs.has(tab.id)) {
+          knownTabs.add(tab.id);
+          await browser.tabs.executeScript(tab.id, {
+            file: "content/content.js",
+          });
+          /**
+           * When the script has executed we open a connection to the
+           * tab's content script so that it can detect if the extension
+           * gets uninstalled or upgraded.
+           */
+          browser.tabs.connect(tab.id!);
         }
+      } catch (err) {
+        console.error(err);
       }
-    }
-  );
+    });
+
+    settings = await getSettings();
+    propagateSettingsUpdate(settings);
+
+    browser.runtime.onMessage.addListener(async (message, sender) => {
+      try {
+        if ("__parcel_hmr_reload__" in message) {
+          /**
+           * From: https://v2.parceljs.org/recipes/web-extension/#unexpected-messages
+           * `In development mode, your background scripts will receive a message event
+           * with the content { __parcel_hmr_reload__: true } whenever the page is reloaded.
+           * Parcel will use this automatically to refresh the extension when necessary,
+           * so you'll want to ensure any messages your background scripts receive do not
+           * have the __parcel_hmr_reload__ property before handling them.`
+           */
+          return;
+        }
+
+        if ("op" in message) {
+          switch (message.op) {
+            case "activateIcon":
+              if (browser.pageAction) {
+                browser.pageAction.show(sender.tab.id);
+              }
+              break;
+            case "saveSetting":
+              const { name, value } = message;
+              await saveSettingItem(name, value);
+              break;
+            case "getSettings":
+              return settings;
+          }
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    });
+  } catch (err) {
+    console.error(err);
+  }
 }
 
 /**
@@ -161,18 +164,27 @@ async function onStartupOrOnInstalledListener() {
  * This event is not fired when an incognito profile is started, even if
  * this extension is operating in 'split' incognito mode.
  **/
-chrome.runtime.onStartup.addListener(onStartupOrOnInstalledListener);
+browser.runtime.onStartup.addListener(onStartupOrOnInstalledListener);
 
 // Fired when the extension is first installed, when the extension is updated to a new version, and when Chrome is updated to a new version.
-chrome.runtime.onInstalled.addListener(onStartupOrOnInstalledListener);
+browser.runtime.onInstalled.addListener(onStartupOrOnInstalledListener);
 
-function propagateSettingsUpdate(settings: Settings) {
-  chrome.runtime.sendMessage({ op: "settingsUpdate", settings });
-  chrome.tabs.query({ url: "*://trader.degiro.nl/*" }, (tabs) => {
-    tabs.forEach((tab) => {
-      if (tab && tab.id) {
-        chrome.tabs.sendMessage(tab.id, { op: "settingsUpdate", settings });
+async function propagateSettingsUpdate(settings: Settings) {
+  try {
+    const tabs = await browser.tabs.query({ url: "*://trader.degiro.nl/*" });
+    tabs.forEach(async (tab) => {
+      try {
+        if (tab && tab.id) {
+          await browser.tabs.sendMessage(tab.id, {
+            op: "settingsUpdate",
+            settings,
+          });
+        }
+      } catch (err) {
+        console.error(err);
       }
     });
-  });
+  } catch (err) {
+    console.error(err);
+  }
 }

@@ -1,3 +1,4 @@
+import { browser, Runtime } from "webextension-polyfill-ts";
 import {
   DegiroClient,
   DegiroConfig,
@@ -8,7 +9,7 @@ import {
 const BASE_THEME_ID = "--suite-theme-css";
 const CONFIG_URL = "https://trader.degiro.nl/login/secure/config";
 
-let connectionPort: chrome.runtime.Port;
+let connectionPort: Runtime.Port;
 let currentTheme = "default";
 let degiroData: {
   config: DegiroConfig;
@@ -19,25 +20,32 @@ let degiroData: {
  * This allows us to detect if it get uninstalled or upgraded
  * so that we can do some cleanup.
  */
-chrome.runtime.onConnect.addListener((port) => {
+browser.runtime.onConnect.addListener((port) => {
   connectionPort = port;
   connectionPort.onDisconnect.addListener(cleanup);
 });
 
-function initialize() {
-  chrome.runtime.sendMessage({ op: "getSettings" }, handleSettingsUpdate);
-  chrome.runtime.onMessage.addListener(onMessageHandler);
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", colorSchemeChangeHandler);
+async function initialize() {
+  try {
+    browser.runtime.onMessage.addListener(onMessageHandler);
+    await browser.runtime.sendMessage({ op: "activateIcon" });
+    handleSettingsUpdate(
+      await browser.runtime.sendMessage({ op: "getSettings" })
+    );
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", colorSchemeChangeHandler);
 
-  // If we're inside an iframe (quick order in popup) we mark
-  // the page so that we can avoid applying themes for now.
-  if (window.self !== window.top) {
-    document.querySelector("html").dataset.suiteIframe = "true";
+    // If we're inside an iframe (quick order in popup) we mark
+    // the page so that we can avoid applying themes for now.
+    if (window.self !== window.top) {
+      document.querySelector("html").dataset.suiteIframe = "true";
+    }
+
+    // fetchDegiroData();
+  } catch (err) {
+    console.error(err);
   }
-
-  fetchDegiroData();
 }
 
 async function fetchDegiroData() {
@@ -57,7 +65,7 @@ async function fetchDegiroData() {
 
 function cleanup() {
   applyTheme("default");
-  chrome.runtime.onMessage.removeListener(onMessageHandler);
+  browser.runtime.onMessage.removeListener(onMessageHandler);
   connectionPort.onDisconnect.removeListener(cleanup);
 }
 
@@ -65,11 +73,7 @@ function handleSettingsUpdate(settings: Settings) {
   applyTheme(settings.theme);
 }
 
-function onMessageHandler(
-  message: any,
-  sender: chrome.runtime.MessageSender,
-  sendResponse: (response?: any) => void
-): void {
+function onMessageHandler(message: any, sender: Runtime.MessageSender): void {
   // Only handle messages that come from the extension itself (if theres `tab` then it comes from a content script)
   if (!sender.tab) {
     if (message.op === "settingsUpdate") {
@@ -94,7 +98,7 @@ function loadBaseTheme() {
   const link = document.createElement("link");
   link.setAttribute(
     "href",
-    chrome.extension.getURL("content/styles/theme.css")
+    browser.extension.getURL("content/styles/theme.css")
   );
   link.setAttribute("id", BASE_THEME_ID);
   link.setAttribute("type", "text/css");

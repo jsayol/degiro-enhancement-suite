@@ -1,36 +1,35 @@
+import { browser, Runtime } from "webextension-polyfill-ts";
 import { Settings } from "../common";
 
-function reloadOpenTabs() {
-  chrome.tabs.query({ url: "*://trader.degiro.nl/*" }, (tabs) => {
-    tabs.forEach((tab) => {
-      if (tab && tab.id) {
-        chrome.tabs.reload(tab.id);
-      }
-    });
+async function reloadOpenTabs() {
+  const tabs = await browser.tabs.query({ url: "*://trader.degiro.nl/*" });
+  tabs.forEach((tab) => {
+    if (tab && tab.id) {
+      browser.tabs.reload(tab.id);
+    }
   });
 }
 
-function saveSetting(name: string, value: any) {
-  chrome.runtime.sendMessage({ op: "saveSetting", name, value });
+async function saveSetting(name: string, value: any) {
+  await browser.runtime.sendMessage({ op: "saveSetting", name, value });
 }
 
 // Restores stored settings
-function loadSettings() {
-  chrome.runtime.sendMessage({ op: "getSettings" }, (settings: Settings) => {
-    const localeElement = document.getElementById(
-      "locale"
-    ) as HTMLSelectElement;
-    const themeElement = document.querySelector(
-      "#theme-" + settings.theme
-    ) as HTMLInputElement | null;
-
-    localeElement.value = settings.locale;
-    if (themeElement) {
-      themeElement.checked = true;
-    }
-
-    applyThemeToPopup(settings.theme);
+async function loadSettings() {
+  const settings: Settings = await browser.runtime.sendMessage({
+    op: "getSettings",
   });
+  const localeElement = document.getElementById("locale") as HTMLSelectElement;
+  const themeElement = document.querySelector(
+    "#theme-" + settings.theme
+  ) as HTMLInputElement | null;
+
+  localeElement.value = settings.locale;
+  if (themeElement) {
+    themeElement.checked = true;
+  }
+
+  applyThemeToPopup(settings.theme);
 }
 
 function applyThemeToPopup(theme: string) {

@@ -1,9 +1,9 @@
 {
   "name": "degiro-enhancement-suite",
-  "version": "1.1.1",
-  "description": "A Web Extension to enhance the DEGIRO webtrader.",
+  "version": "1.2.0",
+  "description": "A browser extension to enhance the DEGIRO webtrader",
   "repository": "https://github.com/jsayol/degiro-enhancement-suite",
-  "author": "",
+  "author": "Josep Sayol <jsayoldev@gmail.com>",
   "license": "MIT",
   "private": true,
   "targets": {
@@ -30,12 +30,11 @@
   },
   "browserslist": ">0.25% and supports async-functions",
   "dependencies": {
-    "webextension-polyfill": "^0.7.0"
+    "webextension-polyfill-ts": "^0.25.0"
   },
   "devDependencies": {
     "@parcel/config-webextension": "^2.0.0-nightly.2261",
     "@parcel/transformer-sass": "^2.0.0-nightly.639",
-    "@types/chrome": "^0.0.134",
     "parcel": "^2.0.0-nightly.637",
     "rimraf": "^3.0.2",
     "typescript": "^4.2.4",
