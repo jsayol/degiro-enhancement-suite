@@ -26,6 +26,7 @@
       "all_frames": true,
       "js": ["content/content.ts"],
       "css": [
+        "content/styles/content.scss",
         "content/styles/themes/dark.scss",
         "content/styles/themes/soft-blue.scss",
         "content/styles/themes/soft-green.scss",

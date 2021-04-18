@@ -16,11 +16,6 @@
 
 // html[data-suite-theme]:not([data-suite-theme="default"])
 #appContainer {
-  *:last-child {
-    transition: background-color 300ms ease, color 50ms ease,
-      border-color 50ms ease;
-  }
-
   filter: native-contrast(var(--suite-theme-global-contrast))
     native-saturate(var(--suite-theme-global-saturate)) !important;
   color: var(--suite-theme-color) !important;
