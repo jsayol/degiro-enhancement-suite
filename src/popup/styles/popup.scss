@@ -45,6 +45,8 @@ body {
 
 fieldset {
   border: 0;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
 }
 
 .description {
@@ -97,18 +99,18 @@ div.radio-element {
   }
 }
 
-.tabIcon {
-  margin-right: 4px;
+// .tabIcon {
+//   margin-right: 4px;
 
-  &.settingsIcon {
-    font-size: 1.3rem;
-  }
+//   &.settingsIcon {
+//     font-size: 1.3rem;
+//   }
 
-  &.quickOrderIcon {
-    color: transparent;
-    text-shadow: 0 0 1px var(--suite-theme-color);
-  }
-}
+//   &.quickOrderIcon {
+//     color: transparent;
+//     text-shadow: 0 0 1px var(--suite-theme-color);
+//   }
+// }
 
 #reloadButton {
   display: none;
@@ -141,6 +143,69 @@ span.info-icon {
 
 #radio-theme-auto {
   display: none;
+}
+
+#fx-calc {
+  fieldset {
+    border: 1px solid var(--suite-theme-border-color);
+    border-radius: 6px;
+
+    .title {
+      font-weight: bold;
+      margin: 0 -0.75em 1em -0.75em;
+    }
+  }
+
+  .foldable-content {
+    // padding-top: 1em;
+  }
+
+  #fx-amount {
+    width: 120px;
+  }
+
+  div.fx-calc-amount-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+
+    select {
+      margin: 0 0 0 0.3em;
+      padding: 0;
+    }
+  }
+}
+
+.foldable {
+  .foldable-trigger {
+    cursor: pointer;
+
+    &::before {
+      content: "▸";
+    }
+
+    &.open::before {
+      content: "▾";
+    }
+  }
+
+  .foldable-content {
+    max-height: 0;
+    opacity: 0;
+    // transition: max-height 150ms ease-out, visibility 150ms ease-out;
+    visibility: hidden;
+    transition: max-height 100ms ease-out, opacity 100ms ease-out,
+      visibility 0s ease-out 100ms;
+
+    &.open {
+      max-height: 500px;
+      opacity: 1;
+      // transition: max-height 150ms ease-in, visibility 150ms ease-in;
+      visibility: visible;
+      transition: max-height 100ms ease-in, opacity 100ms ease-in,
+        visibility 0s ease-in;
+    }
+  }
 }
 
 /* This detects if "prefers-color-scheme" is supported */

@@ -32,6 +32,10 @@ aside {
   }
 }
 
+div[data-name="openedTasksAlert"] {
+  background-color: var(--suite-theme-bg-prominent) !important;
+}
+
 div[data-name="commonOrderButtonLayout"],
 button[accent="true"]:not([data-name="quickOrderButton"]),
 img[data-name="countryFlag"],

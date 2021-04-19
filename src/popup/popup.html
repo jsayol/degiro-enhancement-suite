@@ -23,15 +23,17 @@
     <div class="content">
 
       <div class="tabbed">
-        <input type="radio" id="tab1" name="css-tabs" checked>
-        <input type="radio" id="tab2" name="css-tabs">
+        <input type="radio" id="tab-settings" name="css-tabs" checked>
+        <input type="radio" id="tab-utils" name="css-tabs">
+        <input type="radio" id="tab-order" name="css-tabs">
 
         <ul class="tabs">
-          <li class="tab"><label for="tab1"><span class="tabIcon settingsIcon">⚙</span> Settings</label></li>
-          <li class="tab"><label for="tab2"><span class="tabIcon quickOrderIcon">➕</span> Quick order</label></li>
+          <li class="tab"><label for="tab-settings">Settings</label></li>
+          <li class="tab"><label for="tab-utils">Utils</label></li>
+          <li class="tab"><label for="tab-order">Order</label></li>
         </ul>
 
-        <div class="tab-content">
+        <div class="tab-content" data-tab="settings">
           <button id="reloadButton" title="Reload to apply the new language">↻</button>
           <div class="form">
             <fieldset>
@@ -118,37 +120,63 @@
               </div> -->
             </fieldset>
           </div>
-
-          <div class="bottom">
-            <div class="btn-container kofi">
-              <a title="Donate on ko-fi.com" class="donation-button" href="https://ko-fi.com/Q5Q447X4V" target="_blank">
-                <span class="donationtext">
-                  <img src="../assets/img/cup-border.png" alt="Ko-fi donations" class="donationimg" />
-                </span>
-              </a>
-            </div>
-
-            <div class="btn-container crypto">
-              <a title="Donate with Crypto" class="donation-button"
-                href="https://commerce.coinbase.com/checkout/7867ad05-6d57-4971-8085-c339fcd58ef8" target="_blank">
-                <span class="donationtext">
-                  <img src="../assets/img/bitcoin.svg" alt="Crypto donations" class="donationimg" />
-                </span>
-              </a>
-            </div>
-          </div>
-
         </div>
 
-        <div class="tab-content">
+        <div class="tab-content" data-tab="utils">
+          <div id="fx-calc">
+            <div class="form">
+              <fieldset class="foldable">
+                <div class="title foldable-trigger">Currency exchange fee calculator</div>
+                <div class="foldable-content">
+                  <label class="description" for="fx-amount">Amount:</label>
+                  <div class="fx-calc-amount-container">
+                    <input type="number" min="0" id="fx-amount">
+                    <select id="fx-currency">
+                      <option value="EUR">EUR</option>
+                      <option value="USD">USD</option>
+                      <option value="GBP">GBP</option>
+                      <option value="CHF">CHF</option>
+                      <option value="DKK">DKK</option>
+                      <option value="NOK">NOK</option>
+                      <option value="SEK">SEK</option>
+                    </select>
+                  </div>
+                  <div>AutoFX fee: <span id="fx-fee-autofx"></span></div>
+                  <div>Manual fee: <span id="fx-fee-manual"></span></div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" data-tab="order">
           <iframe id="quickOrder" width="350" height="510"></iframe>
+        </div>
+
+        <div class="bottom">
+          <div class="btn-container kofi">
+            <a title="Donate on ko-fi.com" class="donation-button" href="https://ko-fi.com/Q5Q447X4V" target="_blank">
+              <span class="donationtext">
+                <img src="../assets/img/cup-border.png" alt="Ko-fi donations" class="donationimg" />
+              </span>
+            </a>
+          </div>
+
+          <div class="btn-container crypto">
+            <a title="Donate with Crypto" class="donation-button"
+              href="https://commerce.coinbase.com/checkout/7867ad05-6d57-4971-8085-c339fcd58ef8" target="_blank">
+              <span class="donationtext">
+                <img src="../assets/img/bitcoin.svg" alt="Crypto donations" class="donationimg" />
+              </span>
+            </a>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 
-  <script src="../../node_modules/webextension-polyfill/dist/browser-polyfill.js"></script>
+  <script src="../vendor/webextension-polyfill.ts"></script>
   <script src="popup.ts"></script>
 </body>
 
