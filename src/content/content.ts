@@ -92,6 +92,7 @@ function colorSchemeChangeHandler(event: MediaQueryListEvent) {
 }
 
 function loadBaseTheme() {
+  return; // TODO: temporary!!!!
   if (document.getElementById(BASE_THEME_ID)) {
     return;
   }
@@ -107,6 +108,7 @@ function loadBaseTheme() {
 }
 
 function unloadBaseTheme() {
+  return; // TODO: temporary!!!!
   const cssNode = document.getElementById(BASE_THEME_ID);
   if (cssNode && cssNode.parentNode) {
     cssNode.parentNode.removeChild(cssNode);

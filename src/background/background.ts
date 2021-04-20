@@ -1,5 +1,6 @@
 import { browser, WebRequest } from "webextension-polyfill-ts";
 import { Settings } from "../common";
+import * as stylesManager from "./styles-manager";
 
 const DEFAULT_SETTINGS: Settings = {
   locale: "default",
@@ -29,7 +30,23 @@ async function saveSettingItem(name: string, value: any): Promise<void> {
 function onBeforeRequestListener(
   details: WebRequest.OnBeforeRequestDetailsType
 ): WebRequest.BlockingResponse | void {
+  // Fetch and parse sourcemaps for js files
+  if (details.url.match(stylesManager.JS_URL_REGEX)) {
+    /**
+     * TODO: unlikely, but just appending ".map" might not necessarily
+     * be the url of the source map. Maybe extract it from the js?
+     * (fetch() with "Range: bytes=-800" header)
+     **/
+    stylesManager.applySourceMap(details.url + ".map");
+  }
+
+  // TODO: temp, extracts a list of the CSS files loaded so far
+  if (details.url.includes(".css")) {
+    console.log(details.url);
+  }
+
   if (settings.locale && settings.locale !== "default") {
+    // Replace the default i18n file with the one chosen by the user
     const match = details.url.match(
       new RegExp("^(https?://trader.degiro.nl/i18n/messages_)(.+)")
     );
@@ -47,10 +64,13 @@ function onBeforeRequestListener(
   }
 }
 
-// Remove the "x-frame-options" response header so we can show the quick order page inside an iframe
 function onHeadersReceivedListener(
   details: WebRequest.OnHeadersReceivedDetailsType
 ): WebRequest.BlockingResponse | void {
+  /**
+   * Remove the "x-frame-options" response header so that we can show
+   * the quick order page inside an iframe.
+   **/
   if (details.responseHeaders) {
     const responseHeaders = details.responseHeaders.filter(
       (header) => header.name.toLowerCase() !== "x-frame-options"
@@ -82,12 +102,16 @@ browser.webRequest.onHeadersReceived.addListener(
 
 async function onStartupOrOnInstalledListener() {
   try {
+    // Flush in-memory cache so that we can see all requests
+    // See https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
+    const flushingCache = browser.webRequest.handlerBehaviorChanged();
+
+    // Keep track of open tabs
     browser.tabs.onCreated.addListener((tab) => {
       if (tab.id) {
         knownTabs.add(tab.id);
       }
     });
-
     browser.tabs.onRemoved.addListener((tabId, info) => {
       knownTabs.delete(tabId);
     });
@@ -121,6 +145,7 @@ async function onStartupOrOnInstalledListener() {
     settings = await getSettings();
     propagateSettingsUpdate(settings);
 
+    // Handle messages
     browser.runtime.onMessage.addListener(async (message, sender) => {
       try {
         if ("__parcel_hmr_reload__" in message) {
@@ -154,6 +179,8 @@ async function onStartupOrOnInstalledListener() {
         console.error(err);
       }
     });
+
+    await flushingCache;
   } catch (err) {
     console.error(err);
   }
@@ -166,7 +193,10 @@ async function onStartupOrOnInstalledListener() {
  **/
 browser.runtime.onStartup.addListener(onStartupOrOnInstalledListener);
 
-// Fired when the extension is first installed, when the extension is updated to a new version, and when Chrome is updated to a new version.
+/**
+ * Fired when the extension is first installed, when the extension is updated
+ * to a new version, and when Chrome is updated to a new version.
+ **/
 browser.runtime.onInstalled.addListener(onStartupOrOnInstalledListener);
 
 async function propagateSettingsUpdate(settings: Settings) {

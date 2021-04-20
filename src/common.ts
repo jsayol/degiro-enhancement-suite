@@ -94,3 +94,46 @@ export function getRandomColor() {
 
   return randomColor;
 }
+
+export function hasProperty(obj: object, prop: string): boolean {
+  return Boolean(Reflect.getOwnPropertyDescriptor(obj, prop));
+}
+
+/*
+function setNoCacheControlHeader(
+  detail: WebRequest.OnBeforeSendHeadersDetailsType
+) {
+  const headers = (detail.requestHeaders || []).filter(
+    (header) => header.name.toLowerCase() !== "cache-control"
+  );
+  headers.push({ name: "Cache-Control", value: "no-cache" });
+  return { requestHeaders: headers };
+}
+
+let noCacheTimeout = null;
+
+function disableNoCache() {
+  if (
+    browser.webRequest.onBeforeSendHeaders.hasListener(setNoCacheControlHeader)
+  ) {
+    if (noCacheTimeout) clearTimeout(noCacheTimeout);
+    browser.webRequest.onBeforeSendHeaders.removeListener(
+      setNoCacheControlHeader
+    );
+  }
+}
+
+function enableNoCache() {
+  const hasListener = browser.webRequest.onBeforeSendHeaders.hasListener(
+    setNoCacheControlHeader
+  );
+  if (!hasListener) {
+    browser.webRequest.onBeforeSendHeaders.addListener(
+      setNoCacheControlHeader,
+      { urls: ["<all_urls>"] },
+      ["blocking", "requestHeaders"]
+    );
+    noCacheTimeout = setTimeout(disableNoCache, 5000);
+  }
+}
+*/

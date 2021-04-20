@@ -402,19 +402,19 @@ div {
     svg {
       * {
         &[fill="#007336"] {
-          fill: var(--suite-theme-green-color) !important;
+          fill: var(--suite-theme-green) !important;
         }
 
         &[fill="#FF0000"] {
-          fill: var(--suite-theme-red-color) !important;
+          fill: var(--suite-theme-red) !important;
         }
 
         &[stroke="#66B366"] {
-          stroke: var(--suite-theme-green-color) !important;
+          stroke: var(--suite-theme-green) !important;
         }
 
         &[stroke="#FF0000"] {
-          stroke: var(--suite-theme-red-color) !important;
+          stroke: var(--suite-theme-red) !important;
         }
 
         &[stroke="#FFFFFF"] {
@@ -434,13 +434,13 @@ div {
 
       text[x="708"] {
         &:nth-last-child(2) {
-          fill: var(--suite-theme-textongreen-color) !important;
-          color: var(--suite-theme-textongreen-color) !important;
+          fill: var(--suite-theme-textongreen) !important;
+          color: var(--suite-theme-textongreen) !important;
         }
 
         &:nth-last-child(1) {
-          fill: var(--suite-theme-textonred-color) !important;
-          color: var(--suite-theme-textonred-color) !important;
+          fill: var(--suite-theme-textonred) !important;
+          color: var(--suite-theme-textonred) !important;
         }
       }
     }
@@ -811,13 +811,13 @@ section[data-name="sideInformationPanel"] {
 #appContainer {
   #appWorkspace button {
     &[data-action="buy"]:not([disabled]) {
-      color: var(--suite-theme-textongreen-color) !important;
-      background-color: var(--suite-theme-green-color) !important;
+      color: var(--suite-theme-textongreen) !important;
+      background-color: var(--suite-theme-green) !important;
     }
 
     &[data-action="sell"]:not([disabled]) {
-      color: var(--suite-theme-textonred-color) !important;
-      background-color: var(--suite-theme-red-color) !important;
+      color: var(--suite-theme-textonred) !important;
+      background-color: var(--suite-theme-red) !important;
     }
   }
 
@@ -825,12 +825,12 @@ section[data-name="sideInformationPanel"] {
   // span {
   //   &[data-positive="true"]:is([data-field="totalPl"], :not(:is([data-id="totalPortfolio"], [data-field="depreciationValue"], [data-field="depreciationPercent"], [data-field="initialPrice"], [data-field="firePrice"]))),
   //   &[data-negative="false"] {
-  //     color: var(--suite-theme-green-color) !important;
+  //     color: var(--suite-theme-green) !important;
   //   }
 
   //   &[data-positive="false"]:is([data-field="totalPl"], :not(:is([data-id="totalPortfolio"], [data-field="depreciationValue"], [data-field="depreciationPercent"], [data-field="initialPrice"], [data-field="firePrice"]))),
   //   &[data-negative="true"] {
-  //     color: var(--suite-theme-red-color) !important;
+  //     color: var(--suite-theme-red) !important;
   //   }
   // }
 }

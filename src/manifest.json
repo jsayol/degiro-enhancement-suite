@@ -13,7 +13,7 @@
   },
   "background": {
     "persistent": true,
-    "scripts": ["vendor/webextension-polyfill.ts", "background/background.ts"]
+    "scripts": ["./vendor/webextension-polyfill.ts", "background/background.ts"]
   },
   "browser_action": {
     "default_title": "Enhancement Suite for DEGIRO",
@@ -22,9 +22,13 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://trader.degiro.nl/*"],
+      "matches": [
+        "*://trader.degiro.nl/login/*",
+        "*://trader.degiro.nl/trader/*",
+        "*://trader.degiro.nl/beta-trader/*"
+      ],
       "all_frames": true,
-      "js": ["vendor/webextension-polyfill.ts", "content/content.ts"],
+      "js": ["./vendor/webextension-polyfill.ts", "content/content.ts"],
       "css": [
         "content/styles/content.scss",
         "content/styles/themes/dark.scss",
@@ -34,6 +38,19 @@
         "content/styles/themes/high-contrast-black.scss",
         "content/styles/themes/high-contrast-white.scss"
       ]
+    },
+    {
+      "matches": ["*://trader.degiro.nl/login/*"],
+      "all_frames": true,
+      "css": ["content/styles-new/login/app.scss"]
+    },
+    {
+      "matches": [
+        "*://trader.degiro.nl/trader/*",
+        "*://trader.degiro.nl/beta-trader/*"
+      ],
+      "all_frames": true,
+      "css": ["content/styles-new/trader/app.scss"]
     }
   ],
   "web_accessible_resources": ["content/styles/theme.scss"],
