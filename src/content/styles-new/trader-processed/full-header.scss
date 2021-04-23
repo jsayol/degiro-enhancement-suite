@@ -1,0 +1,41 @@
+html[data-suite-theme] {
+  @alternative-order-selector:optionsList@ {
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    color: #000;
+  }
+
+  @alternative-order-selector:optionItem@:focus,
+  @alternative-order-selector:optionItem@:hover {
+    background-color: #e4f4fb;
+  }
+
+  ._32AlLnUO {
+    background-color: #fff;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  @full-header:header@ {
+    background-color: #fff;
+    border-bottom-color: #e8e8e8;
+  }
+
+  @full-header:commonOrderButtonLayout@ {
+    background-color: #009fdf;
+    color: #fff;
+  }
+
+  /* TODO: fix this */
+  /* @full-header:commonOrderButtonLayout@ @full-header:alternativeOrdersSelector@ {
+  border-left-color: 0.5);
+} */
+
+  @media (pointer: fine), all and (pointer: none) {
+    @full-header:alternativeOrdersSelector@:hover {
+      background-color: #007bc2;
+    }
+  }
+}

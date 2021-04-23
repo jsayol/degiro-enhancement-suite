@@ -1,0 +1,76 @@
+html[data-suite-theme] {
+  @expandable-content:minimizedContent@:after {
+    box-shadow: 0 0 8px 8px #fff;
+  }
+
+  @list:groupDivider@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  @list:item@,
+  @list:underlinedItem@ {
+    border-bottom-color: #e8e8e8;
+  }
+
+  @list:item@:not(@list:underlinedItem@):last-child {
+    border-bottom-color: transparent;
+  }
+
+  @list:selectedItem@ {
+    background-color: #f7f8f9;
+  }
+
+  @list:list@ @list:selectedItem@:after,
+  @list:list@ @list:hoverableItem@:after {
+    background-color: inherit;
+  }
+
+  @list:subContent@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    @list:hoverableItem@:hover,
+    @list:item@:focus {
+      background-color: #e4f4fb;
+    }
+  }
+
+  @switch-buttons:switchControl@ {
+    background-color: #f3f4f5;
+  }
+
+  @switch-buttons:switchControlInTransition@ {
+    background-color: transparent;
+  }
+
+  @switch-buttons:option@ + @switch-buttons:option@ {
+    border-left-color: #f3f4f5;
+  }
+
+  @switch-buttons:option@[disabled] {
+    background-color: transparent;
+  }
+
+  @switch-buttons:activeOption@ {
+    color: #fff;
+  }
+
+  @switch-buttons:option@ + @switch-buttons:activeOption@,
+  @switch-buttons:activeOption@ + @switch-buttons:option@ {
+    border-left: 0;
+  }
+
+  @switch-buttons:activeOption@:first-child {
+    background-color: #00a658;
+  }
+
+  @switch-buttons:activeOption@:last-child {
+    background-color: #009fdf;
+  }
+
+  @switch-buttons:option@[disabled]@switch-buttons:activeOption@ {
+    background-color: #d4d4d4;
+    color: #000;
+  }
+}

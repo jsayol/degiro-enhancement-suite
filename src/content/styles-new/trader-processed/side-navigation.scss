@@ -1,0 +1,110 @@
+html[data-suite-theme] {
+  ._2qBKh7vt {
+    background-color: #e6605c;
+    color: #fff;
+  }
+
+  .eIiUV4uU {
+    background-color: #181a21;
+  }
+
+  ._3PIXiFtL {
+    color: #e6605c;
+  }
+
+  @side-navigation:navigationTopMenuItem@ {
+    color: #98a1b1;
+  }
+
+  @side-navigation:activeNavigationItem@,
+  @side-navigation:openedNavigationItem@ {
+    color: #fff;
+  }
+
+  @side-navigation:activeNavigationItem@ @side-navigation:navigationItemIcon@ {
+    color: #009fdf;
+  }
+
+  @side-navigation:activeNavigationItem@ @side-navigation:profileAvatar@ {
+    background-color: #009fdf;
+    color: currentColor;
+  }
+
+  .HFtJ8ljz {
+    background-color: #181a21;
+    color: #fff;
+  }
+
+  ._3rPJxCL- {
+    color: #98a1b1;
+  }
+
+  @side-navigation:navigationSubMenuItem@ {
+    color: #98a1b1;
+  }
+
+  ._2Aw-y_lx > .HFtJ8ljz:before {
+    border-bottom-color: transparent;
+    border-right-color: #181a21;
+    border-top-color: transparent;
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    @side-navigation:navigationTopMenuItem@:focus,
+    @side-navigation:navigationTopMenuItem@:hover {
+      color: #fff;
+    }
+
+    @side-navigation:navigationSubMenuItemWrapper@:hover > @side-navigation:navigationSubMenuItem@ {
+      background-color: hsla(0, 0%, 100%, 0.15);
+      color: #fff;
+    }
+  }
+
+  @inbox-status-icon:badge@ {
+    background-color: #e6605c;
+    color: #fff;
+  }
+
+  @avatar:avatar@ {
+    background-color: #edeff1;
+    color: #000;
+  }
+
+  @profile-navigation-item:profileItemSeparator@ {
+    background-color: hsla(0, 0%, 100%, 0.2);
+  }
+
+  @profile-navigation-item:clientInfoTitle@ {
+    color: #fff;
+  }
+
+  @checkbox:thumb@ {
+    background-color: #f0f0f0;
+    border-color: #d4d4d4;
+  }
+
+  @checkbox:input@:checked ~ @checkbox:thumb@ {
+    background-color: #009fdf;
+    border-color: #009fdf;
+  }
+
+  @checkbox:input@[disabled]:checked ~ @checkbox:thumb@,
+  @checkbox:input@[disabled] ~ @checkbox:thumb@ {
+    background-color: #d4d4d4;
+    border-color: transparent;
+  }
+
+  @checkbox:input@:checked ~ @checkbox:thumb@:after {
+    border-color: #fff;
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    @checkbox:thumb@:hover {
+      background-color: #f3f4f5;
+    }
+    @checkbox:input@:focus ~ @checkbox:thumb@ {
+      border-color: #009fdf;
+    }
+  }
+}

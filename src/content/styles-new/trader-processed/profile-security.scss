@@ -1,0 +1,77 @@
+html[data-suite-theme] {
+  .HYW76b34 {
+    background: #fff;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  @input:inputFieldLayout@ {
+    background-color: #f3f4f5;
+  }
+
+  @input:inputFieldLayout@:focus-within,
+  @input:focusedInputFieldLayout@ {
+    background-color: #fff;
+  }
+
+  @input:inputFieldLayout@:not(@input:invalidInputFieldLayout@):focus-within,
+  @input:focusedInputFieldLayout@ {
+    border-color: #009fdf;
+  }
+
+  @input:invalidInputFieldLayout@ {
+    border-color: #e6605c;
+  }
+
+  @input:inputFieldControl@ {
+    background-color: inherit;
+  }
+
+  ._3dpUyUgG {
+    background-color: #fff;
+    color: #007bc2;
+  }
+
+  .HNj2UG1r {
+    background-color: #fff;
+    border-bottom-color: #e8e8e8;
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  @breadcrumbs:selectedNavigationItem@ {
+    color: #000;
+  }
+
+  @list:groupDivider@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  @list:item@,
+  @list:underlinedItem@ {
+    border-bottom-color: #e8e8e8;
+  }
+
+  @list:item@:not(@list:underlinedItem@):last-child {
+    border-bottom-color: transparent;
+  }
+
+  @list:selectedItem@ {
+    background-color: #f7f8f9;
+  }
+
+  @list:list@ @list:selectedItem@:after,
+  @list:list@ @list:hoverableItem@:after {
+    background-color: inherit;
+  }
+
+  @list:subContent@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    @list:hoverableItem@:hover,
+    @list:item@:focus {
+      background-color: #e4f4fb;
+    }
+  }
+}

@@ -28,10 +28,12 @@ browser.runtime.onConnect.addListener((port) => {
 async function initialize() {
   try {
     browser.runtime.onMessage.addListener(onMessageHandler);
+
+    const settings = await browser.runtime.sendMessage({ op: "getSettings" });
+    handleSettingsUpdate(settings);
+
     await browser.runtime.sendMessage({ op: "activateIcon" });
-    handleSettingsUpdate(
-      await browser.runtime.sendMessage({ op: "getSettings" })
-    );
+
     window
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", colorSchemeChangeHandler);
@@ -41,6 +43,8 @@ async function initialize() {
     if (window.self !== window.top) {
       document.querySelector("html").dataset.suiteIframe = "true";
     }
+
+    console.log(document.styleSheets);
 
     // fetchDegiroData();
   } catch (err) {

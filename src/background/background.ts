@@ -135,7 +135,7 @@ async function onStartupOrOnInstalledListener() {
            * tab's content script so that it can detect if the extension
            * gets uninstalled or upgraded.
            */
-          browser.tabs.connect(tab.id!);
+          browser.tabs.connect(tab.id);
         }
       } catch (err) {
         console.error(err);

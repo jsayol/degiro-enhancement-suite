@@ -1,5 +1,5 @@
 import { browser } from "webextension-polyfill-ts";
-import { hasProperty } from "../common";
+import { getKnownAppVersion, hasProperty } from "../common";
 
 export const JS_URL_REGEX = /\/(login|trader)\/scripts\/([^\/]+)\.([^\.]+)\.js$/;
 export const JSMAP_URL_REGEX = /\/(login|trader)\/scripts\/([^\/]+)\.([^\.]+)\.js\.map$/;
@@ -15,7 +15,7 @@ interface SourceMap {
 }
 
 type FilesSeen = Set<string>;
-let filesSeen: FilesSeen;
+let filesSeen: FilesSeen = new Set();
 
 export type Module = "login" | "trader";
 export type ModuleClasses = {
@@ -30,12 +30,12 @@ const EMPTY_STYLES_TREE: StylesTree = {
   trader: {},
 };
 
-let stylesTree: StylesTree;
+let stylesTree: StylesTree = EMPTY_STYLES_TREE;
 
 export async function applySourceMap(url: string): Promise<void> {
-  if (filesSeen.has(url)) {
-    return;
-  }
+  // if (filesSeen.has(url)) {
+  //   return;
+  // }
 
   const [, module, chunk] = url.match(JSMAP_URL_REGEX) as [any, Module, string];
 
@@ -44,17 +44,18 @@ export async function applySourceMap(url: string): Promise<void> {
   const map: SourceMap = await resp.json();
 
   // Extract the generated classnames from the sourcemap
-  map.sourcesContent.forEach((fileSource) => {
+  map.sourcesContent.forEach((fileSource, pos) => {
     const contentMatch = fileSource.match(
       /^\/\/ extracted by mini-css-extract-plugin\n((.|\n|\r)+)/
     );
 
     if (contentMatch) {
+      const [, sourceFileName] = map.sources[pos].match(/([^\/]+)\.css$/);
       const content = contentMatch[1];
       content.split("\n").map((line) => {
         const lineMatch = line.match(/export const ([^ ]+) = "(.+)";/);
         if (lineMatch) {
-          let key = lineMatch[1];
+          let key = sourceFileName + ":" + lineMatch[1];
           const classes = lineMatch[2].split(" ");
 
           if (!hasProperty(stylesTree, module)) {
@@ -78,7 +79,7 @@ export async function applySourceMap(url: string): Promise<void> {
   await storeStyles(stylesTree);
   await storeFilesSeen(filesSeen);
 
-  // console.log(stylesTree);
+  console.log(stylesTree);
 
   // TODO: process theme stylesheet template with the new styles
 }
@@ -111,8 +112,12 @@ async function storeFilesSeen(filesSeen: FilesSeen): Promise<void> {
 }
 
 async function initialize() {
+  reset(); // TODO: !!!!!!!! REMOVE !!!!!!!!
+
   stylesTree = await getStyles();
   filesSeen = await getFilesSeen();
+
+  console.log(stylesTree);
 }
 
 initialize();

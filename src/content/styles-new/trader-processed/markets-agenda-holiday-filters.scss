@@ -1,0 +1,75 @@
+html[data-suite-theme] {
+  @country-flag:flag@ {
+    border-color: #d4d4d4;
+    object-fit: cover;
+  }
+
+  @country-flag:flag@@country-flag:noBorder@ {
+    border-color: transparent;
+  }
+
+  @datepicker:inputWithIcon@:focus + @datepicker:inputIcon@ {
+    color: #009fdf;
+  }
+
+  @datepicker:popup@ {
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  @datepicker:selectedItem@ {
+    background-color: #009fdf;
+    color: #fff;
+  }
+
+  @datepicker:item@[disabled],
+  @datepicker:moreButton@[disabled],
+  @datepicker:navButton@[disabled] {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    @datepicker:item@:not([disabled]):not(@datepicker:selectedItem@):hover,
+    @datepicker:moreButton@:not([disabled]):hover {
+      background-color: #f3f4f5;
+    }
+  }
+
+  .IIr0vEtl {
+    border-bottom-color: #e8e8e8;
+  }
+
+  ._2mblqc1D {
+    color: #000;
+  }
+
+  ._2mblqc1D[disabled] {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+  @form-line-multi-select-filter:formLineWrapper@ .Assm8m4p {
+    border-bottom-color: #e8e8e8;
+  }
+
+  @form-line-multi-select-filter:formLineIcon@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .HYW76b34 {
+    background: #fff;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 767px) {
+    @float-controls-panel:floatLayoutButton@ {
+    }
+  }
+
+  ._2aaXLEv1 {
+    background-color: transparent;
+  }
+}
