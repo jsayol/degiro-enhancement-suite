@@ -20,8 +20,10 @@ const baseDir = path.join(
   "dist",
   distEnv,
   "content",
-  "styles-new"
+  "styles"
 );
+
+const outDir = path.join(__dirname, "..", "src", "content", "styles");
 
 async function bundle(module: Module) {
   try {
@@ -30,7 +32,7 @@ async function bundle(module: Module) {
     const bundle: { [k: string]: string } = {};
 
     for (const file of files) {
-      const fileMatch = file.match(/(.+)\.css/);
+      const fileMatch = file.match(/(.+)\.css$/);
       if (fileMatch) {
         const chunk = fileMatch[1];
         const content = await readFile(path.join(moduleDir, file));
@@ -38,13 +40,14 @@ async function bundle(module: Module) {
       }
     }
 
-    const bundlePath = path.join(baseDir, module + "-css.json");
+    // const bundlePath = path.join(baseDir, module + "-css.json");
+    const bundlePath = path.join(outDir, module + "-css.ts");
     const bundleJSON =
       distEnv === "prod"
         ? JSON.stringify(bundle)
         : JSON.stringify(bundle, null, 2);
 
-    await writeFile(bundlePath, bundleJSON);
+    await writeFile(bundlePath, "export default " + bundleJSON);
   } catch (err) {
     console.error(err);
   }

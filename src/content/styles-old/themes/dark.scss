@@ -1,0 +1,32 @@
+/*
+ NOTE: if using this theme as a base to make another one, remove
+ the `html[data-suite-theme="auto"]` slector.
+ 
+ "auto" here is only used for the popup, the content script handles
+ applying the auto theme to the webtrader.
+ */
+html[data-suite-theme="dark"], html[data-suite-theme="auto"] {
+  --suite-theme-color-accent-bg: #009fe3;
+  --suite-theme-color-accent-fg: #000;
+  --suite-theme-login-logo-filter: drop-shadow(0px 0px 3px #768390);
+  --suite-theme-bg-app: #101010;
+  --suite-theme-bg-prominent: #101010;
+  --suite-theme-bg: #161617;
+  --suite-theme-bg-midlite: #1e1e1f;
+  --suite-theme-bg-lite: #1f2021;
+  --suite-theme-color: #afafaf;
+  --suite-theme-color-secondary: #696969;
+  --suite-theme-border-color: #2f2f2f;
+  --suite-theme-scroll-bg: #0c0c0c;
+  --suite-theme-scroll-thumb-bg: #3a3a3a;
+  --suite-theme-scroll-track-bg: #2f2f2f;
+  --suite-theme-red: #e8312b;
+  --suite-theme-green: #008043;
+  --suite-theme-textonred: #cecece;
+  --suite-theme-textongreen: #cecece;
+  --suite-theme-brightness: 100%;
+  --suite-theme-global-contrast: 100%;
+  --suite-theme-global-saturate: 80%;
+  --suite-theme-chart-line-color: #353535;
+  --suite-theme-chart-line-bg: rgb(80 80 80 / 25%);
+}

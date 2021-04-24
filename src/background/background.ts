@@ -1,5 +1,5 @@
 import { browser, WebRequest } from "webextension-polyfill-ts";
-import { Settings } from "../common";
+import { hasProperty, Settings } from "../common";
 import * as stylesManager from "./styles-manager";
 
 const DEFAULT_SETTINGS: Settings = {
@@ -9,22 +9,6 @@ const DEFAULT_SETTINGS: Settings = {
 
 let settings = DEFAULT_SETTINGS;
 let knownTabs: Set<number /*tabId*/> = new Set();
-
-function getSettings(): Promise<Settings> {
-  return browser.storage.sync.get(DEFAULT_SETTINGS) as Promise<Settings>;
-}
-
-async function saveSettingItem(name: string, value: any): Promise<void> {
-  try {
-    if (name in settings && settings[name as keyof Settings] !== value) {
-      settings[name as keyof Settings] = value;
-      await browser.storage.sync.set({ [name]: value });
-      propagateSettingsUpdate(settings);
-    }
-  } catch (err) {
-    console.error(err);
-  }
-}
 
 // Intercept the request for the I18N file and replace it with the user's preferred language
 function onBeforeRequestListener(
@@ -38,11 +22,6 @@ function onBeforeRequestListener(
      * (fetch() with "Range: bytes=-800" header)
      **/
     stylesManager.applySourceMap(details.url + ".map");
-  }
-
-  // TODO: temp, extracts a list of the CSS files loaded so far
-  if (details.url.includes(".css")) {
-    console.log(details.url);
   }
 
   if (settings.locale && settings.locale !== "default") {
@@ -85,26 +64,12 @@ function onErrorOccurredListener(
   console.log("onErrorOccurredListener", details);
 }
 
-browser.webRequest.onErrorOccurred.addListener(onErrorOccurredListener, {
-  urls: ["<all_urls>"],
-});
-
-browser.webRequest.onBeforeRequest.addListener(
-  onBeforeRequestListener,
-  { urls: ["<all_urls>"] },
-  ["blocking"]
-);
-browser.webRequest.onHeadersReceived.addListener(
-  onHeadersReceivedListener,
-  { urls: ["<all_urls>"] },
-  ["blocking", "responseHeaders"]
-);
-
 async function onStartupOrOnInstalledListener() {
   try {
     // Flush in-memory cache so that we can see all requests
     // See https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
-    const flushingCache = browser.webRequest.handlerBehaviorChanged();
+    // const flushingCache = browser.webRequest.handlerBehaviorChanged();
+    await browser.webRequest.handlerBehaviorChanged();
 
     // Keep track of open tabs
     browser.tabs.onCreated.addListener((tab) => {
@@ -164,7 +129,7 @@ async function onStartupOrOnInstalledListener() {
           switch (message.op) {
             case "activateIcon":
               if (browser.pageAction) {
-                browser.pageAction.show(sender.tab.id);
+                browser.pageAction.show(sender.tab!.id!);
               }
               break;
             case "saveSetting":
@@ -173,6 +138,12 @@ async function onStartupOrOnInstalledListener() {
               break;
             case "getSettings":
               return settings;
+            case "loadBaseTheme":
+              stylesManager.loadBaseTheme(sender.tab!.id!);
+              break;
+            case "unloadBaseTheme":
+              stylesManager.unloadBaseTheme(sender.tab!.id!);
+              break;
           }
         }
       } catch (err) {
@@ -180,24 +151,27 @@ async function onStartupOrOnInstalledListener() {
       }
     });
 
-    await flushingCache;
+    // await flushingCache;
   } catch (err) {
     console.error(err);
   }
 }
 
-/**
- * Fired when a profile that has this extension installed first starts up.
- * This event is not fired when an incognito profile is started, even if
- * this extension is operating in 'split' incognito mode.
- **/
-browser.runtime.onStartup.addListener(onStartupOrOnInstalledListener);
+function getSettings(): Promise<Settings> {
+  return browser.storage.sync.get(DEFAULT_SETTINGS) as Promise<Settings>;
+}
 
-/**
- * Fired when the extension is first installed, when the extension is updated
- * to a new version, and when Chrome is updated to a new version.
- **/
-browser.runtime.onInstalled.addListener(onStartupOrOnInstalledListener);
+async function saveSettingItem(name: string, value: any): Promise<void> {
+  try {
+    if (name in settings && settings[name as keyof Settings] !== value) {
+      settings[name as keyof Settings] = value;
+      await browser.storage.sync.set({ [name]: value });
+      propagateSettingsUpdate(settings);
+    }
+  } catch (err) {
+    console.error(err);
+  }
+}
 
 async function propagateSettingsUpdate(settings: Settings) {
   try {
@@ -218,3 +192,32 @@ async function propagateSettingsUpdate(settings: Settings) {
     console.error(err);
   }
 }
+
+/**
+ * Fired when a profile that has this extension installed first starts up.
+ * This event is not fired when an incognito profile is started, even if
+ * this extension is operating in 'split' incognito mode.
+ **/
+browser.runtime.onStartup.addListener(onStartupOrOnInstalledListener);
+
+/**
+ * Fired when the extension is first installed, when the extension is updated
+ * to a new version, and when Chrome is updated to a new version.
+ **/
+browser.runtime.onInstalled.addListener(onStartupOrOnInstalledListener);
+
+browser.webRequest.onErrorOccurred.addListener(onErrorOccurredListener, {
+  urls: ["<all_urls>"],
+});
+
+browser.webRequest.onBeforeRequest.addListener(
+  onBeforeRequestListener,
+  { urls: ["<all_urls>"] },
+  ["blocking"]
+);
+
+browser.webRequest.onHeadersReceived.addListener(
+  onHeadersReceivedListener,
+  { urls: ["<all_urls>"] },
+  ["blocking", "responseHeaders"]
+);

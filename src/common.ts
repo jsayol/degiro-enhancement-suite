@@ -99,6 +99,16 @@ export function hasProperty(obj: object, prop: string): boolean {
   return Boolean(Reflect.getOwnPropertyDescriptor(obj, prop));
 }
 
+export function fetchFresh(url: string): Promise<Response> {
+  return fetch(url, {
+    method: "GET",
+    headers: {
+      pragma: "no-cache",
+      "Cache-Control": "no-cache",
+    },
+  });
+}
+
 /*
 function setNoCacheControlHeader(
   detail: WebRequest.OnBeforeSendHeadersDetailsType

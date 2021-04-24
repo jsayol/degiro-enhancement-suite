@@ -1,0 +1,70 @@
+html[data-suite-theme] {
+  .\@select\:select\@ {
+    background-color: #f3f4f5;
+  }
+
+  .\@select\:controlField\@ {
+    background-color: inherit;
+    caret-color: transparent;
+  }
+
+  .\@select\:controlField\@:focus {
+    outline: none;
+  }
+
+  .\@select\:controlFieldWithActiveSearch\@ {
+    background-color: inherit;
+    caret-color: auto;
+  }
+
+  .\@select\:dropdownIndicator\@,
+  .\@select\:disabledSelect\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@select\:disabledSelect\@ .\@select\:dropdownIndicator\@ {
+    color: #ababab;
+  }
+
+  .\@select\:controlField\@ + .\@select\:dropdownIndicator\@ {
+    color: #000;
+  }
+
+  ._2o-tQ7jU {
+    background-color: #fff;
+    border-color: #d4d4d4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .\@select\:optionItem\@:hover,
+  .\@select\:hoveredOptionItem\@ {
+    background-color: #e4f4fb;
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    .\@select\:select\@:focus-within {
+      background-color: #fff;
+      border-color: #009fdf;
+    }
+  }
+
+  .\@multi-select\:checkbox\@ {
+    background-color: #f3f4f5;
+    border-color: #e8e8e8;
+  }
+
+  .\@multi-select\:activeCheckbox\@ {
+    background-color: #009fdf;
+    color: #fff;
+  }
+
+  .\@multi-select\:initiallySelectedOption\@ + .\@multi-select\:multiSelectOptionItem\@:not(.\@multi-select\:initiallySelectedOption\@),
+  .\@multi-select\:footerContainer\@ {
+    border-top-color: #d4d4d4;
+  }
+
+  .\@multi-select\:footerContainer\@ {
+    background-color: #fff;
+  }
+}

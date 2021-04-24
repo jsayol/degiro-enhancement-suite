@@ -1,0 +1,34 @@
+html[data-suite-theme] {
+  .\@news-article-item\:dateTime\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@news-article-item\:subCategoryLabelWrapper\@ {
+    color: #000;
+  }
+
+  .\@news-list\:newsListItem\@,
+  .\@news-list\:selectedNewsListItem\@ {
+    border-bottom-color: #e8e8e8;
+  }
+
+  .\@news-list\:selectedNewsListItem\@ {
+    background-color: #e4f4fb;
+  }
+
+  .\@news-list\:newsListItem\@:last-of-type {
+    border-bottom: none;
+  }
+
+  .\@news-list\:newsListItemDate\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@country-flag\:flag\@ {
+    border-color: #d4d4d4;
+  }
+
+  .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
+    border-color: transparent;
+  }
+}

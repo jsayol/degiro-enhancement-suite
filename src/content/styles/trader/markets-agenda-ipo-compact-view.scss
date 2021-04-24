@@ -1,0 +1,50 @@
+html[data-suite-theme] {
+  .\@country-flag\:flag\@ {
+    border-color: #d4d4d4;
+  }
+
+  .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
+    border-color: transparent;
+  }
+
+  .\@compact-view\:secondaryContent\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@compact-view\:agendaListItem\@ .\@compact-view\:valueSubContent\@ {
+    color: #000;
+  }
+
+  .\@compact-view\:companyName\@ {
+    word-break: break-word;
+  }
+
+  ._2MnhUNur {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  ._3fNf038_ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@compact-view\:tableRow\@ {
+    background-color: #fff;
+    border-bottom-color: #e8e8e8;
+  }
+
+  .\@compact-view\:exchanges\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@compact-view\:exchangesOverlay\@ {
+    background-color: #fff;
+  }
+
+  .\@compact-view\:moreItemsButton\@ {
+    background-color: #fff;
+  }
+
+  .\@compact-view\:dateTimeDivider\@ {
+    color: #000;
+  }
+}

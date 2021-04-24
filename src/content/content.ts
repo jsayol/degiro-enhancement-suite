@@ -1,20 +1,24 @@
 import { browser, Runtime } from "webextension-polyfill-ts";
 import {
-  DegiroClient,
-  DegiroConfig,
+  // DegiroClient,
+  // DegiroConfig,
   getRandomColor,
   Settings,
 } from "../common";
 
+// import * as loginCSSBundle from "./styles/login-css.json";
+// import * as traderCSSBundle from "./styles/trader-css.json";
+
 const BASE_THEME_ID = "--suite-theme-css";
-const CONFIG_URL = "https://trader.degiro.nl/login/secure/config";
+// const CONFIG_URL = "https://trader.degiro.nl/login/secure/config";
 
 let connectionPort: Runtime.Port;
 let currentTheme = "default";
-let degiroData: {
-  config: DegiroConfig;
-  client: DegiroClient;
-};
+// let degiroData: {
+//   config: DegiroConfig;
+//   client: DegiroClient;
+// };
+
 /**
  * Monitor the connection to the extension's background page.
  * This allows us to detect if it get uninstalled or upgraded
@@ -41,7 +45,7 @@ async function initialize() {
     // If we're inside an iframe (quick order in popup) we mark
     // the page so that we can avoid applying themes for now.
     if (window.self !== window.top) {
-      document.querySelector("html").dataset.suiteIframe = "true";
+      document.querySelector("html")!.dataset.suiteIframe = "true";
     }
 
     console.log(document.styleSheets);
@@ -52,20 +56,20 @@ async function initialize() {
   }
 }
 
-async function fetchDegiroData() {
-  // TODO: handle possible errors while fetching
+// async function fetchDegiroData() {
+//   // TODO: handle possible errors while fetching
 
-  const configResponse = await fetch(CONFIG_URL);
-  const configJSON = await configResponse.json();
-  const config: DegiroConfig = configJSON["data"];
+//   const configResponse = await fetch(CONFIG_URL);
+//   const configJSON = await configResponse.json();
+//   const config: DegiroConfig = configJSON["data"];
 
-  const clientUrl = `${config.paUrl}client?sessionId=${config.sessionId}`;
-  const clientResponse = await fetch(clientUrl);
-  const clientJSON = await clientResponse.json();
-  const client: DegiroClient = clientJSON["data"];
+//   const clientUrl = `${config.paUrl}client?sessionId=${config.sessionId}`;
+//   const clientResponse = await fetch(clientUrl);
+//   const clientJSON = await clientResponse.json();
+//   const client: DegiroClient = clientJSON["data"];
 
-  degiroData = { config, client };
-}
+//   degiroData = { config, client };
+// }
 
 function cleanup() {
   applyTheme("default");
@@ -96,6 +100,16 @@ function colorSchemeChangeHandler(event: MediaQueryListEvent) {
 }
 
 function loadBaseTheme() {
+  browser.runtime.sendMessage({ op: "loadBaseTheme" });
+  return;
+}
+
+async function unloadBaseTheme() {
+  browser.runtime.sendMessage({ op: "unloadBaseTheme" });
+  return;
+}
+
+function loadBaseTheme_old() {
   return; // TODO: temporary!!!!
   if (document.getElementById(BASE_THEME_ID)) {
     return;
@@ -103,7 +117,7 @@ function loadBaseTheme() {
   const link = document.createElement("link");
   link.setAttribute(
     "href",
-    browser.extension.getURL("content/styles/theme.css")
+    browser.extension.getURL("content/styles-old/theme.css")
   );
   link.setAttribute("id", BASE_THEME_ID);
   link.setAttribute("type", "text/css");
@@ -111,11 +125,11 @@ function loadBaseTheme() {
   document.querySelector("html")?.appendChild(link);
 }
 
-function unloadBaseTheme() {
+function unloadBaseTheme_old() {
   return; // TODO: temporary!!!!
-  const cssNode = document.getElementById(BASE_THEME_ID);
+  const cssNode = document.getElementById(BASE_THEME_ID)!;
   if (cssNode && cssNode.parentNode) {
-    cssNode.parentNode.removeChild(cssNode);
+    cssNode.parentNode!.removeChild(cssNode);
   }
 }
 
@@ -131,7 +145,7 @@ function applyTheme(theme: string) {
       applyAutoTheme(useDark);
     }
   } else {
-    document.querySelector("html").dataset.suiteTheme = theme;
+    document.querySelector("html")!.dataset.suiteTheme = theme;
 
     if (theme === "default") {
       unloadBaseTheme();
@@ -149,7 +163,7 @@ function applyTheme(theme: string) {
 }
 
 function applyAutoTheme(useDark = false) {
-  document.querySelector("html").dataset.suiteTheme = useDark
+  document.querySelector("html")!.dataset.suiteTheme = useDark
     ? "dark"
     : "default";
   if (useDark) {
@@ -160,7 +174,7 @@ function applyAutoTheme(useDark = false) {
 }
 
 function applyRandomTheme() {
-  const style = document.querySelector("html").style;
+  const style = document.querySelector("html")!.style;
   style.setProperty("--suite-theme-bg-app", getRandomColor());
   style.setProperty("--suite-theme-bg-prominent", getRandomColor());
   style.setProperty("--suite-theme-bg", getRandomColor());
@@ -183,7 +197,7 @@ function applyRandomTheme() {
 }
 
 function removeRandomTheme() {
-  const style = document.querySelector("html").style;
+  const style = document.querySelector("html")!.style;
   style.removeProperty("--suite-theme-bg-app");
   style.removeProperty("--suite-theme-bg-prominent");
   style.removeProperty("--suite-theme-bg");

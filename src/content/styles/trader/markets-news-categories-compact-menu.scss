@@ -1,0 +1,35 @@
+html[data-suite-theme] {
+  .\@news-categories-menu\:selectBase\@.\@news-categories-menu\:dropdown\@ {
+    background-color: #fff;
+  }
+
+  .\@news-categories-menu\:selectBase\@.\@news-categories-menu\:dropdown\@.\@news-categories-menu\:activeDropdownItem\@ {
+    background-color: #d4d4d4;
+    color: #000;
+  }
+
+  .\@news-categories-menu\:groupSelectButton\@ {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .\@news-categories-menu\:groupSelectButton\@.\@news-categories-menu\:frontPageButton\@ {
+    color: #000;
+  }
+
+  .\@news-categories-menu\:groupSelectButton\@.\@news-categories-menu\:groupActiveSelectButton\@:disabled {
+    background-color: #d4d4d4;
+    border-color: #009fdf;
+    color: #000;
+  }
+
+  .iXZp95NS {
+    background-color: #f7f8f9;
+    border-bottom-color: #edeff1;
+    border-top-color: #edeff1;
+  }
+
+  ._1gwuPi-l.\@news-categories-menu\:activeCategoryItem\@ .\@news-categories-menu\:checkIcon\@ {
+    color: #009fdf;
+  }
+}

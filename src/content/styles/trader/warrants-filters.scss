@@ -1,0 +1,55 @@
+html[data-suite-theme] {
+  .\@input\:inputFieldLayout\@ {
+    background-color: #f3f4f5;
+  }
+
+  .\@input\:inputFieldLayout\@:focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
+    background-color: #fff;
+  }
+
+  .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
+    border-color: #009fdf;
+  }
+
+  .\@input\:invalidInputFieldLayout\@ {
+    border-color: #e6605c;
+  }
+
+  .\@input\:inputFieldControl\@ {
+    background-color: inherit;
+  }
+
+  ._3dpUyUgG {
+    background-color: #fff;
+    color: #007bc2;
+  }
+
+  .\@search\:inputFieldLayout\@ .\@search\:inputField\@ {
+    background-color: inherit;
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    .\@search\:inputFieldLayout\@ .\@search\:inputField\@:focus {
+      background-color: inherit;
+    }
+  }
+
+  .\@filters\:collapsedFiltersSectionButton\@ {
+    background-color: transparent;
+  }
+
+  .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@ {
+    background-color: #fff;
+    border-color: #e8e8e8;
+  }
+
+  .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@:focus-within {
+    border-color: #009fdf;
+  }
+
+  .\@filters\:activeFiltersButtonIcon\@ {
+    color: #e6605c;
+  }
+}

@@ -9,7 +9,7 @@ interface ReversedStyles {
   [module: string]: { [chunk: string]: Array<[string, string]> };
 }
 
-const baseDir = path.join(__dirname, "..", "src", "content", "styles-new");
+const baseDir = path.join(__dirname, "..", "src", "content", "styles");
 
 const styles = reverseStyles({
   login: {
@@ -2071,35 +2071,33 @@ function reverseStyles(styles: ExtractedStyles): ReversedStyles {
 }
 
 async function classesToTemplate(module: Module) {
-  const dir = path.join(baseDir, module + "-nonprocessed");
+  const dir = path.join(baseDir, module + "-unprocessed");
   const files = await listFiles(dir);
   const sharedStyles =
     module !== "login" ? styles[module]["app-shared-chunk"] : [];
 
   for (const file of files) {
     const [, chunk] = file.match(/(.+)\.scss/)!;
+    const filePath = path.join(dir, file);
+    const chunkStyles = chunk in styles[module] ? styles[module][chunk] : [];
+    const combinedStyles = [...sharedStyles, ...chunkStyles];
 
-    if (chunk in styles[module]) {
-      const filePath = path.join(dir, file);
-      let content = await readFile(filePath);
-      console.log(module, chunk);
+    let content = await readFile(filePath);
 
-      const chunkStyles = styles[module][chunk];
-      const combinedStyles = [...sharedStyles, ...chunkStyles];
+    console.log(module, chunk);
 
-      // The more classes it has, the sooner we have to apply it
-      combinedStyles.sort((a, b) => (a[0].length < b[0].length ? 1 : -1));
+    // The more classes it has, the sooner we have to apply it
+    combinedStyles.sort((a, b) => (a[0].length < b[0].length ? 1 : -1));
 
-      for (const [classes, styleName] of combinedStyles) {
-        content = content.replaceAll(
-          classes,
-          `.\\@${styleName.replaceAll(":", "\\:")}\\@`
-        );
-      }
-
-      const destFilePath = path.join(baseDir, module, file);
-      writeFile(destFilePath, content);
+    for (const [classes, styleName] of combinedStyles) {
+      content = content.replaceAll(
+        classes,
+        `.\\@${styleName.replaceAll(":", "\\:")}\\@`
+      );
     }
+
+    const destFilePath = path.join(baseDir, module, file);
+    writeFile(destFilePath, content);
   }
 }
 

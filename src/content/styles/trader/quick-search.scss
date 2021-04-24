@@ -1,0 +1,92 @@
+html[data-suite-theme] {
+  .\@input\:inputFieldLayout\@ {
+    background-color: #f3f4f5;
+  }
+
+  .\@input\:inputFieldLayout\@:focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
+    background-color: #fff;
+  }
+
+  .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
+    border-color: #009fdf;
+  }
+
+  .\@input\:invalidInputFieldLayout\@ {
+    border-color: #e6605c;
+  }
+
+  .\@input\:inputFieldControl\@ {
+    background-color: inherit;
+  }
+
+  ._3dpUyUgG {
+    background-color: #fff;
+    color: #007bc2;
+  }
+
+  .\@search\:inputFieldLayout\@ .\@search\:inputField\@ {
+    background-color: inherit;
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    .\@search\:inputFieldLayout\@ .\@search\:inputField\@:focus {
+      background-color: inherit;
+    }
+  }
+
+  .\@list\:groupDivider\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@list\:item\@,
+  .\@list\:underlinedItem\@ {
+    border-bottom-color: #e8e8e8;
+  }
+
+  .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
+    border-bottom-color: transparent;
+  }
+
+  .\@list\:selectedItem\@ {
+    background-color: #f7f8f9;
+  }
+
+  .\@list\:list\@ .\@list\:selectedItem\@:after,
+  .\@list\:list\@ .\@list\:hoverableItem\@:after {
+    background-color: inherit;
+  }
+
+  .\@list\:subContent\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    .\@list\:hoverableItem\@:hover,
+    .\@list\:item\@:focus {
+      background-color: #e4f4fb;
+    }
+  }
+
+  .\@quick-search\:inputFieldLayout\@ {
+    background: #f3f4f5;
+    border-color: #f3f4f5;
+  }
+
+  .\@quick-search\:layout\@ .\@quick-search\:inputFieldLayout\@ .\@quick-search\:inputField\@ {
+    background: inherit;
+    border-color: transparent;
+  }
+
+  .\@quick-search\:emptyResultsMessage\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    .\@quick-search\:inputFieldLayout\@:focus-within {
+      background: #f3f4f5;
+      border-color: #f3f4f5;
+    }
+  }
+}

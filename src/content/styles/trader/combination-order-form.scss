@@ -1,0 +1,131 @@
+html[data-suite-theme] {
+  .\@order-form\:warningBox\@ + .\@order-form\:warningBox\@ {
+    border-top-color: #e8e8e8;
+  }
+
+  .\@input\:inputFieldLayout\@ {
+    background-color: #f3f4f5;
+  }
+
+  .\@input\:inputFieldLayout\@:focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
+    background-color: #fff;
+  }
+
+  .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
+    border-color: #009fdf;
+  }
+
+  .\@input\:invalidInputFieldLayout\@ {
+    border-color: #e6605c;
+  }
+
+  .\@input\:inputFieldControl\@ {
+    background-color: inherit;
+  }
+
+  ._3dpUyUgG {
+    background-color: #fff;
+    color: #007bc2;
+  }
+
+  .\@switch-buttons\:switchControl\@ {
+    background-color: #f3f4f5;
+  }
+
+  .\@switch-buttons\:switchControlInTransition\@ {
+    background-color: transparent;
+  }
+
+  .\@switch-buttons\:option\@ + .\@switch-buttons\:option\@ {
+    border-left-color: #f3f4f5;
+  }
+
+  .\@switch-buttons\:option\@[disabled] {
+    background-color: transparent;
+  }
+
+  .\@switch-buttons\:activeOption\@ {
+    color: #fff;
+  }
+
+  .\@switch-buttons\:activeOption\@:first-child {
+    background-color: #00a658;
+  }
+
+  .\@switch-buttons\:activeOption\@:last-child {
+    background-color: #009fdf;
+  }
+
+  .\@switch-buttons\:option\@[disabled].\@switch-buttons\:activeOption\@ {
+    background-color: #d4d4d4;
+    color: #000;
+  }
+
+  .LxrALQ7-:last-child {
+    background-color: #e6605c;
+  }
+
+  .kSPLeTvJ {
+    background-color: #f3f4f5;
+    border-color: #f3f4f5;
+  }
+
+  ._1ASjxRvu {
+    background-color: #fff;
+    border-color: #009fdf;
+  }
+
+  ._35GLVuG2 {
+    border-top-color: #d4d4d4;
+  }
+
+  ._35GLVuG2 + ._35GLVuG2 {
+    border-top: 0;
+  }
+
+  ._2fEWKGqL {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@order-confirmation\:documentsInfo\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@order-confirmation-fees\:feesHeader\@ {
+    color: #000;
+  }
+
+  .\@filters\:collapsedFiltersSectionButton\@ {
+    background-color: transparent;
+  }
+
+  .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@ {
+    background-color: #fff;
+    border-color: #e8e8e8;
+  }
+
+  .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@:focus-within {
+    border-color: #009fdf;
+  }
+
+  .\@filters\:activeFiltersButtonIcon\@ {
+    color: #e6605c;
+  }
+
+  ._3C0lad-l {
+    background-color: #fff;
+    box-shadow: -2px 0 4px -2px rgba(0, 0, 0, 0.14);
+  }
+
+  ._1VHD57HG {
+    color: #000;
+  }
+
+  @media (min-width: 1024px) {
+    ._3C0lad-l {
+      border-left-color: #d4d4d4;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+html[data-suite-theme] {
+  .\@agenda\:agendaLayout\@ ._3n28doiM.\@agenda\:agendaTableCard\@ {
+    border-top: 0;
+  }
+
+  .\@agenda\:ipoHeadline\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@agenda\:toggleIcon\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@agenda\:disclaimer\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    .\@agenda\:toggleIcon\@:hover {
+      color: #007bc2;
+    }
+  }
+}

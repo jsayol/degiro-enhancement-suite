@@ -1,0 +1,67 @@
+html[data-suite-theme] {
+  .\@country-flag\:flag\@ {
+    border-color: #d4d4d4;
+  }
+
+  .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
+    border-color: transparent;
+  }
+
+  .\@compact-view\:secondaryContent\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@compact-view\:agendaListItem\@ .\@compact-view\:valueSubContent\@ {
+    color: #000;
+  }
+
+  ._2MnhUNur {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  ._3nV1RBSy.\@compact-view\:agendaCard\@ {
+    border-top: 0;
+  }
+
+  ._3fNf038_ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@compact-view\:tableRow\@ {
+    background-color: #fff;
+    border-bottom-color: #e8e8e8;
+  }
+
+  .\@compact-view\:exchanges\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@compact-view\:exchangesOverlay\@ {
+    background-color: #fff;
+  }
+
+  .\@compact-view\:moreItemsButton\@ {
+    background-color: #fff;
+  }
+
+  .\@compact-view\:dateTimeDivider\@ {
+    color: #000;
+  }
+
+  .\@full-view\:agendaHeaderCompactView\@ .SRKeLvAF {
+    background-color: #fafafa;
+  }
+
+  .\@full-view\:groupedCellDivider\@ {
+    background-color: #edeff1;
+  }
+
+  ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) ._3jr4aOva:not(.SRKeLvAF),
+  ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) .ZSFu57um:not(.SRKeLvAF) {
+    background-color: #fff;
+  }
+
+  .\@full-view\:disabledCompanyNameCell\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+}

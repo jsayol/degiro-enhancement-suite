@@ -1,0 +1,99 @@
+html[data-suite-theme] {
+  .\@checkbox\:thumb\@ {
+    background-color: #f0f0f0;
+    border-color: #d4d4d4;
+  }
+
+  .\@checkbox\:input\@:checked ~ .\@checkbox\:thumb\@ {
+    background-color: #009fdf;
+    border-color: #009fdf;
+  }
+
+  .\@checkbox\:input\@[disabled]:checked ~ .\@checkbox\:thumb\@,
+  .\@checkbox\:input\@[disabled] ~ .\@checkbox\:thumb\@ {
+    background-color: #d4d4d4;
+    border-color: transparent;
+  }
+
+  .\@checkbox\:input\@:checked ~ .\@checkbox\:thumb\@:after {
+    border-color: #fff;
+    border-width: 0 2px 2px 0;
+  }
+
+  @media (pointer: fine), all and (pointer: none) {
+    .\@checkbox\:thumb\@:hover {
+      background-color: #f3f4f5;
+    }
+    .\@checkbox\:input\@:focus ~ .\@checkbox\:thumb\@ {
+      border-color: #009fdf;
+    }
+  }
+
+  .\@inbox-status-icon\:badge\@ {
+    background-color: #e6605c;
+    color: #fff;
+  }
+
+  ._34nAy_uB {
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+
+  .JvAjbK_F {
+    background-color: #fff;
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.16);
+  }
+
+  .UX9AKdXx {
+    background-color: #181a21;
+    color: #ababab;
+  }
+
+  ._3aoRYGOx:before {
+    background: #181a21;
+  }
+
+  ._1VCqr8vi {
+    background-color: #009fdf;
+    color: #fff;
+  }
+
+  ._1VCqr8vi:after,
+  ._2hnF2C5c:after {
+    border-bottom-color: transparent;
+    border-left-color: #fff;
+    border-top-color: transparent;
+  }
+
+  ._2hnF2C5c:after {
+    border-left-color: rgba(0, 0, 0, 0.55);
+  }
+
+  ._1qKSuIJr {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  ._2qBKh7vt {
+    background-color: #e6605c;
+    color: #fff;
+  }
+
+  .\@avatar\:avatar\@ {
+    background-color: #edeff1;
+    color: #000;
+  }
+
+  .keM55XVj {
+    color: #ababab;
+  }
+
+  .DiLpaovC {
+    background-color: #181a21;
+    color: #fff;
+  }
+
+  .DiLpaovC:after {
+    border-bottom-color: transparent;
+    border-left-color: #fff;
+    border-top-color: transparent;
+  }
+}

@@ -1,0 +1,26 @@
+html[data-suite-theme] {
+  .\@full-view\:agendaHeaderCompactView\@ .SRKeLvAF {
+    background-color: #fafafa;
+  }
+
+  .\@full-view\:groupedCellDivider\@ {
+    background-color: #edeff1;
+  }
+
+  ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) ._3jr4aOva:not(.SRKeLvAF),
+  ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) .ZSFu57um:not(.SRKeLvAF) {
+    background-color: #fff;
+  }
+
+  .\@full-view\:disabledCompanyNameCell\@ {
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .\@country-flag\:flag\@ {
+    border-color: #d4d4d4;
+  }
+
+  .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
+    border-color: transparent;
+  }
+}
