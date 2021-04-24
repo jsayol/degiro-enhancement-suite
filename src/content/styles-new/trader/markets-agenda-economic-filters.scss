@@ -1,37 +1,37 @@
 html[data-suite-theme] {
-  ._1WbrYw9_ {
+  .\@country-flag\:flag\@ {
     border-color: #d4d4d4;
   }
 
-  ._1WbrYw9_._3w7YM0bX {
+  .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
     border-color: transparent;
   }
 
-  ._1KhdrThW:focus + .Qgbk06Ib {
+  .\@datepicker\:inputWithIcon\@:focus + .\@datepicker\:inputIcon\@ {
     color: #009fdf;
   }
 
-  .wKb4xEDK {
+  .\@datepicker\:popup\@ {
     background-color: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   }
 
-  ._3W5tpmzT {
+  .\@datepicker\:selectedItem\@ {
     background-color: #009fdf;
     color: #fff;
   }
 
-  ._1xTj_g_w[disabled],
-  ._3ikYP1Sz[disabled],
-  ._3sBaDV1Z[disabled] {
+  .\@datepicker\:item\@[disabled],
+  .\@datepicker\:moreButton\@[disabled],
+  .\@datepicker\:navButton\@[disabled] {
     background-color: transparent;
     color: rgba(0, 0, 0, 0.55);
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._1xTj_g_w:not([disabled]):not(._3W5tpmzT):hover,
-    ._3ikYP1Sz:not([disabled]):hover {
+    .\@datepicker\:item\@:not([disabled]):not(.\@datepicker\:selectedItem\@):hover,
+    .\@datepicker\:moreButton\@:not([disabled]):hover {
       background-color: #f3f4f5;
     }
   }
@@ -49,15 +49,15 @@ html[data-suite-theme] {
     color: rgba(0, 0, 0, 0.25);
   }
 
-  ._2uWZRZOS {
+  .\@agenda-economic-filters\:firstCurrencyUnit\@ {
     border-top-color: #d4d4d4;
   }
 
-  ._29cya0qL .Assm8m4p {
+  .\@form-line-multi-select-filter\:formLineWrapper\@ .Assm8m4p {
     border-bottom-color: #e8e8e8;
   }
 
-  .jYQQ4EKJ {
+  .\@form-line-multi-select-filter\:formLineIcon\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 

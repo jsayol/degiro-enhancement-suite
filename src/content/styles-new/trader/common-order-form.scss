@@ -1,29 +1,29 @@
 html[data-suite-theme] {
-  ._3K08ms9k + ._3K08ms9k {
+  .\@order-form\:warningBox\@ + .\@order-form\:warningBox\@ {
     border-top-color: #e8e8e8;
   }
 
-  ._3sq8JoBx {
+  .\@common-order-form\:productChangeButton\@ {
     color: #009fdf;
   }
 
-  ._2EfoFDd6 ._1-App5Fj ._1yYRanu4 {
+  ._2EfoFDd6 .\@common-order-form\:fieldSelect\@ .\@common-order-form\:fieldSelectControlWithError\@ {
     border-color: #e6605c;
   }
 
-  ._2TZn-T5Q {
+  .\@common-order-form\:orderActionButton\@ {
     border-color: #e8e8e8;
   }
 
-  ._2TZn-T5Q:not(:first-child) {
+  .\@common-order-form\:orderActionButton\@:not(:first-child) {
     border-left: 0;
   }
 
-  ._2TZn-T5Q:focus {
+  .\@common-order-form\:orderActionButton\@:focus {
     border-color: #009fdf;
   }
 
-  ._2TZn-T5Q[disabled] {
+  .\@common-order-form\:orderActionButton\@[disabled] {
     color: #fff;
   }
 
@@ -45,25 +45,25 @@ html[data-suite-theme] {
     border-color: #e6605c;
   }
 
-  ._3JvmSTh1 {
+  .\@input\:inputFieldLayout\@ {
     background-color: #f3f4f5;
   }
 
-  ._3JvmSTh1:focus-within,
-  .bdrWSXIv {
+  .\@input\:inputFieldLayout\@:focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
     background-color: #fff;
   }
 
-  ._3JvmSTh1:not(._3-W3NFy8):focus-within,
-  .bdrWSXIv {
+  .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
     border-color: #009fdf;
   }
 
-  ._3-W3NFy8 {
+  .\@input\:invalidInputFieldLayout\@ {
     border-color: #e6605c;
   }
 
-  ._3jh6ix0v {
+  .\@input\:inputFieldControl\@ {
     background-color: inherit;
   }
 
@@ -72,58 +72,58 @@ html[data-suite-theme] {
     color: #007bc2;
   }
 
-  ._1pY1orTj {
+  .\@order-confirmation\:documentsInfo\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._2oWoXcNf {
+  .\@order-confirmation-fees\:feesHeader\@ {
     color: #000;
   }
 
-  ._2SrzFmAE ._1BDyVcdM {
+  .\@search\:inputFieldLayout\@ .\@search\:inputField\@ {
     background-color: inherit;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._2SrzFmAE ._1BDyVcdM:focus {
+    .\@search\:inputFieldLayout\@ .\@search\:inputField\@:focus {
       background-color: inherit;
     }
   }
 
-  ._2kkWoRPp {
+  .\@list\:groupDivider\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3JWUeKY8,
-  ._3Y0KrE9V {
+  .\@list\:item\@,
+  .\@list\:underlinedItem\@ {
     border-bottom-color: #e8e8e8;
   }
 
-  ._3JWUeKY8:not(._3Y0KrE9V):last-child {
+  .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
     border-bottom-color: transparent;
   }
 
-  ._1Zrwwp4K {
+  .\@list\:selectedItem\@ {
     background-color: #f7f8f9;
   }
 
-  ._281AtAZr ._1Zrwwp4K:after,
-  ._281AtAZr ._2ALhJK48:after {
+  .\@list\:list\@ .\@list\:selectedItem\@:after,
+  .\@list\:list\@ .\@list\:hoverableItem\@:after {
     background-color: inherit;
   }
 
-  ._1F6vKW7N {
+  .\@list\:subContent\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._2ALhJK48:hover,
-    ._3JWUeKY8:focus {
+    .\@list\:hoverableItem\@:hover,
+    .\@list\:item\@:focus {
       background-color: #e4f4fb;
     }
   }
 
-  ._1veR2tP7 {
+  .\@alternative-order-selector\:optionsList\@ {
     background-color: #fff;
     border-color: #d4d4d4;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
@@ -131,12 +131,12 @@ html[data-suite-theme] {
     color: #000;
   }
 
-  ._2GDZmzGr:focus,
-  ._2GDZmzGr:hover {
+  .\@alternative-order-selector\:optionItem\@:focus,
+  .\@alternative-order-selector\:optionItem\@:hover {
     background-color: #e4f4fb;
   }
 
-  ._2I5a0skB {
+  .\@order-product-search\:emptyResultsMessage\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 }

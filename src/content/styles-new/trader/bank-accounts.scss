@@ -1,5 +1,5 @@
 html[data-suite-theme] {
-  ._3KrPIW5d {
+  .\@info-table\:cell\@ {
     border-bottom-color: #e8e8e8;
   }
 
@@ -13,29 +13,29 @@ html[data-suite-theme] {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._34xCdDCO {
+  .\@breadcrumbs\:selectedNavigationItem\@ {
     color: #000;
   }
 
-  ._3JvmSTh1 {
+  .\@input\:inputFieldLayout\@ {
     background-color: #f3f4f5;
   }
 
-  ._3JvmSTh1:focus-within,
-  .bdrWSXIv {
+  .\@input\:inputFieldLayout\@:focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
     background-color: #fff;
   }
 
-  ._3JvmSTh1:not(._3-W3NFy8):focus-within,
-  .bdrWSXIv {
+  .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
     border-color: #009fdf;
   }
 
-  ._3-W3NFy8 {
+  .\@input\:invalidInputFieldLayout\@ {
     border-color: #e6605c;
   }
 
-  ._3jh6ix0v {
+  .\@input\:inputFieldControl\@ {
     background-color: inherit;
   }
 

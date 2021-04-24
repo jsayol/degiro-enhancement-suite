@@ -1,55 +1,55 @@
 html[data-suite-theme] {
-  ._1Yzp_hiy {
+  .\@promotion\:closeButton\@ {
     color: #ababab;
   }
 
-  ._1WbrYw9_ {
+  .\@country-flag\:flag\@ {
     border-color: #d4d4d4;
     object-fit: cover;
   }
 
-  ._1WbrYw9_._3w7YM0bX {
+  .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
     border-color: transparent;
   }
 
-  ._2me9YHul {
+  .\@products-carousel\:navigationButton\@ {
     border-color: #d4d4d4;
   }
 
-  ._2me9YHul[disabled] {
+  .\@products-carousel\:navigationButton\@[disabled] {
     background-color: transparent;
     color: #ababab;
   }
 
-  ._3M8v3em7 {
+  .\@products-carousel\:listItem\@ {
     border-left-color: #d4d4d4;
   }
 
-  ._3M8v3em7:first-child {
+  .\@products-carousel\:listItem\@:first-child {
     border-left: 0;
   }
 
-  ._1i_UDq8g ._3M8v3em7 {
+  .\@products-carousel\:listLayoutWithNavigationButtons\@ .\@products-carousel\:listItem\@ {
     background-color: #f7f8f9;
     border-bottom-color: #d4d4d4;
   }
 
-  ._1i_UDq8g ._1ivg9Ttu {
+  .\@products-carousel\:listLayoutWithNavigationButtons\@ .\@products-carousel\:selectedListItem\@ {
     background-color: #fff;
     border-bottom-color: #fff;
     border-top-color: #d4d4d4;
   }
 
-  .jZEe5eS6 {
+  .\@latest-videos\:clipItemImgLabel\@ {
     background-color: #000;
     color: #fff;
   }
 
-  ._5vGKVxmP {
+  .\@latest-videos\:clipItemSubTitle\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._2dJ0xT1B {
+  .\@latest-videos\:clipModalButtons\@ {
     border-top-color: #e8e8e8;
   }
 
@@ -59,13 +59,13 @@ html[data-suite-theme] {
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._2GIBxeYE:focus,
-    ._12DX_2Gd:focus {
+    .\@latest-videos\:clipItem\@:focus,
+    .\@latest-videos\:promoClipInfo\@:focus {
       background-color: #f7f8f9;
     }
   }
 
-  ._2UdAYB7T {
+  .\@video-player\:player\@ {
     background-color: #000;
   }
 }

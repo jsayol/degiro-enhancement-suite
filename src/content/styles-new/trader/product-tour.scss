@@ -1,15 +1,15 @@
 html[data-suite-theme] {
-  ._13hpuJxe b {
+  .\@product-tour\:salutationModalContent\@ b {
     color: #007bc2;
   }
 
-  ._2E_kGey5 {
+  .\@product-tour\:popupArrow\@ {
     border-bottom-color: #fff;
     border-left-color: transparent;
     border-right-color: transparent;
   }
 
-  .vpvdbwUp {
+  .\@product-tour\:header\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
@@ -21,11 +21,11 @@ html[data-suite-theme] {
     background-color: #009fdf;
   }
 
-  ._2-SWPUZf {
+  .\@product-tour\:focusedElement\@ {
     box-shadow: 0 0 8px 4px #009fdf !important;
   }
 
-  [href]._2-SWPUZf {
+  [href].\@product-tour\:focusedElement\@ {
     color: #fff !important;
   }
 }

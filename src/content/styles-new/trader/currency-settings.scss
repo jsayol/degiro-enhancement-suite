@@ -1,75 +1,75 @@
 html[data-suite-theme] {
-  ._2agBdEEB:after {
+  .\@expandable-content\:minimizedContent\@:after {
     box-shadow: 0 0 8px 8px #fff;
   }
 
-  ._2kkWoRPp {
+  .\@list\:groupDivider\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3JWUeKY8,
-  ._3Y0KrE9V {
+  .\@list\:item\@,
+  .\@list\:underlinedItem\@ {
     border-bottom-color: #e8e8e8;
   }
 
-  ._3JWUeKY8:not(._3Y0KrE9V):last-child {
+  .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
     border-bottom-color: transparent;
   }
 
-  ._1Zrwwp4K {
+  .\@list\:selectedItem\@ {
     background-color: #f7f8f9;
   }
 
-  ._281AtAZr ._1Zrwwp4K:after,
-  ._281AtAZr ._2ALhJK48:after {
+  .\@list\:list\@ .\@list\:selectedItem\@:after,
+  .\@list\:list\@ .\@list\:hoverableItem\@:after {
     background-color: inherit;
   }
 
-  ._1F6vKW7N {
+  .\@list\:subContent\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._2ALhJK48:hover,
-    ._3JWUeKY8:focus {
+    .\@list\:hoverableItem\@:hover,
+    .\@list\:item\@:focus {
       background-color: #e4f4fb;
     }
   }
 
-  ._3gW7N2zK {
+  .\@switch-buttons\:switchControl\@ {
     background-color: #f3f4f5;
   }
 
-  .kpZgEsAD {
+  .\@switch-buttons\:switchControlInTransition\@ {
     background-color: transparent;
   }
 
-  ._2zd9-3cj + ._2zd9-3cj {
+  .\@switch-buttons\:option\@ + .\@switch-buttons\:option\@ {
     border-left-color: #f3f4f5;
   }
 
-  ._2zd9-3cj[disabled] {
+  .\@switch-buttons\:option\@[disabled] {
     background-color: transparent;
   }
 
-  .cdcYYFOO {
+  .\@switch-buttons\:activeOption\@ {
     color: #fff;
   }
 
-  ._2zd9-3cj + .cdcYYFOO,
-  .cdcYYFOO + ._2zd9-3cj {
+  .\@switch-buttons\:option\@ + .\@switch-buttons\:activeOption\@,
+  .\@switch-buttons\:activeOption\@ + .\@switch-buttons\:option\@ {
     border-left: 0;
   }
 
-  .cdcYYFOO:first-child {
+  .\@switch-buttons\:activeOption\@:first-child {
     background-color: #00a658;
   }
 
-  .cdcYYFOO:last-child {
+  .\@switch-buttons\:activeOption\@:last-child {
     background-color: #009fdf;
   }
 
-  ._2zd9-3cj[disabled].cdcYYFOO {
+  .\@switch-buttons\:option\@[disabled].\@switch-buttons\:activeOption\@ {
     background-color: #d4d4d4;
     color: #000;
   }

@@ -42,7 +42,7 @@
     {
       "matches": ["*://trader.degiro.nl/login/*"],
       "all_frames": true,
-      "css": ["content/styles-new/login-processed/app.scss"]
+      "css": ["content/styles-new/login/app.scss"]
     },
     {
       "matches": [

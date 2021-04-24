@@ -12,20 +12,20 @@ html[data-suite-theme] {
     color: #e6605c;
   }
 
-  ._3pa6aqkC {
+  .\@side-navigation\:navigationTopMenuItem\@ {
     color: #98a1b1;
   }
 
-  .HQyHIjoH,
-  .XOeKKr7L {
+  .\@side-navigation\:activeNavigationItem\@,
+  .\@side-navigation\:openedNavigationItem\@ {
     color: #fff;
   }
 
-  .HQyHIjoH .Uha2CINp {
+  .\@side-navigation\:activeNavigationItem\@ .\@side-navigation\:navigationItemIcon\@ {
     color: #009fdf;
   }
 
-  .HQyHIjoH ._37YCacmQ {
+  .\@side-navigation\:activeNavigationItem\@ .\@side-navigation\:profileAvatar\@ {
     background-color: #009fdf;
     color: currentColor;
   }
@@ -39,7 +39,7 @@ html[data-suite-theme] {
     color: #98a1b1;
   }
 
-  ._1TI7X8XV {
+  .\@side-navigation\:navigationSubMenuItem\@ {
     color: #98a1b1;
   }
 
@@ -50,60 +50,60 @@ html[data-suite-theme] {
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._3pa6aqkC:focus,
-    ._3pa6aqkC:hover {
+    .\@side-navigation\:navigationTopMenuItem\@:focus,
+    .\@side-navigation\:navigationTopMenuItem\@:hover {
       color: #fff;
     }
 
-    ._2iaMitWH:hover > ._1TI7X8XV {
+    .\@side-navigation\:navigationSubMenuItemWrapper\@:hover > .\@side-navigation\:navigationSubMenuItem\@ {
       background-color: hsla(0, 0%, 100%, 0.15);
       color: #fff;
     }
   }
 
-  .QD_J6C5r {
+  .\@inbox-status-icon\:badge\@ {
     background-color: #e6605c;
     color: #fff;
   }
 
-  ._1wxMG71x {
+  .\@avatar\:avatar\@ {
     background-color: #edeff1;
     color: #000;
   }
 
-  ._1DQE8iUT {
+  .\@profile-navigation-item\:profileItemSeparator\@ {
     background-color: hsla(0, 0%, 100%, 0.2);
   }
 
-  ._1PHU9CUG {
+  .\@profile-navigation-item\:clientInfoTitle\@ {
     color: #fff;
   }
 
-  ._1SfXUC7W {
+  .\@checkbox\:thumb\@ {
     background-color: #f0f0f0;
     border-color: #d4d4d4;
   }
 
-  ._3D0IGC3v:checked ~ ._1SfXUC7W {
+  .\@checkbox\:input\@:checked ~ .\@checkbox\:thumb\@ {
     background-color: #009fdf;
     border-color: #009fdf;
   }
 
-  ._3D0IGC3v[disabled]:checked ~ ._1SfXUC7W,
-  ._3D0IGC3v[disabled] ~ ._1SfXUC7W {
+  .\@checkbox\:input\@[disabled]:checked ~ .\@checkbox\:thumb\@,
+  .\@checkbox\:input\@[disabled] ~ .\@checkbox\:thumb\@ {
     background-color: #d4d4d4;
     border-color: transparent;
   }
 
-  ._3D0IGC3v:checked ~ ._1SfXUC7W:after {
+  .\@checkbox\:input\@:checked ~ .\@checkbox\:thumb\@:after {
     border-color: #fff;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._1SfXUC7W:hover {
+    .\@checkbox\:thumb\@:hover {
       background-color: #f3f4f5;
     }
-    ._3D0IGC3v:focus ~ ._1SfXUC7W {
+    .\@checkbox\:input\@:focus ~ .\@checkbox\:thumb\@ {
       border-color: #009fdf;
     }
   }

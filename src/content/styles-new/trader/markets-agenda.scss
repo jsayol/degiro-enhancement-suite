@@ -1,90 +1,90 @@
 html[data-suite-theme] {
-  ._316S4p2b {
+  .\@pagination-buttons\:layout\@ {
     color: #000;
   }
 
-  ._1pn7hE7- {
+  .\@pagination-buttons\:button\@ {
     border-bottom-color: transparent;
   }
 
-  ._1pn7hE7-:disabled {
+  .\@pagination-buttons\:button\@:disabled {
     background-color: inherit;
   }
 
-  ._1pn7hE7-:focus {
+  .\@pagination-buttons\:button\@:focus {
     color: #009fdf;
   }
 
-  ._1pn7hE7-._1TSB-BAR {
+  .\@pagination-buttons\:button\@.\@pagination-buttons\:disabledButton\@ {
     background-color: inherit;
     color: #000;
   }
 
-  ._2ZC0AnZ6 {
+  .\@pagination-buttons\:activeButton\@ {
     border-bottom-color: #009fdf;
   }
 
-  ._3-BDc_76 {
+  .\@agenda-period-navigation\:navigation\@ {
     background: #000;
   }
 
-  ._3cDgL7I7 {
+  .\@agenda-period-navigation\:button\@ {
     color: #ababab;
   }
 
-  ._3cDgL7I7._13Mvw6c8 {
+  .\@agenda-period-navigation\:button\@.\@agenda-period-navigation\:buttonSelected\@ {
     border-bottom-width: 0;
     color: #fff;
   }
 
-  ._13Mvw6c8:after {
+  .\@agenda-period-navigation\:buttonSelected\@:after {
     border-color: transparent transparent #fff;
     border-width: 0 6px 6px;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._3-BDc_76 ._3cDgL7I7:focus,
-    ._3-BDc_76 ._3cDgL7I7:hover {
+    .\@agenda-period-navigation\:navigation\@ .\@agenda-period-navigation\:button\@:focus,
+    .\@agenda-period-navigation\:navigation\@ .\@agenda-period-navigation\:button\@:hover {
       color: #ababab;
     }
   }
 
-  ._2yIQtRn4 ._3n28doiM._2uPWOaAd {
+  .\@agenda\:agendaLayout\@ ._3n28doiM.\@agenda\:agendaTableCard\@ {
     border-top: 0;
   }
 
-  ._1CVTc3bB {
+  .\@agenda\:ipoHeadline\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3XtTiBQM {
+  .\@agenda\:toggleIcon\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3SHcS-Ra {
+  .\@agenda\:disclaimer\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._3XtTiBQM:hover {
+    .\@agenda\:toggleIcon\@:hover {
       color: #007bc2;
     }
   }
 
-  ._1V8z-9bE {
+  .\@filters\:collapsedFiltersSectionButton\@ {
     background-color: transparent;
   }
 
-  ._31320W00 ._24ScMuu4 {
+  .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@ {
     background-color: #fff;
     border-color: #e8e8e8;
   }
 
-  ._31320W00 ._24ScMuu4:focus-within {
+  .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@:focus-within {
     border-color: #009fdf;
   }
 
-  .AxZvdu2w {
+  .\@filters\:activeFiltersButtonIcon\@ {
     color: #e6605c;
   }
 }

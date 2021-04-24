@@ -1,23 +1,23 @@
 html[data-suite-theme] {
-  ._3JvmSTh1 {
+  .\@input\:inputFieldLayout\@ {
     background-color: #f3f4f5;
   }
 
-  ._3JvmSTh1:focus-within,
-  .bdrWSXIv {
+  .\@input\:inputFieldLayout\@:focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
     background-color: #fff;
   }
 
-  ._3JvmSTh1:not(._3-W3NFy8):focus-within,
-  .bdrWSXIv {
+  .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
     border-color: #009fdf;
   }
 
-  ._3-W3NFy8 {
+  .\@input\:invalidInputFieldLayout\@ {
     border-color: #e6605c;
   }
 
-  ._3jh6ix0v {
+  .\@input\:inputFieldControl\@ {
     background-color: inherit;
   }
 
@@ -26,66 +26,66 @@ html[data-suite-theme] {
     color: #007bc2;
   }
 
-  ._2SrzFmAE ._1BDyVcdM {
+  .\@search\:inputFieldLayout\@ .\@search\:inputField\@ {
     background-color: inherit;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._2SrzFmAE ._1BDyVcdM:focus {
+    .\@search\:inputFieldLayout\@ .\@search\:inputField\@:focus {
       background-color: inherit;
     }
   }
 
-  ._2kkWoRPp {
+  .\@list\:groupDivider\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3JWUeKY8,
-  ._3Y0KrE9V {
+  .\@list\:item\@,
+  .\@list\:underlinedItem\@ {
     border-bottom-color: #e8e8e8;
   }
 
-  ._3JWUeKY8:not(._3Y0KrE9V):last-child {
+  .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
     border-bottom-color: transparent;
   }
 
-  ._1Zrwwp4K {
+  .\@list\:selectedItem\@ {
     background-color: #f7f8f9;
   }
 
-  ._281AtAZr ._1Zrwwp4K:after,
-  ._281AtAZr ._2ALhJK48:after {
+  .\@list\:list\@ .\@list\:selectedItem\@:after,
+  .\@list\:list\@ .\@list\:hoverableItem\@:after {
     background-color: inherit;
   }
 
-  ._1F6vKW7N {
+  .\@list\:subContent\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._2ALhJK48:hover,
-    ._3JWUeKY8:focus {
+    .\@list\:hoverableItem\@:hover,
+    .\@list\:item\@:focus {
       background-color: #e4f4fb;
     }
   }
 
-  .aGOfC4nV {
+  .\@inbox\:messagesPanel\@ {
     background-color: #fff;
   }
 
-  ._1OIdzYiq {
+  .\@inbox\:messageItemStatusBadge\@ {
     background-color: currentColor;
   }
 
-  ._1tgFG7iN {
+  .\@inbox\:unknownAlertStatusText\@ {
     color: transparent;
   }
 
-  ._2xorMy_6 .aGOfC4nV {
+  .\@inbox\:fullLayout\@ .\@inbox\:messagesPanel\@ {
     border-right-color: #d4d4d4;
   }
 
-  ._2xorMy_6 ._1ckWzcdY {
+  .\@inbox\:fullLayout\@ .\@inbox\:selectedMessageItem\@ {
     background-color: #f7f8f9;
   }
 }

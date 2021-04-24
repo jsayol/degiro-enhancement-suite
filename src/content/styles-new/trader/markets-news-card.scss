@@ -1,87 +1,87 @@
 html[data-suite-theme] {
-  ._2kkWoRPp {
+  .\@list\:groupDivider\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3JWUeKY8,
-  ._3Y0KrE9V {
+  .\@list\:item\@,
+  .\@list\:underlinedItem\@ {
     border-bottom-color: #e8e8e8;
   }
 
-  ._3JWUeKY8:not(._3Y0KrE9V):last-child {
+  .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
     border-bottom-color: transparent;
   }
 
-  ._1Zrwwp4K {
+  .\@list\:selectedItem\@ {
     background-color: #f7f8f9;
   }
 
-  ._281AtAZr ._1Zrwwp4K:after,
-  ._281AtAZr ._2ALhJK48:after {
+  .\@list\:list\@ .\@list\:selectedItem\@:after,
+  .\@list\:list\@ .\@list\:hoverableItem\@:after {
     background-color: inherit;
   }
 
-  ._1F6vKW7N {
+  .\@list\:subContent\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._2ALhJK48:hover,
-    ._3JWUeKY8:focus {
+    .\@list\:hoverableItem\@:hover,
+    .\@list\:item\@:focus {
       background-color: #e4f4fb;
     }
   }
 
-  ._316S4p2b {
+  .\@pagination-buttons\:layout\@ {
     color: #000;
   }
 
-  ._1pn7hE7- {
+  .\@pagination-buttons\:button\@ {
     border-bottom-color: transparent;
   }
 
-  ._1pn7hE7-:disabled {
+  .\@pagination-buttons\:button\@:disabled {
     background-color: inherit;
   }
 
-  ._1pn7hE7-:focus {
+  .\@pagination-buttons\:button\@:focus {
     color: #009fdf;
   }
 
-  ._1pn7hE7-._1TSB-BAR {
+  .\@pagination-buttons\:button\@.\@pagination-buttons\:disabledButton\@ {
     background-color: inherit;
     color: #000;
   }
 
-  ._2ZC0AnZ6 {
+  .\@pagination-buttons\:activeButton\@ {
     border-bottom-color: #009fdf;
   }
 
-  ._3fsQ8Cps {
+  .\@news-article-item\:dateTime\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3v7KvgqR {
+  .\@news-article-item\:subCategoryLabelWrapper\@ {
     color: #000;
   }
 
-  .Ww9dtK-j._2UVGMGP3 {
+  .Ww9dtK-j.\@news-article-page\:embeddedCard\@ {
     border-top-color: #e8e8e8;
   }
 
-  ._3_nIrzwr {
+  .\@news-article-page\:articleCategoryTitle\@ {
     color: #ababab;
   }
 
-  ._32GwrzNb {
+  .\@news-article-page\:articleFooter\@ {
     color: #ababab;
   }
 
-  ._1kuNhBQ4 {
+  .\@news-card\:newsListItemDate\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._2nZHbWCO ._1elGIpu3:before {
+  .\@news-card\:newsContentWithArticle\@ .\@news-card\:selectedNewsListItem\@:before {
     background-color: #009fdf;
   }
 

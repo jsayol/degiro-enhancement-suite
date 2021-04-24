@@ -1,9 +1,9 @@
 html[data-suite-theme] {
-  ._1VrRUXxk {
+  .\@alerts\:alertBackdrop\@ {
     background-color: #fff;
   }
 
-  ._3SIBT-bT {
+  .\@alerts\:closeButton\@ {
     color: #ababab;
   }
 
@@ -19,110 +19,110 @@ html[data-suite-theme] {
     color: #000;
   }
 
-  ._2M-TmtZI {
+  .\@sub-navigation\:activeNavigationItem\@ {
     color: #009fdf;
   }
 
-  ._2M-TmtZI:after {
+  .\@sub-navigation\:activeNavigationItem\@:after {
     background-color: #009fdf;
   }
 
-  ._1HaCyFuQ {
+  .\@opened-tasks-alert\:alert\@ {
     background-color: #181a21;
     color: #fff;
   }
 
-  ._2kkWoRPp {
+  .\@list\:groupDivider\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3JWUeKY8,
-  ._3Y0KrE9V {
+  .\@list\:item\@,
+  .\@list\:underlinedItem\@ {
     border-bottom-color: #e8e8e8;
   }
 
-  ._3JWUeKY8:not(._3Y0KrE9V):last-child {
+  .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
     border-bottom-color: transparent;
   }
 
-  ._1Zrwwp4K {
+  .\@list\:selectedItem\@ {
     background-color: #f7f8f9;
   }
 
-  ._281AtAZr ._1Zrwwp4K:after,
-  ._281AtAZr ._2ALhJK48:after {
+  .\@list\:list\@ .\@list\:selectedItem\@:after,
+  .\@list\:list\@ .\@list\:hoverableItem\@:after {
     background-color: inherit;
   }
 
-  ._1F6vKW7N {
+  .\@list\:subContent\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._2ALhJK48:hover,
-    ._3JWUeKY8:focus {
+    .\@list\:hoverableItem\@:hover,
+    .\@list\:item\@:focus {
       background-color: #e4f4fb;
     }
   }
 
-  ._1-qPS-1K {
+  .\@account-overview\:totalValue\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._1V8z-9bE {
+  .\@filters\:collapsedFiltersSectionButton\@ {
     background-color: transparent;
   }
 
-  ._31320W00 ._24ScMuu4 {
+  .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@ {
     background-color: #fff;
     border-color: #e8e8e8;
   }
 
-  ._31320W00 ._24ScMuu4:focus-within {
+  .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@:focus-within {
     border-color: #009fdf;
   }
 
-  .AxZvdu2w {
+  .\@filters\:activeFiltersButtonIcon\@ {
     color: #e6605c;
   }
 
-  ._2IXrK1CA {
+  .\@buttons-group\:buttonsGroup\@ {
     background-color: #f3f4f5;
   }
 
-  .V09i3yvL {
+  .\@buttons-group\:buttonsGroupItem\@ {
     border-left-color: #e8e8e8;
   }
 
-  .V09i3yvL:first-child {
+  .\@buttons-group\:buttonsGroupItem\@:first-child {
     border-left: 0;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    .V09i3yvL:hover {
+    .\@buttons-group\:buttonsGroupItem\@:hover {
       background-color: rgba(0, 0, 0, 0.1);
     }
   }
 
-  ._3JvmSTh1 {
+  .\@input\:inputFieldLayout\@ {
     background-color: #f3f4f5;
   }
 
-  ._3JvmSTh1:focus-within,
-  .bdrWSXIv {
+  .\@input\:inputFieldLayout\@:focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
     background-color: #fff;
   }
 
-  ._3JvmSTh1:not(._3-W3NFy8):focus-within,
-  .bdrWSXIv {
+  .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
     border-color: #009fdf;
   }
 
-  ._3-W3NFy8 {
+  .\@input\:invalidInputFieldLayout\@ {
     border-color: #e6605c;
   }
 
-  ._3jh6ix0v {
+  .\@input\:inputFieldControl\@ {
     background-color: inherit;
   }
 
@@ -131,31 +131,31 @@ html[data-suite-theme] {
     color: #007bc2;
   }
 
-  ._1KhdrThW:focus + .Qgbk06Ib {
+  .\@datepicker\:inputWithIcon\@:focus + .\@datepicker\:inputIcon\@ {
     color: #009fdf;
   }
 
-  .wKb4xEDK {
+  .\@datepicker\:popup\@ {
     background-color: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   }
 
-  ._3W5tpmzT {
+  .\@datepicker\:selectedItem\@ {
     background-color: #009fdf;
     color: #fff;
   }
 
-  ._1xTj_g_w[disabled],
-  ._3ikYP1Sz[disabled],
-  ._3sBaDV1Z[disabled] {
+  .\@datepicker\:item\@[disabled],
+  .\@datepicker\:moreButton\@[disabled],
+  .\@datepicker\:navButton\@[disabled] {
     background-color: transparent;
     color: rgba(0, 0, 0, 0.55);
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._1xTj_g_w:not([disabled]):not(._3W5tpmzT):hover,
-    ._3ikYP1Sz:not([disabled]):hover {
+    .\@datepicker\:item\@:not([disabled]):not(.\@datepicker\:selectedItem\@):hover,
+    .\@datepicker\:moreButton\@:not([disabled]):hover {
       background-color: #f3f4f5;
     }
   }
@@ -164,40 +164,40 @@ html[data-suite-theme] {
     border-bottom-color: #e8e8e8;
   }
 
-  ._2SrzFmAE ._1BDyVcdM {
+  .\@search\:inputFieldLayout\@ .\@search\:inputField\@ {
     background-color: inherit;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._2SrzFmAE ._1BDyVcdM:focus {
+    .\@search\:inputFieldLayout\@ .\@search\:inputField\@:focus {
       background-color: inherit;
     }
   }
 
-  .fC_Qu6kY {
+  .\@switch\:track\@ {
     background-color: #d4d4d4;
   }
 
-  ._2IQ4pEdI {
+  .\@switch\:thumb\@ {
     background-color: #f3f4f5;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   }
 
-  .b1W6H4_a:checked ~ .fC_Qu6kY {
+  .\@switch\:checkbox\@:checked ~ .\@switch\:track\@ {
     background-color: #009fdf;
   }
 
-  .b1W6H4_a:checked ~ ._2IQ4pEdI {
+  .\@switch\:checkbox\@:checked ~ .\@switch\:thumb\@ {
     background-color: #009fdf;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    .b1W6H4_a:focus ~ ._2IQ4pEdI {
+    .\@switch\:checkbox\@:focus ~ .\@switch\:thumb\@ {
       background-color: #fff;
       box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3);
     }
-    .b1W6H4_a:checked:focus ~ ._2IQ4pEdI {
+    .\@switch\:checkbox\@:checked:focus ~ .\@switch\:thumb\@ {
       background-color: #009fdf;
       box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3);
     }
@@ -207,32 +207,32 @@ html[data-suite-theme] {
     border-bottom-color: #e8e8e8;
   }
 
-  ._19tVoLhw {
+  .\@form-line-select-filter\:formLineIcon\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._316S4p2b {
+  .\@pagination-buttons\:layout\@ {
     color: #000;
   }
 
-  ._1pn7hE7- {
+  .\@pagination-buttons\:button\@ {
     border-bottom-color: transparent;
   }
 
-  ._1pn7hE7-:disabled {
+  .\@pagination-buttons\:button\@:disabled {
     background-color: inherit;
   }
 
-  ._1pn7hE7-:focus {
+  .\@pagination-buttons\:button\@:focus {
     color: #009fdf;
   }
 
-  ._1pn7hE7-._1TSB-BAR {
+  .\@pagination-buttons\:button\@.\@pagination-buttons\:disabledButton\@ {
     background-color: inherit;
     color: #000;
   }
 
-  ._2ZC0AnZ6 {
+  .\@pagination-buttons\:activeButton\@ {
     border-bottom-color: #009fdf;
   }
 }

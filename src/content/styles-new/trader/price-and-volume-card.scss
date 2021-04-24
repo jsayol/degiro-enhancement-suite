@@ -1,10 +1,10 @@
 html[data-suite-theme] {
-  .xvFSckQ6 {
+  .\@accordion-item\:item\@ {
     border-bottom-color: #e8e8e8;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._3u-ooGhO:hover ._168WKOXC {
+    .\@card-header-hint-button\:button\@:hover .\@card-header-hint-button\:icon\@ {
       color: #009fdf;
     }
   }
@@ -17,16 +17,16 @@ html[data-suite-theme] {
     border-bottom: none;
   }
 
-  ._3cNJiTRI ._1xsdEprT:last-child ._1EP--32- {
+  .\@ratios-table\:bottomBorderedTable\@ ._1xsdEprT:last-child ._1EP--32- {
     border-bottom-color: #e8e8e8;
   }
 
-  ._1xsdEprT:not(._2bcIrSh2):nth-child(odd) ._1EP--32-:not(._2h2YaWrE) {
+  ._1xsdEprT:not(.\@ratios-table\:selectedRow\@):nth-child(odd) ._1EP--32-:not(._2h2YaWrE) {
     background-color: #fff;
   }
 
-  ._2NuD6_HF:not(._2V4tV0mY):nth-child(odd) ._1jrJLgoY:not(.DSQLkZye),
-  ._2NuD6_HF:not(._2V4tV0mY):nth-child(odd) ._18c12Ubd:not(.DSQLkZye) {
+  ._2NuD6_HF:not(.\@price-and-volume-card\:selectedRow\@):nth-child(odd) ._1jrJLgoY:not(.DSQLkZye),
+  ._2NuD6_HF:not(.\@price-and-volume-card\:selectedRow\@):nth-child(odd) ._18c12Ubd:not(.DSQLkZye) {
     background-color: #fff;
   }
 
@@ -35,7 +35,7 @@ html[data-suite-theme] {
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    .bAaR7RCf:hover {
+    .\@product-details-hint\:icon\@:hover {
       color: #009fdf;
     }
   }
@@ -44,7 +44,7 @@ html[data-suite-theme] {
     background-color: initial;
   }
 
-  ._2IwL33pE {
+  .\@price-range-table\:priceRangeHeader\@ {
     border-top-color: #e8e8e8;
   }
 }

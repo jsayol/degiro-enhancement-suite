@@ -1,5 +1,5 @@
 html[data-suite-theme] {
-  ._1veR2tP7 {
+  .\@alternative-order-selector\:optionsList\@ {
     background-color: #fff;
     border: 1px solid #d4d4d4;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
@@ -7,8 +7,8 @@ html[data-suite-theme] {
     color: #000;
   }
 
-  ._2GDZmzGr:focus,
-  ._2GDZmzGr:hover {
+  .\@alternative-order-selector\:optionItem\@:focus,
+  .\@alternative-order-selector\:optionItem\@:hover {
     background-color: #e4f4fb;
   }
 
@@ -18,23 +18,23 @@ html[data-suite-theme] {
       0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   }
 
-  ._147fFmXL {
+  .\@full-header\:header\@ {
     background-color: #fff;
     border-bottom-color: #e8e8e8;
   }
 
-  ._19s4yIYX {
+  .\@full-header\:commonOrderButtonLayout\@ {
     background-color: #009fdf;
     color: #fff;
   }
 
   /* TODO: fix this */
-  /* ._19s4yIYX ._564j7I0b {
+  /* .\@full-header\:commonOrderButtonLayout\@ .\@full-header\:alternativeOrdersSelector\@ {
   border-left-color: 0.5);
 } */
 
   @media (pointer: fine), all and (pointer: none) {
-    ._564j7I0b:hover {
+    .\@full-header\:alternativeOrdersSelector\@:hover {
       background-color: #007bc2;
     }
   }

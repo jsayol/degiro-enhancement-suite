@@ -1,43 +1,43 @@
 html[data-suite-theme] {
-  ._3aKD8cJa {
+  .\@bar-chart\:chartText\@ {
     fill: rgba(0, 0, 0, 0.55);
   }
 
-  .JFqlBKZR {
+  .\@bar-chart\:chartGridLine\@ {
     stroke: #e8e8e8;
   }
 
-  ._2Wj09Ukw {
+  .\@bar-chart\:chartTextNoData\@ {
     fill: rgba(0, 0, 0, 0.55);
   }
 
-  ._117F2TyM {
+  .\@chart-legend\:chartLegendItem\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3uZqPfLC {
+  .\@no-data-message\:noDataToDisplay\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3oLn_MN8 {
+  .\@analyst-rating\:analystRatingContainer\@ {
     background-color: #fafafa;
     border-color: #d4d4d4;
   }
 
-  ._3KsPwl0e {
+  .\@analyst-rating\:analystRatingScale\@ {
     background: linear-gradient(90deg, #00a658, #d4d4d4 50%, #e6605c);
   }
 
-  .RyrAgVRb {
+  .\@analyst-rating\:axisLabel\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3hxM_TrW {
+  .\@analyst-rating\:currentValuePointer\@ {
     color: #fff;
   }
 
-  ._3hxM_TrW,
-  ._3hxM_TrW:after {
+  .\@analyst-rating\:currentValuePointer\@,
+  .\@analyst-rating\:currentValuePointer\@:after {
     background-color: #000;
   }
 }

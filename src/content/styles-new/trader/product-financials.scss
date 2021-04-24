@@ -1,43 +1,43 @@
 html[data-suite-theme] {
-  ._3uZqPfLC {
+  .\@no-data-message\:noDataToDisplay\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3aKD8cJa {
+  .\@bar-chart\:chartText\@ {
     fill: rgba(0, 0, 0, 0.55);
   }
 
-  .JFqlBKZR {
+  .\@bar-chart\:chartGridLine\@ {
     stroke: #e8e8e8;
   }
 
-  ._2Wj09Ukw {
+  .\@bar-chart\:chartTextNoData\@ {
     fill: rgba(0, 0, 0, 0.55);
   }
 
-  ._117F2TyM {
+  .\@chart-legend\:chartLegendItem\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._1A8_3vrg {
+  .\@statements-period-navigation\:statementsPeriodNavigation\@ {
     background: #000;
   }
 
-  .Nm5omvC7 {
+  .\@statements-period-navigation\:statementsPeriodButton\@ {
     color: #ababab;
   }
 
-  .Nm5omvC7._32yCs-da {
+  .\@statements-period-navigation\:statementsPeriodButton\@.\@statements-period-navigation\:selectedStatementsPeriodButton\@ {
     color: #fff;
   }
 
-  ._32yCs-da:after {
+  .\@statements-period-navigation\:selectedStatementsPeriodButton\@:after {
     border-color: transparent transparent #fff;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._1A8_3vrg .Nm5omvC7:focus,
-    ._1A8_3vrg .Nm5omvC7:hover {
+    .\@statements-period-navigation\:statementsPeriodNavigation\@ .\@statements-period-navigation\:statementsPeriodButton\@:focus,
+    .\@statements-period-navigation\:statementsPeriodNavigation\@ .\@statements-period-navigation\:statementsPeriodButton\@:hover {
       color: #ababab;
     }
   }
@@ -49,7 +49,7 @@ html[data-suite-theme] {
     ._3oGscGgD ._3FghPXuE:hover ._3ByEduw-:not(:first-child):hover {
       background-color: #bbe2f5;
     }
-    ._3FghPXuE:not(._3-EYymGa):nth-child(odd):hover ._3ByEduw-:not(._2Hheu-u7) {
+    ._3FghPXuE:not(.\@table-card\:selectedRow\@):nth-child(odd):hover ._3ByEduw-:not(._2Hheu-u7) {
       background-color: #e4f4fb;
     }
     ._3oGscGgD
@@ -64,7 +64,7 @@ html[data-suite-theme] {
     }
   }
 
-  ._1e3sAcsb {
+  .\@product-financials\:disclaimer\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 }

@@ -43,7 +43,7 @@ html[data-suite-theme] {
     background-color: #fff;
   }
 
-  ._3qOjVCA9 {
+  .\@icon\:iconShape\@ {
     fill: currentColor;
   }
 
@@ -51,118 +51,118 @@ html[data-suite-theme] {
     fill: currentColor;
   }
 
-  ._1PbPcuTx {
+  .\@icon\:accentIcon\@ {
     color: #009fdf;
   }
 
-  ._1e_5ibvk {
+  .\@icon\:hintIcon\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3kdA-VsS {
+  .\@icon\:disabledIcon\@ {
     color: #d4d4d4;
   }
 
-  ._3FmQikJc {
+  .\@icon\:secondaryActionIcon\@ {
     color: #333;
   }
 
-  ._1LDsddkU,
-  .ioXTFC3S:hover {
+  .\@icon\:activeItemDetailsIconWrapper\@,
+  .\@icon\:itemDetailsIconWrapper\@:hover {
     background-color: #bbe2f5;
   }
 
-  ._1uYeu0KX {
+  .\@snackbar\:snackbar\@ {
     background-color: #181a21;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
       0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
     color: #fff;
   }
 
-  ._26tQclzn {
+  .\@snackbar\:action\@ {
     color: #009fdf;
   }
 
-  ._28G8vBfE {
+  .\@snackbar\:closeButton\@ {
     color: #ababab;
   }
 
-  ._1AZfbcrJ {
+  .\@status\:infoStatusText\@ {
     color: #009fdf;
   }
 
-  .OJOTNeT_ {
+  .\@status\:successStatusText\@ {
     color: #00a658;
   }
 
-  ._1dct_iLB,
-  ._3NbL14BI {
+  .\@status\:alertStatusText\@,
+  .\@status\:failureStatusText\@ {
     color: #e6605c;
   }
 
-  ._3MFdVxJ7,
-  .LqrlhiIa {
+  .\@status\:warningStatusText\@,
+  .\@status\:pendingStatusText\@ {
     color: #f2892e;
   }
 
-  ._3vUqQwpS {
+  .\@status\:inactiveStatusText\@ {
     color: #ababab;
   }
 
-  ._3BP7hV6K,
-  ._100Jc0OI {
+  .\@status\:failureStatusBackground\@,
+  .\@status\:alertStatusBackground\@ {
     background-color: #fdf0ef;
   }
 
-  ._3d7a6ba5 {
+  .\@status\:infoStatusBackground\@ {
     background-color: #e5f5fb;
   }
 
-  ._1E1XrASA {
+  .\@status\:warningStatusBackground\@ {
     background-color: rgba(242, 137, 46, 0.14);
   }
 
-  ._3EYNkwql {
+  .\@buy-sell-badge\:buyBadge\@ {
     color: #008753;
   }
 
-  ._2EvZOFhA {
+  .\@buy-sell-badge\:sellBadge\@ {
     color: #cc4c3b;
   }
 
-  .DO38JSCn {
+  .\@value\:positiveValue\@ {
     color: #008753;
   }
 
-  .YxYcYvo1 {
+  .\@value\:negativeValue\@ {
     color: #cc4c3b;
   }
 
-  ._3CZoX5pk:after,
-  .aFXdYwgH:after {
+  .\@value\:valueGrowHighlighting1\@:after,
+  .\@value\:valueGrowHighlighting2\@:after {
     background: #008753;
   }
 
-  ._1cDRLYeM:after,
-  ._3r9EjM4w:after {
+  .\@value\:valueFallHighlighting2\@:after,
+  .\@value\:valueFallHighlighting1\@:after {
     background: #cc4c3b;
   }
 
-  ._-0LozeWL.DO38JSCn {
+  .\@value\:relativeDiffValueText\@.\@value\:positiveValue\@ {
     color: #008753;
   }
 
-  ._-0LozeWL.YxYcYvo1 {
+  .\@value\:relativeDiffValueText\@.\@value\:negativeValue\@ {
     color: #cc4c3b;
   }
 
-  ._1h_eTEhu[disabled] {
+  .\@value\:orderTriggerValue\@[disabled] {
     background-color: transparent;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._1h_eTEhu:not([disabled]):focus,
-    ._1h_eTEhu:not([disabled]):hover {
+    .\@value\:orderTriggerValue\@:not([disabled]):focus,
+    .\@value\:orderTriggerValue\@:not([disabled]):hover {
       color: #009fdf;
     }
   }
@@ -191,22 +191,22 @@ html[data-suite-theme] {
     color: #000;
   }
 
-  ._19IIBXeB {
+  .\@button\:disabledButton\@ {
     background-color: #d4d4d4;
     color: #fff;
   }
 
-  .CPtfiZ7R._19IIBXeB {
+  .\@button\:textButton\@.\@button\:disabledButton\@ {
     background-color: transparent;
   }
 
-  ._1kPJSn4E:focus:before,
-  ._1kPJSn4E:hover:before,
-  ._3-IB_JCb:before {
+  .\@button\:selectableButtonWithBackdrop\@:focus:before,
+  .\@button\:selectableButtonWithBackdrop\@:hover:before,
+  .\@button\:activeButtonWithBackdrop\@:before {
     background-color: rgba(152, 161, 177, 0.2);
   }
 
-  ._1as8uSSY:after {
+  .\@button\:transition\@:after {
     background-image: repeating-linear-gradient(
       45deg,
       #007bc2,
@@ -217,40 +217,40 @@ html[data-suite-theme] {
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._25y7gyVl:not(._19IIBXeB):hover {
+    ._25y7gyVl:not(.\@button\:disabledButton\@):hover {
       background-color: #f3f4f5;
       border-color: #f3f4f5;
     }
-    .duvfw-AB:not(._19IIBXeB):hover {
+    .duvfw-AB:not(.\@button\:disabledButton\@):hover {
       background-color: #007bc2;
     }
-    ._25y7gyVl:not(._19IIBXeB):focus,
-    ._29t5APwC:not(._19IIBXeB):focus,
-    .duvfw-AB:not(._19IIBXeB):focus {
+    ._25y7gyVl:not(.\@button\:disabledButton\@):focus,
+    ._29t5APwC:not(.\@button\:disabledButton\@):focus,
+    .duvfw-AB:not(.\@button\:disabledButton\@):focus {
       background-color: #fff;
       border-color: #009fdf;
       color: #007bc2;
     }
   }
 
-  ._1cB-Ekc9 a {
+  .\@external-html-content\:externalHtmlContent\@ a {
     color: #009fdf;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._1cB-Ekc9 a:focus,
-    ._1cB-Ekc9 a:hover {
+    .\@external-html-content\:externalHtmlContent\@ a:focus,
+    .\@external-html-content\:externalHtmlContent\@ a:hover {
       color: #007bc2;
     }
   }
 
-  .n9Y_xeF9:after,
-  .n9Y_xeF9:before {
+  .\@scroll-panel\:verticalScrollPanelShadowedWrapper\@:after,
+  .\@scroll-panel\:verticalScrollPanelShadowedWrapper\@:before {
     background: linear-gradient(180deg, #fff 30%, hsla(0, 0%, 100%, 0));
   }
 
-  ._2WxIHyr-:after,
-  ._2WxIHyr-:before {
+  .\@scroll-panel\:horizontalScrollPanelShadowedWrapper\@:after,
+  .\@scroll-panel\:horizontalScrollPanelShadowedWrapper\@:before {
     background: linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, 0));
   }
   ._1ZM6JdZl:after,
@@ -258,37 +258,37 @@ html[data-suite-theme] {
     background: linear-gradient(270deg, transparent 0, #000);
   }
 
-  ._2Lc-F8xg {
+  .\@modal\:backdrop\@ {
     background-color: rgba(0, 0, 0, 0.55);
   }
 
-  ._34VONsxu {
+  .\@modal\:window\@ {
     background-color: #fff;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
       0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   }
 
-  .LcAk5OkM {
+  .\@app-component\:compactHeaderPlaceholder\@ {
     background-color: #009fdf;
   }
 
-  .f4nqyMou {
+  .\@app-component\:fullHeaderPlaceholder\@ {
     background-color: #fff;
   }
 
-  ._2BdaSZqu {
+  .\@app-component\:dataVendors\@ {
     background-color: #edeff1;
     color: rgba(0, 0, 0, 0.55);
   }
 
   @media (min-width: 1440px) {
-    .txRELtv5 {
+    .\@app-component\:globalFeedbackButton\@ {
       background-color: #333;
       color: #fff;
     }
   }
 
-  .dy5DZ3l4 {
+  .\@side-information-panel\:baseOpenedLayout\@ {
     background-color: #fff;
     border-left-color: #d4d4d4;
   }
@@ -298,11 +298,11 @@ html[data-suite-theme] {
       0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   }
 
-  ._3JMk9DqI {
+  .\@side-information-panel\:header\@ {
     border-bottom-color: #d4d4d4;
   }
 
-  .MAYOM1yO {
+  .\@side-information-panel\:navigationItem\@ {
     border-bottom-color: #d4d4d4;
   }
 
@@ -314,7 +314,7 @@ html[data-suite-theme] {
     border-bottom-color: transparent;
   }
 
-  ._3qim-euk + ._2Ctif5Ft ._3GVSy4VH,
+  ._3qim-euk + .\@side-information-panel\:section\@ ._3GVSy4VH,
   ._3qim-euk + ._3GVSy4VH {
     border-top-color: transparent;
   }
@@ -325,86 +325,86 @@ html[data-suite-theme] {
     }
   }
 
-  ._214_3KqX {
+  .\@hint\:popup\@ {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     color: #000;
   }
 
-  ._1xGSw9zr {
+  .\@hint\:closeButtonIcon\@ {
     color: #ababab;
   }
 
-  ._1kYpKNYS {
+  .\@hint\:content\@ {
     background: #000;
     color: #fff;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._2HHYp_aN:focus ._330pdmTh {
+    .\@hint\:layout\@:focus .\@hint\:icon\@ {
       color: #009fdf;
     }
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._24B3km1G:hover {
+    .\@data-vendors\:toggleIcon\@:hover {
       color: #007bc2;
     }
   }
 
-  ._2dcJGOUN {
+  .\@form\:formTitle\@ {
     color: #000;
   }
 
-  ._3jWTMeHo {
+  .\@form\:formExtraInfo\@ {
     border-top-color: #e8e8e8;
   }
 
-  .nCR5h3iF {
+  .\@form\:fieldError\@ {
     color: #e6605c;
   }
 
-  ._1dgOEOFT {
+  .\@account-summary\:layout\@ {
     background-color: #fff;
     border-bottom-color: #e8e8e8;
   }
 
-  .yrOJbG72 {
+  .\@account-summary\:bottomLayout\@ {
     border-top-color: #e8e8e8;
   }
 
-  .yrOJbG72:before {
+  .\@account-summary\:bottomLayout\@:before {
     background: linear-gradient(hsla(0, 0%, 100%, 0.1), rgba(0, 0, 0, 0.1));
   }
 
-  .zlwsqPsd {
+  .\@page\:pageWrapperWithCardsGrid\@ {
     background-color: #edeff1;
   }
 
-  .zlwsqPsd ._2x2HMYM- {
+  .\@page\:pageWrapperWithCardsGrid\@ .\@page\:pageCard\@ {
     border-color: #e8e8e8;
   }
 
-  ._1fXxiMaD {
+  .\@page\:pageHeaderAsCard\@ {
     background-color: #fff;
   }
 
-  .LuMx5N-a {
+  .\@link\:actionLink\@ {
     color: #009fdf;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    .LuMx5N-a:focus,
-    .LuMx5N-a:hover {
+    .\@link\:actionLink\@:focus,
+    .\@link\:actionLink\@:hover {
       color: #007bc2;
     }
-    ._3hNzOhh2:focus,
-    ._3hNzOhh2:hover {
+    .\@link\:accentWhenSelectedLink\@:focus,
+    .\@link\:accentWhenSelectedLink\@:hover {
       color: #009fdf;
     }
   }
 
-  ._2aTWrjNT {
+  .\@card\:cardsDivider\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
@@ -412,11 +412,11 @@ html[data-suite-theme] {
     background-color: #fff;
   }
 
-  ._3KT_-c8T {
+  .\@card\:cardSubHeader\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3txtVfoE {
+  .\@table\:cell\@ {
     background-color: #fff;
   }
 
@@ -425,41 +425,41 @@ html[data-suite-theme] {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._1Vv6E52I,
-  ._3T8sEjYG {
+  .\@table\:detailsIconCell\@,
+  .\@table\:feedQualityCell\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._1uF5sQLY,
-  ._2nWsxCRP {
+  .\@table\:secondaryContentCell\@,
+  .\@table\:secondaryContentRow\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._1atGqEg5 ._3txtVfoE {
+  .\@table\:row\@ .\@table\:cell\@ {
     border-bottom-color: #e8e8e8;
   }
 
-  ._1atGqEg5:first-child ._3txtVfoE {
+  .\@table\:row\@:first-child .\@table\:cell\@ {
     border-top-color: #e8e8e8;
   }
 
-  ._1atGqEg5._3VumnLL6 ._3txtVfoE {
+  .\@table\:row\@.\@table\:selectedRow\@ .\@table\:cell\@ {
     background-color: #f3f4f5;
   }
 
-  ._1atGqEg5:not(._3VumnLL6):nth-child(odd) ._3txtVfoE:not(._3fYLd38o) {
+  .\@table\:row\@:not(.\@table\:selectedRow\@):nth-child(odd) .\@table\:cell\@:not(._3fYLd38o) {
     background-color: #f7f8f9;
   }
 
-  .QTzbBtZF:before {
+  .\@table\:startStickyCell\@:before {
     background: #d4d4d4;
   }
 
-  .QTzbBtZF:after {
+  .\@table\:startStickyCell\@:after {
     background: #e8e8e8;
   }
 
-  .j9O5hedy:after {
+  .\@table\:startStickyCellShadowedContent\@:after {
     background-image: linear-gradient(
       270deg,
       hsla(0, 0%, 100%, 0.15) 0,
@@ -468,26 +468,26 @@ html[data-suite-theme] {
     );
   }
 
-  .UP9iKLye {
+  .\@table\:footerPageSizeSelectorLabel\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._23k5ev1C:hover ._3txtVfoE {
+    .\@table\:hoverableRow\@:hover .\@table\:cell\@ {
       background-color: #e4f4fb;
     }
-    ._1hm4jOQi:hover ._3txtVfoE {
+    .\@table\:selectableRow\@:hover .\@table\:cell\@ {
       background-color: #e4f4fb;
     }
   }
 
   @supports (-ms-ime-align: auto) {
-    .QTzbBtZF {
+    .\@table\:startStickyCell\@ {
       border-right-color: #e8e8e8;
     }
   }
 
-  ._1GTwtGbs {
+  .\@group-select\:group\@ {
     color: #000;
   }
 
@@ -495,46 +495,46 @@ html[data-suite-theme] {
     border-bottom-color: transparent;
   }
 
-  ._3O-i74lZ,
-  ._3O-i74lZ[disabled] {
+  .\@group-select\:activeItem\@,
+  .\@group-select\:activeItem\@[disabled] {
     background-color: transparent;
     border-bottom-color: #009fdf;
     color: #009fdf;
   }
 
-  ._Sv-wtqf {
+  .\@expanded-payments-info\:layout\@ {
     border-left-color: #e8e8e8;
   }
 
-  ._2p8l9pj- {
+  .\@feed-quality\:badge\@ {
     color: #000;
   }
 
-  ._2p8l9pj-:before {
+  .\@feed-quality\:badge\@:before {
     background-color: #008753;
   }
 
-  ._2GQ-RMfr:before {
+  .\@feed-quality\:badgeWithDelayedValue\@:before {
     background-color: #f2892e;
   }
 
-  ._14yV3h1K:before {
+  .\@feed-quality\:badgeWithEndOfDayValue\@:before {
     background-color: #007bc2;
   }
 
-  ._2-xVQKnL {
+  .\@actions-menu\:actionsMenu\@ {
     background-color: #fff;
   }
 
-  ._3xp9xfhI {
+  .\@actions-menu\:actionItemsSeparator\@ {
     background-color: #e8e8e8;
   }
-  ._23Feidbq:focus {
+  .\@actions-menu\:actionItem\@:focus {
     background-color: #e4f4fb;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._23Feidbq:hover {
+    .\@actions-menu\:actionItem\@:hover {
       background-color: #e4f4fb;
     }
   }
@@ -543,54 +543,54 @@ html[data-suite-theme] {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._2ABtKCe- {
+  .\@product-category-badge\:badge\@ {
     background-color: #fff;
   }
 
-  ._1Z7MlEUL {
+  .\@details-overview\:lineTopSeparator\@ {
     border-top-color: #e8e8e8;
   }
 
-  ._1GY3cgfF {
+  .\@details-overview\:lineBottomSeparator\@ {
     border-bottom-color: #e8e8e8;
   }
 
-  ._3yHl9Rej,
-  .m8SaCQ0N {
+  .\@product-trading-buttons\:smallButton\@,
+  .\@product-trading-buttons\:largeButton\@ {
     color: #fff;
   }
-  ._31aFFCZq {
+  .\@product-trading-buttons\:buyButton\@ {
     background-color: #00a658;
   }
 
-  ._1FxqMlng {
+  .\@product-trading-buttons\:sellButton\@ {
     background-color: #e6605c;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._31aFFCZq:not([disabled]):focus,
-    ._31aFFCZq:not([disabled]):hover {
+    .\@product-trading-buttons\:buyButton\@:not([disabled]):focus,
+    .\@product-trading-buttons\:buyButton\@:not([disabled]):hover {
       background-color: #008753;
     }
-    ._1FxqMlng:not([disabled]):focus,
-    ._1FxqMlng:not([disabled]):hover {
+    .\@product-trading-buttons\:sellButton\@:not([disabled]):focus,
+    .\@product-trading-buttons\:sellButton\@:not([disabled]):hover {
       background-color: #cc4c3b;
     }
   }
 
-  ._1cbUpjV8 {
+  .\@product-info-toggle\:popupContent\@ {
     background-color: #fff;
     border-color: #000;
   }
 
-  ._2nJuk3jc {
+  .\@product-info-toggle\:detailsLine\@ {
     border-top-color: #e8e8e8;
   }
 
-  .hSyrIMCA {
+  .\@payments-view\:noDataMessage\@ {
     color: rgba(0, 0, 0, 0.55);
   }
-  ._1_WK0RS- {
+  .\@payments-view\:cell\@ {
     border-bottom-color: #e8e8e8;
   }
 
@@ -602,45 +602,45 @@ html[data-suite-theme] {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._225D5bZq {
+  .\@payments-navigation\:button\@ {
     background-color: #000;
     color: #fff;
   }
 
-  ._1YWePShC[disabled],
-  ._3pBOy15F[disabled] {
+  .\@sections\:section\@[disabled],
+  .\@sections\:sectionToggle\@[disabled] {
     background-color: transparent;
     color: #000;
   }
 
-  ._2hVomjHa {
+  .\@sections\:sectionLabel\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  .JW2tGu-V {
+  .\@sections\:valuesVisibilityButton\@ {
     color: #009fdf;
   }
 
-  ._1O9aanpA {
+  .\@settings-list-toggle\:settingsList\@ {
     background-color: #fff;
   }
 
-  ._2Nlo3JDj + ._2Nlo3JDj {
+  .\@settings-list-toggle\:settingsListItem\@ + .\@settings-list-toggle\:settingsListItem\@ {
     border-top-color: #e8e8e8;
   }
 
-  ._3RuXct74,
-  ._3RuXct74[disabled] {
+  .\@settings-list-toggle\:settingsListButton\@,
+  .\@settings-list-toggle\:settingsListButton\@[disabled] {
     background-color: transparent;
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3RuXct74.madfOO6a {
+  .\@settings-list-toggle\:settingsListButton\@.\@settings-list-toggle\:settingsListActiveButton\@ {
     color: #009fdf;
   }
 
-  ._3OzwVuDY,
-  ._3XIcV2wn {
+  .\@compact-header\:controlButton\@,
+  .\@compact-header\:header\@ {
     background-color: #009fdf;
     color: #fff;
   }

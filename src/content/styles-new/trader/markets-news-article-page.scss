@@ -1,55 +1,55 @@
 html[data-suite-theme] {
-  ._3fsQ8Cps {
+  .\@news-article-item\:dateTime\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._3v7KvgqR {
+  .\@news-article-item\:subCategoryLabelWrapper\@ {
     color: #000;
   }
 
-  ._2f4nmAf5,
-  ._3sik6KCI {
+  .\@news-list\:newsListItem\@,
+  .\@news-list\:selectedNewsListItem\@ {
     border-bottom-color: #e8e8e8;
   }
 
-  ._3sik6KCI {
+  .\@news-list\:selectedNewsListItem\@ {
     background-color: #e4f4fb;
   }
 
-  ._2f4nmAf5:last-of-type {
+  .\@news-list\:newsListItem\@:last-of-type {
     border-bottom: none;
   }
 
-  .mAkmuPN8 {
+  .\@news-list\:newsListItemDate\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._1WbrYw9_ {
+  .\@country-flag\:flag\@ {
     border-color: #d4d4d4;
   }
 
-  ._1WbrYw9_._3w7YM0bX {
+  .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
     border-color: transparent;
   }
 
-  .Ww9dtK-j._2UVGMGP3 {
+  .Ww9dtK-j.\@news-article-page\:embeddedCard\@ {
     border-top-color: #e8e8e8;
   }
 
-  ._3_nIrzwr {
+  .\@news-article-page\:articleCategoryTitle\@ {
     color: #ababab;
   }
 
-  ._32GwrzNb {
+  .\@news-article-page\:articleFooter\@ {
     color: #ababab;
   }
 
-  .xvFSckQ6 {
+  .\@accordion-item\:item\@ {
     border-bottom-color: #e8e8e8;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    .XtedfmM5:hover {
+    .\@related-stocks\:productName\@:hover {
       color: #009fdf;
     }
   }

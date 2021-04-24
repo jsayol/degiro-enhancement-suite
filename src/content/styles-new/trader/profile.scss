@@ -1,44 +1,44 @@
 html[data-suite-theme] {
-  ._1VrRUXxk {
+  .\@alerts\:alertBackdrop\@ {
     background-color: #fff;
   }
 
-  ._3SIBT-bT {
+  .\@alerts\:closeButton\@ {
     color: #ababab;
   }
 
-  ._1HaCyFuQ {
+  .\@opened-tasks-alert\:alert\@ {
     background-color: #181a21;
     color: #fff;
   }
 
-  .iFMi1SJU {
+  .\@start-page\:card\@ {
     background: #fff;
   }
 
-  ._1Wf2_3mI .iFMi1SJU:not(.QE1kBvCG):after {
+  .\@start-page\:compactCardsGrid\@ .\@start-page\:card\@:not(.\@start-page\:accentCard\@):after {
     border-top-color: #e8e8e8;
   }
 
-  ._1wutmMzo {
+  .\@start-page\:cardDescription\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  .QE1kBvCG {
+  .\@start-page\:accentCard\@ {
     background-color: #009fdf;
     color: #fff;
   }
 
-  ._29EwJ2TB .iFMi1SJU:not(.QE1kBvCG) {
+  .\@start-page\:fullCardsGrid\@ .\@start-page\:card\@:not(.\@start-page\:accentCard\@) {
     border-color: #e8e8e8;
   }
 
-  ._2Dk4Jq5M {
+  .\@start-page\:accentClientRole\@ {
     color: #007bc2;
   }
 
   @media (pointer: fine), all and (pointer: none) {
-    ._29EwJ2TB .iFMi1SJU:hover {
+    .\@start-page\:fullCardsGrid\@ .\@start-page\:card\@:hover {
       box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
     }
   }

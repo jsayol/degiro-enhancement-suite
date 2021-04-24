@@ -1,74 +1,74 @@
 html[data-suite-theme] {
-  ._131J9jh1 {
+  .\@note-textarea\:wrapper\@ {
     outline-color: #e8e8e8;
   }
 
-  ._131J9jh1:focus-within {
+  .\@note-textarea\:wrapper\@:focus-within {
     outline-color: #009fdf;
   }
 
-  ._3GPjV2U8 {
+  .\@note-textarea\:textarea\@ {
     background: transparent;
   }
 
-  .yHNk8c1- {
+  .\@note-textarea\:fakeText\@ {
     color: transparent;
   }
 
-  ._23ryh3SY {
+  .\@note-textarea\:fakeTextErrorPart\@ {
     background-color: #e6605c;
   }
 
-  ._3mvUkCuk {
+  .\@note-textarea\:counterError\@ {
     color: #e6605c;
   }
 
-  .Rw6KMAz4:disabled {
+  .\@button\:button\@:disabled {
     background: inherit;
     color: #000;
   }
 
-  .Rw6KMAz4:hover {
+  .\@button\:button\@:hover {
     background-color: #f3f4f5;
   }
 
-  .Rw6KMAz4:focus {
+  .\@button\:button\@:focus {
     border-color: #009fdf;
     color: #009fdf;
     outline: none;
   }
 
-  ._1MgP6zrU {
+  .\@button\:primaryButton\@ {
     background-color: #009fdf;
     color: #fff;
   }
 
-  ._1MgP6zrU:hover {
+  .\@button\:primaryButton\@:hover {
     background-color: #007bc2;
   }
 
-  ._1MgP6zrU:focus {
+  .\@button\:primaryButton\@:focus {
     background-color: #e4f4fb;
     color: #007bc2;
   }
 
-  ._13V8dVE-:focus {
+  .\@product-notes\:productNote\@:focus {
     outline-color: #009fdf;
   }
 
-  ._3CaPzRMw {
+  .\@product-notes\:noteSection\@ {
     background-color: #f3f4f5;
   }
 
-  ._1htE6tkS {
+  .\@product-notes\:timeStamp\@ {
     color: #ababab;
   }
 
-  ._1L16L2Eo {
+  .\@product-notes\:serviceMessageWarning\@ {
     color: #009fdf;
   }
 
-  ._2IJAHDD6 {
+  .\@product-notes\:serviceMessageError\@ {
     color: #e6605c;
   }
 }

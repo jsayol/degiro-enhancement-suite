@@ -1,7 +1,7 @@
 // Any unchanged properties are commented for now. Maybe remove them later.
 
 html[data-suite-theme] {
-  .QxZy6s_V {
+  .\@header\:appLogo\@ {
     filter: var(--suite-theme-login-logo-filter);
   }
 
@@ -57,119 +57,119 @@ html[data-suite-theme] {
   //   background-color: transparent;
   // }
 
-  // ._3qOjVCA9 {
+  // .\@icon\:iconShape\@ {
   //   fill: currentColor;
   // }
 
-  // ._1KJUWku- {
+  // .\@modal\:overlay\@ {
   //   background-color: rgba(0, 23, 34, 0.6);
   // }
 
-  .iImY3xeh {
+  .\@modal\:modal\@ {
     background-color: var(--suite-theme-bg);
   }
 
-  // ._1aOjAzVZ {
+  // .\@modal\:modalTitle\@ {
   //   color: #000;
   // }
 
-  // ._1LwT17FC {
+  // .\@modal\:modalTitleError\@ {
   //   color: #e5231f;
   // }
 
-  .emxZ8a_C {
+  .\@modal\:modalIconWrapper\@ {
     background-color: var(--suite-theme-color-accent-bg);
     color: #fff;
   }
 
-  // ._2HBsj-HV {
+  // .\@modal\:modalIconWrapperError\@ {
   //   background-color: #e5231f;
   // }
 
-  // ._3pXInOYV {
+  // .\@modal\:modalIconWrapperWarning\@ {
   //   background-color: #f89406;
   // }
 
-  // ._3BXRfRRY {
+  // .\@modal\:modalIcon\@ {
   //   color: #fff;
   // }
 
-  ._3nx04Jq5 {
+  .\@modal\:modalContent\@ {
     color: var(--suite-theme-color);
   }
 
-  ._3j79Qr2T {
+  .\@modal\:modalActionsItem\@ {
     background: none;
     border-top-color: var(--suite-theme-border-color);
     color: var(--suite-theme-color-accent-bg);
   }
 
-  ._3j79Qr2T:nth-child(3n-1) {
+  .\@modal\:modalActionsItem\@:nth-child(3n-1) {
     border-left-color: var(--suite-theme-border-color);
   }
 
-  ._2Y5bJ8HD {
+  .\@header\:layout\@ {
     border-bottom-color: var(--suite-theme-border-color);
     // box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   }
 
   @media (min-width: 500px) {
-    .HzuOhgui {
+    .\@header\:appLogoSeparator\@ {
       background-color: var(--suite-theme-color);
     }
   }
 
-  ._2hOXZdLb {
+  .\@carousel\:sliderNavigationItem\@ {
     background-color: var(--suite-theme-border-color);
   }
 
-  .Owpl-wwx {
+  .\@carousel\:activeSliderNavigationItem\@ {
     background-color: var(--suite-theme-color-accent-bg);
   }
 
-  ._1EEaqLAc {
+  .\@button\:button\@ {
     background-color: var(--suite-theme-color-accent-bg);
     color: var(--suite-theme-color-accent-fg);
   }
 
-  // ._2tgaaLak {
+  // .\@button\:inactiveButton\@ {
   //   background-color: #9aa9b7;
   //   color: #fff;
   // }
 
-  .Wnbra79t {
+  .\@button\:textButton\@ {
     // background-color: transparent;
     color: var(--suite-theme-color-accent-bg);
   }
 
-  ._2p5qWLSy:last-child {
+  .\@onboarding\:button\@:last-child {
     background-color: var(--suite-theme-bg);
     color: var(--suite-theme-color-accent-bg);
   }
 
-  ._31zBDXQN {
+  .\@page-notification\:infoNotification\@ {
     background-color: var(--suite-theme-color-accent-bg);
     // color: #fff;
   }
 
-  ._3qG1CsaZ {
+  .\@page-notification\:warningNotification\@ {
     // background-color: rgba(242, 137, 46, 0.14);
     background-color: var(--suite-theme-bg-lite);
   }
 
-  // ._31zBDXQN ._3sZKvny0 {
+  // .\@page-notification\:infoNotification\@ .\@page-notification\:notificationIcon\@ {
   //   color: currentColor;
   // }
 
-  // ._3qG1CsaZ ._3sZKvny0 {
+  // .\@page-notification\:warningNotification\@ .\@page-notification\:notificationIcon\@ {
   //   color: #f89406;
   // }
 
-  // ._33xZZC6S {
+  // .\@page-notification\:content\@ {
   //   color: currentColor;
   // }
 
-  // ._3bZFQtXw {
+  // .\@page-notification\:closeButton\@ {
   //   background: transparent;
   //   color: currentColor;
   // }
@@ -178,7 +178,7 @@ html[data-suite-theme] {
   //   color: #e5231f;
   // }
 
-  // ._3o_m96Y4 {
+  // .\@user-account-person-verification\:personsDescription\@ {
   //   color: #9aa9b7;
   // }
 
@@ -186,33 +186,33 @@ html[data-suite-theme] {
   //   color: #9aa9b7;
   // }
 
-  ._23hICSSF {
+  .\@passcode-indicator\:passCodeIndicatorItem\@ {
     background-color: var(--suite-theme-border-color);
   }
 
-  ._2JaEHQGp {
+  .\@passcode-indicator\:passCodeIndicatorItemActive\@ {
     background-color: var(--suite-theme-color-accent-bg);
   }
 
-  ._2JaEHQGp:after {
+  .\@passcode-indicator\:passCodeIndicatorItemActive\@:after {
     background-color: var(--suite-theme-bg);
   }
 
-  ._3A39h7WD {
+  .\@passcode-keyboard\:keyboardButton\@ {
     // background: transparent;
     border-bottom-color: var(--suite-theme-border-color);
   }
 
-  ._3A39h7WD:active {
+  .\@passcode-keyboard\:keyboardButton\@:active {
     background-color: var(--suite-theme-border-color);
   }
 
-  // ._3A39h7WD:nth-child(10),
-  // ._3A39h7WD:nth-child(12) {
+  // .\@passcode-keyboard\:keyboardButton\@:nth-child(10),
+  // .\@passcode-keyboard\:keyboardButton\@:nth-child(12) {
   //   border-bottom-color: transparent;
   // }
 
-  ._1-D85oBC {
+  .\@passcode-keyboard\:keyboardButtonIcon\@ {
     color: var(--suite-theme-color);
   }
 
@@ -220,36 +220,36 @@ html[data-suite-theme] {
     border-bottom-color: var(--suite-theme-border-color);
   }
 
-  .GrGPQSOP {
+  .\@passcode\:userSelectControlIcon\@ {
     color: var(--suite-theme-color-accent-bg);
   }
 
-  // .ZmefKW3- {
+  // .\@passcode\:userSelectControlToggleIcon\@ {
   //   color: #9aa9b7;
   // }
 
-  .mvX7z6Bb {
+  .\@passcode\:biometricAuthModalImgWrapper\@ {
     background-color: var(--suite-theme-bg);
     box-shadow: 0 0 16px 1px var(--suite-theme-color-accent-bg);
   }
 
-  .aRK9EO0B {
+  .\@input\:input\@ {
     border-color: var(--suite-theme-border-color);
     color: var(--suite-theme-color);
     background-color: var(--suite-theme-bg-lite);
   }
 
-  .aRK9EO0B:focus {
+  .\@input\:input\@:focus {
     border-color: var(--suite-theme-color-accent-bg);
     box-shadow: inset 0 0 0 1px var(--suite-theme-color-accent-bg);
   }
 
-  // ._2nfAQijt {
+  // .\@input\:inputWithError\@ {
   //   border-color: #e5231f;
   //   box-shadow: inset 0 0 0 1px #e5231f;
   // }
 
-  ._1_wNBTPG {
+  .\@input\:inputHint\@ {
     color: var(--suite-theme-color-accent-bg);
   }
 
@@ -257,7 +257,7 @@ html[data-suite-theme] {
   //   color: #e5231f;
   // }
 
-  // ._1atihC2l {
+  // .\@password-input\:toggleButtonIcon\@ {
   //   caret-color: inherit;
   //   color: #9aa9b7;
   // }
@@ -265,7 +265,7 @@ html[data-suite-theme] {
   // @media (any-hover: hover),
   //   all and (-moz-touch-enabled: 0),
   //   all and (pointer: fine) {
-  //   ._3j7COas4:focus {
+  //   .\@password-input\:toggleButton\@:focus {
   //     background-color: rgba(0, 0, 0, 0.1);
   //   }
   // }
@@ -274,32 +274,32 @@ html[data-suite-theme] {
   //   box-shadow: inset 0 0 0 992px #fff;
   // }
 
-  // ._3Qndw_FX {
+  // .\@password-login\:passwordResetLink\@ {
   //   color: #9aa9b7;
   // }
 
   @media (any-hover: hover),
     all and (-moz-touch-enabled: 0),
     all and (pointer: fine) {
-    ._3Qndw_FX:hover {
+    .\@password-login\:passwordResetLink\@:hover {
       color: var(--suite-theme-color-accent-bg);
     }
   }
 
-  // ._37ve3Ur8 {
+  // .\@user-activation-result\:titleIcon\@ {
   //   color: #9aa9b7;
   // }
 
-  // ._34BOAy60 {
+  // .\@user-activation-result\:titleSubIcon\@ {
   //   color: #2ecc71;
   // }
 
-  ._1BTKaVpC {
+  .\@users\:userActionsItem\@ {
     background: transparent;
     color: var(--suite-theme-color-accent-bg);
   }
 
-  // ._1BTKaVpC + ._1BTKaVpC {
+  // .\@users\:userActionsItem\@ + .\@users\:userActionsItem\@ {
   //   color: #9aa9b7;
   // }
 }

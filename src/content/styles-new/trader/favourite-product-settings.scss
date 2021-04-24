@@ -1,23 +1,23 @@
 html[data-suite-theme] {
-  ._3JvmSTh1 {
+  .\@input\:inputFieldLayout\@ {
     background-color: #f3f4f5;
   }
 
-  ._3JvmSTh1:focus-within,
-  .bdrWSXIv {
+  .\@input\:inputFieldLayout\@:focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
     background-color: #fff;
   }
 
-  ._3JvmSTh1:not(._3-W3NFy8):focus-within,
-  .bdrWSXIv {
+  .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
+  .\@input\:focusedInputFieldLayout\@ {
     border-color: #009fdf;
   }
 
-  ._3-W3NFy8 {
+  .\@input\:invalidInputFieldLayout\@ {
     border-color: #e6605c;
   }
 
-  ._3jh6ix0v {
+  .\@input\:inputFieldControl\@ {
     background-color: inherit;
   }
 
@@ -26,24 +26,24 @@ html[data-suite-theme] {
     color: #007bc2;
   }
 
-  ._2A-PyhWT:hover,
-  ._3uOwJ2TK {
+  .\@lists-form\:selectableListItem\@:hover,
+  .\@lists-form\:activeListItem\@ {
     background-color: #e4f4fb;
   }
 
-  ._1kQuXOpG[disabled] {
+  .\@lists-form\:deleteButton\@[disabled] {
     background-color: transparent;
   }
 
-  ._1kQuXOpG[disabled] ._3aV3ngbl {
+  .\@lists-form\:deleteButton\@[disabled] .\@lists-form\:deleteButtonIcon\@ {
     color: #ababab;
   }
 
-  ._3f1ZNxzU {
+  .\@lists-form\:listItemButton\@ {
     background-color: #d4d4d4;
   }
 
-  ._3f1ZNxzU + ._3f1ZNxzU {
+  .\@lists-form\:listItemButton\@ + .\@lists-form\:listItemButton\@ {
     background-color: #009fdf;
     color: #fff;
   }

@@ -1,5 +1,5 @@
 html[data-suite-theme] {
-  ._1ceKYh3W .SRKeLvAF {
+  .\@full-view\:agendaHeaderCompactView\@ .SRKeLvAF {
     background-color: #fafafa;
   }
 
@@ -7,16 +7,16 @@ html[data-suite-theme] {
     border-top: 0;
   }
 
-  ._3RG2gusx {
+  .\@full-view\:groupedCellDivider\@ {
     background-color: #edeff1;
   }
 
-  ._1UIli3mH:not(._3Ne93sHk):nth-child(odd) ._3jr4aOva:not(.SRKeLvAF),
-  ._1UIli3mH:not(._3Ne93sHk):nth-child(odd) .ZSFu57um:not(.SRKeLvAF) {
+  ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) ._3jr4aOva:not(.SRKeLvAF),
+  ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) .ZSFu57um:not(.SRKeLvAF) {
     background-color: #fff;
   }
 
-  ._10lOptvj {
+  .\@full-view\:disabledCompanyNameCell\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
@@ -24,11 +24,11 @@ html[data-suite-theme] {
     border-right-color: #d4d4d4;
   }
 
-  ._2CZhCc1l {
+  .\@agenda-splits-full-view\:disabledProductEventCell\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  .cXzcf1kz:not(.ALrcs4K7):nth-child(odd) ._16CxOdOW:not(._2LvmSz1g) {
+  .cXzcf1kz:not(.\@agenda-splits-full-view\:selectedRow\@):nth-child(odd) ._16CxOdOW:not(.\@agenda-splits-full-view\:headerCell\@) {
     background-color: #fff;
   }
 }

@@ -1,13 +1,13 @@
 html[data-suite-theme] {
-  ._1VrRUXxk {
+  .\@alerts\:alertBackdrop\@ {
     background-color: #fff;
   }
 
-  ._3SIBT-bT {
+  .\@alerts\:closeButton\@ {
     color: #ababab;
   }
 
-  ._1HaCyFuQ {
+  .\@opened-tasks-alert\:alert\@ {
     background-color: #181a21;
     color: #fff;
   }
@@ -16,7 +16,7 @@ html[data-suite-theme] {
     background: #fff;
   }
 
-  ._3U9TLDUu {
+  .\@product-details\:stickyHeader\@ {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   }
@@ -27,16 +27,16 @@ html[data-suite-theme] {
       0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   }
 
-  ._1T9wgTeI {
+  .\@product-details-header\:header\@ {
     background-color: #fff;
   }
 
-  ._1vgHt8Re {
+  .\@product-details-header\:breadcrumbs\@ {
     color: rgba(0, 0, 0, 0.55);
   }
 
-  ._1LqOZoJA,
-  ._3g4wM5PU {
+  .\@product-details-header\:breadcrumbsProductBrief\@,
+  .\@product-details-header\:breadcrumbsBackButton\@ {
     color: #000;
   }
 
@@ -52,11 +52,11 @@ html[data-suite-theme] {
     color: #000;
   }
 
-  ._2M-TmtZI {
+  .\@sub-navigation\:activeNavigationItem\@ {
     color: #009fdf;
   }
 
-  ._2M-TmtZI:after {
+  .\@sub-navigation\:activeNavigationItem\@:after {
     background-color: #009fdf;
   }
 }
