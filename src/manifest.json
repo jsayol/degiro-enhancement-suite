@@ -41,7 +41,6 @@
     }
   ],
   "web_accessible_resources": [
-    "content/styles-old/theme.scss",
     "content/styles/login/app.scss",
     "content/styles/trader/account-overview.scss",
     "content/styles/trader/allocation-settings.scss",

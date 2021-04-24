@@ -1,49 +1,49 @@
 html[data-suite-theme] {
   .\@full-view\:agendaHeaderCompactView\@ .SRKeLvAF {
-    background-color: #fafafa;
+    background-color: #fafafa !important;
   }
 
   ._1UIli3mH:first-child .SRKeLvAF {
-    border-top: 0;
+    border-top: 0 !important;
   }
 
   .\@full-view\:groupedCellDivider\@ {
-    background-color: #edeff1;
+    background-color: #edeff1 !important;
   }
 
   ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) ._3jr4aOva:not(.SRKeLvAF),
   ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) .ZSFu57um:not(.SRKeLvAF) {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@full-view\:disabledCompanyNameCell\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@country-flag\:flag\@ {
-    border-color: #d4d4d4;
-    object-fit: cover;
+    border-color: #d4d4d4 !important;
+    object-fit: cover !important;
   }
 
   .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
-    border-color: transparent;
+    border-color: transparent !important;
   }
 
   ._3N8OmG8V {
-    background-color: #333;
+    background-color: #333 !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@product-details-hint\:icon\@:hover {
-      color: #009fdf;
+      color: #009fdf !important;
     }
   }
 
   .\@agenda-holidays-full-view\:countryCell\@ {
-    border-right-color: #e8e8e8;
+    border-right-color: #e8e8e8 !important;
   }
 
   .\@agenda-holidays-full-view\:exchangesDisclaimer\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 }

@@ -1,142 +1,142 @@
 html[data-suite-theme] {
   .\@order-form\:warningBox\@ + .\@order-form\:warningBox\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@common-order-form\:productChangeButton\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   ._2EfoFDd6 .\@common-order-form\:fieldSelect\@ .\@common-order-form\:fieldSelectControlWithError\@ {
-    border-color: #e6605c;
+    border-color: #e6605c !important;
   }
 
   .\@common-order-form\:orderActionButton\@ {
-    border-color: #e8e8e8;
+    border-color: #e8e8e8 !important;
   }
 
   .\@common-order-form\:orderActionButton\@:not(:first-child) {
-    border-left: 0;
+    border-left: 0 !important;
   }
 
   .\@common-order-form\:orderActionButton\@:focus {
-    border-color: #009fdf;
+    border-color: #009fdf !important;
   }
 
   .\@common-order-form\:orderActionButton\@[disabled] {
-    color: #fff;
+    color: #fff !important;
   }
 
   .u-OZX1IW {
-    color: #00a658;
+    color: #00a658 !important;
   }
 
   ._2opx293R {
-    color: #e6605c;
+    color: #e6605c !important;
   }
 
   .u-OZX1IW[disabled] {
-    background-color: #00a658;
-    border-color: #00a658;
+    background-color: #00a658 !important;
+    border-color: #00a658 !important;
   }
 
   ._2opx293R[disabled] {
-    background-color: #e6605c;
-    border-color: #e6605c;
+    background-color: #e6605c !important;
+    border-color: #e6605c !important;
   }
 
   .\@input\:inputFieldLayout\@ {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@input\:inputFieldLayout\@:focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    border-color: #009fdf;
+    border-color: #009fdf !important;
   }
 
   .\@input\:invalidInputFieldLayout\@ {
-    border-color: #e6605c;
+    border-color: #e6605c !important;
   }
 
   .\@input\:inputFieldControl\@ {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   ._3dpUyUgG {
-    background-color: #fff;
-    color: #007bc2;
+    background-color: #fff !important;
+    color: #007bc2 !important;
   }
 
   .\@order-confirmation\:documentsInfo\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@order-confirmation-fees\:feesHeader\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@search\:inputFieldLayout\@ .\@search\:inputField\@ {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@search\:inputFieldLayout\@ .\@search\:inputField\@:focus {
-      background-color: inherit;
+      background-color: inherit !important;
     }
   }
 
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
   }
 
   .\@list\:selectedItem\@ {
-    background-color: #f7f8f9;
+    background-color: #f7f8f9 !important;
   }
 
   .\@list\:list\@ .\@list\:selectedItem\@:after,
   .\@list\:list\@ .\@list\:hoverableItem\@:after {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@list\:hoverableItem\@:hover,
     .\@list\:item\@:focus {
-      background-color: #e4f4fb;
+      background-color: #e4f4fb !important;
     }
   }
 
   .\@alternative-order-selector\:optionsList\@ {
-    background-color: #fff;
-    border-color: #d4d4d4;
+    background-color: #fff !important;
+    border-color: #d4d4d4 !important;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    color: #000;
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+    color: #000 !important;
   }
 
   .\@alternative-order-selector\:optionItem\@:focus,
   .\@alternative-order-selector\:optionItem\@:hover {
-    background-color: #e4f4fb;
+    background-color: #e4f4fb !important;
   }
 
   .\@order-product-search\:emptyResultsMessage\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 }

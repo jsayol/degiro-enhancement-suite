@@ -1,13 +1,13 @@
 html[data-suite-theme] {
   .\@product-company-information\:companyProfileLastModified\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@product-company-information\:summaryMoreButton\@:after {
-    background: linear-gradient(0deg, #fff 0, hsla(0, 0%, 100%, 0) 30%);
+    background: linear-gradient(0deg, #fff 0, hsla(0, 0%, 100%, 0) 30%) !important;
   }
 
   .\@product-company-information\:lineTopSeparator\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 }

@@ -1,41 +1,41 @@
 html[data-suite-theme] {
   ._1veR2tP7 {
-    background-color: #fff;
-    border: 1px solid #d4d4d4;
+    background-color: #fff !important;
+    border: 1px solid #d4d4d4 !important;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    color: #000;
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+    color: #000 !important;
   }
 
   ._2GDZmzGr:focus,
   ._2GDZmzGr:hover {
-    background-color: #e4f4fb;
+    background-color: #e4f4fb !important;
   }
 
   ._32AlLnUO {
-    background-color: #fff;
+    background-color: #fff !important;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
   }
 
   ._147fFmXL {
-    background-color: #fff;
-    border-bottom-color: #e8e8e8;
+    background-color: #fff !important;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   ._19s4yIYX {
-    background-color: #009fdf;
-    color: #fff;
+    background-color: #009fdf !important;
+    color: #fff !important;
   }
 
   /* TODO: fix this */
   /* ._19s4yIYX ._564j7I0b {
-  border-left-color: 0.5);
+  border-left-color: 0.5) !important;
 } */
 
   @media (pointer: fine), all and (pointer: none) {
     ._564j7I0b:hover {
-      background-color: #007bc2;
+      background-color: #007bc2 !important;
     }
   }
 }

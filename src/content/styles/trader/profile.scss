@@ -1,45 +1,45 @@
 html[data-suite-theme] {
   .\@alerts\:alertBackdrop\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@alerts\:closeButton\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .\@opened-tasks-alert\:alert\@ {
-    background-color: #181a21;
-    color: #fff;
+    background-color: #181a21 !important;
+    color: #fff !important;
   }
 
   .\@start-page\:card\@ {
-    background: #fff;
+    background: #fff !important;
   }
 
   .\@start-page\:compactCardsGrid\@ .\@start-page\:card\@:not(.\@start-page\:accentCard\@):after {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@start-page\:cardDescription\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@start-page\:accentCard\@ {
-    background-color: #009fdf;
-    color: #fff;
+    background-color: #009fdf !important;
+    color: #fff !important;
   }
 
   .\@start-page\:fullCardsGrid\@ .\@start-page\:card\@:not(.\@start-page\:accentCard\@) {
-    border-color: #e8e8e8;
+    border-color: #e8e8e8 !important;
   }
 
   .\@start-page\:accentClientRole\@ {
-    color: #007bc2;
+    color: #007bc2 !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@start-page\:fullCardsGrid\@ .\@start-page\:card\@:hover {
-      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16) !important;
     }
   }
 }

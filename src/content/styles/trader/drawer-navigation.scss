@@ -1,99 +1,99 @@
 html[data-suite-theme] {
   .\@checkbox\:thumb\@ {
-    background-color: #f0f0f0;
-    border-color: #d4d4d4;
+    background-color: #f0f0f0 !important;
+    border-color: #d4d4d4 !important;
   }
 
   .\@checkbox\:input\@:checked ~ .\@checkbox\:thumb\@ {
-    background-color: #009fdf;
-    border-color: #009fdf;
+    background-color: #009fdf !important;
+    border-color: #009fdf !important;
   }
 
   .\@checkbox\:input\@[disabled]:checked ~ .\@checkbox\:thumb\@,
   .\@checkbox\:input\@[disabled] ~ .\@checkbox\:thumb\@ {
-    background-color: #d4d4d4;
-    border-color: transparent;
+    background-color: #d4d4d4 !important;
+    border-color: transparent !important;
   }
 
   .\@checkbox\:input\@:checked ~ .\@checkbox\:thumb\@:after {
-    border-color: #fff;
-    border-width: 0 2px 2px 0;
+    border-color: #fff !important;
+    border-width: 0 2px 2px 0 !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@checkbox\:thumb\@:hover {
-      background-color: #f3f4f5;
+      background-color: #f3f4f5 !important;
     }
     .\@checkbox\:input\@:focus ~ .\@checkbox\:thumb\@ {
-      border-color: #009fdf;
+      border-color: #009fdf !important;
     }
   }
 
   .\@inbox-status-icon\:badge\@ {
-    background-color: #e6605c;
-    color: #fff;
+    background-color: #e6605c !important;
+    color: #fff !important;
   }
 
   ._34nAy_uB {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .JvAjbK_F {
-    background-color: #fff;
-    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.16);
+    background-color: #fff !important;
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.16) !important;
   }
 
   .UX9AKdXx {
-    background-color: #181a21;
-    color: #ababab;
+    background-color: #181a21 !important;
+    color: #ababab !important;
   }
 
   ._3aoRYGOx:before {
-    background: #181a21;
+    background: #181a21 !important;
   }
 
   ._1VCqr8vi {
-    background-color: #009fdf;
-    color: #fff;
+    background-color: #009fdf !important;
+    color: #fff !important;
   }
 
   ._1VCqr8vi:after,
   ._2hnF2C5c:after {
-    border-bottom-color: transparent;
-    border-left-color: #fff;
-    border-top-color: transparent;
+    border-bottom-color: transparent !important;
+    border-left-color: #fff !important;
+    border-top-color: transparent !important;
   }
 
   ._2hnF2C5c:after {
-    border-left-color: rgba(0, 0, 0, 0.55);
+    border-left-color: rgba(0, 0, 0, 0.55) !important;
   }
 
   ._1qKSuIJr {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   ._2qBKh7vt {
-    background-color: #e6605c;
-    color: #fff;
+    background-color: #e6605c !important;
+    color: #fff !important;
   }
 
   .\@avatar\:avatar\@ {
-    background-color: #edeff1;
-    color: #000;
+    background-color: #edeff1 !important;
+    color: #000 !important;
   }
 
   .keM55XVj {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .DiLpaovC {
-    background-color: #181a21;
-    color: #fff;
+    background-color: #181a21 !important;
+    color: #fff !important;
   }
 
   .DiLpaovC:after {
-    border-bottom-color: transparent;
-    border-left-color: #fff;
-    border-top-color: transparent;
+    border-bottom-color: transparent !important;
+    border-left-color: #fff !important;
+    border-top-color: transparent !important;
   }
 }

@@ -1,90 +1,90 @@
 html[data-suite-theme] {
   .\@pagination-buttons\:layout\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@pagination-buttons\:button\@ {
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
   }
 
   .\@pagination-buttons\:button\@:disabled {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   .\@pagination-buttons\:button\@:focus {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@pagination-buttons\:button\@.\@pagination-buttons\:disabledButton\@ {
-    background-color: inherit;
-    color: #000;
+    background-color: inherit !important;
+    color: #000 !important;
   }
 
   .\@pagination-buttons\:activeButton\@ {
-    border-bottom-color: #009fdf;
+    border-bottom-color: #009fdf !important;
   }
 
   .\@agenda-period-navigation\:navigation\@ {
-    background: #000;
+    background: #000 !important;
   }
 
   .\@agenda-period-navigation\:button\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .\@agenda-period-navigation\:button\@.\@agenda-period-navigation\:buttonSelected\@ {
-    border-bottom-width: 0;
-    color: #fff;
+    border-bottom-width: 0 !important;
+    color: #fff !important;
   }
 
   .\@agenda-period-navigation\:buttonSelected\@:after {
-    border-color: transparent transparent #fff;
-    border-width: 0 6px 6px;
+    border-color: transparent transparent #fff !important;
+    border-width: 0 6px 6px !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@agenda-period-navigation\:navigation\@ .\@agenda-period-navigation\:button\@:focus,
     .\@agenda-period-navigation\:navigation\@ .\@agenda-period-navigation\:button\@:hover {
-      color: #ababab;
+      color: #ababab !important;
     }
   }
 
   .\@agenda\:agendaLayout\@ ._3n28doiM.\@agenda\:agendaTableCard\@ {
-    border-top: 0;
+    border-top: 0 !important;
   }
 
   .\@agenda\:ipoHeadline\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@agenda\:toggleIcon\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@agenda\:disclaimer\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@agenda\:toggleIcon\@:hover {
-      color: #007bc2;
+      color: #007bc2 !important;
     }
   }
 
   .\@filters\:collapsedFiltersSectionButton\@ {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@ {
-    background-color: #fff;
-    border-color: #e8e8e8;
+    background-color: #fff !important;
+    border-color: #e8e8e8 !important;
   }
 
   .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@:focus-within {
-    border-color: #009fdf;
+    border-color: #009fdf !important;
   }
 
   .\@filters\:activeFiltersButtonIcon\@ {
-    color: #e6605c;
+    color: #e6605c !important;
   }
 }

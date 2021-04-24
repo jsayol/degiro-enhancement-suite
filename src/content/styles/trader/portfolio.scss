@@ -1,185 +1,185 @@
 html[data-suite-theme] {
   .\@alerts\:alertBackdrop\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@alerts\:closeButton\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .\@opened-tasks-alert\:alert\@ {
-    background-color: #181a21;
-    color: #fff;
+    background-color: #181a21 !important;
+    color: #fff !important;
   }
 
   .\@portfolio\:emptyPortfolioMessageOnGlobalCompactLayout\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@portfolio\:valuesSwitchButton\@ {
-    background-color: #fff;
-    border-bottom-color: #d4d4d4;
-    border-top-color: #d4d4d4;
+    background-color: #fff !important;
+    border-bottom-color: #d4d4d4 !important;
+    border-top-color: #d4d4d4 !important;
   }
 
   .\@portfolio\:valuesSwitchButton\@:before {
-    border-top-color: #009fdf;
+    border-top-color: #009fdf !important;
   }
 
   .\@portfolio\:valuesSwitchSelectedSection\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
   }
 
   .\@list\:selectedItem\@ {
-    background-color: #f7f8f9;
+    background-color: #f7f8f9 !important;
   }
 
   .\@list\:list\@ .\@list\:selectedItem\@:after,
   .\@list\:list\@ .\@list\:hoverableItem\@:after {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@list\:hoverableItem\@:hover,
     .\@list\:item\@:focus {
-      background-color: #e4f4fb;
+      background-color: #e4f4fb !important;
     }
   }
 
   .\@pagination-buttons\:layout\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@pagination-buttons\:button\@ {
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
   }
 
   .\@pagination-buttons\:button\@:disabled {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   .\@pagination-buttons\:button\@:focus {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@pagination-buttons\:button\@.\@pagination-buttons\:disabledButton\@ {
-    background-color: inherit;
-    color: #000;
+    background-color: inherit !important;
+    color: #000 !important;
   }
 
   .\@pagination-buttons\:activeButton\@ {
-    border-bottom-color: #009fdf;
+    border-bottom-color: #009fdf !important;
   }
 
   .\@buttons-group\:buttonsGroup\@ {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@buttons-group\:buttonsGroupItem\@ {
-    border-left-color: #e8e8e8;
+    border-left-color: #e8e8e8 !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@buttons-group\:buttonsGroupItem\@:hover {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 0, 0, 0.1) !important;
     }
   }
 
   .\@input\:inputFieldLayout\@ {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@input\:inputFieldLayout\@:focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    border-color: #009fdf;
+    border-color: #009fdf !important;
   }
 
   .\@input\:invalidInputFieldLayout\@ {
-    border-color: #e6605c;
+    border-color: #e6605c !important;
   }
 
   .\@input\:inputFieldControl\@ {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   ._3dpUyUgG {
-    background-color: #fff;
-    color: #007bc2;
+    background-color: #fff !important;
+    color: #007bc2 !important;
   }
 
   .\@datepicker\:inputWithIcon\@:focus + .\@datepicker\:inputIcon\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@datepicker\:popup\@ {
-    background-color: #fff;
+    background-color: #fff !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
   }
 
   .\@datepicker\:selectedItem\@ {
-    background-color: #009fdf;
-    color: #fff;
+    background-color: #009fdf !important;
+    color: #fff !important;
   }
 
   .\@datepicker\:item\@[disabled],
   .\@datepicker\:moreButton\@[disabled],
   .\@datepicker\:navButton\@[disabled] {
-    background-color: transparent;
-    color: rgba(0, 0, 0, 0.55);
+    background-color: transparent !important;
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@datepicker\:item\@:not([disabled]):not(.\@datepicker\:selectedItem\@):hover,
     .\@datepicker\:moreButton\@:not([disabled]):hover {
-      background-color: #f3f4f5;
+      background-color: #f3f4f5 !important;
     }
   }
 
   .\@filters\:collapsedFiltersSectionButton\@ {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@ {
-    background-color: #fff;
-    border-color: #e8e8e8;
+    background-color: #fff !important;
+    border-color: #e8e8e8 !important;
   }
 
   .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@:focus-within {
-    border-color: #009fdf;
+    border-color: #009fdf !important;
   }
 
   .\@filters\:activeFiltersButtonIcon\@ {
-    color: #e6605c;
+    color: #e6605c !important;
   }
 
   .\@infinitive\:progressBar\@ {
-    background-color: #edeff1;
+    background-color: #edeff1 !important;
   }
 
   .\@infinitive\:value\@ {
-    background-color: #009fdf;
+    background-color: #009fdf !important;
   }
 }

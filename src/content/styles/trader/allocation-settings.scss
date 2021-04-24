@@ -1,28 +1,28 @@
 html[data-suite-theme] {
   .\@input\:inputFieldLayout\@ {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@input\:inputFieldLayout\@:focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    border-color: #009fdf;
+    border-color: #009fdf !important;
   }
 
   .\@input\:invalidInputFieldLayout\@ {
-    border-color: #e6605c;
+    border-color: #e6605c !important;
   }
 
   .\@input\:inputFieldControl\@ {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   ._3dpUyUgG {
-    background-color: #fff;
-    color: #007bc2;
+    background-color: #fff !important;
+    color: #007bc2 !important;
   }
 }

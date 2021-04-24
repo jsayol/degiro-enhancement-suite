@@ -1,5 +1,5 @@
 // Allows for a smoth transition when changing themes
 #appContainer *:last-child {
   transition: background-color 300ms ease, color 50ms ease,
-    border-color 50ms ease;
+    border-color 50ms ease !important;
 }

@@ -1,4 +1,5 @@
 import { browser, Runtime } from "webextension-polyfill-ts";
+import { Module } from "../../scripts/common";
 import {
   // DegiroClient,
   // DegiroConfig,
@@ -12,8 +13,13 @@ import {
 const BASE_THEME_ID = "--suite-theme-css";
 // const CONFIG_URL = "https://trader.degiro.nl/login/secure/config";
 
+const currentModule = getCurrentAppModule();
 let connectionPort: Runtime.Port;
 let currentTheme = "default";
+let hasBaseTheme = {
+  login: false,
+  trader: false,
+};
 // let degiroData: {
 //   config: DegiroConfig;
 //   client: DegiroClient;
@@ -32,6 +38,7 @@ browser.runtime.onConnect.addListener((port) => {
 async function initialize() {
   try {
     browser.runtime.onMessage.addListener(onMessageHandler);
+    browser.runtime.sendMessage({ op: "tabReady" });
 
     const settings = await browser.runtime.sendMessage({ op: "getSettings" });
     handleSettingsUpdate(settings);
@@ -48,12 +55,22 @@ async function initialize() {
       document.querySelector("html")!.dataset.suiteIframe = "true";
     }
 
-    console.log(document.styleSheets);
-
     // fetchDegiroData();
   } catch (err) {
     console.error(err);
   }
+}
+
+function getCurrentAppModule(): Module {
+  const hrefMatch = document.location.href.match(
+    /https?:\/\/trader.degiro.nl\/(login|trader|beta-trader)\//
+  );
+
+  if (!hrefMatch) {
+    throw new Error("Unknown app module for " + document.location.href);
+  }
+
+  return hrefMatch[1] === "login" ? "login" : "trader";
 }
 
 // async function fetchDegiroData() {
@@ -81,14 +98,27 @@ function handleSettingsUpdate(settings: Settings) {
   applyTheme(settings.theme);
 }
 
-function onMessageHandler(message: any, sender: Runtime.MessageSender): void {
+async function onMessageHandler(
+  message: any,
+  sender: Runtime.MessageSender
+): Promise<any> {
   // Only handle messages that come from the extension itself (if theres `tab` then it comes from a content script)
   if (!sender.tab) {
-    if (message.op === "settingsUpdate") {
-      handleSettingsUpdate(message.settings);
-    }
-    if (message.op === "reload") {
-      location.reload();
+    switch (message.op) {
+      case "settingsUpdate":
+        handleSettingsUpdate(message.settings);
+        break;
+      case "reload":
+        location.reload();
+        break;
+      case "hasBaseTheme":
+        return hasBaseTheme;
+      case "baseThemeLoaded":
+        hasBaseTheme[message.module as Module] = true;
+        break;
+      case "baseThemeUnloaded":
+        hasBaseTheme[message.module as Module] = false;
+        break;
     }
   }
 }
@@ -99,38 +129,22 @@ function colorSchemeChangeHandler(event: MediaQueryListEvent) {
   }
 }
 
-function loadBaseTheme() {
-  browser.runtime.sendMessage({ op: "loadBaseTheme" });
-  return;
+async function loadBaseTheme() {
+  await browser.runtime.sendMessage({
+    op: "loadBaseTheme",
+    module: currentModule,
+  });
+
+  hasBaseTheme[currentModule] = true;
 }
 
 async function unloadBaseTheme() {
-  browser.runtime.sendMessage({ op: "unloadBaseTheme" });
-  return;
-}
+  await browser.runtime.sendMessage({
+    op: "unloadBaseTheme",
+    module: currentModule,
+  });
 
-function loadBaseTheme_old() {
-  return; // TODO: temporary!!!!
-  if (document.getElementById(BASE_THEME_ID)) {
-    return;
-  }
-  const link = document.createElement("link");
-  link.setAttribute(
-    "href",
-    browser.extension.getURL("content/styles-old/theme.css")
-  );
-  link.setAttribute("id", BASE_THEME_ID);
-  link.setAttribute("type", "text/css");
-  link.setAttribute("rel", "stylesheet");
-  document.querySelector("html")?.appendChild(link);
-}
-
-function unloadBaseTheme_old() {
-  return; // TODO: temporary!!!!
-  const cssNode = document.getElementById(BASE_THEME_ID)!;
-  if (cssNode && cssNode.parentNode) {
-    cssNode.parentNode!.removeChild(cssNode);
-  }
+  hasBaseTheme[currentModule] = false;
 }
 
 function applyTheme(theme: string) {

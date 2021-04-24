@@ -1,46 +1,46 @@
 html[data-suite-theme] {
   .\@country-flag\:flag\@ {
-    border-color: #d4d4d4;
+    border-color: #d4d4d4 !important;
   }
 
   .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
-    border-color: transparent;
+    border-color: transparent !important;
   }
 
   .\@compact-view\:secondaryContent\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@compact-view\:agendaListItem\@ .\@compact-view\:valueSubContent\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   ._2MnhUNur {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   ._3fNf038_ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@compact-view\:tableRow\@ {
-    background-color: #fff;
-    border-bottom-color: #e8e8e8;
+    background-color: #fff !important;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@compact-view\:exchanges\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@compact-view\:exchangesOverlay\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@compact-view\:moreItemsButton\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@compact-view\:dateTimeDivider\@ {
-    color: #000;
+    color: #000 !important;
   }
 }

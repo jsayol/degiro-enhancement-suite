@@ -1,43 +1,43 @@
 html[data-suite-theme] {
   .\@bar-chart\:chartText\@ {
-    fill: rgba(0, 0, 0, 0.55);
+    fill: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@bar-chart\:chartGridLine\@ {
-    stroke: #e8e8e8;
+    stroke: #e8e8e8 !important;
   }
 
   .\@bar-chart\:chartTextNoData\@ {
-    fill: rgba(0, 0, 0, 0.55);
+    fill: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@chart-legend\:chartLegendItem\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@no-data-message\:noDataToDisplay\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@analyst-rating\:analystRatingContainer\@ {
-    background-color: #fafafa;
-    border-color: #d4d4d4;
+    background-color: #fafafa !important;
+    border-color: #d4d4d4 !important;
   }
 
   .\@analyst-rating\:analystRatingScale\@ {
-    background: linear-gradient(90deg, #00a658, #d4d4d4 50%, #e6605c);
+    background: linear-gradient(90deg, #00a658, #d4d4d4 50%, #e6605c) !important;
   }
 
   .\@analyst-rating\:axisLabel\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@analyst-rating\:currentValuePointer\@ {
-    color: #fff;
+    color: #fff !important;
   }
 
   .\@analyst-rating\:currentValuePointer\@,
   .\@analyst-rating\:currentValuePointer\@:after {
-    background-color: #000;
+    background-color: #000 !important;
   }
 }

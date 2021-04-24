@@ -1,50 +1,50 @@
 html[data-suite-theme] {
   .\@business-and-financial-summary-card\:lastModified\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@product-company-information\:companyProfileLastModified\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@product-company-information\:summaryMoreButton\@:after {
-    background: linear-gradient(0deg, #fff 0, hsla(0, 0%, 100%, 0) 30%);
+    background: linear-gradient(0deg, #fff 0, hsla(0, 0%, 100%, 0) 30%) !important;
   }
 
   .\@product-company-information\:lineTopSeparator\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@company-information-card\:numbersSection\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@no-data-message\:noDataToDisplay\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@issues-card\:issue\@ + .\@issues-card\:issue\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@key-executives-card\:row\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@key-executives-card\:row\@:nth-child(odd) {
-    background: #f7f8f9;
+    background: #f7f8f9 !important;
   }
 
   .\@key-executives-card\:row\@:nth-child(2n) {
-    background: #fff;
+    background: #fff !important;
   }
 
   .\@key-executives-card\:headerRow\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@key-executives-card\:headerCell\@ {
-    background: #fff;
-    color: rgba(0, 0, 0, 0.55);
+    background: #fff !important;
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 }

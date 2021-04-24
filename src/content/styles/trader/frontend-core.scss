@@ -1,70 +1,70 @@
 html[data-suite-theme] {
   .\@select\:select\@ {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@select\:controlField\@ {
-    background-color: inherit;
-    caret-color: transparent;
+    background-color: inherit !important;
+    caret-color: transparent !important;
   }
 
   .\@select\:controlField\@:focus {
-    outline: none;
+    outline: none !important;
   }
 
   .\@select\:controlFieldWithActiveSearch\@ {
-    background-color: inherit;
-    caret-color: auto;
+    background-color: inherit !important;
+    caret-color: auto !important;
   }
 
   .\@select\:dropdownIndicator\@,
   .\@select\:disabledSelect\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@select\:disabledSelect\@ .\@select\:dropdownIndicator\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .\@select\:controlField\@ + .\@select\:dropdownIndicator\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   ._2o-tQ7jU {
-    background-color: #fff;
-    border-color: #d4d4d4;
+    background-color: #fff !important;
+    border-color: #d4d4d4 !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
   }
 
   .\@select\:optionItem\@:hover,
   .\@select\:hoveredOptionItem\@ {
-    background-color: #e4f4fb;
+    background-color: #e4f4fb !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@select\:select\@:focus-within {
-      background-color: #fff;
-      border-color: #009fdf;
+      background-color: #fff !important;
+      border-color: #009fdf !important;
     }
   }
 
   .\@multi-select\:checkbox\@ {
-    background-color: #f3f4f5;
-    border-color: #e8e8e8;
+    background-color: #f3f4f5 !important;
+    border-color: #e8e8e8 !important;
   }
 
   .\@multi-select\:activeCheckbox\@ {
-    background-color: #009fdf;
-    color: #fff;
+    background-color: #009fdf !important;
+    color: #fff !important;
   }
 
   .\@multi-select\:initiallySelectedOption\@ + .\@multi-select\:multiSelectOptionItem\@:not(.\@multi-select\:initiallySelectedOption\@),
   .\@multi-select\:footerContainer\@ {
-    border-top-color: #d4d4d4;
+    border-top-color: #d4d4d4 !important;
   }
 
   .\@multi-select\:footerContainer\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 }

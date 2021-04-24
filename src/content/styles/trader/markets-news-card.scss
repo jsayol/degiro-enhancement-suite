@@ -1,93 +1,93 @@
 html[data-suite-theme] {
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
   }
 
   .\@list\:selectedItem\@ {
-    background-color: #f7f8f9;
+    background-color: #f7f8f9 !important;
   }
 
   .\@list\:list\@ .\@list\:selectedItem\@:after,
   .\@list\:list\@ .\@list\:hoverableItem\@:after {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@list\:hoverableItem\@:hover,
     .\@list\:item\@:focus {
-      background-color: #e4f4fb;
+      background-color: #e4f4fb !important;
     }
   }
 
   .\@pagination-buttons\:layout\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@pagination-buttons\:button\@ {
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
   }
 
   .\@pagination-buttons\:button\@:disabled {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   .\@pagination-buttons\:button\@:focus {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@pagination-buttons\:button\@.\@pagination-buttons\:disabledButton\@ {
-    background-color: inherit;
-    color: #000;
+    background-color: inherit !important;
+    color: #000 !important;
   }
 
   .\@pagination-buttons\:activeButton\@ {
-    border-bottom-color: #009fdf;
+    border-bottom-color: #009fdf !important;
   }
 
   .\@news-article-item\:dateTime\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@news-article-item\:subCategoryLabelWrapper\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .Ww9dtK-j.\@news-article-page\:embeddedCard\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@news-article-page\:articleCategoryTitle\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .\@news-article-page\:articleFooter\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .\@news-card\:newsListItemDate\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@news-card\:newsContentWithArticle\@ .\@news-card\:selectedNewsListItem\@:before {
-    background-color: #009fdf;
+    background-color: #009fdf !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     ._2YKSttAD:hover {
-      color: #009fdf;
+      color: #009fdf !important;
     }
   }
 }

@@ -1,31 +1,31 @@
 html[data-suite-theme] {
   .\@product-tour\:salutationModalContent\@ b {
-    color: #007bc2;
+    color: #007bc2 !important;
   }
 
   .\@product-tour\:popupArrow\@ {
-    border-bottom-color: #fff;
-    border-left-color: transparent;
-    border-right-color: transparent;
+    border-bottom-color: #fff !important;
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
   }
 
   .\@product-tour\:header\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   ._3XxpCQ5H {
-    background-color: #d4d4d4;
+    background-color: #d4d4d4 !important;
   }
 
   ._3_8LzFwY {
-    background-color: #009fdf;
+    background-color: #009fdf !important;
   }
 
   .\@product-tour\:focusedElement\@ {
-    box-shadow: 0 0 8px 4px #009fdf !important;
+    box-shadow: 0 0 8px 4px #009fdf !important !important;
   }
 
   [href].\@product-tour\:focusedElement\@ {
-    color: #fff !important;
+    color: #fff !important !important;
   }
 }

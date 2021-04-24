@@ -1,25 +1,25 @@
 html[data-suite-theme] {
   .\@bar-chart\:chartText\@ {
-    fill: rgba(0, 0, 0, 0.55);
+    fill: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@bar-chart\:chartGridLine\@ {
-    stroke: #e8e8e8;
+    stroke: #e8e8e8 !important;
   }
 
   .\@bar-chart\:chartTextNoData\@ {
-    fill: rgba(0, 0, 0, 0.55);
+    fill: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@chart-legend\:chartLegendItem\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@no-data-message\:noDataToDisplay\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@product-company-financials\:statementPeriodItem\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 }

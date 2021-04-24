@@ -1,37 +1,37 @@
 html[data-suite-theme] {
   ._3N8OmG8V {
-    background-color: #333;
+    background-color: #333 !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@product-details-hint\:icon\@:hover {
-      color: #009fdf;
+      color: #009fdf !important;
     }
   }
 
   ._2h2YaWrE {
-    background-color: #fafafa;
+    background-color: #fafafa !important;
   }
 
   ._1xsdEprT:last-child ._1EP--32- {
-    border-bottom: none;
+    border-bottom: none !important;
   }
 
   .\@ratios-table\:bottomBorderedTable\@ ._1xsdEprT:last-child ._1EP--32- {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   ._1xsdEprT:not(.\@ratios-table\:selectedRow\@):nth-child(odd) ._1EP--32-:not(._2h2YaWrE) {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@accordion-item\:item\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@card-header-hint-button\:button\@:hover .\@card-header-hint-button\:icon\@ {
-      color: #009fdf;
+      color: #009fdf !important;
     }
   }
 }

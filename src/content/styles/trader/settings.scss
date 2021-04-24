@@ -1,34 +1,34 @@
 html[data-suite-theme] {
   .\@alerts\:alertBackdrop\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@alerts\:closeButton\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   ._1JPj7mYU {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   ._1JPj7mYU:after {
-    background-color: #e8e8e8;
+    background-color: #e8e8e8 !important;
   }
 
   ._3sp9rzcO {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@sub-navigation\:activeNavigationItem\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@sub-navigation\:activeNavigationItem\@:after {
-    background-color: #009fdf;
+    background-color: #009fdf !important;
   }
 
   .\@opened-tasks-alert\:alert\@ {
-    background-color: #181a21;
-    color: #fff;
+    background-color: #181a21 !important;
+    color: #fff !important;
   }
 }

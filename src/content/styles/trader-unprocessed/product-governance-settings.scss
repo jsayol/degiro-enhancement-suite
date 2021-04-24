@@ -1,15 +1,15 @@
 html[data-suite-theme] {
   .MRBQtaNV {
-    background-color: #fafafa;
+    background-color: #fafafa !important;
   }
 
   ._2ZvmPd_E {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   ._1yHT5BZk,
   ._2ZvmPd_E {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   ._1yHT5BZk ._2ZvmPd_E,
@@ -18,60 +18,60 @@ html[data-suite-theme] {
   }
 
   ._1HJi8KWO:before {
-    background-color: #009fdf;
+    background-color: #009fdf !important;
   }
 
   ._3--Zlx6S {
-    color: #000;
+    color: #000 !important;
   }
 
   ._2C0QmyHD {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .fC_Qu6kY {
-    background-color: #d4d4d4;
+    background-color: #d4d4d4 !important;
   }
 
   ._2IQ4pEdI {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
   }
 
   .b1W6H4_a:checked ~ .fC_Qu6kY {
-    background-color: #009fdf;
+    background-color: #009fdf !important;
   }
 
   .b1W6H4_a:checked ~ ._2IQ4pEdI {
-    background-color: #009fdf;
+    background-color: #009fdf !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .b1W6H4_a:focus ~ ._2IQ4pEdI {
-      background-color: #fff;
-      box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3);
+      background-color: #fff !important;
+      box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3) !important;
     }
     .b1W6H4_a:checked:focus ~ ._2IQ4pEdI {
-      background-color: #009fdf;
-      box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3);
+      background-color: #009fdf !important;
+      box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3) !important;
     }
   }
 
   ._1pxSpJHR:before,
   ._1pxSpJHR:not(:last-child):after {
-    background-color: #e8e8e8;
+    background-color: #e8e8e8 !important;
   }
 
   ._3SKxNVCs:before {
-    background-color: #009fdf;
+    background-color: #009fdf !important;
   }
 
   ._2h6WgA6V {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   ._3SKxNVCs ._2h6WgA6V {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 }

@@ -1,11 +1,17 @@
 import { browser } from "webextension-polyfill-ts";
 import { hasProperty } from "../common";
-import loginCss from "../content/styles/login-css";
 import loginCSSBundle from "../content/styles/login-css";
 import traderCSSBundle from "../content/styles/trader-css";
+import { tabIsReady } from "./common";
 
-export const JS_URL_REGEX = /https?:\/\/trader.degiro.nl\/(login|trader)\/scripts\/([^\/]+)\.([^\.]+)\.js$/;
-export const JSMAP_URL_REGEX = /https?:\/\/trader.degiro.nl\/(login|trader)\/scripts\/([^\/]+)\.([^\.]+)\.js\.map$/;
+export const JS_URL_REGEX = new RegExp(
+  "https?://trader\\.degiro\\.nl/(login|trader|beta-trader)/scripts/([^/]+)\\.([^\\.]+)\\.js$"
+);
+export const JSMAP_URL_REGEX = new RegExp(
+  JS_URL_REGEX.source.replace(/\$$/, "\\.map$")
+);
+
+JS_URL_REGEX.source;
 
 export type Module = "login" | "trader";
 
@@ -35,18 +41,48 @@ const EMPTY_STYLES_TREE: StylesTree = {
 };
 
 let filesSeen: FilesSeen = new Set();
-let baseThemeLoaded: { [tabId: number]: boolean } = {};
 let stylesTree: StylesTree = EMPTY_STYLES_TREE;
 let loginCSS: string;
 let traderCSS: string;
 let updateStorageTimeout: { [m: string]: ReturnType<typeof setTimeout> } = {};
 
+const initialized = initialize();
+
+async function initialize(): Promise<void> {
+  await reset(); // TODO: !!!!!!!! REMOVE !!!!!!!!
+
+  stylesTree = await getStyles();
+  filesSeen = await getFilesSeen();
+
+  await prepareBaseTheme();
+
+  console.log("initialize", { stylesTree });
+}
+
+export async function reset(): Promise<void> {
+  stylesTree = EMPTY_STYLES_TREE;
+  filesSeen.clear();
+  await storeStyles(stylesTree);
+  await storeFilesSeen(filesSeen);
+
+  // TODO: maybe put this into a separate function and only call
+  // it when there is an extension update that requires it.
+  await browser.storage.local.set({
+    loginCSS: "",
+    traderCSS: "",
+  });
+}
+
 export async function applySourceMap(url: string): Promise<void> {
+  await initialized;
+
+  // TODO: uncomment this, temporary
   // if (filesSeen.has(url)) {
   //   return;
   // }
 
   const [, module, chunk] = url.match(JSMAP_URL_REGEX) as [any, Module, string];
+  console.log("applySourceMap", { module, chunk, url });
 
   // Fetch the sourcemap
   const resp = await fetch(url);
@@ -88,17 +124,9 @@ export async function applySourceMap(url: string): Promise<void> {
   await storeStyles(stylesTree);
   await storeFilesSeen(filesSeen);
 
-  console.log(stylesTree);
+  console.log("applySourceMap", { stylesTree });
 
-  // TODO: process theme stylesheet template with the new styles
   updateBaseTheme();
-}
-
-export function reset(): void {
-  stylesTree = EMPTY_STYLES_TREE;
-  filesSeen.clear();
-  storeStyles(stylesTree);
-  storeFilesSeen(filesSeen);
 }
 
 async function getStyles(): Promise<StylesTree> {
@@ -121,18 +149,7 @@ async function storeFilesSeen(filesSeen: FilesSeen): Promise<void> {
   return browser.storage.local.set({ filesSeen: [...filesSeen] });
 }
 
-async function initialize() {
-  reset(); // TODO: !!!!!!!! REMOVE !!!!!!!!
-
-  stylesTree = await getStyles();
-  filesSeen = await getFilesSeen();
-
-  await prepareBaseTheme();
-
-  console.log(stylesTree);
-}
-
-async function prepareBaseTheme() {
+async function prepareBaseTheme(): Promise<void> {
   let {
     loginCSS: storedLoginCSS,
     traderCSS: storedTraderCSS,
@@ -174,59 +191,84 @@ async function prepareBaseTheme() {
   console.log({ loginCSS });
 }
 
-export async function loadBaseTheme(tabId: number) {
-  if (baseThemeLoaded[tabId]) {
-    return;
-  }
+export async function loadBaseTheme(
+  tabId: number,
+  module: Module
+): Promise<void> {
+  await initialized;
 
-  baseThemeLoaded[tabId] = true;
-  console.log("loadBaseTheme", { tabId: tabId, loginCSS });
-
-  browser.tabs.insertCSS(tabId, { code: loginCSS, cssOrigin: "user" });
-  browser.tabs.insertCSS(tabId, { code: traderCSS, cssOrigin: "user" });
+  console.log("loadBaseTheme", { tabId, module });
+  const code = module === "login" ? loginCSS : traderCSS;
+  await browser.tabs.insertCSS(tabId, { code, cssOrigin: "user" });
+  await browser.tabs.sendMessage(tabId, { op: "baseThemeLoaded", module });
 }
 
-export async function unloadBaseTheme(tabId: number) {
-  if (!baseThemeLoaded[tabId]) {
-    return;
-  }
+export async function unloadBaseTheme(
+  tabId: number,
+  module: Module
+): Promise<void> {
+  await initialized;
 
-  delete baseThemeLoaded[tabId];
-  console.log("unloadBaseTheme tabId=" + tabId);
-
-  await Promise.all([
-    browser.tabs.removeCSS(tabId, { code: loginCSS, cssOrigin: "user" }),
-    browser.tabs.removeCSS(tabId, { code: traderCSS, cssOrigin: "user" }),
-  ]);
+  console.log("unloadBaseTheme", { tabId, module });
+  const code = module === "login" ? loginCSS : traderCSS;
+  await browser.tabs.removeCSS(tabId, { code: loginCSS, cssOrigin: "user" });
+  await browser.tabs.sendMessage(tabId, { op: "baseThemeUnloaded", module });
 }
 
-export async function updateBaseTheme() {
-  // TODO: if a tab is reloaded then baseThemeLoaded[tab.id] will
-  // be true but the theme won't actually be loaded. Fix.
-  // (also applies to loadBaseTheme & unloadBaseTheme)
-
+export async function updateBaseTheme(): Promise<void> {
   try {
+    await initialized;
+
     const tabs = await browser.tabs.query({ url: "*://trader.degiro.nl/*" });
-    const tabsToUpdate: number[] = [];
 
-    tabs.forEach(async (tab) => {
-      try {
-        if (tab && tab.id && baseThemeLoaded[tab.id]) {
-          tabsToUpdate.push(tab.id);
+    const tabsThemeStatus = await Promise.all(
+      tabs.map(
+        async (
+          tab
+        ): Promise<{
+          tabId: number;
+          hasBaseTheme: { login: boolean; trader: boolean };
+        }> => {
+          try {
+            await tabIsReady(tab.id!);
+            const hasBaseTheme = await browser.tabs.sendMessage(tab.id!, {
+              op: "hasBaseTheme",
+            });
+            return { tabId: tab.id!, hasBaseTheme };
+          } catch (err) {
+            console.error(err.message);
+            throw err;
+          }
         }
-      } catch (err) {
-        console.error(err);
-      }
-    });
+      )
+    );
 
-    await Promise.all(tabsToUpdate.map((tabId) => unloadBaseTheme(tabId)));
+    await Promise.all(
+      tabsThemeStatus.map(async (status) => {
+        if (status.hasBaseTheme.login) {
+          await unloadBaseTheme(status.tabId, "login");
+        }
+        if (status.hasBaseTheme.trader) {
+          await unloadBaseTheme(status.tabId, "trader");
+        }
+      })
+    );
 
     await Promise.all([
       updateBaseThemeForModule("login"),
       updateBaseThemeForModule("trader"),
     ]);
 
-    await Promise.all(tabsToUpdate.map((tabId) => loadBaseTheme(tabId)));
+    await Promise.all(
+      tabsThemeStatus.map(async (status) => {
+        if (status.hasBaseTheme.login) {
+          await loadBaseTheme(status.tabId, "login");
+        }
+        if (status.hasBaseTheme.trader) {
+          await loadBaseTheme(status.tabId, "trader");
+        }
+      })
+    );
   } catch (err) {
     console.error(err);
   }
@@ -235,13 +277,6 @@ export async function updateBaseTheme() {
 async function updateBaseThemeForModule(module: Module) {
   const storageKey = module + "CSS";
   let css = module === "login" ? loginCSS : traderCSS;
-
-  // const storageKey = module + "CSS";
-  // let {
-  //   [storageKey]: css,
-  // }: { [k: string]: string } = await browser.storage.local.get({
-  //   [storageKey]: "",
-  // });
 
   const moduleStyles = stylesTree[module];
   for (const chunk in moduleStyles) {
@@ -261,13 +296,16 @@ async function updateBaseThemeForModule(module: Module) {
     console.log({ [storageKey]: css });
   }
 
+  if (module === "login") {
+    loginCSS = css;
+  } else {
+    traderCSS = css;
+  }
+
   clearTimeout(updateStorageTimeout[module]);
 
   updateStorageTimeout[module] = setTimeout(() => {
+    console.log("Update " + storageKey);
     browser.storage.local.set({ [storageKey]: css });
-  }, 3000);
-
-  // await browser.storage.local.set({ [storageKey]: css });
+  }, 500);
 }
-
-initialize();

@@ -1,209 +1,209 @@
 html[data-suite-theme] {
   button {
-    background: transparent;
+    background: transparent !important;
   }
 
   button[disabled] {
-    background-color: #d4d4d4;
-    color: #fff;
+    background-color: #d4d4d4 !important;
+    color: #fff !important;
   }
 
   input::-ms-value,
   select::-ms-value,
   textarea::-ms-value {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   input::-moz-placeholder {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   input::placeholder {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   input:-webkit-autofill {
-    background-color: transparent !important;
+    background-color: transparent !important !important;
   }
 
   input[disabled]::-moz-placeholder,
   input[readonly]::-moz-placeholder {
-    color: #d4d4d4;
+    color: #d4d4d4 !important;
   }
 
   input[disabled],
   input[disabled]::placeholder,
   input[readonly],
   input[readonly]::placeholder {
-    color: #d4d4d4;
+    color: #d4d4d4 !important;
   }
 
   body,
   html {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@icon\:iconShape\@ {
-    fill: currentColor;
+    fill: currentColor !important;
   }
 
   ._2wiHXP95 svg {
-    fill: currentColor;
+    fill: currentColor !important;
   }
 
   .\@icon\:accentIcon\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@icon\:hintIcon\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@icon\:disabledIcon\@ {
-    color: #d4d4d4;
+    color: #d4d4d4 !important;
   }
 
   .\@icon\:secondaryActionIcon\@ {
-    color: #333;
+    color: #333 !important;
   }
 
   .\@icon\:activeItemDetailsIconWrapper\@,
   .\@icon\:itemDetailsIconWrapper\@:hover {
-    background-color: #bbe2f5;
+    background-color: #bbe2f5 !important;
   }
 
   .\@snackbar\:snackbar\@ {
-    background-color: #181a21;
+    background-color: #181a21 !important;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    color: #fff;
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+    color: #fff !important;
   }
 
   .\@snackbar\:action\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@snackbar\:closeButton\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .\@status\:infoStatusText\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@status\:successStatusText\@ {
-    color: #00a658;
+    color: #00a658 !important;
   }
 
   .\@status\:alertStatusText\@,
   .\@status\:failureStatusText\@ {
-    color: #e6605c;
+    color: #e6605c !important;
   }
 
   .\@status\:warningStatusText\@,
   .\@status\:pendingStatusText\@ {
-    color: #f2892e;
+    color: #f2892e !important;
   }
 
   .\@status\:inactiveStatusText\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .\@status\:failureStatusBackground\@,
   .\@status\:alertStatusBackground\@ {
-    background-color: #fdf0ef;
+    background-color: #fdf0ef !important;
   }
 
   .\@status\:infoStatusBackground\@ {
-    background-color: #e5f5fb;
+    background-color: #e5f5fb !important;
   }
 
   .\@status\:warningStatusBackground\@ {
-    background-color: rgba(242, 137, 46, 0.14);
+    background-color: rgba(242, 137, 46, 0.14) !important;
   }
 
   .\@buy-sell-badge\:buyBadge\@ {
-    color: #008753;
+    color: #008753 !important;
   }
 
   .\@buy-sell-badge\:sellBadge\@ {
-    color: #cc4c3b;
+    color: #cc4c3b !important;
   }
 
   .\@value\:positiveValue\@ {
-    color: #008753;
+    color: #008753 !important;
   }
 
   .\@value\:negativeValue\@ {
-    color: #cc4c3b;
+    color: #cc4c3b !important;
   }
 
   .\@value\:valueGrowHighlighting1\@:after,
   .\@value\:valueGrowHighlighting2\@:after {
-    background: #008753;
+    background: #008753 !important;
   }
 
   .\@value\:valueFallHighlighting2\@:after,
   .\@value\:valueFallHighlighting1\@:after {
-    background: #cc4c3b;
+    background: #cc4c3b !important;
   }
 
   .\@value\:relativeDiffValueText\@.\@value\:positiveValue\@ {
-    color: #008753;
+    color: #008753 !important;
   }
 
   .\@value\:relativeDiffValueText\@.\@value\:negativeValue\@ {
-    color: #cc4c3b;
+    color: #cc4c3b !important;
   }
 
   .\@value\:orderTriggerValue\@[disabled] {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@value\:orderTriggerValue\@:not([disabled]):focus,
     .\@value\:orderTriggerValue\@:not([disabled]):hover {
-      color: #009fdf;
+      color: #009fdf !important;
     }
   }
 
   ._3n7H-eSi {
-    color: #00a658;
+    color: #00a658 !important;
   }
 
   ._2SBhdd1O {
-    color: #e6605c;
+    color: #e6605c !important;
   }
 
   ._29t5APwC {
-    background-color: #f3f4f5;
-    color: #333;
+    background-color: #f3f4f5 !important;
+    color: #333 !important;
   }
 
   .duvfw-AB {
-    background-color: #009fdf;
-    color: #fff;
+    background-color: #009fdf !important;
+    color: #fff !important;
   }
 
   ._25y7gyVl {
-    background-color: #fff;
-    border-color: #e8e8e8;
-    color: #000;
+    background-color: #fff !important;
+    border-color: #e8e8e8 !important;
+    color: #000 !important;
   }
 
   .\@button\:disabledButton\@ {
-    background-color: #d4d4d4;
-    color: #fff;
+    background-color: #d4d4d4 !important;
+    color: #fff !important;
   }
 
   .\@button\:textButton\@.\@button\:disabledButton\@ {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   .\@button\:selectableButtonWithBackdrop\@:focus:before,
   .\@button\:selectableButtonWithBackdrop\@:hover:before,
   .\@button\:activeButtonWithBackdrop\@:before {
-    background-color: rgba(152, 161, 177, 0.2);
+    background-color: rgba(152, 161, 177, 0.2) !important;
   }
 
   .\@button\:transition\@:after {
@@ -213,250 +213,250 @@ html[data-suite-theme] {
       #007bc2 8px,
       #fff 0,
       #fff 16px
-    );
+    ) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     ._25y7gyVl:not(.\@button\:disabledButton\@):hover {
-      background-color: #f3f4f5;
-      border-color: #f3f4f5;
+      background-color: #f3f4f5 !important;
+      border-color: #f3f4f5 !important;
     }
     .duvfw-AB:not(.\@button\:disabledButton\@):hover {
-      background-color: #007bc2;
+      background-color: #007bc2 !important;
     }
     ._25y7gyVl:not(.\@button\:disabledButton\@):focus,
     ._29t5APwC:not(.\@button\:disabledButton\@):focus,
     .duvfw-AB:not(.\@button\:disabledButton\@):focus {
-      background-color: #fff;
-      border-color: #009fdf;
-      color: #007bc2;
+      background-color: #fff !important;
+      border-color: #009fdf !important;
+      color: #007bc2 !important;
     }
   }
 
   .\@external-html-content\:externalHtmlContent\@ a {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@external-html-content\:externalHtmlContent\@ a:focus,
     .\@external-html-content\:externalHtmlContent\@ a:hover {
-      color: #007bc2;
+      color: #007bc2 !important;
     }
   }
 
   .\@scroll-panel\:verticalScrollPanelShadowedWrapper\@:after,
   .\@scroll-panel\:verticalScrollPanelShadowedWrapper\@:before {
-    background: linear-gradient(180deg, #fff 30%, hsla(0, 0%, 100%, 0));
+    background: linear-gradient(180deg, #fff 30%, hsla(0, 0%, 100%, 0)) !important;
   }
 
   .\@scroll-panel\:horizontalScrollPanelShadowedWrapper\@:after,
   .\@scroll-panel\:horizontalScrollPanelShadowedWrapper\@:before {
-    background: linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, 0));
+    background: linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, 0)) !important;
   }
   ._1ZM6JdZl:after,
   ._1ZM6JdZl:before {
-    background: linear-gradient(270deg, transparent 0, #000);
+    background: linear-gradient(270deg, transparent 0, #000) !important;
   }
 
   .\@modal\:backdrop\@ {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@modal\:window\@ {
-    background-color: #fff;
+    background-color: #fff !important;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
   }
 
   .\@app-component\:compactHeaderPlaceholder\@ {
-    background-color: #009fdf;
+    background-color: #009fdf !important;
   }
 
   .\@app-component\:fullHeaderPlaceholder\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@app-component\:dataVendors\@ {
-    background-color: #edeff1;
-    color: rgba(0, 0, 0, 0.55);
+    background-color: #edeff1 !important;
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   @media (min-width: 1440px) {
     .\@app-component\:globalFeedbackButton\@ {
-      background-color: #333;
-      color: #fff;
+      background-color: #333 !important;
+      color: #fff !important;
     }
   }
 
   .\@side-information-panel\:baseOpenedLayout\@ {
-    background-color: #fff;
-    border-left-color: #d4d4d4;
+    background-color: #fff !important;
+    border-left-color: #d4d4d4 !important;
   }
 
   ._1Jd_i_hS {
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+      0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
   }
 
   .\@side-information-panel\:header\@ {
-    border-bottom-color: #d4d4d4;
+    border-bottom-color: #d4d4d4 !important;
   }
 
   .\@side-information-panel\:navigationItem\@ {
-    border-bottom-color: #d4d4d4;
+    border-bottom-color: #d4d4d4 !important;
   }
 
   ._3GVSy4VH {
-    border-top-color: #d4d4d4;
+    border-top-color: #d4d4d4 !important;
   }
 
   ._2jN_Jz5z ._3GVSy4VH {
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
   }
 
   ._3qim-euk + .\@side-information-panel\:section\@ ._3GVSy4VH,
   ._3qim-euk + ._3GVSy4VH {
-    border-top-color: transparent;
+    border-top-color: transparent !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     ._3GVSy4VH:focus {
-      border-color: #009fdf;
+      border-color: #009fdf !important;
     }
   }
 
   .\@hint\:popup\@ {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    color: #000;
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+    color: #000 !important;
   }
 
   .\@hint\:closeButtonIcon\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .\@hint\:content\@ {
-    background: #000;
-    color: #fff;
+    background: #000 !important;
+    color: #fff !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@hint\:layout\@:focus .\@hint\:icon\@ {
-      color: #009fdf;
+      color: #009fdf !important;
     }
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@data-vendors\:toggleIcon\@:hover {
-      color: #007bc2;
+      color: #007bc2 !important;
     }
   }
 
   .\@form\:formTitle\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@form\:formExtraInfo\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@form\:fieldError\@ {
-    color: #e6605c;
+    color: #e6605c !important;
   }
 
   .\@account-summary\:layout\@ {
-    background-color: #fff;
-    border-bottom-color: #e8e8e8;
+    background-color: #fff !important;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@account-summary\:bottomLayout\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@account-summary\:bottomLayout\@:before {
-    background: linear-gradient(hsla(0, 0%, 100%, 0.1), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(hsla(0, 0%, 100%, 0.1), rgba(0, 0, 0, 0.1)) !important;
   }
 
   .\@page\:pageWrapperWithCardsGrid\@ {
-    background-color: #edeff1;
+    background-color: #edeff1 !important;
   }
 
   .\@page\:pageWrapperWithCardsGrid\@ .\@page\:pageCard\@ {
-    border-color: #e8e8e8;
+    border-color: #e8e8e8 !important;
   }
 
   .\@page\:pageHeaderAsCard\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@link\:actionLink\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@link\:actionLink\@:focus,
     .\@link\:actionLink\@:hover {
-      color: #007bc2;
+      color: #007bc2 !important;
     }
     .\@link\:accentWhenSelectedLink\@:focus,
     .\@link\:accentWhenSelectedLink\@:hover {
-      color: #009fdf;
+      color: #009fdf !important;
     }
   }
 
   .\@card\:cardsDivider\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   ._1zoYYmyE {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@card\:cardSubHeader\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@table\:cell\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   ._3fYLd38o {
-    border-bottom-color: #e8e8e8;
-    color: rgba(0, 0, 0, 0.55);
+    border-bottom-color: #e8e8e8 !important;
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@table\:detailsIconCell\@,
   .\@table\:feedQualityCell\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@table\:secondaryContentCell\@,
   .\@table\:secondaryContentRow\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@table\:row\@ .\@table\:cell\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@table\:row\@:first-child .\@table\:cell\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@table\:row\@.\@table\:selectedRow\@ .\@table\:cell\@ {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@table\:row\@:not(.\@table\:selectedRow\@):nth-child(odd) .\@table\:cell\@:not(._3fYLd38o) {
-    background-color: #f7f8f9;
+    background-color: #f7f8f9 !important;
   }
 
   .\@table\:startStickyCell\@:before {
-    background: #d4d4d4;
+    background: #d4d4d4 !important;
   }
 
   .\@table\:startStickyCell\@:after {
-    background: #e8e8e8;
+    background: #e8e8e8 !important;
   }
 
   .\@table\:startStickyCellShadowedContent\@:after {
@@ -465,183 +465,183 @@ html[data-suite-theme] {
       hsla(0, 0%, 100%, 0.15) 0,
       #d4d4d4 90%,
       #ababab
-    );
+    ) !important;
   }
 
   .\@table\:footerPageSizeSelectorLabel\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@table\:hoverableRow\@:hover .\@table\:cell\@ {
-      background-color: #e4f4fb;
+      background-color: #e4f4fb !important;
     }
     .\@table\:selectableRow\@:hover .\@table\:cell\@ {
-      background-color: #e4f4fb;
+      background-color: #e4f4fb !important;
     }
   }
 
   @supports (-ms-ime-align: auto) {
     .\@table\:startStickyCell\@ {
-      border-right-color: #e8e8e8;
+      border-right-color: #e8e8e8 !important;
     }
   }
 
   .\@group-select\:group\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   ._2tmBgf2f {
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
   }
 
   .\@group-select\:activeItem\@,
   .\@group-select\:activeItem\@[disabled] {
-    background-color: transparent;
-    border-bottom-color: #009fdf;
-    color: #009fdf;
+    background-color: transparent !important;
+    border-bottom-color: #009fdf !important;
+    color: #009fdf !important;
   }
 
   .\@expanded-payments-info\:layout\@ {
-    border-left-color: #e8e8e8;
+    border-left-color: #e8e8e8 !important;
   }
 
   .\@feed-quality\:badge\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@feed-quality\:badge\@:before {
-    background-color: #008753;
+    background-color: #008753 !important;
   }
 
   .\@feed-quality\:badgeWithDelayedValue\@:before {
-    background-color: #f2892e;
+    background-color: #f2892e !important;
   }
 
   .\@feed-quality\:badgeWithEndOfDayValue\@:before {
-    background-color: #007bc2;
+    background-color: #007bc2 !important;
   }
 
   .\@actions-menu\:actionsMenu\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@actions-menu\:actionItemsSeparator\@ {
-    background-color: #e8e8e8;
+    background-color: #e8e8e8 !important;
   }
   .\@actions-menu\:actionItem\@:focus {
-    background-color: #e4f4fb;
+    background-color: #e4f4fb !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@actions-menu\:actionItem\@:hover {
-      background-color: #e4f4fb;
+      background-color: #e4f4fb !important;
     }
   }
 
   ._21l9ETAc {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@product-category-badge\:badge\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@details-overview\:lineTopSeparator\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@details-overview\:lineBottomSeparator\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@product-trading-buttons\:smallButton\@,
   .\@product-trading-buttons\:largeButton\@ {
-    color: #fff;
+    color: #fff !important;
   }
   .\@product-trading-buttons\:buyButton\@ {
-    background-color: #00a658;
+    background-color: #00a658 !important;
   }
 
   .\@product-trading-buttons\:sellButton\@ {
-    background-color: #e6605c;
+    background-color: #e6605c !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@product-trading-buttons\:buyButton\@:not([disabled]):focus,
     .\@product-trading-buttons\:buyButton\@:not([disabled]):hover {
-      background-color: #008753;
+      background-color: #008753 !important;
     }
     .\@product-trading-buttons\:sellButton\@:not([disabled]):focus,
     .\@product-trading-buttons\:sellButton\@:not([disabled]):hover {
-      background-color: #cc4c3b;
+      background-color: #cc4c3b !important;
     }
   }
 
   .\@product-info-toggle\:popupContent\@ {
-    background-color: #fff;
-    border-color: #000;
+    background-color: #fff !important;
+    border-color: #000 !important;
   }
 
   .\@product-info-toggle\:detailsLine\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@payments-view\:noDataMessage\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
   .\@payments-view\:cell\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   ._2SEldLb2 {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .rtSmT2Hs {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@payments-navigation\:button\@ {
-    background-color: #000;
-    color: #fff;
+    background-color: #000 !important;
+    color: #fff !important;
   }
 
   .\@sections\:section\@[disabled],
   .\@sections\:sectionToggle\@[disabled] {
-    background-color: transparent;
-    color: #000;
+    background-color: transparent !important;
+    color: #000 !important;
   }
 
   .\@sections\:sectionLabel\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@sections\:valuesVisibilityButton\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@settings-list-toggle\:settingsList\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@settings-list-toggle\:settingsListItem\@ + .\@settings-list-toggle\:settingsListItem\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 
   .\@settings-list-toggle\:settingsListButton\@,
   .\@settings-list-toggle\:settingsListButton\@[disabled] {
-    background-color: transparent;
-    color: rgba(0, 0, 0, 0.55);
+    background-color: transparent !important;
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@settings-list-toggle\:settingsListButton\@.\@settings-list-toggle\:settingsListActiveButton\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@compact-header\:controlButton\@,
   .\@compact-header\:header\@ {
-    background-color: #009fdf;
-    color: #fff;
+    background-color: #009fdf !important;
+    color: #fff !important;
   }
 }

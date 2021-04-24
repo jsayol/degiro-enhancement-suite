@@ -1,13 +1,13 @@
 html[data-suite-theme] {
   .\@agenda-card\:companyName\@ {
-    word-break: break-word;
+    word-break: break-word !important;
   }
 
   .\@agenda-card\:agendaPrimaryValue\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@agenda-card\:agendaValue\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 }

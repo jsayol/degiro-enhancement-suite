@@ -1,45 +1,45 @@
 html[data-suite-theme] {
   .\@news-article-item\:dateTime\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@news-article-item\:subCategoryLabelWrapper\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@focus-news-article-item\:newsArticleDescription\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@news-list\:newsListItem\@,
   .\@news-list\:selectedNewsListItem\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@news-list\:selectedNewsListItem\@ {
-    background-color: #e4f4fb;
+    background-color: #e4f4fb !important;
   }
 
   .\@news-list\:newsListItem\@:last-of-type {
-    border-bottom: none;
+    border-bottom: none !important;
   }
 
   .\@news-list\:newsListItemDate\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@normal-news-article-item\:normalNewsArticleItem\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@normal-news-article-item\:content\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@normal-news-article-item\:normalNewsArticleItem\@:nth-child(2n):nth-last-child(-n + 3) ~ .\@normal-news-article-item\:normalNewsArticleItem\@ {
   }
 
   .\@side-news-article\:sideNewsArticleBottomLineSeparator\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 }

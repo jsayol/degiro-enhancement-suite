@@ -1,5 +1,6 @@
 import { browser, WebRequest } from "webextension-polyfill-ts";
-import { hasProperty, Settings } from "../common";
+import { Settings } from "../common";
+import { removeTabReady, setTabReady } from "./common";
 import * as stylesManager from "./styles-manager";
 
 const DEFAULT_SETTINGS: Settings = {
@@ -69,6 +70,7 @@ async function onStartupOrOnInstalledListener() {
     // Flush in-memory cache so that we can see all requests
     // See https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
     // const flushingCache = browser.webRequest.handlerBehaviorChanged();
+    // TODO: does this actually do anything in this case?
     await browser.webRequest.handlerBehaviorChanged();
 
     // Keep track of open tabs
@@ -136,13 +138,22 @@ async function onStartupOrOnInstalledListener() {
               const { name, value } = message;
               await saveSettingItem(name, value);
               break;
+            case "tabReady":
+              setTabReady(sender.tab!.id!);
+              break;
             case "getSettings":
               return settings;
             case "loadBaseTheme":
-              stylesManager.loadBaseTheme(sender.tab!.id!);
+              return stylesManager.loadBaseTheme(
+                sender.tab!.id!,
+                message.module
+              );
               break;
             case "unloadBaseTheme":
-              stylesManager.unloadBaseTheme(sender.tab!.id!);
+              return stylesManager.unloadBaseTheme(
+                sender.tab!.id!,
+                message.module
+              );
               break;
           }
         }
@@ -220,4 +231,20 @@ browser.webRequest.onHeadersReceived.addListener(
   onHeadersReceivedListener,
   { urls: ["<all_urls>"] },
   ["blocking", "responseHeaders"]
+);
+
+browser.tabs.onUpdated.addListener((tabId: number, changeInfo) => {
+  if (changeInfo.status === "loading") {
+    removeTabReady(tabId);
+  }
+});
+
+browser.tabs.onRemoved.addListener((tabId: number) => {
+  removeTabReady(tabId);
+});
+
+browser.tabs.onReplaced.addListener(
+  (addedTabId: number, removedTabId: number) => {
+    removeTabReady(removedTabId);
+  }
 );

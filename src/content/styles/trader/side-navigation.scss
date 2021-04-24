@@ -1,110 +1,110 @@
 html[data-suite-theme] {
   ._2qBKh7vt {
-    background-color: #e6605c;
-    color: #fff;
+    background-color: #e6605c !important;
+    color: #fff !important;
   }
 
   .eIiUV4uU {
-    background-color: #181a21;
+    background-color: #181a21 !important;
   }
 
   ._3PIXiFtL {
-    color: #e6605c;
+    color: #e6605c !important;
   }
 
   .\@side-navigation\:navigationTopMenuItem\@ {
-    color: #98a1b1;
+    color: #98a1b1 !important;
   }
 
   .\@side-navigation\:activeNavigationItem\@,
   .\@side-navigation\:openedNavigationItem\@ {
-    color: #fff;
+    color: #fff !important;
   }
 
   .\@side-navigation\:activeNavigationItem\@ .\@side-navigation\:navigationItemIcon\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@side-navigation\:activeNavigationItem\@ .\@side-navigation\:profileAvatar\@ {
-    background-color: #009fdf;
-    color: currentColor;
+    background-color: #009fdf !important;
+    color: currentColor !important;
   }
 
   .HFtJ8ljz {
-    background-color: #181a21;
-    color: #fff;
+    background-color: #181a21 !important;
+    color: #fff !important;
   }
 
   ._3rPJxCL- {
-    color: #98a1b1;
+    color: #98a1b1 !important;
   }
 
   .\@side-navigation\:navigationSubMenuItem\@ {
-    color: #98a1b1;
+    color: #98a1b1 !important;
   }
 
   ._2Aw-y_lx > .HFtJ8ljz:before {
-    border-bottom-color: transparent;
-    border-right-color: #181a21;
-    border-top-color: transparent;
+    border-bottom-color: transparent !important;
+    border-right-color: #181a21 !important;
+    border-top-color: transparent !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@side-navigation\:navigationTopMenuItem\@:focus,
     .\@side-navigation\:navigationTopMenuItem\@:hover {
-      color: #fff;
+      color: #fff !important;
     }
 
     .\@side-navigation\:navigationSubMenuItemWrapper\@:hover > .\@side-navigation\:navigationSubMenuItem\@ {
-      background-color: hsla(0, 0%, 100%, 0.15);
-      color: #fff;
+      background-color: hsla(0, 0%, 100%, 0.15) !important;
+      color: #fff !important;
     }
   }
 
   .\@inbox-status-icon\:badge\@ {
-    background-color: #e6605c;
-    color: #fff;
+    background-color: #e6605c !important;
+    color: #fff !important;
   }
 
   .\@avatar\:avatar\@ {
-    background-color: #edeff1;
-    color: #000;
+    background-color: #edeff1 !important;
+    color: #000 !important;
   }
 
   .\@profile-navigation-item\:profileItemSeparator\@ {
-    background-color: hsla(0, 0%, 100%, 0.2);
+    background-color: hsla(0, 0%, 100%, 0.2) !important;
   }
 
   .\@profile-navigation-item\:clientInfoTitle\@ {
-    color: #fff;
+    color: #fff !important;
   }
 
   .\@checkbox\:thumb\@ {
-    background-color: #f0f0f0;
-    border-color: #d4d4d4;
+    background-color: #f0f0f0 !important;
+    border-color: #d4d4d4 !important;
   }
 
   .\@checkbox\:input\@:checked ~ .\@checkbox\:thumb\@ {
-    background-color: #009fdf;
-    border-color: #009fdf;
+    background-color: #009fdf !important;
+    border-color: #009fdf !important;
   }
 
   .\@checkbox\:input\@[disabled]:checked ~ .\@checkbox\:thumb\@,
   .\@checkbox\:input\@[disabled] ~ .\@checkbox\:thumb\@ {
-    background-color: #d4d4d4;
-    border-color: transparent;
+    background-color: #d4d4d4 !important;
+    border-color: transparent !important;
   }
 
   .\@checkbox\:input\@:checked ~ .\@checkbox\:thumb\@:after {
-    border-color: #fff;
+    border-color: #fff !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@checkbox\:thumb\@:hover {
-      background-color: #f3f4f5;
+      background-color: #f3f4f5 !important;
     }
     .\@checkbox\:input\@:focus ~ .\@checkbox\:thumb\@ {
-      border-color: #009fdf;
+      border-color: #009fdf !important;
     }
   }
 }

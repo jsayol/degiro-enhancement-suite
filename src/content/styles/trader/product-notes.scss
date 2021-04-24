@@ -1,74 +1,74 @@
 html[data-suite-theme] {
   .\@note-textarea\:wrapper\@ {
-    outline-color: #e8e8e8;
+    outline-color: #e8e8e8 !important;
   }
 
   .\@note-textarea\:wrapper\@:focus-within {
-    outline-color: #009fdf;
+    outline-color: #009fdf !important;
   }
 
   .\@note-textarea\:textarea\@ {
-    background: transparent;
+    background: transparent !important;
   }
 
   .\@note-textarea\:fakeText\@ {
-    color: transparent;
+    color: transparent !important;
   }
 
   .\@note-textarea\:fakeTextErrorPart\@ {
-    background-color: #e6605c;
+    background-color: #e6605c !important;
   }
 
   .\@note-textarea\:counterError\@ {
-    color: #e6605c;
+    color: #e6605c !important;
   }
 
   .\@button\:button\@:disabled {
-    background: inherit;
-    color: #000;
+    background: inherit !important;
+    color: #000 !important;
   }
 
   .\@button\:button\@:hover {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@button\:button\@:focus {
-    border-color: #009fdf;
-    color: #009fdf;
-    outline: none;
+    border-color: #009fdf !important;
+    color: #009fdf !important;
+    outline: none !important;
   }
 
   .\@button\:primaryButton\@ {
-    background-color: #009fdf;
-    color: #fff;
+    background-color: #009fdf !important;
+    color: #fff !important;
   }
 
   .\@button\:primaryButton\@:hover {
-    background-color: #007bc2;
+    background-color: #007bc2 !important;
   }
 
   .\@button\:primaryButton\@:focus {
-    background-color: #e4f4fb;
-    color: #007bc2;
+    background-color: #e4f4fb !important;
+    color: #007bc2 !important;
   }
 
   .\@product-notes\:productNote\@:focus {
-    outline-color: #009fdf;
+    outline-color: #009fdf !important;
   }
 
   .\@product-notes\:noteSection\@ {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@product-notes\:timeStamp\@ {
-    color: #ababab;
+    color: #ababab !important;
   }
 
   .\@product-notes\:serviceMessageWarning\@ {
-    color: #009fdf;
+    color: #009fdf !important;
   }
 
   .\@product-notes\:serviceMessageError\@ {
-    color: #e6605c;
+    color: #e6605c !important;
   }
 }

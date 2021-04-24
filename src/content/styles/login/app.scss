@@ -2,304 +2,306 @@
 
 html[data-suite-theme] {
   .\@header\:appLogo\@ {
-    filter: var(--suite-theme-login-logo-filter);
+    filter: var(--suite-theme-login-logo-filter) !important;
   }
 
-  ._2b904SBi {
-    color: var(--suite-theme-color);
-  }
+  // ._2b904SBi {
+  //   color: var(--suite-theme-color) !important;
+  // }
 
-  ._2yZHs4iT {
-    color: var(--suite-theme-color);
-  }
+  // ._2yZHs4iT {
+  //   color: var(--suite-theme-color) !important;
+  // }
 
-  ._33YMireY {
-    color: var(--suite-theme-color);
-  }
+  // ._33YMireY {
+  //   color: var(--suite-theme-color) !important;
+  // }
 
-  ._3yWsNwyD {
-    color: var(--suite-theme-color);
-  }
+  // ._3yWsNwyD {
+  //   color: var(--suite-theme-color) !important;
+  // }
 
   // ._3EP9ApGu {
-  //   color: #2ecc71;
+  //   color: #2ecc71 !important;
   // }
 
   // ._3bcExoP_ {
-  //   color: #e5231f;
+  //   color: #e5231f !important;
   // }
 
   body .spinner {
-    color: var(--suite-theme-color-accent-bg);
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   body {
-    background-color: var(--suite-theme-bg);
-    color: var(--suite-theme-color);
+    background-color: var(--suite-theme-bg) !important;
+    color: var(--suite-theme-color) !important;
   }
 
-  .V369L4Lq,
+  // .V369L4Lq,
   a {
-    color: var(--suite-theme-color-accent-bg);
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   // input::-ms-value,
   // select::-ms-value,
   // textarea::-ms-value {
-  //   background-color: inherit;
+  //   background-color: inherit !important;
   // }
 
-  // input:-webkit-autofill {
+  input:-webkit-autofill {
+    color: var(--suite-theme-color) !important;
+    background-color: var(--suite-theme-bg-lite) !important;
+    border-color: var(--suite-theme-border-color) !important;
+  }
+
+  // button {
   //   background-color: transparent !important;
   // }
 
-  // button {
-  //   background-color: transparent;
-  // }
-
   // .\@icon\:iconShape\@ {
-  //   fill: currentColor;
+  //   fill: currentColor !important;
   // }
 
   // .\@modal\:overlay\@ {
-  //   background-color: rgba(0, 23, 34, 0.6);
+  //   background-color: rgba(0, 23, 34, 0.6) !important;
   // }
 
   .\@modal\:modal\@ {
-    background-color: var(--suite-theme-bg);
+    background-color: var(--suite-theme-bg) !important;
   }
 
   // .\@modal\:modalTitle\@ {
-  //   color: #000;
+  //   color: #000 !important;
   // }
 
   // .\@modal\:modalTitleError\@ {
-  //   color: #e5231f;
+  //   color: #e5231f !important;
   // }
 
   .\@modal\:modalIconWrapper\@ {
-    background-color: var(--suite-theme-color-accent-bg);
-    color: #fff;
+    background-color: var(--suite-theme-color-accent-bg) !important;
+    color: #fff !important;
   }
 
   // .\@modal\:modalIconWrapperError\@ {
-  //   background-color: #e5231f;
+  //   background-color: #e5231f !important;
   // }
 
-  // .\@modal\:modalIconWrapperWarning\@ {
-  //   background-color: #f89406;
-  // }
+  .\@modal\:modalIconWrapperWarning\@ {
+    background-color: #f89406 !important;
+  }
 
   // .\@modal\:modalIcon\@ {
-  //   color: #fff;
+  //   color: #fff !important;
   // }
 
   .\@modal\:modalContent\@ {
-    color: var(--suite-theme-color);
+    color: var(--suite-theme-color) !important;
   }
 
   .\@modal\:modalActionsItem\@ {
-    background: none;
-    border-top-color: var(--suite-theme-border-color);
-    color: var(--suite-theme-color-accent-bg);
+    background: none !important;
+    border-top-color: var(--suite-theme-border-color) !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@modal\:modalActionsItem\@:nth-child(3n-1) {
-    border-left-color: var(--suite-theme-border-color);
+    border-left-color: var(--suite-theme-border-color) !important;
   }
 
   .\@header\:layout\@ {
-    border-bottom-color: var(--suite-theme-border-color);
-    // box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    border-bottom-color: var(--suite-theme-border-color) !important;
+    // box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1) !important;
   }
 
   @media (min-width: 500px) {
     .\@header\:appLogoSeparator\@ {
-      background-color: var(--suite-theme-color);
+      background-color: var(--suite-theme-color) !important;
     }
   }
 
   .\@carousel\:sliderNavigationItem\@ {
-    background-color: var(--suite-theme-border-color);
+    background-color: var(--suite-theme-border-color) !important;
   }
 
   .\@carousel\:activeSliderNavigationItem\@ {
-    background-color: var(--suite-theme-color-accent-bg);
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@button\:button\@ {
-    background-color: var(--suite-theme-color-accent-bg);
-    color: var(--suite-theme-color-accent-fg);
+    background-color: var(--suite-theme-color-accent-bg) !important;
+    color: var(--suite-theme-color-accent-fg) !important;
   }
 
   // .\@button\:inactiveButton\@ {
-  //   background-color: #9aa9b7;
-  //   color: #fff;
+  //   background-color: #9aa9b7 !important;
+  //   color: #fff !important;
   // }
 
   .\@button\:textButton\@ {
-    // background-color: transparent;
-    color: var(--suite-theme-color-accent-bg);
+    // background-color: transparent !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@onboarding\:button\@:last-child {
-    background-color: var(--suite-theme-bg);
-    color: var(--suite-theme-color-accent-bg);
+    background-color: var(--suite-theme-bg) !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@page-notification\:infoNotification\@ {
-    background-color: var(--suite-theme-color-accent-bg);
-    // color: #fff;
+    background-color: var(--suite-theme-color-accent-bg) !important;
+    // color: #fff !important;
   }
 
   .\@page-notification\:warningNotification\@ {
-    // background-color: rgba(242, 137, 46, 0.14);
-    background-color: var(--suite-theme-bg-lite);
+    // background-color: rgba(242, 137, 46, 0.14) !important;
+    background-color: var(--suite-theme-bg-lite) !important;
   }
 
   // .\@page-notification\:infoNotification\@ .\@page-notification\:notificationIcon\@ {
-  //   color: currentColor;
+  //   color: currentColor !important;
   // }
 
   // .\@page-notification\:warningNotification\@ .\@page-notification\:notificationIcon\@ {
-  //   color: #f89406;
+  //   color: #f89406 !important;
   // }
 
   // .\@page-notification\:content\@ {
-  //   color: currentColor;
+  //   color: currentColor !important;
   // }
 
   // .\@page-notification\:closeButton\@ {
-  //   background: transparent;
-  //   color: currentColor;
+  //   background: transparent !important;
+  //   color: currentColor !important;
   // }
 
   // ._2bCX4v_d {
-  //   color: #e5231f;
+  //   color: #e5231f !important;
   // }
 
   // .\@user-account-person-verification\:personsDescription\@ {
-  //   color: #9aa9b7;
+  //   color: #9aa9b7 !important;
   // }
 
   // ._7HO4Le6K {
-  //   color: #9aa9b7;
+  //   color: #9aa9b7 !important;
   // }
 
   .\@passcode-indicator\:passCodeIndicatorItem\@ {
-    background-color: var(--suite-theme-border-color);
+    background-color: var(--suite-theme-border-color) !important;
   }
 
   .\@passcode-indicator\:passCodeIndicatorItemActive\@ {
-    background-color: var(--suite-theme-color-accent-bg);
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@passcode-indicator\:passCodeIndicatorItemActive\@:after {
-    background-color: var(--suite-theme-bg);
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@passcode-keyboard\:keyboardButton\@ {
-    // background: transparent;
-    border-bottom-color: var(--suite-theme-border-color);
+    // background: transparent !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@passcode-keyboard\:keyboardButton\@:active {
-    background-color: var(--suite-theme-border-color);
+    background-color: var(--suite-theme-border-color) !important;
   }
 
   // .\@passcode-keyboard\:keyboardButton\@:nth-child(10),
   // .\@passcode-keyboard\:keyboardButton\@:nth-child(12) {
-  //   border-bottom-color: transparent;
+  //   border-bottom-color: transparent !important;
   // }
 
   .\@passcode-keyboard\:keyboardButtonIcon\@ {
-    color: var(--suite-theme-color);
+    color: var(--suite-theme-color) !important;
   }
 
-  ._255dB75- {
-    border-bottom-color: var(--suite-theme-border-color);
-  }
+  // ._255dB75- {
+  //   border-bottom-color: var(--suite-theme-border-color) !important;
+  // }
 
   .\@passcode\:userSelectControlIcon\@ {
-    color: var(--suite-theme-color-accent-bg);
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   // .\@passcode\:userSelectControlToggleIcon\@ {
-  //   color: #9aa9b7;
+  //   color: #9aa9b7 !important;
   // }
 
   .\@passcode\:biometricAuthModalImgWrapper\@ {
-    background-color: var(--suite-theme-bg);
-    box-shadow: 0 0 16px 1px var(--suite-theme-color-accent-bg);
+    background-color: var(--suite-theme-bg) !important;
+    box-shadow: 0 0 16px 1px var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@input\:input\@ {
-    border-color: var(--suite-theme-border-color);
-    color: var(--suite-theme-color);
-    background-color: var(--suite-theme-bg-lite);
+    border-color: var(--suite-theme-border-color) !important;
+    color: var(--suite-theme-color) !important;
+    background-color: var(--suite-theme-bg-lite) !important;
   }
 
   .\@input\:input\@:focus {
-    border-color: var(--suite-theme-color-accent-bg);
-    box-shadow: inset 0 0 0 1px var(--suite-theme-color-accent-bg);
+    border-color: var(--suite-theme-color-accent-bg) !important;
+    box-shadow: inset 0 0 0 1px var(--suite-theme-color-accent-bg) !important;
   }
 
   // .\@input\:inputWithError\@ {
-  //   border-color: #e5231f;
-  //   box-shadow: inset 0 0 0 1px #e5231f;
+  //   border-color: #e5231f !important;
+  //   box-shadow: inset 0 0 0 1px #e5231f !important;
   // }
 
   .\@input\:inputHint\@ {
-    color: var(--suite-theme-color-accent-bg);
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   // ._1YeleNA1 {
-  //   color: #e5231f;
+  //   color: #e5231f !important;
   // }
 
   // .\@password-input\:toggleButtonIcon\@ {
-  //   caret-color: inherit;
-  //   color: #9aa9b7;
+  //   caret-color: inherit !important;
+  //   color: #9aa9b7 !important;
   // }
 
   // @media (any-hover: hover),
   //   all and (-moz-touch-enabled: 0),
   //   all and (pointer: fine) {
   //   .\@password-input\:toggleButton\@:focus {
-  //     background-color: rgba(0, 0, 0, 0.1);
+  //     background-color: rgba(0, 0, 0, 0.1) !important;
   //   }
   // }
 
   // ._3nsvRz94:-webkit-autofill {
-  //   box-shadow: inset 0 0 0 992px #fff;
+  //   box-shadow: inset 0 0 0 992px #fff !important;
   // }
 
   // .\@password-login\:passwordResetLink\@ {
-  //   color: #9aa9b7;
+  //   color: #9aa9b7 !important;
   // }
 
   @media (any-hover: hover),
     all and (-moz-touch-enabled: 0),
     all and (pointer: fine) {
     .\@password-login\:passwordResetLink\@:hover {
-      color: var(--suite-theme-color-accent-bg);
+      color: var(--suite-theme-color-accent-bg) !important;
     }
   }
 
   // .\@user-activation-result\:titleIcon\@ {
-  //   color: #9aa9b7;
+  //   color: #9aa9b7 !important;
   // }
 
   // .\@user-activation-result\:titleSubIcon\@ {
-  //   color: #2ecc71;
+  //   color: #2ecc71 !important;
   // }
 
   .\@users\:userActionsItem\@ {
-    background: transparent;
-    color: var(--suite-theme-color-accent-bg);
+    background: transparent !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   // .\@users\:userActionsItem\@ + .\@users\:userActionsItem\@ {
-  //   color: #9aa9b7;
+  //   color: #9aa9b7 !important;
   // }
 }

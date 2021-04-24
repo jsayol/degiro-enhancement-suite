@@ -1,34 +1,34 @@
 html[data-suite-theme] {
   .\@news-article-item\:dateTime\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@news-article-item\:subCategoryLabelWrapper\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@news-list\:newsListItem\@,
   .\@news-list\:selectedNewsListItem\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@news-list\:selectedNewsListItem\@ {
-    background-color: #e4f4fb;
+    background-color: #e4f4fb !important;
   }
 
   .\@news-list\:newsListItem\@:last-of-type {
-    border-bottom: none;
+    border-bottom: none !important;
   }
 
   .\@news-list\:newsListItemDate\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@country-flag\:flag\@ {
-    border-color: #d4d4d4;
+    border-color: #d4d4d4 !important;
   }
 
   .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
-    border-color: transparent;
+    border-color: transparent !important;
   }
 }

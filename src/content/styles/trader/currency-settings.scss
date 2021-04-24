@@ -1,76 +1,76 @@
 html[data-suite-theme] {
   .\@expandable-content\:minimizedContent\@:after {
-    box-shadow: 0 0 8px 8px #fff;
+    box-shadow: 0 0 8px 8px #fff !important;
   }
 
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8;
+    border-bottom-color: #e8e8e8 !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
-    border-bottom-color: transparent;
+    border-bottom-color: transparent !important;
   }
 
   .\@list\:selectedItem\@ {
-    background-color: #f7f8f9;
+    background-color: #f7f8f9 !important;
   }
 
   .\@list\:list\@ .\@list\:selectedItem\@:after,
   .\@list\:list\@ .\@list\:hoverableItem\@:after {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@list\:hoverableItem\@:hover,
     .\@list\:item\@:focus {
-      background-color: #e4f4fb;
+      background-color: #e4f4fb !important;
     }
   }
 
   .\@switch-buttons\:switchControl\@ {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@switch-buttons\:switchControlInTransition\@ {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   .\@switch-buttons\:option\@ + .\@switch-buttons\:option\@ {
-    border-left-color: #f3f4f5;
+    border-left-color: #f3f4f5 !important;
   }
 
   .\@switch-buttons\:option\@[disabled] {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   .\@switch-buttons\:activeOption\@ {
-    color: #fff;
+    color: #fff !important;
   }
 
   .\@switch-buttons\:option\@ + .\@switch-buttons\:activeOption\@,
   .\@switch-buttons\:activeOption\@ + .\@switch-buttons\:option\@ {
-    border-left: 0;
+    border-left: 0 !important;
   }
 
   .\@switch-buttons\:activeOption\@:first-child {
-    background-color: #00a658;
+    background-color: #00a658 !important;
   }
 
   .\@switch-buttons\:activeOption\@:last-child {
-    background-color: #009fdf;
+    background-color: #009fdf !important;
   }
 
   .\@switch-buttons\:option\@[disabled].\@switch-buttons\:activeOption\@ {
-    background-color: #d4d4d4;
-    color: #000;
+    background-color: #d4d4d4 !important;
+    color: #000 !important;
   }
 }

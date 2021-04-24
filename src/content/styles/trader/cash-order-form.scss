@@ -1,55 +1,55 @@
 html[data-suite-theme] {
   .\@deposit\:transferOption\@ {
-    border-bottom-color: #d4d4d4;
-    color: rgba(0, 0, 0, 0.55);
+    border-bottom-color: #d4d4d4 !important;
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@deposit\:transferOptionTitle\@ {
-    color: #000;
+    color: #000 !important;
   }
 
   .\@input\:inputFieldLayout\@ {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@input\:inputFieldLayout\@:focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    border-color: #009fdf;
+    border-color: #009fdf !important;
   }
 
   .\@input\:invalidInputFieldLayout\@ {
-    border-color: #e6605c;
+    border-color: #e6605c !important;
   }
 
   .\@input\:inputFieldControl\@ {
-    background-color: inherit;
+    background-color: inherit !important;
   }
 
   ._3dpUyUgG {
-    background-color: #fff;
-    color: #007bc2;
+    background-color: #fff !important;
+    color: #007bc2 !important;
   }
 
   .\@buttons-group\:buttonsGroup\@ {
-    background-color: #f3f4f5;
+    background-color: #f3f4f5 !important;
   }
 
   .\@buttons-group\:buttonsGroupItem\@ {
-    border-left-color: #e8e8e8;
+    border-left-color: #e8e8e8 !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@buttons-group\:buttonsGroupItem\@:hover {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 0, 0, 0.1) !important;
     }
   }
 
   .\@order-form\:warningBox\@ + .\@order-form\:warningBox\@ {
-    border-top-color: #e8e8e8;
+    border-top-color: #e8e8e8 !important;
   }
 }

@@ -1,42 +1,42 @@
 html[data-suite-theme] {
   .\@full-view\:agendaHeaderCompactView\@ .SRKeLvAF {
-    background-color: #fafafa;
+    background-color: #fafafa !important;
   }
 
   ._1UIli3mH:first-child .SRKeLvAF {
-    border-top: 0;
+    border-top: 0 !important;
   }
 
   .\@full-view\:groupedCellDivider\@ {
-    background-color: #edeff1;
+    background-color: #edeff1 !important;
   }
 
   ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) ._3jr4aOva:not(.SRKeLvAF),
   ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) .ZSFu57um:not(.SRKeLvAF) {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .\@full-view\:disabledCompanyNameCell\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .\@country-flag\:flag\@ {
-    border-color: #d4d4d4;
+    border-color: #d4d4d4 !important;
   }
 
   .\@country-flag\:flag\@.\@country-flag\:noBorder\@ {
-    border-color: transparent;
+    border-color: transparent !important;
   }
 
   ._1hbIBXiI {
-    border-right-color: #d4d4d4;
+    border-right-color: #d4d4d4 !important;
   }
 
   .\@agenda-splits-full-view\:disabledProductEventCell\@ {
-    color: rgba(0, 0, 0, 0.55);
+    color: rgba(0, 0, 0, 0.55) !important;
   }
 
   .cXzcf1kz:not(.\@agenda-splits-full-view\:selectedRow\@):nth-child(odd) ._16CxOdOW:not(.\@agenda-splits-full-view\:headerCell\@) {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 }
