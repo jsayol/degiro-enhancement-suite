@@ -1,6 +1,6 @@
 html[data-suite-theme] {
   ._1VrRUXxk {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   ._3SIBT-bT {
@@ -17,20 +17,20 @@ html[data-suite-theme] {
   }
 
   ._1Wf2_3mI .iFMi1SJU:not(.QE1kBvCG):after {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   ._1wutmMzo {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .QE1kBvCG {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
     color: #fff !important;
   }
 
   ._29EwJ2TB .iFMi1SJU:not(.QE1kBvCG) {
-    border-color: #e8e8e8 !important;
+    border-color: var(--suite-theme-border-color) !important;
   }
 
   ._2Dk4Jq5M {

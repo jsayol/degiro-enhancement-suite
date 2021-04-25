@@ -1,10 +1,10 @@
 html[data-suite-theme] {
   ._2B3Ly9oj {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._3NLN59hC {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .MDyoowC6:after {
@@ -12,23 +12,23 @@ html[data-suite-theme] {
   }
 
   ._1kQr2vDj {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   ._1AXOHVRn {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   ._3uZqPfLC {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._26yEicJP + ._26yEicJP {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   ._1XWSozd5 {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   ._1XWSozd5:nth-child(odd) {
@@ -40,11 +40,11 @@ html[data-suite-theme] {
   }
 
   ._3dppn0ls {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   ._2WdSLV9g {
     background: #fff !important;
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 }

@@ -16,9 +16,10 @@
     "prod": {}
   },
   "scripts": {
-    "start": "parcel watch src/manifest.json --no-hmr --target dev",
-    "start:hmr": "parcel watch src/manifest.json --host localhost --port 1234 --target dev",
-    "build": "parcel build src/manifest.json --target prod",
+    "start": "npm run bundlecss && concurrently \"npm:bundlecss watch\" \"npm:start:hmr\"",
+    "start:nohmr": "parcel watch src/manifest.json --no-hmr --target dev",
+    "start:hmr": "npm run bundlecss && parcel watch src/manifest.json --host localhost --port 1234 --target dev",
+    "build": "npm run bundlecss && parcel build src/manifest.json --target prod",
     "clean": "npm run clean:dev && npm run clean:prod",
     "clean:dev": "rimraf dist/dev",
     "clean:prod": "rimraf dist/prod",
@@ -26,7 +27,8 @@
     "cleanstart:hmr": "npm run clean:dev && npm run start:hmr",
     "cleanbuild": "npm run clean:prod && npm run build",
     "ff:dev": "web-ext run --source-dir ./dist/dev",
-    "ff:prod": "web-ext run --source-dir ./dist/prod"
+    "ff:prod": "web-ext run --source-dir ./dist/prod",
+    "bundlecss": "ts-node scripts/bundle-css.ts"
   },
   "browserslist": ">0.25% and supports async-functions",
   "dependencies": {
@@ -36,9 +38,16 @@
     "@parcel/config-webextension": "^2.0.0-nightly.2261",
     "@parcel/transformer-sass": "^2.0.0-nightly.639",
     "@types/mkdirp": "^1.0.1",
+    "@types/node-fetch": "^2.5.10",
+    "@types/sass": "^1.16.0",
+    "chokidar": "^3.5.1",
+    "concurrently": "^6.0.2",
     "mkdirp": "^0.5.5",
+    "node-fetch": "^2.6.1",
     "parcel": "^2.0.0-nightly.637",
     "rimraf": "^3.0.2",
+    "sass": "*",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.4",
     "web-ext": "^6.0.0"
   }

@@ -1,12 +1,12 @@
 html[data-suite-theme] {
   .HNj2UG1r {
-    background-color: #fff !important;
-    border-bottom-color: #e8e8e8 !important;
-    color: rgba(0, 0, 0, 0.55) !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@breadcrumbs\:selectedNavigationItem\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@trading-profile\:profileCard\@ {
@@ -18,15 +18,15 @@ html[data-suite-theme] {
   }
 
   .\@trading-profile\:limitationItem\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@trading-profile\:limitationItem\@ .\@trading-profile\:statusIcon\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@trading-profile\:featureItem\@ .\@trading-profile\:statusIcon\@ {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@trading-profile\:selectedProfileCard\@ .\@trading-profile\:featureItem\@ .\@trading-profile\:statusIcon\@ {
@@ -34,12 +34,12 @@ html[data-suite-theme] {
   }
 
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
@@ -56,7 +56,7 @@ html[data-suite-theme] {
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
@@ -71,35 +71,35 @@ html[data-suite-theme] {
   }
 
   .\@switch\:thumb\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
   }
 
   .\@switch\:checkbox\@:checked ~ .\@switch\:track\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@switch\:checkbox\@:checked ~ .\@switch\:thumb\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@switch\:checkbox\@:focus ~ .\@switch\:thumb\@ {
-      background-color: #fff !important;
+      background-color: var(--suite-theme-bg) !important;
       box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3) !important;
     }
     .\@switch\:checkbox\@:checked:focus ~ .\@switch\:thumb\@ {
-      background-color: #009fdf !important;
+      background-color: var(--suite-theme-color-accent-bg) !important;
       box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3) !important;
     }
   }
 
   .\@info-table\:cell\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   ._2JV9SF6_ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 }

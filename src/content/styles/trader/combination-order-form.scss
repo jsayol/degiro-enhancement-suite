@@ -1,20 +1,20 @@
 html[data-suite-theme] {
   .\@order-form\:warningBox\@ + .\@order-form\:warningBox\@ {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   .\@input\:inputFieldLayout\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@input\:inputFieldLayout\@:focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@input\:invalidInputFieldLayout\@ {
@@ -26,12 +26,12 @@ html[data-suite-theme] {
   }
 
   ._3dpUyUgG {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     color: #007bc2 !important;
   }
 
   .\@switch-buttons\:switchControl\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@switch-buttons\:switchControlInTransition\@ {
@@ -39,7 +39,7 @@ html[data-suite-theme] {
   }
 
   .\@switch-buttons\:option\@ + .\@switch-buttons\:option\@ {
-    border-left-color: #f3f4f5 !important;
+    border-left-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@switch-buttons\:option\@[disabled] {
@@ -55,46 +55,46 @@ html[data-suite-theme] {
   }
 
   .\@switch-buttons\:activeOption\@:last-child {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@switch-buttons\:option\@[disabled].\@switch-buttons\:activeOption\@ {
     background-color: #d4d4d4 !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
-  .LxrALQ7-:last-child {
+  .\@combination-order-form\:activeOrderActionOption\@:last-child {
     background-color: #e6605c !important;
   }
 
-  .kSPLeTvJ {
-    background-color: #f3f4f5 !important;
-    border-color: #f3f4f5 !important;
+  .\@combination-order-form\:productSelectButton\@ {
+    background-color: var(--suite-theme-bg-midlite) !important;
+    border-color: var(--suite-theme-bg-midlite) !important;
   }
 
   ._1ASjxRvu {
-    background-color: #fff !important;
-    border-color: #009fdf !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
-  ._35GLVuG2 {
+  .\@product-details\:layout\@ {
     border-top-color: #d4d4d4 !important;
   }
 
-  ._35GLVuG2 + ._35GLVuG2 {
+  .\@product-details\:layout\@ + .\@product-details\:layout\@ {
     border-top: 0 !important;
   }
 
-  ._2fEWKGqL {
-    color: rgba(0, 0, 0, 0.55) !important;
+  .\@product-details\:pricesLine\@ {
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@order-confirmation\:documentsInfo\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@order-confirmation-fees\:feesHeader\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@filters\:collapsedFiltersSectionButton\@ {
@@ -102,29 +102,29 @@ html[data-suite-theme] {
   }
 
   .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@ {
-    background-color: #fff !important;
-    border-color: #e8e8e8 !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-color: var(--suite-theme-border-color) !important;
   }
 
   .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@:focus-within {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@filters\:activeFiltersButtonIcon\@ {
     color: #e6605c !important;
   }
 
-  ._3C0lad-l {
-    background-color: #fff !important;
+  .\@product-picker\:layout\@ {
+    background-color: var(--suite-theme-bg) !important;
     box-shadow: -2px 0 4px -2px rgba(0, 0, 0, 0.14) !important;
   }
 
-  ._1VHD57HG {
-    color: #000 !important;
+  .\@product-picker\:periodSelect\@ {
+    color: var(--suite-theme-color) !important;
   }
 
   @media (min-width: 1024px) {
-    ._3C0lad-l {
+    .\@product-picker\:layout\@ {
       border-left-color: #d4d4d4 !important;
     }
   }

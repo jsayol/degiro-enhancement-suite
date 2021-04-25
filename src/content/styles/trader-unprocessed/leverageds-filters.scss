@@ -4,12 +4,12 @@ html[data-suite-theme] {
   }
 
   ._31320W00 ._24ScMuu4 {
-    background-color: #fff !important;
-    border-color: #e8e8e8 !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-color: var(--suite-theme-border-color) !important;
   }
 
   ._31320W00 ._24ScMuu4:focus-within {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .AxZvdu2w {
@@ -17,17 +17,17 @@ html[data-suite-theme] {
   }
 
   ._3JvmSTh1 {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   ._3JvmSTh1:focus-within,
   .bdrWSXIv {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   ._3JvmSTh1:not(._3-W3NFy8):focus-within,
   .bdrWSXIv {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   ._3-W3NFy8 {
@@ -39,7 +39,7 @@ html[data-suite-theme] {
   }
 
   ._3dpUyUgG {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     color: #007bc2 !important;
   }
 
@@ -58,35 +58,35 @@ html[data-suite-theme] {
   }
 
   ._2IQ4pEdI {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
   }
 
   .b1W6H4_a:checked ~ .fC_Qu6kY {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .b1W6H4_a:checked ~ ._2IQ4pEdI {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .b1W6H4_a:focus ~ ._2IQ4pEdI {
-      background-color: #fff !important;
+      background-color: var(--suite-theme-bg) !important;
       box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3) !important;
     }
     .b1W6H4_a:checked:focus ~ ._2IQ4pEdI {
-      background-color: #009fdf !important;
+      background-color: var(--suite-theme-color-accent-bg) !important;
       box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3) !important;
     }
   }
 
   ._1EWp8hdR {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   ._19tVoLhw {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 }

@@ -1,15 +1,15 @@
 html[data-suite-theme] {
   .\@news-article-item\:dateTime\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@news-article-item\:subCategoryLabelWrapper\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@news-list\:newsListItem\@,
   .\@news-list\:selectedNewsListItem\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@news-list\:selectedNewsListItem\@ {
@@ -21,7 +21,7 @@ html[data-suite-theme] {
   }
 
   .\@news-list\:newsListItemDate\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@country-flag\:flag\@ {
@@ -33,7 +33,7 @@ html[data-suite-theme] {
   }
 
   .Ww9dtK-j.\@news-article-page\:embeddedCard\@ {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   .\@news-article-page\:articleCategoryTitle\@ {
@@ -45,12 +45,12 @@ html[data-suite-theme] {
   }
 
   .\@accordion-item\:item\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@related-stocks\:productName\@:hover {
-      color: #009fdf !important;
+      color: var(--suite-theme-color-accent-bg) !important;
     }
   }
 }

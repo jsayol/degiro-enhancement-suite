@@ -1,6 +1,6 @@
 html[data-suite-theme] {
   .\@alerts\:alertBackdrop\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@alerts\:closeButton\@ {
@@ -23,17 +23,17 @@ html[data-suite-theme] {
   }
 
   .\@input\:inputFieldLayout\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@input\:inputFieldLayout\@:focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@input\:invalidInputFieldLayout\@ {
@@ -45,17 +45,17 @@ html[data-suite-theme] {
   }
 
   ._3dpUyUgG {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     color: #007bc2 !important;
   }
 
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
@@ -72,7 +72,7 @@ html[data-suite-theme] {
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
@@ -83,8 +83,8 @@ html[data-suite-theme] {
   }
 
   .\@quick-search\:inputFieldLayout\@ {
-    background: #f3f4f5 !important;
-    border-color: #f3f4f5 !important;
+    background: var(--suite-theme-bg-midlite) !important;
+    border-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@quick-search\:layout\@ .\@quick-search\:inputFieldLayout\@ .\@quick-search\:inputField\@ {
@@ -93,22 +93,22 @@ html[data-suite-theme] {
   }
 
   .\@quick-search\:emptyResultsMessage\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@quick-search\:inputFieldLayout\@:focus-within {
-      background: #f3f4f5 !important;
-      border-color: #f3f4f5 !important;
+      background: var(--suite-theme-bg-midlite) !important;
+      border-color: var(--suite-theme-bg-midlite) !important;
     }
   }
 
   .\@markets\:quickSearchButtonLayout\@:before {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@markets\:quickSearchButtonText\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@markets\:marketLosersListItem\@ {
@@ -124,22 +124,22 @@ html[data-suite-theme] {
   }
 
   ._1JPj7mYU {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   ._1JPj7mYU:after {
-    background-color: #e8e8e8 !important;
+    background-color: var(--suite-theme-border-color) !important;
   }
 
   ._3sp9rzcO {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@sub-navigation\:activeNavigationItem\@ {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@sub-navigation\:activeNavigationItem\@:after {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 }

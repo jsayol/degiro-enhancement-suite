@@ -5,8 +5,8 @@ html[data-suite-theme] {
   }
 
   .\@checkbox\:input\@:checked ~ .\@checkbox\:thumb\@ {
-    background-color: #009fdf !important;
-    border-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@checkbox\:input\@[disabled]:checked ~ .\@checkbox\:thumb\@,
@@ -22,10 +22,10 @@ html[data-suite-theme] {
 
   @media (pointer: fine), all and (pointer: none) {
     .\@checkbox\:thumb\@:hover {
-      background-color: #f3f4f5 !important;
+      background-color: var(--suite-theme-bg-midlite) !important;
     }
     .\@checkbox\:input\@:focus ~ .\@checkbox\:thumb\@ {
-      border-color: #009fdf !important;
+      border-color: var(--suite-theme-color-accent-bg) !important;
     }
   }
 
@@ -34,26 +34,26 @@ html[data-suite-theme] {
     color: #fff !important;
   }
 
-  ._34nAy_uB {
-    background-color: rgba(0, 0, 0, 0.55) !important;
+  .\@drawer\:layout\@ {
+    background-color: var(--suite-theme-color-secondary) !important;
   }
 
   .JvAjbK_F {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.16) !important;
   }
 
-  .UX9AKdXx {
+  .\@drawer\:toolbar\@ {
     background-color: #181a21 !important;
     color: #ababab !important;
   }
 
-  ._3aoRYGOx:before {
+  .\@drawer-navigation\:controlItem\@:before {
     background: #181a21 !important;
   }
 
   ._1VCqr8vi {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
     color: #fff !important;
   }
 
@@ -65,11 +65,11 @@ html[data-suite-theme] {
   }
 
   ._2hnF2C5c:after {
-    border-left-color: rgba(0, 0, 0, 0.55) !important;
+    border-left-color: var(--suite-theme-color-secondary) !important;
   }
 
   ._1qKSuIJr {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._2qBKh7vt {
@@ -78,11 +78,11 @@ html[data-suite-theme] {
   }
 
   .\@avatar\:avatar\@ {
-    background-color: #edeff1 !important;
-    color: #000 !important;
+    background-color: var(--suite-theme-bg-lite)  !important;
+    color: var(--suite-theme-color) !important;
   }
 
-  .keM55XVj {
+  .\@user-profile\:profileControlSubTitle\@ {
     color: #ababab !important;
   }
 

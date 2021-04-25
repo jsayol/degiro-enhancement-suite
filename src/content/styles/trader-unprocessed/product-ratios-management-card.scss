@@ -5,7 +5,7 @@ html[data-suite-theme] {
 
   @media (pointer: fine), all and (pointer: none) {
     .bAaR7RCf:hover {
-      color: #009fdf !important;
+      color: var(--suite-theme-color-accent-bg) !important;
     }
   }
 
@@ -14,20 +14,20 @@ html[data-suite-theme] {
   }
 
   ._3cNJiTRI ._1xsdEprT:last-child ._1EP--32- {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   ._1xsdEprT:not(._2bcIrSh2):nth-child(odd) ._1EP--32-:not(._2h2YaWrE) {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .xvFSckQ6 {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     ._3u-ooGhO:hover ._168WKOXC {
-      color: #009fdf !important;
+      color: var(--suite-theme-color-accent-bg) !important;
     }
   }
 }

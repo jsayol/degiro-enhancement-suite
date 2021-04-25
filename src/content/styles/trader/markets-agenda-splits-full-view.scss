@@ -8,16 +8,16 @@ html[data-suite-theme] {
   }
 
   .\@full-view\:groupedCellDivider\@ {
-    background-color: #edeff1 !important;
+    background-color: var(--suite-theme-bg-lite)  !important;
   }
 
   ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) ._3jr4aOva:not(.SRKeLvAF),
   ._1UIli3mH:not(.\@full-view\:selectedRow\@):nth-child(odd) .ZSFu57um:not(.SRKeLvAF) {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@full-view\:disabledCompanyNameCell\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@country-flag\:flag\@ {
@@ -33,10 +33,10 @@ html[data-suite-theme] {
   }
 
   .\@agenda-splits-full-view\:disabledProductEventCell\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .cXzcf1kz:not(.\@agenda-splits-full-view\:selectedRow\@):nth-child(odd) ._16CxOdOW:not(.\@agenda-splits-full-view\:headerCell\@) {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 }

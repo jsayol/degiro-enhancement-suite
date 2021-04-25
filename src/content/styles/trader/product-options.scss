@@ -1,6 +1,6 @@
 html[data-suite-theme] {
   .\@pagination-buttons\:layout\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@pagination-buttons\:button\@ {
@@ -12,21 +12,21 @@ html[data-suite-theme] {
   }
 
   .\@pagination-buttons\:button\@:focus {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@pagination-buttons\:button\@.\@pagination-buttons\:disabledButton\@ {
     background-color: inherit !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@pagination-buttons\:activeButton\@ {
-    border-bottom-color: #009fdf !important;
+    border-bottom-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@options\:tablesHeaderTitle\@ {
     border-bottom: 2px solid !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   ._2AWxLI4H {
@@ -35,24 +35,24 @@ html[data-suite-theme] {
 
   .\@options\:seriesSectionTitle\@ {
     background-color: #f7f8f9 !important;
-    border-bottom-color: #e8e8e8 !important;
-    color: rgba(0, 0, 0, 0.55) !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@options\:seriesSectionLine\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@options\:seriesSectionLine\@:last-child {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@options\:searchResultsCompactLayout\@ .\@options\:tableSwitchableValue\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@options\:searchResultsCompactLayout\@ .\@options\:tablesFooter\@,
   .\@options\:searchResultsFullLayout\@ .\@options\:tablesFooter\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 }

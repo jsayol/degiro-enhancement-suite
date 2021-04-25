@@ -1,5 +1,5 @@
 import { browser, WebRequest } from "webextension-polyfill-ts";
-import { Settings } from "../common";
+import { JS_URL_REGEX, Settings } from "../common";
 import { removeTabReady, setTabReady } from "./common";
 import * as stylesManager from "./styles-manager";
 
@@ -16,7 +16,7 @@ function onBeforeRequestListener(
   details: WebRequest.OnBeforeRequestDetailsType
 ): WebRequest.BlockingResponse | void {
   // Fetch and parse sourcemaps for js files
-  if (details.url.match(stylesManager.JS_URL_REGEX)) {
+  if (details.url.match(JS_URL_REGEX)) {
     /**
      * TODO: unlikely, but just appending ".map" might not necessarily
      * be the url of the source map. Maybe extract it from the js?

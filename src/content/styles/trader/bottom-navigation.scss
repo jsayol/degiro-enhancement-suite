@@ -3,19 +3,19 @@ html[data-suite-theme] {
     background-color: #181a21 !important;
   }
 
-  .rWVJdq6U {
+  .\@bottom-navigation\:navigationItem\@ {
     color: #98a1b1 !important;
   }
 
-  .QDPk8OLd {
+  .\@bottom-navigation\:activeNavigationItem\@ {
     color: #fff !important;
   }
 
-  .QDPk8OLd ._2tHmlr0F {
-    color: #009fdf !important;
+  .\@bottom-navigation\:activeNavigationItem\@ .\@bottom-navigation\:navigationItemIcon\@ {
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
-  ._2nB0NFT4 ._5TQ_UgEr {
+  ._2nB0NFT4 .\@bottom-navigation\:orderButton\@ {
     color: #fff !important;
   }
 }

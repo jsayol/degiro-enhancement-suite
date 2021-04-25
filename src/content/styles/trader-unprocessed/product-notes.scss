@@ -1,10 +1,10 @@
 html[data-suite-theme] {
   ._131J9jh1 {
-    outline-color: #e8e8e8 !important;
+    outline-color: var(--suite-theme-border-color) !important;
   }
 
   ._131J9jh1:focus-within {
-    outline-color: #009fdf !important;
+    outline-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   ._3GPjV2U8 {
@@ -25,21 +25,21 @@ html[data-suite-theme] {
 
   .Rw6KMAz4:disabled {
     background: inherit !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .Rw6KMAz4:hover {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .Rw6KMAz4:focus {
-    border-color: #009fdf !important;
-    color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
+    color: var(--suite-theme-color-accent-bg) !important;
     outline: none !important;
   }
 
   ._1MgP6zrU {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
     color: #fff !important;
   }
 
@@ -53,11 +53,11 @@ html[data-suite-theme] {
   }
 
   ._13V8dVE-:focus {
-    outline-color: #009fdf !important;
+    outline-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   ._3CaPzRMw {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   ._1htE6tkS {
@@ -65,7 +65,7 @@ html[data-suite-theme] {
   }
 
   ._1L16L2Eo {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   ._2IJAHDD6 {

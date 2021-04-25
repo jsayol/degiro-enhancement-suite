@@ -1,7 +1,7 @@
 html[data-suite-theme] {
   ._3aQXaZJj,
   .esNU1WY_ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   ._1sj426FH {
@@ -9,7 +9,7 @@ html[data-suite-theme] {
   }
 
   ._3UbVFYsd {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .eSdyvZw8 {

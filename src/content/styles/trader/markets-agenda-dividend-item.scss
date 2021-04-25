@@ -4,15 +4,15 @@ html[data-suite-theme] {
   }
 
   .\@agenda\:ipoHeadline\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@agenda\:toggleIcon\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@agenda\:disclaimer\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {

@@ -4,10 +4,10 @@ html[data-suite-theme] {
   }
 
   ._179hiQhK {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   ._1YfE1hPn {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 }

@@ -1,6 +1,6 @@
 html[data-suite-theme] {
   .\@product-company-information\:companyProfileLastModified\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@product-company-information\:summaryMoreButton\@:after {
@@ -8,6 +8,6 @@ html[data-suite-theme] {
   }
 
   .\@product-company-information\:lineTopSeparator\@ {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 }

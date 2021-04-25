@@ -35,22 +35,22 @@ html[data-suite-theme] {
   }
 
   ._1i_UDq8g ._1ivg9Ttu {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     border-bottom-color: #fff !important;
     border-top-color: #d4d4d4 !important;
   }
 
   .jZEe5eS6 {
-    background-color: #000 !important;
+    background-color: var(--suite-theme-color) !important;
     color: #fff !important;
   }
 
   ._5vGKVxmP {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._2dJ0xT1B {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   ._1E31BIi1[disabled] {
@@ -66,6 +66,6 @@ html[data-suite-theme] {
   }
 
   ._2UdAYB7T {
-    background-color: #000 !important;
+    background-color: var(--suite-theme-color) !important;
   }
 }

@@ -1,19 +1,19 @@
 html[data-suite-theme] {
   .\@infinitive\:progressBar\@ {
-    background-color: #edeff1 !important;
+    background-color: var(--suite-theme-bg-lite)  !important;
   }
 
   .\@infinitive\:value\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
@@ -30,7 +30,7 @@ html[data-suite-theme] {
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
@@ -41,7 +41,7 @@ html[data-suite-theme] {
   }
 
   .\@pagination-buttons\:layout\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@pagination-buttons\:button\@ {
@@ -53,19 +53,19 @@ html[data-suite-theme] {
   }
 
   .\@pagination-buttons\:button\@:focus {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@pagination-buttons\:button\@.\@pagination-buttons\:disabledButton\@ {
     background-color: inherit !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@pagination-buttons\:activeButton\@ {
-    border-bottom-color: #009fdf !important;
+    border-bottom-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@product-symbol-isin\:section\@ + .\@product-symbol-isin\:section\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 }

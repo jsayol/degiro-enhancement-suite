@@ -5,44 +5,44 @@ html[data-suite-theme] {
 
   @media (pointer: fine), all and (pointer: none) {
     .\@product-details-hint\:icon\@:hover {
-      color: #009fdf !important;
+      color: var(--suite-theme-color-accent-bg) !important;
     }
   }
 
   .\@product-price-range\:priceRange\@ {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   .\@product-price-range\:sliderTrack\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@product-price-range\:sliderThumbToggle\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
     border-color: #fff !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
   }
 
   .\@product-price-range\:priceRangeAmount\@ {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@product-price-range\:compactPrice52WeekRangeAmount\@ {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   .\@product-price-range\:priceRangeDateValue\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@accordion-item\:item\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@card-header-hint-button\:button\@:hover .\@card-header-hint-button\:icon\@ {
-      color: #009fdf !important;
+      color: var(--suite-theme-color-accent-bg) !important;
     }
   }
 }

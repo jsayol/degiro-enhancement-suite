@@ -1,16 +1,16 @@
 html[data-suite-theme] {
   .\@input\:inputFieldLayout\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@input\:inputFieldLayout\@:focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@input\:invalidInputFieldLayout\@ {
@@ -22,7 +22,7 @@ html[data-suite-theme] {
   }
 
   ._3dpUyUgG {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     color: #007bc2 !important;
   }
 
@@ -37,12 +37,12 @@ html[data-suite-theme] {
   }
 
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
@@ -59,7 +59,7 @@ html[data-suite-theme] {
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
@@ -70,23 +70,24 @@ html[data-suite-theme] {
   }
 
   .\@quick-search\:inputFieldLayout\@ {
-    background: #f3f4f5 !important;
-    border-color: #f3f4f5 !important;
+    background: var(--suite-theme-bg-midlite) !important;
+    border-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@quick-search\:layout\@ .\@quick-search\:inputFieldLayout\@ .\@quick-search\:inputField\@ {
-    background: inherit !important;
-    border-color: transparent !important;
+    color: var(--suite-theme-color) !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
+    border-color: var(--suite-theme-border-color) !important;
   }
 
   .\@quick-search\:emptyResultsMessage\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@quick-search\:inputFieldLayout\@:focus-within {
-      background: #f3f4f5 !important;
-      border-color: #f3f4f5 !important;
+      background: var(--suite-theme-bg-midlite) !important;
+      border-color: var(--suite-theme-bg-midlite) !important;
     }
   }
 }

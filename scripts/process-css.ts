@@ -1,5 +1,6 @@
 import * as path from "path";
-import { listFiles, Module, readFile, writeFile } from "./common";
+import { Module } from "../src/common";
+import { listFiles, readFile, writeFile } from "./common";
 
 interface ExtractedStyles {
   [module: string]: { [chunk: string]: { [style: string]: string[] } };

@@ -1,15 +1,15 @@
 html[data-suite-theme] {
   .HNj2UG1r {
-    background-color: #fff !important;
-    border-bottom-color: #e8e8e8 !important;
-    color: rgba(0, 0, 0, 0.55) !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@breadcrumbs\:selectedNavigationItem\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
-  .-QHHeCqU {
-    color: rgba(0, 0, 0, 0.55) !important;
+  .\@joint-account-information\:hintLine\@ {
+    color: var(--suite-theme-color-secondary) !important;
   }
 }

@@ -1,26 +1,26 @@
 html[data-suite-theme] {
   .\@news-categories-menu\:selectBase\@.\@news-categories-menu\:dropdown\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@news-categories-menu\:selectBase\@.\@news-categories-menu\:dropdown\@.\@news-categories-menu\:activeDropdownItem\@ {
     background-color: #d4d4d4 !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@news-categories-menu\:groupSelectButton\@ {
-    background-color: #fff !important;
-    color: #000 !important;
+    background-color: var(--suite-theme-bg) !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@news-categories-menu\:groupSelectButton\@.\@news-categories-menu\:frontPageButton\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@news-categories-menu\:groupSelectButton\@.\@news-categories-menu\:groupActiveSelectButton\@:disabled {
     background-color: #d4d4d4 !important;
-    border-color: #009fdf !important;
-    color: #000 !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .iXZp95NS {
@@ -30,6 +30,6 @@ html[data-suite-theme] {
   }
 
   ._1gwuPi-l.\@news-categories-menu\:activeCategoryItem\@ .\@news-categories-menu\:checkIcon\@ {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 }

@@ -12,15 +12,15 @@ html[data-suite-theme] {
   }
 
   ._3RG2gusx {
-    background-color: #edeff1 !important;
+    background-color: var(--suite-theme-bg-lite)  !important;
   }
 
   ._1UIli3mH:not(._3Ne93sHk):nth-child(odd) ._3jr4aOva:not(.SRKeLvAF),
   ._1UIli3mH:not(._3Ne93sHk):nth-child(odd) .ZSFu57um:not(.SRKeLvAF) {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   ._10lOptvj {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 }

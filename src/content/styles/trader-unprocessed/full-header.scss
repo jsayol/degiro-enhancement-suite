@@ -1,10 +1,10 @@
 html[data-suite-theme] {
   ._1veR2tP7 {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     border: 1px solid #d4d4d4 !important;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
       0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   ._2GDZmzGr:focus,
@@ -13,18 +13,18 @@ html[data-suite-theme] {
   }
 
   ._32AlLnUO {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
       0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
   }
 
   ._147fFmXL {
-    background-color: #fff !important;
-    border-bottom-color: #e8e8e8 !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   ._19s4yIYX {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
     color: #fff !important;
   }
 

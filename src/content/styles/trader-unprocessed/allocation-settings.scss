@@ -1,16 +1,16 @@
 html[data-suite-theme] {
   ._3JvmSTh1 {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   ._3JvmSTh1:focus-within,
   .bdrWSXIv {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   ._3JvmSTh1:not(._3-W3NFy8):focus-within,
   .bdrWSXIv {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   ._3-W3NFy8 {
@@ -22,7 +22,7 @@ html[data-suite-theme] {
   }
 
   ._3dpUyUgG {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     color: #007bc2 !important;
   }
 }

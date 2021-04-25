@@ -4,12 +4,12 @@ html[data-suite-theme] {
   }
 
   .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@ {
-    background-color: #fff !important;
-    border-color: #e8e8e8 !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-color: var(--suite-theme-border-color) !important;
   }
 
   .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@:focus-within {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@filters\:activeFiltersButtonIcon\@ {
@@ -21,14 +21,14 @@ html[data-suite-theme] {
   }
 
   .\@input-placeholder\:inputPlaceholder\@ {
-    background-color: #f3f4f5 !important;
-    border-color: #e8e8e8 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
+    border-color: var(--suite-theme-border-color) !important;
     column-gap: 0 !important;
   }
 
   .\@input-placeholder\:inputPlaceholder\@:focus-within {
-    background-color: #fff !important;
-    border-color: #009fdf !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@input-placeholder\:input\@ {
@@ -41,7 +41,7 @@ html[data-suite-theme] {
   }
 
   .\@options-list\:optionsList\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     border-color: #d4d4d4 !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
@@ -53,13 +53,13 @@ html[data-suite-theme] {
   }
 
   .\@base-range\:applyButton\@ {
-    background: #009fdf !important;
+    background: var(--suite-theme-color-accent-bg) !important;
     border: none !important;
     color: #fff !important;
   }
 
   ._3_708K76[disabled] {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._2dAiUx8g {
@@ -67,17 +67,17 @@ html[data-suite-theme] {
   }
 
   .\@input\:inputFieldLayout\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@input\:inputFieldLayout\@:focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@input\:invalidInputFieldLayout\@ {
@@ -89,7 +89,7 @@ html[data-suite-theme] {
   }
 
   ._3dpUyUgG {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     color: #007bc2 !important;
   }
 
@@ -108,26 +108,26 @@ html[data-suite-theme] {
   }
 
   .\@switch\:thumb\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
   }
 
   .\@switch\:checkbox\@:checked ~ .\@switch\:track\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@switch\:checkbox\@:checked ~ .\@switch\:thumb\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@switch\:checkbox\@:focus ~ .\@switch\:thumb\@ {
-      background-color: #fff !important;
+      background-color: var(--suite-theme-bg) !important;
       box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3) !important;
     }
     .\@switch\:checkbox\@:checked:focus ~ .\@switch\:thumb\@ {
-      background-color: #009fdf !important;
+      background-color: var(--suite-theme-color-accent-bg) !important;
       box-shadow: 0 0 0 8px hsla(0, 0%, 83.1%, 0.3) !important;
     }
   }
@@ -137,10 +137,10 @@ html[data-suite-theme] {
   }
 
   ._1EWp8hdR {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@form-line-select-filter\:formLineIcon\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 }

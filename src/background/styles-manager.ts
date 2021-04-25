@@ -1,27 +1,16 @@
 import { browser } from "webextension-polyfill-ts";
-import { hasProperty } from "../common";
+import {
+  EMPTY_STYLES_TREE,
+  extractCSSClassesFromSourceMap,
+  hasProperty,
+  JSMAP_URL_REGEX,
+  mergeStylesTrees,
+  Module,
+  StylesTree,
+} from "../common";
 import loginCSSBundle from "../content/styles/login-css";
 import traderCSSBundle from "../content/styles/trader-css";
 import { tabIsReady } from "./common";
-
-export const JS_URL_REGEX = new RegExp(
-  "https?://trader\\.degiro\\.nl/(login|trader|beta-trader)/scripts/([^/]+)\\.([^\\.]+)\\.js$"
-);
-export const JSMAP_URL_REGEX = new RegExp(
-  JS_URL_REGEX.source.replace(/\$$/, "\\.map$")
-);
-
-JS_URL_REGEX.source;
-
-export type Module = "login" | "trader";
-
-export type ModuleClasses = {
-  [chunk: string]: { [style: string]: Array<string> };
-};
-
-export type StylesTree = {
-  [module in Module]: ModuleClasses;
-};
 
 interface SourceMap {
   version: number;
@@ -34,11 +23,6 @@ interface SourceMap {
 }
 
 type FilesSeen = Set<string>;
-
-const EMPTY_STYLES_TREE: StylesTree = {
-  login: {},
-  trader: {},
-};
 
 let filesSeen: FilesSeen = new Set();
 let stylesTree: StylesTree = EMPTY_STYLES_TREE;
@@ -81,41 +65,8 @@ export async function applySourceMap(url: string): Promise<void> {
   //   return;
   // }
 
-  const [, module, chunk] = url.match(JSMAP_URL_REGEX) as [any, Module, string];
-  console.log("applySourceMap", { module, chunk, url });
-
-  // Fetch the sourcemap
-  const resp = await fetch(url);
-  const map: SourceMap = await resp.json();
-
-  // Extract the generated classnames from the sourcemap
-  map.sourcesContent.forEach((fileSource, pos) => {
-    const contentMatch = fileSource.match(
-      /^\/\/ extracted by mini-css-extract-plugin\n((.|\n|\r)+)/
-    );
-
-    if (contentMatch) {
-      const [, sourceFileName] = map.sources[pos].match(/([^\/]+)\.css$/)!;
-      const content = contentMatch[1];
-      content.split("\n").map((line) => {
-        const lineMatch = line.match(/export const ([^ ]+) = "(.+)";/);
-        if (lineMatch) {
-          let key = sourceFileName + ":" + lineMatch[1];
-          const classes = lineMatch[2].split(" ");
-
-          if (!hasProperty(stylesTree, module)) {
-            stylesTree[module] = {};
-          }
-
-          if (!hasProperty(stylesTree[module], chunk)) {
-            stylesTree[module][chunk] = {};
-          }
-
-          stylesTree[module][chunk][key] = classes;
-        }
-      });
-    }
-  });
+  const newStyles = await extractCSSClassesFromSourceMap(url, JSMAP_URL_REGEX);
+  stylesTree = mergeStylesTrees([stylesTree, newStyles]);
 
   // Add this URL to the list of files we've already seen and processed
   filesSeen.add(url);
@@ -141,7 +92,7 @@ async function storeStyles(styles: StylesTree): Promise<void> {
 
 async function getFilesSeen(): Promise<FilesSeen> {
   const result = await browser.storage.local.get({ filesSeen: [] });
-  console.log({ getFilesSeen: result });
+  console.log(result);
   return new Set(result.filesSeen);
 }
 
@@ -188,7 +139,7 @@ async function prepareBaseTheme(): Promise<void> {
     traderCSS = storedTraderCSS;
   }
 
-  console.log({ loginCSS });
+  console.log({ traderCSS });
 }
 
 export async function loadBaseTheme(
@@ -211,7 +162,7 @@ export async function unloadBaseTheme(
 
   console.log("unloadBaseTheme", { tabId, module });
   const code = module === "login" ? loginCSS : traderCSS;
-  await browser.tabs.removeCSS(tabId, { code: loginCSS, cssOrigin: "user" });
+  await browser.tabs.removeCSS(tabId, { code, cssOrigin: "user" });
   await browser.tabs.sendMessage(tabId, { op: "baseThemeUnloaded", module });
 }
 
@@ -292,7 +243,7 @@ async function updateBaseThemeForModule(module: Module) {
     }
   }
 
-  if (module === "login") {
+  if (module === "trader") {
     console.log({ [storageKey]: css });
   }
 

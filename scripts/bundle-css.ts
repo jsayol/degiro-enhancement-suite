@@ -1,57 +1,75 @@
 import * as path from "path";
-import {
-  listFiles,
-  Module,
-  readFile,
-  removeLastLines,
-  writeFile,
-} from "./common";
+import * as sass from "sass";
+import * as chokidar from "chokidar";
+import { Module } from "../src/common";
+import { listFiles, writeFile } from "./common";
 
-const distEnv = process.argv[2];
+const BASE_DIR = path.join(__dirname, "..", "src", "content", "styles");
 
-if (!["dev", "prod"].includes(distEnv)) {
-  console.error('Specify either "dev" or "prod"');
-  process.exit(1);
-}
+const watch = process.argv[2] === "watch";
 
-const baseDir = path.join(
-  __dirname,
-  "..",
-  "dist",
-  distEnv,
-  "content",
-  "styles"
-);
-
-const outDir = path.join(__dirname, "..", "src", "content", "styles");
-
-async function bundle(module: Module) {
+async function bundleModule(module: Module) {
   try {
-    const moduleDir = path.join(baseDir, module);
-    const files = await listFiles(moduleDir);
+    const moduleDir = path.join(BASE_DIR, module);
+    const files = await listFiles(moduleDir, /.*\.scss$/);
     const bundle: { [k: string]: string } = {};
+    const bundlePath = path.join(BASE_DIR, module + "-css.ts");
 
     for (const file of files) {
-      const fileMatch = file.match(/(.+)\.css$/);
-      if (fileMatch) {
-        const chunk = fileMatch[1];
-        const content = await readFile(path.join(moduleDir, file));
-        bundle[chunk] = removeLastLines(content, 2);
-      }
+      const [chunk] = file.split(".");
+      const sassResult = sass.renderSync({
+        file: path.join(moduleDir, file),
+        sourceMap: true,
+        outputStyle: "compressed",
+      });
+      bundle[chunk] = sassResult.css.toString();
     }
 
-    // const bundlePath = path.join(baseDir, module + "-css.json");
-    const bundlePath = path.join(outDir, module + "-css.ts");
-    const bundleJSON =
-      distEnv === "prod"
-        ? JSON.stringify(bundle)
-        : JSON.stringify(bundle, null, 2);
-
+    const bundleJSON = JSON.stringify(bundle, null, 2);
     await writeFile(bundlePath, "export default " + bundleJSON);
   } catch (err) {
     console.error(err);
   }
 }
 
-bundle("login");
-bundle("trader");
+export async function bundle(): Promise<void> {
+  await Promise.all([bundleModule("login"), bundleModule("trader")]);
+}
+
+function handleFileChange(filePath: string): void {
+  const relativePath = path.relative(BASE_DIR, filePath);
+  const module = path.dirname(relativePath) as Module;
+  console.log(`[CHANGE] ${module} (${relativePath})`);
+  bundleModule(module);
+}
+
+if (!watch) {
+  bundle();
+} else {
+  const watcher = chokidar.watch(BASE_DIR, {
+    persistent: true,
+    ignored: ["*-unprocessed/**/*", /\.ts$/],
+    ignoreInitial: true,
+  });
+
+  watcher
+    .on("ready", () => console.log("Watching files"))
+    .on("add", handleFileChange)
+    .on("change", handleFileChange)
+    .on("unlink", handleFileChange);
+
+  if (process.platform === "win32") {
+    var readline = require("readline").createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    readline.on("SIGINT", function () {
+      process.emit("SIGINT" as any);
+    });
+  }
+
+  process.on("SIGINT", function () {
+    process.exit();
+  });
+}

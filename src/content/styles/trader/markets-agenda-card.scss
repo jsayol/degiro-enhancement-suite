@@ -4,10 +4,10 @@ html[data-suite-theme] {
   }
 
   .\@agenda-card\:agendaPrimaryValue\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@agenda-card\:agendaValue\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 }

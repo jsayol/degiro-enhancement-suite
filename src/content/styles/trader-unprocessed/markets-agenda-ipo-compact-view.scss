@@ -8,11 +8,11 @@ html[data-suite-theme] {
   }
 
   ._1GMEuLu5 {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._19nlLTqn ._3QiKxaLm {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   ._3xLohwEW {
@@ -20,31 +20,31 @@ html[data-suite-theme] {
   }
 
   ._2MnhUNur {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._3fNf038_ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._3azz-ku6 {
-    background-color: #fff !important;
-    border-bottom-color: #e8e8e8 !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   ._2LoO-18t {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .vlVKdFGV {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   ._2SEKkei0 {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .NmNsx9VS {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 }

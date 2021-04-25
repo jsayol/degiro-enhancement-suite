@@ -1,7 +1,7 @@
 html[data-suite-theme] {
   .\@product-orders-book\:bodyCell\@,
   .\@product-orders-book\:headerCell\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@product-orders-book\:collapsedLayoutHeaderCell\@ {
@@ -9,7 +9,7 @@ html[data-suite-theme] {
   }
 
   .\@product-orders-book\:ordersNumber\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@product-orders-book\:bidVolume\@ {

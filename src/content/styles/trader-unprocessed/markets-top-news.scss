@@ -1,19 +1,19 @@
 html[data-suite-theme] {
   ._3fsQ8Cps {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._3v7KvgqR {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   ._3_48UyQ7 {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   ._2f4nmAf5,
   ._3sik6KCI {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   ._3sik6KCI {
@@ -25,21 +25,21 @@ html[data-suite-theme] {
   }
 
   .mAkmuPN8 {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .cHaLMbqt {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   ._1QJRxgQc {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .cHaLMbqt:nth-child(2n):nth-last-child(-n + 3) ~ .cHaLMbqt {
   }
 
   ._1J3DLNkR {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 }

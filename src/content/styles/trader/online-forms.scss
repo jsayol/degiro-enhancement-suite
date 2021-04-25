@@ -1,11 +1,11 @@
 html[data-suite-theme] {
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
@@ -22,7 +22,7 @@ html[data-suite-theme] {
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
@@ -33,13 +33,13 @@ html[data-suite-theme] {
   }
 
   .HNj2UG1r {
-    background-color: #fff !important;
-    border-bottom-color: #e8e8e8 !important;
-    color: rgba(0, 0, 0, 0.55) !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@breadcrumbs\:selectedNavigationItem\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@task\:openedTasksIcon\@ {

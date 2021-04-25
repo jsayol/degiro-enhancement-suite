@@ -22,11 +22,11 @@ html[data-suite-theme] {
   }
 
   .\@side-navigation\:activeNavigationItem\@ .\@side-navigation\:navigationItemIcon\@ {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@side-navigation\:activeNavigationItem\@ .\@side-navigation\:profileAvatar\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
     color: currentColor !important;
   }
 
@@ -67,8 +67,8 @@ html[data-suite-theme] {
   }
 
   .\@avatar\:avatar\@ {
-    background-color: #edeff1 !important;
-    color: #000 !important;
+    background-color: var(--suite-theme-bg-lite)  !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@profile-navigation-item\:profileItemSeparator\@ {
@@ -85,8 +85,8 @@ html[data-suite-theme] {
   }
 
   .\@checkbox\:input\@:checked ~ .\@checkbox\:thumb\@ {
-    background-color: #009fdf !important;
-    border-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@checkbox\:input\@[disabled]:checked ~ .\@checkbox\:thumb\@,
@@ -101,10 +101,10 @@ html[data-suite-theme] {
 
   @media (pointer: fine), all and (pointer: none) {
     .\@checkbox\:thumb\@:hover {
-      background-color: #f3f4f5 !important;
+      background-color: var(--suite-theme-bg-midlite) !important;
     }
     .\@checkbox\:input\@:focus ~ .\@checkbox\:thumb\@ {
-      border-color: #009fdf !important;
+      border-color: var(--suite-theme-color-accent-bg) !important;
     }
   }
 }

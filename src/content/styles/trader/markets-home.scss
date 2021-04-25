@@ -35,22 +35,22 @@ html[data-suite-theme] {
   }
 
   .\@products-carousel\:listLayoutWithNavigationButtons\@ .\@products-carousel\:selectedListItem\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     border-bottom-color: #fff !important;
     border-top-color: #d4d4d4 !important;
   }
 
   .\@latest-videos\:clipItemImgLabel\@ {
-    background-color: #000 !important;
+    background-color: var(--suite-theme-color) !important;
     color: #fff !important;
   }
 
   .\@latest-videos\:clipItemSubTitle\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@latest-videos\:clipModalButtons\@ {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   ._1E31BIi1[disabled] {
@@ -66,6 +66,6 @@ html[data-suite-theme] {
   }
 
   .\@video-player\:player\@ {
-    background-color: #000 !important;
+    background-color: var(--suite-theme-color) !important;
   }
 }

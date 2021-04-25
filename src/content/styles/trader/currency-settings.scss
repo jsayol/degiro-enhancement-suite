@@ -4,12 +4,12 @@ html[data-suite-theme] {
   }
 
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
@@ -26,7 +26,7 @@ html[data-suite-theme] {
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
@@ -37,7 +37,7 @@ html[data-suite-theme] {
   }
 
   .\@switch-buttons\:switchControl\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@switch-buttons\:switchControlInTransition\@ {
@@ -45,7 +45,7 @@ html[data-suite-theme] {
   }
 
   .\@switch-buttons\:option\@ + .\@switch-buttons\:option\@ {
-    border-left-color: #f3f4f5 !important;
+    border-left-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@switch-buttons\:option\@[disabled] {
@@ -66,11 +66,11 @@ html[data-suite-theme] {
   }
 
   .\@switch-buttons\:activeOption\@:last-child {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@switch-buttons\:option\@[disabled].\@switch-buttons\:activeOption\@ {
     background-color: #d4d4d4 !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 }

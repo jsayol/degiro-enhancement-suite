@@ -1,10 +1,10 @@
 html[data-suite-theme] {
   .\@note-textarea\:wrapper\@ {
-    outline-color: #e8e8e8 !important;
+    outline-color: var(--suite-theme-border-color) !important;
   }
 
   .\@note-textarea\:wrapper\@:focus-within {
-    outline-color: #009fdf !important;
+    outline-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@note-textarea\:textarea\@ {
@@ -25,21 +25,21 @@ html[data-suite-theme] {
 
   .\@button\:button\@:disabled {
     background: inherit !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@button\:button\@:hover {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@button\:button\@:focus {
-    border-color: #009fdf !important;
-    color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
+    color: var(--suite-theme-color-accent-bg) !important;
     outline: none !important;
   }
 
   .\@button\:primaryButton\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
     color: #fff !important;
   }
 
@@ -53,11 +53,11 @@ html[data-suite-theme] {
   }
 
   .\@product-notes\:productNote\@:focus {
-    outline-color: #009fdf !important;
+    outline-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@product-notes\:noteSection\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@product-notes\:timeStamp\@ {
@@ -65,7 +65,7 @@ html[data-suite-theme] {
   }
 
   .\@product-notes\:serviceMessageWarning\@ {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@product-notes\:serviceMessageError\@ {

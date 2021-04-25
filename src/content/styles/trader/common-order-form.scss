@@ -1,10 +1,10 @@
 html[data-suite-theme] {
   .\@order-form\:warningBox\@ + .\@order-form\:warningBox\@ {
-    border-top-color: #e8e8e8 !important;
+    border-top-color: var(--suite-theme-border-color) !important;
   }
 
   .\@common-order-form\:productChangeButton\@ {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   ._2EfoFDd6 .\@common-order-form\:fieldSelect\@ .\@common-order-form\:fieldSelectControlWithError\@ {
@@ -12,7 +12,7 @@ html[data-suite-theme] {
   }
 
   .\@common-order-form\:orderActionButton\@ {
-    border-color: #e8e8e8 !important;
+    border-color: var(--suite-theme-border-color) !important;
   }
 
   .\@common-order-form\:orderActionButton\@:not(:first-child) {
@@ -20,7 +20,7 @@ html[data-suite-theme] {
   }
 
   .\@common-order-form\:orderActionButton\@:focus {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@common-order-form\:orderActionButton\@[disabled] {
@@ -46,17 +46,17 @@ html[data-suite-theme] {
   }
 
   .\@input\:inputFieldLayout\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@input\:inputFieldLayout\@:focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@input\:invalidInputFieldLayout\@ {
@@ -68,16 +68,16 @@ html[data-suite-theme] {
   }
 
   ._3dpUyUgG {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     color: #007bc2 !important;
   }
 
   .\@order-confirmation\:documentsInfo\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@order-confirmation-fees\:feesHeader\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@search\:inputFieldLayout\@ .\@search\:inputField\@ {
@@ -91,12 +91,12 @@ html[data-suite-theme] {
   }
 
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
@@ -113,7 +113,7 @@ html[data-suite-theme] {
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
@@ -124,11 +124,11 @@ html[data-suite-theme] {
   }
 
   .\@alternative-order-selector\:optionsList\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     border-color: #d4d4d4 !important;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
       0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@alternative-order-selector\:optionItem\@:focus,
@@ -137,6 +137,6 @@ html[data-suite-theme] {
   }
 
   .\@order-product-search\:emptyResultsMessage\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 }

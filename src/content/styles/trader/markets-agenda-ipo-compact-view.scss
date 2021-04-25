@@ -8,11 +8,11 @@ html[data-suite-theme] {
   }
 
   .\@compact-view\:secondaryContent\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@compact-view\:agendaListItem\@ .\@compact-view\:valueSubContent\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@compact-view\:companyName\@ {
@@ -20,31 +20,31 @@ html[data-suite-theme] {
   }
 
   ._2MnhUNur {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._3fNf038_ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@compact-view\:tableRow\@ {
-    background-color: #fff !important;
-    border-bottom-color: #e8e8e8 !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@compact-view\:exchanges\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@compact-view\:exchangesOverlay\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@compact-view\:moreItemsButton\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@compact-view\:dateTimeDivider\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 }

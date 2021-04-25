@@ -1,22 +1,22 @@
 html[data-suite-theme] {
   ._3aKD8cJa {
-    fill: rgba(0, 0, 0, 0.55) !important;
+    fill: var(--suite-theme-color-secondary) !important;
   }
 
   .JFqlBKZR {
-    stroke: #e8e8e8 !important;
+    stroke: var(--suite-theme-border-color) !important;
   }
 
   ._2Wj09Ukw {
-    fill: rgba(0, 0, 0, 0.55) !important;
+    fill: var(--suite-theme-color-secondary) !important;
   }
 
   ._117F2TyM {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._3uZqPfLC {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._3oLn_MN8 {
@@ -29,7 +29,7 @@ html[data-suite-theme] {
   }
 
   .RyrAgVRb {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   ._3hxM_TrW {
@@ -38,6 +38,6 @@ html[data-suite-theme] {
 
   ._3hxM_TrW,
   ._3hxM_TrW:after {
-    background-color: #000 !important;
+    background-color: var(--suite-theme-color) !important;
   }
 }

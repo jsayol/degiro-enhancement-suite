@@ -1,6 +1,6 @@
 html[data-suite-theme] {
   .\@alerts\:alertBackdrop\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@alerts\:closeButton\@ {
@@ -13,30 +13,30 @@ html[data-suite-theme] {
   }
 
   .\@portfolio\:emptyPortfolioMessageOnGlobalCompactLayout\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@portfolio\:valuesSwitchButton\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     border-bottom-color: #d4d4d4 !important;
     border-top-color: #d4d4d4 !important;
   }
 
   .\@portfolio\:valuesSwitchButton\@:before {
-    border-top-color: #009fdf !important;
+    border-top-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@portfolio\:valuesSwitchSelectedSection\@ {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@list\:groupDivider\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   .\@list\:item\@,
   .\@list\:underlinedItem\@ {
-    border-bottom-color: #e8e8e8 !important;
+    border-bottom-color: var(--suite-theme-border-color) !important;
   }
 
   .\@list\:item\@:not(.\@list\:underlinedItem\@):last-child {
@@ -53,7 +53,7 @@ html[data-suite-theme] {
   }
 
   .\@list\:subContent\@ {
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
@@ -64,7 +64,7 @@ html[data-suite-theme] {
   }
 
   .\@pagination-buttons\:layout\@ {
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@pagination-buttons\:button\@ {
@@ -76,24 +76,24 @@ html[data-suite-theme] {
   }
 
   .\@pagination-buttons\:button\@:focus {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@pagination-buttons\:button\@.\@pagination-buttons\:disabledButton\@ {
     background-color: inherit !important;
-    color: #000 !important;
+    color: var(--suite-theme-color) !important;
   }
 
   .\@pagination-buttons\:activeButton\@ {
-    border-bottom-color: #009fdf !important;
+    border-bottom-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@buttons-group\:buttonsGroup\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@buttons-group\:buttonsGroupItem\@ {
-    border-left-color: #e8e8e8 !important;
+    border-left-color: var(--suite-theme-border-color) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
@@ -103,17 +103,17 @@ html[data-suite-theme] {
   }
 
   .\@input\:inputFieldLayout\@ {
-    background-color: #f3f4f5 !important;
+    background-color: var(--suite-theme-bg-midlite) !important;
   }
 
   .\@input\:inputFieldLayout\@:focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
   }
 
   .\@input\:inputFieldLayout\@:not(.\@input\:invalidInputFieldLayout\@):focus-within,
   .\@input\:focusedInputFieldLayout\@ {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@input\:invalidInputFieldLayout\@ {
@@ -125,22 +125,22 @@ html[data-suite-theme] {
   }
 
   ._3dpUyUgG {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     color: #007bc2 !important;
   }
 
   .\@datepicker\:inputWithIcon\@:focus + .\@datepicker\:inputIcon\@ {
-    color: #009fdf !important;
+    color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@datepicker\:popup\@ {
-    background-color: #fff !important;
+    background-color: var(--suite-theme-bg) !important;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
   }
 
   .\@datepicker\:selectedItem\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
     color: #fff !important;
   }
 
@@ -148,13 +148,13 @@ html[data-suite-theme] {
   .\@datepicker\:moreButton\@[disabled],
   .\@datepicker\:navButton\@[disabled] {
     background-color: transparent !important;
-    color: rgba(0, 0, 0, 0.55) !important;
+    color: var(--suite-theme-color-secondary) !important;
   }
 
   @media (pointer: fine), all and (pointer: none) {
     .\@datepicker\:item\@:not([disabled]):not(.\@datepicker\:selectedItem\@):hover,
     .\@datepicker\:moreButton\@:not([disabled]):hover {
-      background-color: #f3f4f5 !important;
+      background-color: var(--suite-theme-bg-midlite) !important;
     }
   }
 
@@ -163,12 +163,12 @@ html[data-suite-theme] {
   }
 
   .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@ {
-    background-color: #fff !important;
-    border-color: #e8e8e8 !important;
+    background-color: var(--suite-theme-bg) !important;
+    border-color: var(--suite-theme-border-color) !important;
   }
 
   .\@filters\:filtersSection\@ .\@filters\:outlinedControl\@:focus-within {
-    border-color: #009fdf !important;
+    border-color: var(--suite-theme-color-accent-bg) !important;
   }
 
   .\@filters\:activeFiltersButtonIcon\@ {
@@ -176,10 +176,10 @@ html[data-suite-theme] {
   }
 
   .\@infinitive\:progressBar\@ {
-    background-color: #edeff1 !important;
+    background-color: var(--suite-theme-bg-lite)  !important;
   }
 
   .\@infinitive\:value\@ {
-    background-color: #009fdf !important;
+    background-color: var(--suite-theme-color-accent-bg) !important;
   }
 }
